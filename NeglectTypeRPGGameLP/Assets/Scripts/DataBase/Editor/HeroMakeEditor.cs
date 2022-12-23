@@ -5,12 +5,14 @@ using UnityEditor;
 using UnityEngine.UIElements;
 using UnityEditor.Callbacks;
 using System;
+using UnityEngine.Networking;
+using Unity.EditorCoroutines.Editor;
 
 public class HeroMakeEditor : EditorWindow
 {
     GoogleSheetManager sheet;
 
-    HeroInfo info;
+    static List<HeroInfo> heroCache = new List<HeroInfo>();
 
     [MenuItem("MakeData/HeroMakeEditor")]
     static void OpenWindow()
@@ -51,7 +53,7 @@ public class HeroMakeEditor : EditorWindow
 
         leftPane.Add(leftTopPane);
         leftTopPane.style.backgroundColor = Color.black;
-        VisualElement label = new Label("무수한 버튼들");
+        VisualElement label = new Label("임시 버튼들입니다.");
         leftTopPane.Add(label);
 
         var leftBottomPane = new VisualElement();
@@ -75,17 +77,40 @@ public class HeroMakeEditor : EditorWindow
 
     public void CreateScriptableObject()
     {
-        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), "Asset/Resources/Data"+ info.Name + ".asset");
+        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), "Asset/Resources/"+"Data.asset");
     }
 
     public void CallData()
     {
-        if (sheet == null)
-        {
-            sheet = new GoogleSheetManager();
-        }
-        sheet.CreatePost(CreateWWWForm());
+        //GetSheet().CreatePost(CreateWWWForm());
+        //GetSheet().GetData();
+        heroCache.Clear();
+        EditorCoroutineUtility.StartCoroutine(GetDataSheet(),this);
     }
+    const string URL = "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921";
+
+    IEnumerator GetDataSheet()
+    {
+        UnityWebRequest www = UnityWebRequest.Get(URL);
+        yield return www.SendWebRequest();
+
+        string data = www.downloadHandler.text;
+        TSVPasing(data);
+
+        Debug.Log(data);
+    }
+
+    public void TSVPasing(string tsv)
+    {
+        string[] rows = null;
+        string[] values = null;
+
+        rows = tsv.Split('\r');
+        values = tsv.Split('\t');
+        Debug.Log(rows[0]);
+        Debug.Log(values[0]);
+    }
+    
 
     public WWWForm CreateWWWForm()
     {
