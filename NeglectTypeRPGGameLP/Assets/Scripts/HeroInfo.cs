@@ -11,4 +11,5 @@ public class HeroInfo : ScriptableObject
     public string Explanation;
     public string Icon;
     public string Model;
+
 }
