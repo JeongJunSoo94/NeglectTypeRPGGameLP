@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class HeroBase : MonoBehaviour
 {
-    HeroInfo heroInfo;
+    public HeroInfo heroInfo;
     HeroStat heroStat;
     SkillInfo[] skill;
 
@@ -12,5 +12,11 @@ public class HeroBase : MonoBehaviour
         this.heroInfo = heroInfo;
         this.heroStat = heroStat;
         this.skill = skill;
+    }
+    private void Start()
+    {
+        Debug.Log(heroInfo);
+        Debug.Log(heroInfo.Name);
+
     }
 }

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class HeroInfo : ScriptableObject
 {
     public string Name;
@@ -11,5 +12,4 @@ public class HeroInfo : ScriptableObject
     public string Explanation;
     public string Icon;
     public string Model;
-
 }

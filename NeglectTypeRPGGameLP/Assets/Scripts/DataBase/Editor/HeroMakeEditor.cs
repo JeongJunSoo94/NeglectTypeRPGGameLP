@@ -10,11 +10,12 @@ using Unity.EditorCoroutines.Editor;
 
 public class HeroMakeEditor : EditorWindow
 {
-    GoogleSheetManager sheet;
+    List<string[]> heroCache = new List<string[]>();
+    VisualElement splitPane;
+    VisualElement topPane;
+    Label label;
 
-    static List<HeroInfo> heroCache = new List<HeroInfo>();
-
-    [MenuItem("MakeData/HeroMakeEditor")]
+   [MenuItem("MakeData/HeroMakeEditor")]
     static void OpenWindow()
     {
         HeroMakeEditor window = GetWindow<HeroMakeEditor>(typeof(Cubemap));
@@ -43,31 +44,28 @@ public class HeroMakeEditor : EditorWindow
             allObjects.Add(AssetDatabase.LoadAssetAtPath<Sprite>(AssetDatabase.GUIDToAssetPath(guid)));
         }
 
-        var splitView = new TwoPaneSplitView(0, 250, TwoPaneSplitViewOrientation.Horizontal);
+        splitPane = new TwoPaneSplitView(0, 15, TwoPaneSplitViewOrientation.Vertical);
 
-        rootVisualElement.Add(splitView);
+        rootVisualElement.Add(splitPane);
 
-        var leftPane = new TwoPaneSplitView(0, 15, TwoPaneSplitViewOrientation.Vertical);
+        topPane = new VisualElement();
 
-        var leftTopPane = new VisualElement();
+        splitPane.Add(topPane);
+        label = new Label("처음 켜졌습니다.");
+        topPane.Add(label);
 
-        leftPane.Add(leftTopPane);
-        leftTopPane.style.backgroundColor = Color.black;
-        VisualElement label = new Label("임시 버튼들입니다.");
-        leftTopPane.Add(label);
-
-        var leftBottomPane = new VisualElement();
+        var BottomPane = new VisualElement();
         Button JoinButton =(Button) CreateButton("데이터 불러오기", () => { CallData(); });
-        Button SaveDataButton = (Button)CreateButton("에셋으로 데이터 저장", () => { CreateScriptableObject(); });
-        leftBottomPane.Add(JoinButton);
-        leftBottomPane.Add(SaveDataButton);
+        Button SaveDataButton = (Button)CreateButton("에셋으로 데이터 저장", () => { CreateScriptableObjects(); });
+        Button cacheDataButton = (Button)CreateButton("캐시 초기화", () => { heroCache.Clear(); });
+        Button cacheDataLenButton = (Button)CreateButton("캐시 개수", () => { Debug.Log(heroCache.Count); });
+        BottomPane.Add(JoinButton);
+        BottomPane.Add(SaveDataButton);
+        BottomPane.Add(cacheDataButton);
+        BottomPane.Add(cacheDataLenButton);
 
-        leftPane.Add(leftBottomPane);
+        splitPane.Add(BottomPane);
 
-        splitView.Add(leftPane);
-
-        var rightPane = new VisualElement();
-        splitView.Add(rightPane);
     }
 
     private VisualElement CreateButton(string text, Action action)
@@ -75,15 +73,26 @@ public class HeroMakeEditor : EditorWindow
         return new Button(action) { text=text};
     }
 
-    public void CreateScriptableObject()
+    public void CreateScriptableObjects()
     {
-        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), "Asset/Resources/"+"Data.asset");
+        for (int i = 0; i < heroCache.Count; i++)
+        {
+            string path = "Assets/Heroes/Data/" + heroCache[i][0] + "Data.asset";
+            HeroInfo asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
+            if (!asset)
+            {
+                AssetDatabase.CreateAsset(CreateInstance<HeroInfo>(), path);
+                asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
+            }
+            CreateHeroInfoData(asset, heroCache[i]);
+            EditorUtility.SetDirty(asset);
+        }
+        label.text = "데이터 저장했쪄염 뿌우";
+        ColorChange(topPane,Color.green);
     }
 
     public void CallData()
     {
-        //GetSheet().CreatePost(CreateWWWForm());
-        //GetSheet().GetData();
         heroCache.Clear();
         EditorCoroutineUtility.StartCoroutine(GetDataSheet(),this);
     }
@@ -96,8 +105,8 @@ public class HeroMakeEditor : EditorWindow
 
         string data = www.downloadHandler.text;
         TSVPasing(data);
-
-        Debug.Log(data);
+        label.text = "데이터 불러왔쪄염 뿌우";
+        ColorChange(topPane, Color.blue);
     }
 
     public void TSVPasing(string tsv)
@@ -105,19 +114,30 @@ public class HeroMakeEditor : EditorWindow
         string[] rows = null;
         string[] values = null;
 
-        rows = tsv.Split('\r');
-        values = tsv.Split('\t');
-        Debug.Log(rows[0]);
-        Debug.Log(values[0]);
+        rows = tsv.Split('\n');
+        for (int i = 1; i < rows.Length; i++)
+        {
+            values = rows[i].Split('\t');
+            heroCache.Add(values);
+        }
     }
-    
 
-    public WWWForm CreateWWWForm()
+
+    public void ColorChange(VisualElement ve,Color color)
     {
-        WWWForm form = new WWWForm();
-        form.AddField("order", "register");
-        form.AddField("name", "");
-
-        return form;
+        ve.style.backgroundColor = color;
     }
+
+    public void CreateHeroInfoData(HeroInfo info,string[] value)
+    {
+        info.Name = value[0].Trim();
+        info.Faction = value[1].Trim();
+        info.Type = value[2].Trim();
+        info.Rarity = value[3].Trim();
+        info.Explanation = value[4].Trim();
+        info.Icon = value[5].Trim();
+        info.Model = value[6].Trim();
+    }
+
+
 }
