@@ -15,8 +15,6 @@ public class HeroBase : MonoBehaviour
     }
     private void Start()
     {
-        Debug.Log(heroInfo);
-        Debug.Log(heroInfo.Name);
 
     }
 }
