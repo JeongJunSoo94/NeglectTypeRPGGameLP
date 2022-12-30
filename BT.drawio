@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-30T17:35:57.788Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="8vfPfnsJ8EOiHZWVesZj" version="20.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-30T17:36:30.558Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="V9T7QPpjbuIUDrvRnTkR" version="20.7.4" type="github">
   <diagram id="O-LWc2A8Pq9CezwLzfdt" name="페이지-1">
-    <mxGraphModel dx="2057" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2057" dy="856" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -9,6 +9,9 @@
         </mxCell>
         <mxCell id="qAUqQl3StZBXr3iRBp-v-3" value="루트" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="T3gqKkbkDz2L_3jhAisM-184" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="qAUqQl3StZBXr3iRBp-v-4" target="T3gqKkbkDz2L_3jhAisM-176">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="qAUqQl3StZBXr3iRBp-v-4" value="반복" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-80" y="95" width="120" height="60" as="geometry" />
