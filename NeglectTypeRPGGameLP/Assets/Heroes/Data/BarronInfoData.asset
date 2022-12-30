@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e49f2979f80184e9032b8dae01e2e3, type: 3}
-  m_Name: 2Data
+  m_Name: BarronInfoData
   m_EditorClassIdentifier: 
-  Name: 2
-  Faction: Barron
-  Type: "\uC5B4\uBCA4\uC838"
-  Rarity: "\uC6A9\uC0AC"
-  Explanation: Elite
-  Icon: "\uD30C\uC774\uD130"
-  Model: 
+  id: 2
+  Name: Barron
+  Faction: "\uC5B4\uBCA4\uC838"
+  Type: "\uC6A9\uC0AC"
+  Rarity: Elite
+  Explanation: "\uD30C\uC774\uD130"
+  Icon: Barron_Icon
+  Model: 2

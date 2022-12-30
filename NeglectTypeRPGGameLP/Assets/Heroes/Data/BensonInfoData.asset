@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e49f2979f80184e9032b8dae01e2e3, type: 3}
-  m_Name: 4Data
+  m_Name: BensonInfoData
   m_EditorClassIdentifier: 
-  Name: 4
-  Faction: Benson
-  Type: "\uC758\uC6A9\uAD70"
-  Rarity: "\uC6A9\uC0AC"
-  Explanation: Elite
-  Icon: "\uC7AC\uC0DD\uC758 \uBD88"
-  Model: 
+  id: 4
+  Name: Benson
+  Faction: "\uC758\uC6A9\uAD70"
+  Type: "\uC6A9\uC0AC"
+  Rarity: Elite
+  Explanation: "\uC7AC\uC0DD\uC758 \uBD88"
+  Icon: Benson_Icon
+  Model: 4

@@ -10,16 +10,16 @@ using Unity.EditorCoroutines.Editor;
 
 public class HeroMakeEditor : EditorWindow
 {
-    List<string[]> heroCache = new List<string[]>();
+    List<List<string[]>> heroCache = new List<List<string[]>>();
     VisualElement splitPane;
     VisualElement topPane;
     Label label;
 
-   [MenuItem("MakeData/HeroMakeEditor")]
+    [MenuItem("MakeData/HeroMakeEditor")]
     static void OpenWindow()
     {
         HeroMakeEditor window = GetWindow<HeroMakeEditor>(typeof(Cubemap));
-        window.minSize = new Vector2(100,100);
+        window.minSize = new Vector2(100, 100);
         window.maxSize = new Vector2(1000, 1000);
         window.Show();
     }
@@ -51,11 +51,12 @@ public class HeroMakeEditor : EditorWindow
         topPane = new VisualElement();
 
         splitPane.Add(topPane);
-        label = new Label("처음 켜졌습니다.");
+        label = new Label("켜졌습니다.");
         topPane.Add(label);
 
         var BottomPane = new VisualElement();
-        Button JoinButton =(Button) CreateButton("데이터 불러오기", () => { CallData(); });
+
+        Button JoinButton = (Button)CreateButton("데이터 불러오기", () => { CallData(); });
         Button SaveDataButton = (Button)CreateButton("에셋으로 데이터 저장", () => { CreateScriptableObjects(); });
         Button cacheDataButton = (Button)CreateButton("캐시 초기화", () => { heroCache.Clear(); });
         Button cacheDataLenButton = (Button)CreateButton("캐시 개수", () => { Debug.Log(heroCache.Count); });
@@ -70,47 +71,79 @@ public class HeroMakeEditor : EditorWindow
 
     private VisualElement CreateButton(string text, Action action)
     {
-        return new Button(action) { text=text};
+        return new Button(action) { text = text };
     }
 
     public void CreateScriptableObjects()
     {
         for (int i = 0; i < heroCache.Count; i++)
         {
-            string path = "Assets/Heroes/Data/" + heroCache[i][0] + "Data.asset";
-            HeroInfo asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
-            if (!asset)
+            List<string[]> cache = heroCache[i];
+            if (i == 0)
             {
-                AssetDatabase.CreateAsset(CreateInstance<HeroInfo>(), path);
-                asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
+                for (int j = 0; j < cache.Count; j++)
+                {
+                    string path = "Assets/Heroes/Data/" + cache[j][1] + "InfoData.asset";
+                    HeroInfo asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
+                    if (!asset)
+                    {
+                        AssetDatabase.CreateAsset(CreateInstance<HeroInfo>(), path);
+                        asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
+                    }
+                    asset.CreateHeroInfoData(asset, cache[j]);
+                    EditorUtility.SetDirty(asset);
+                }
             }
-            CreateHeroInfoData(asset, heroCache[i]);
-            EditorUtility.SetDirty(asset);
+            else if (i == 1)
+            {
+                for (int j = 0; j < cache.Count; j++)
+                {
+                    string path = "Assets/Heroes/Data/" + cache[j][0] + "StatData.asset";
+                    HeroStat asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
+                    if (!asset)
+                    {
+                        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), path);
+                        asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
+                    }
+                    asset.CreateHeroStatData(asset, cache[j]);
+                    EditorUtility.SetDirty(asset);
+                }
+            }
         }
         label.text = "데이터 저장했쪄염 뿌우";
-        ColorChange(topPane,Color.green);
+        ColorChange(topPane, Color.green);
     }
 
     public void CallData()
     {
         heroCache.Clear();
-        EditorCoroutineUtility.StartCoroutine(GetDataSheet(),this);
+        EditorCoroutineUtility.StartCoroutine(GetDataSheet(), this);
     }
-    const string URL = "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921";
-
+    string[] URL = { 
+                "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921"
+            ,   "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=0"
+    };
     IEnumerator GetDataSheet()
     {
-        UnityWebRequest www = UnityWebRequest.Get(URL);
+        UnityWebRequest www = UnityWebRequest.Get(URL[0]);
         yield return www.SendWebRequest();
 
         string data = www.downloadHandler.text;
-        TSVPasing(data);
+        TSVPasing(data,0);
+
+        www = UnityWebRequest.Get(URL[1]);
+        yield return www.SendWebRequest();
+
+        data = www.downloadHandler.text;
+        TSVPasing(data,1);
+
         label.text = "데이터 불러왔쪄염 뿌우";
         ColorChange(topPane, Color.blue);
     }
 
-    public void TSVPasing(string tsv)
+    public void TSVPasing(string tsv,int index)
     {
+        heroCache.Add(new List<string[]>());
         string[] rows = null;
         string[] values = null;
 
@@ -118,7 +151,7 @@ public class HeroMakeEditor : EditorWindow
         for (int i = 1; i < rows.Length; i++)
         {
             values = rows[i].Split('\t');
-            heroCache.Add(values);
+            heroCache[index].Add(values);
         }
     }
 
@@ -127,17 +160,5 @@ public class HeroMakeEditor : EditorWindow
     {
         ve.style.backgroundColor = color;
     }
-
-    public void CreateHeroInfoData(HeroInfo info,string[] value)
-    {
-        info.Name = value[0].Trim();
-        info.Faction = value[1].Trim();
-        info.Type = value[2].Trim();
-        info.Rarity = value[3].Trim();
-        info.Explanation = value[4].Trim();
-        info.Icon = value[5].Trim();
-        info.Model = value[6].Trim();
-    }
-
 
 }

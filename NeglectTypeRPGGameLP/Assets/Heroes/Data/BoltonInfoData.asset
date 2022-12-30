@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e49f2979f80184e9032b8dae01e2e3, type: 3}
-  m_Name: 3Data
+  m_Name: BoltonInfoData
   m_EditorClassIdentifier: 
-  Name: 3
-  Faction: Bolton
-  Type: "\uC758\uC6A9\uAD70"
-  Rarity: "\uAC00\uB514\uC5B8"
-  Explanation: Elite
-  Icon: "\uC815\uC758 \uC218\uD638"
-  Model: 
+  id: 3
+  Name: Bolton
+  Faction: "\uC758\uC6A9\uAD70"
+  Type: "\uAC00\uB514\uC5B8"
+  Rarity: Elite
+  Explanation: "\uC815\uC758 \uC218\uD638"
+  Icon: Bolton_Icon
+  Model: 3
