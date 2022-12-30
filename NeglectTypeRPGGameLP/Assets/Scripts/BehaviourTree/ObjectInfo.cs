@@ -13,6 +13,8 @@ namespace JJS.BT
         public bool localSync;
         public bool delayEnable;
         public bool delayCheck;
+
+
         public WaitForSeconds wait;
         private void Awake()
         {

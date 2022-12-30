@@ -16,8 +16,6 @@ namespace JJS.BT
         [HideInInspector] public string guid;
         [HideInInspector] public Vector2 position;
         [HideInInspector] public ObjectInfo objectInfo;
-        //[HideInInspector] public Blackboard blackboard;
-        //[HideInInspector] public ai≈¨∑°Ω∫ agent;
         [TextArea] public string description;
 
         public State Update()
