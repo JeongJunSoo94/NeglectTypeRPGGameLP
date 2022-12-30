@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-12-30T17:23:12.364Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="Hr6ef3Od4PvmN9-H1wcm" version="20.7.4" type="github">
+<mxfile host="app.diagrams.net" modified="2022-12-30T17:26:02.210Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="raJWsyurA7Wp-sxpMYmX" version="20.7.4" type="github">
   <diagram id="O-LWc2A8Pq9CezwLzfdt" name="페이지-1">
-    <mxGraphModel dx="2980" dy="1640" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2262" dy="1093" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -105,7 +105,7 @@
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="-150" y="310" />
-              <mxPoint x="-10" y="310" />
+              <mxPoint x="240" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -114,7 +114,7 @@
             <mxPoint x="-20" y="230" as="sourcePoint" />
             <Array as="points">
               <mxPoint x="-150" y="310" />
-              <mxPoint x="230" y="310" />
+              <mxPoint x="590" y="310" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -133,21 +133,26 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-69" value="내 순서가 맞는가" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-60" y="333" width="100" height="100" as="geometry" />
+          <mxGeometry x="190" y="321" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-97" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="T3gqKkbkDz2L_3jhAisM-75" target="T3gqKkbkDz2L_3jhAisM-79">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="530" />
+              <mxPoint x="-10" y="530" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-170" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="T3gqKkbkDz2L_3jhAisM-75" target="T3gqKkbkDz2L_3jhAisM-169">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="-11" y="530" />
+              <mxPoint x="240" y="530" />
               <mxPoint x="520" y="530" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-75" value="select" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="-70.75" y="452" width="120" height="60" as="geometry" />
+          <mxGeometry x="180" y="443" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-77" value="일반공격" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="690" y="969" width="120" height="60" as="geometry" />
@@ -156,10 +161,10 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-79" value="스킬공격가능한가" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="-60" y="551" width="100" height="100" as="geometry" />
+          <mxGeometry x="-60" y="553" width="100" height="100" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-80" value="Idle Action" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="170" y="368" width="120" height="60" as="geometry" />
+          <mxGeometry x="530" y="368" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="T3gqKkbkDz2L_3jhAisM-86" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="T3gqKkbkDz2L_3jhAisM-84" target="T3gqKkbkDz2L_3jhAisM-44">
           <mxGeometry relative="1" as="geometry" />
