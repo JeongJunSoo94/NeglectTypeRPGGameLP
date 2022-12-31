@@ -9,7 +9,7 @@ namespace JJS.BT
 
         void Start()
         {
-            tree = tree.Clone(GetComponent<ObjectInfo>());
+            tree = tree.Clone(GetComponent<Blackboard>());
         }
 
         // Update is called once per frame

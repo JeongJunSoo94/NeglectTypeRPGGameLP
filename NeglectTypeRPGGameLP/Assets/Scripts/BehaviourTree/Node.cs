@@ -15,7 +15,7 @@ namespace JJS.BT
         [HideInInspector] public bool started = false;
         [HideInInspector] public string guid;
         [HideInInspector] public Vector2 position;
-        [HideInInspector] public ObjectInfo objectInfo;
+        [HideInInspector] public Blackboard blackBoard;
         [TextArea] public string description;
 
         public State Update()

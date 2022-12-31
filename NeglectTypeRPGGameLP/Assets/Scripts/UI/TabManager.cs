@@ -8,6 +8,9 @@ public class TabManager : MonoBehaviour
     public int Tab=6;
     public Image[] TabBtnImage;
     public Sprite[] IdleSprite, SelectSprite;
+
+    public List<RectTransform>  a= new List<RectTransform>();
+
     void Start() => TabClick(0);
 
     public void TabClick(int n)

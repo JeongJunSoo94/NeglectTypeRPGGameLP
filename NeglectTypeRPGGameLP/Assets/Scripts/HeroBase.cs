@@ -5,7 +5,17 @@ public class HeroBase : MonoBehaviour
 {
     public HeroInfo heroInfo;
     public HeroStat heroStat;
+
+
+
+    private float maxHealth;
+    public float curHealth;
+    private float maxGage;
+    public float curSkillGage;
+
     SkillInfo[] skill;
+
+
 
     private void Start()
     {

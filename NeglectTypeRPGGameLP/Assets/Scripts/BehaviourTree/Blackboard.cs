@@ -7,6 +7,7 @@ namespace JJS.BT
     public class Blackboard : MonoBehaviour
     {
         public Vector3 moveToPosition;
-        public GameObject moveToObject;
+        public Context context;
+
     }
 }

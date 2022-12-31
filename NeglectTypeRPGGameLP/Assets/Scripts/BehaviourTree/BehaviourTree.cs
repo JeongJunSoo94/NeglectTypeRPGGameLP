@@ -158,13 +158,13 @@ namespace JJS.BT
             });
             return tree;
         }
-        public BehaviourTree Clone(ObjectInfo info)
+        public BehaviourTree Clone(Blackboard info)
         {
             BehaviourTree tree = Instantiate(this);
             tree.rootNode = tree.rootNode.Clone();
             tree.nodes = new List<Node>();
             Traverse(tree.rootNode, (n) => {
-                n.objectInfo = info;
+                n.blackBoard = info;
                 tree.nodes.Add(n);
             });
             return tree;
