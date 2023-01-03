@@ -15,10 +15,8 @@ public class HeroBase : MonoBehaviour
 
     SkillInfo[] skill;
 
-
-
-    private void Start()
+    public void print()
     {
-
+        Debug.Log(heroInfo.name);
     }
 }

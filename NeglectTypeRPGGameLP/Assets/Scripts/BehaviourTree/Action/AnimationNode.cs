@@ -6,9 +6,13 @@ namespace JJS.BT
 {
     public class AnimationNode : ActionNode
     {
+        HeroContext context;
         protected override void OnStart()
         {
-
+            if (context == null)
+            {
+                context = blackBoard.context as HeroContext;
+            }
         }
 
         protected override void OnStop()
@@ -17,6 +21,7 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
+            context.Gets().print();
             return State.Success;
         }
     }
