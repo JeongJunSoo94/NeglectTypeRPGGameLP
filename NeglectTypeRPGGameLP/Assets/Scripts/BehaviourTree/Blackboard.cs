@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace JJS.BT
 {
-    [System.Serializable]
-    public class Blackboard : MonoBehaviour
+    public interface IBlackboard
     {
-        public Vector3 moveToPosition;
-        public Context context;
+        virtual void Create() { }
+    }
+
+    [System.Serializable]
+    public abstract class Blackboard : MonoBehaviour, IBlackboard
+    {
 
     }
 }
