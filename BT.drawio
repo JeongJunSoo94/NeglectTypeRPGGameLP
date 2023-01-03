@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-03T08:36:14.186Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="pMN41RYJaiKD4oOkUxUN" version="20.8.0" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-03T08:37:29.653Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36" etag="3YHzpjKrz0O0EV-Dki-v" version="20.8.0" type="github">
   <diagram id="O-LWc2A8Pq9CezwLzfdt" name="페이지-1">
-    <mxGraphModel dx="937" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1359" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -115,7 +115,7 @@
           <mxGeometry y="60" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="G8qUzHMScA7fltSjxH6P-35" value="Pallarel" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
-          <mxGeometry x="557" y="669" width="209" height="140" as="geometry" />
+          <mxGeometry x="557" y="669" width="209" height="120" as="geometry" />
         </mxCell>
         <mxCell id="G8qUzHMScA7fltSjxH6P-36" value="+ childrenLeftToExecute: List&lt;State&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="G8qUzHMScA7fltSjxH6P-35">
           <mxGeometry y="26" width="209" height="22" as="geometry" />
@@ -124,7 +124,7 @@
           <mxGeometry y="48" width="209" height="8" as="geometry" />
         </mxCell>
         <mxCell id="G8qUzHMScA7fltSjxH6P-38" value="+ OnStart(): void override&#xa;+ OnStop(): void override&#xa;+ OnUpdate(): State override&#xa;- AbortRunningChildren: void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="G8qUzHMScA7fltSjxH6P-35">
-          <mxGeometry y="56" width="209" height="84" as="geometry" />
+          <mxGeometry y="56" width="209" height="64" as="geometry" />
         </mxCell>
         <mxCell id="G8qUzHMScA7fltSjxH6P-39" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.494;exitY=1.027;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="G8qUzHMScA7fltSjxH6P-19" target="G8qUzHMScA7fltSjxH6P-35">
           <mxGeometry x="0.4553" y="-81" width="160" relative="1" as="geometry">
