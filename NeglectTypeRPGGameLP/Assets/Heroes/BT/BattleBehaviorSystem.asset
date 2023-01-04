@@ -1,0 +1,404 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9139008350247504011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e67eac7f72407ca46b107edb1ebc19aa, type: 3}
+  m_Name: RootNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 3ff00998e68114240a6a9a627bc6033c
+  position: {x: -195.13913, y: -176.68808}
+  blackBoard: {fileID: 0}
+  description: 
+  child: {fileID: 1043033445128292158}
+--- !u!114 &-7338844552606009107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c9447d57d5370c439556c0bf4c2e8de, type: 3}
+  m_Name: FailNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f8939e5208460e942a012832de8e58ff
+  position: {x: -876.4682, y: 675.76807}
+  blackBoard: {fileID: 0}
+  description: "\uC784\uC2DC"
+--- !u!114 &-6802102175268480644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6e97d81d76e434e800bc0a033f6209, type: 3}
+  m_Name: VictoryCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: da5be679c20367e4d8422e531d162635
+  position: {x: 323.85944, y: 716.66016}
+  blackBoard: {fileID: 0}
+  description: "\uC2B9\uB9AC\uD558\uC600\uB098"
+  child: {fileID: 7215656656402009659}
+--- !u!114 &-6495512250867991663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a57da4cd3ee80d4f971759e6faad9ab, type: 3}
+  m_Name: BattleEndCleanNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e6b87d4bb0cf584498cecd3554cca085
+  position: {x: 449.85953, y: 1116.66}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &-6247122757058553379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29bfa8bcb83554042b85dece89b1b011, type: 3}
+  m_Name: BattleCountCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2a5881498911a2a4f9e0c3846742da8d
+  position: {x: -249.64394, y: 638.6966}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &-5943849940143815649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32cdd545ae5c804ca7a6f840a4b9b50, type: 3}
+  m_Name: StartUICheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d0cddab6365f8774c94b7d348ae0bbfc
+  position: {x: -570.12366, y: 489.51788}
+  blackBoard: {fileID: 0}
+  description: "\uC544\uB798 \uB178\uB4DC\uC5D0\uC11C \uC131\uACF5 \uBC18\uD658\uC2DC
+    fail\uBC18\uD658"
+  child: {fileID: 5043849997334561455}
+--- !u!114 &-4505825547987243694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a57da4cd3ee80d4f971759e6faad9ab, type: 3}
+  m_Name: BattleEndCleanNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7e980a3007c27ae46ba80a80d4f5ef6f
+  position: {x: 938.8597, y: 893.6601}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &-3896001312194298166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: f630e9480f57c154fb66bf4723197224
+  position: {x: -874.46814, y: 489.76816}
+  blackBoard: {fileID: 0}
+  description: "\uC900\uBE44"
+  children:
+  - {fileID: -7338844552606009107}
+--- !u!114 &-3242193478749123945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7cc43f9731c6e0f4ca180630a9c62f7e, type: 3}
+  m_Name: BattleTurnArrangementNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 74b85e82bcb8dd64fb9e7bb0c65d6058
+  position: {x: -471.60437, y: 842.7495}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &-2564119710970065395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdbe72133e79fd445a2d6ffaa8b1284d, type: 3}
+  m_Name: BattleTurnBehaviorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ab1b8f041ca5c5f4db694e55f493529d
+  position: {x: -55.643917, y: 638.6966}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &-208270775560355013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578f2733e38934b48942241d7f4df0aa, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c2d61d7713b6db448a78f4434180844f
+  position: {x: 582.4407, y: 470.6401}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -6802102175268480644}
+  - {fileID: 923362538676557401}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 836440a63851e2a4ea23a0abcb72a98b, type: 3}
+  m_Name: BattleBehaviorSystem
+  m_EditorClassIdentifier: 
+  rootNode: {fileID: -9139008350247504011}
+  treeState: 0
+  nodes:
+  - {fileID: -9139008350247504011}
+  - {fileID: 1043033445128292158}
+  - {fileID: 6000254945875169810}
+  - {fileID: -5943849940143815649}
+  - {fileID: 5043849997334561455}
+  - {fileID: -208270775560355013}
+  - {fileID: 7215656656402009659}
+  - {fileID: 923362538676557401}
+  - {fileID: -6802102175268480644}
+  - {fileID: 491592364670077866}
+  - {fileID: -3242193478749123945}
+  - {fileID: -6247122757058553379}
+  - {fileID: -2564119710970065395}
+  - {fileID: -3896001312194298166}
+  - {fileID: -7338844552606009107}
+  - {fileID: 2946076998634544871}
+  - {fileID: -6495512250867991663}
+  - {fileID: 7335209971161699033}
+  - {fileID: -4505825547987243694}
+--- !u!114 &491592364670077866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4c52d590fa34eef41a085f77a487d9e5
+  position: {x: -142.143, y: 464.96414}
+  blackBoard: {fileID: 0}
+  description: "\uC804\uD22C"
+  children:
+  - {fileID: -6247122757058553379}
+  - {fileID: -2564119710970065395}
+--- !u!114 &923362538676557401
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 039dc1dbcac47d54990d85b2078ca514
+  position: {x: 818.85956, y: 700.6601}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 7335209971161699033}
+  - {fileID: -4505825547987243694}
+--- !u!114 &1043033445128292158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 578f2733e38934b48942241d7f4df0aa, type: 3}
+  m_Name: SelectorNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 376386acd6513e04da5e94a1b9e54e1d
+  position: {x: -192.51892, y: 236.69662}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -3896001312194298166}
+  - {fileID: -5943849940143815649}
+  - {fileID: 491592364670077866}
+  - {fileID: -208270775560355013}
+--- !u!114 &2946076998634544871
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2be177421d0cf48a46acd6a2bd20d2, type: 3}
+  m_Name: VictoryUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 6106b6186d515444ead981f062ac1550
+  position: {x: 202.85951, y: 1115.66}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &5043849997334561455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 34e0d462398a069449f0236f8d9949e7
+  position: {x: -567.05676, y: 669.9432}
+  blackBoard: {fileID: 0}
+  description: "\uC2DC\uC791"
+  children:
+  - {fileID: 6000254945875169810}
+  - {fileID: -3242193478749123945}
+--- !u!114 &6000254945875169810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: StartUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 4acddec97af57204787df1e5dadc6e97
+  position: {x: -696.04175, y: 848.9769}
+  blackBoard: {fileID: 0}
+  description: 
+--- !u!114 &7215656656402009659
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 873b9c076d94a9f41b3928d676e25b1c
+  position: {x: 319.8595, y: 887.66003}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 2946076998634544871}
+  - {fileID: -6495512250867991663}
+--- !u!114 &7335209971161699033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bb4cfbc911a15a4ebc113dd8a324584, type: 3}
+  m_Name: DefeatUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c62e23a45dce41c489f00c214a209d22
+  position: {x: 745.8595, y: 889.6601}
+  blackBoard: {fileID: 0}
+  description: 

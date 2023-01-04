@@ -4,13 +4,10 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class BattleCountCheck : ActionNode
+    public class VictoryCheckNode : DecoratorNode
     {
-
-
         protected override void OnStart()
         {
-
         }
 
         protected override void OnStop()
@@ -19,8 +16,8 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-
-            return State.Success;
+            child.Update();
+            return State.Running;
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class DamageCheck : DecoratorNode
+    public class SequenceCheckNode : DecoratorNode
     {
         protected override void OnStart()
         {

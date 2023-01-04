@@ -7,6 +7,16 @@ namespace JJS.BT
     public class Blackboard : MonoBehaviour
     {
         public Context context;
+
+        private void Awake()
+        {
+            Init();
+        }
+
+        public void Init()
+        {
+            context.InitContext();
+        }
     }
 
 }

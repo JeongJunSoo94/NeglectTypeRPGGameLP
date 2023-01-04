@@ -13,4 +13,7 @@ public class HeroContext : Context
 
         return info;
     }
+    public override void InitContext()
+    {
+    }
 }

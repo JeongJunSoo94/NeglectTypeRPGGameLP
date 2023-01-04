@@ -120,12 +120,13 @@ namespace JJS.BT
 
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
         {
-            //base.BuildContextualMenu(evt);
+            Vector2 nodePosition = this.ChangeCoordinatesTo(contentViewContainer, evt.localMousePosition);
             {
+
                 var types = TypeCache.GetTypesDerivedFrom<ActionNode>();
                 foreach (var type in types)
                 {
-                    evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+                    evt.menu.AppendAction($"[Action]/{type.Name}", (a) => CreateNode(type, nodePosition));
                 }
             }
 
@@ -133,7 +134,7 @@ namespace JJS.BT
                 var types = TypeCache.GetTypesDerivedFrom<CompositeNode>();
                 foreach (var type in types)
                 {
-                    evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+                    evt.menu.AppendAction($"[Composite]/{type.Name}", (a) => CreateNode(type, nodePosition));
                 }
             }
 
@@ -141,14 +142,44 @@ namespace JJS.BT
                 var types = TypeCache.GetTypesDerivedFrom<DecoratorNode>();
                 foreach (var type in types)
                 {
-                    evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+                    evt.menu.AppendAction($"[Decorator]/{type.Name}", (a) => CreateNode(type, nodePosition));
                 }
             }
+            //{
+            //    var types = TypeCache.GetTypesDerivedFrom<ActionNode>();
+            //    foreach (var type in types)
+            //    {
+            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+            //    }
+            //}
+
+            //{
+            //    var types = TypeCache.GetTypesDerivedFrom<CompositeNode>();
+            //    foreach (var type in types)
+            //    {
+            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+            //    }
+            //}
+
+            //{
+            //    var types = TypeCache.GetTypesDerivedFrom<DecoratorNode>();
+            //    foreach (var type in types)
+            //    {
+            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
+            //    }
+            //}
         }
 
         void CreateNode(System.Type type)
         {
             Node node = tree.CreateNode(type);
+            CreateNodeView(node);
+        }
+
+        void CreateNode(System.Type type, Vector2 position)
+        {
+            Node node = tree.CreateNode(type);
+            node.position = position;
             CreateNodeView(node);
         }
 

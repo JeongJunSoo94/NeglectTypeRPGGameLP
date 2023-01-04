@@ -19,25 +19,6 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -2400839120172409166}
---- !u!114 &-9020712989801807178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 79a118b6e26070149a744309003dbe70, type: 3}
-  m_Name: SequenceCheck
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 790ea24f01f3d854b8ac992bfdb9b957
-  position: {x: 194, y: 646.88}
-  blackBoard: {fileID: 0}
-  description: "\uB0B4 \uC21C\uC11C\uAC00 \uC654\uB294\uAC00"
-  child: {fileID: 4475331866734409460}
 --- !u!114 &-8179143776996694590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,25 +100,6 @@ MonoBehaviour:
   children:
   - {fileID: 9035349294366682562}
   - {fileID: 7309710746585178887}
---- !u!114 &-4615646051204261117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8223f4859d36aa24da30aba51917b94b, type: 3}
-  m_Name: RepeatNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 2981d65c66d8ce843913fa09cabf48ff
-  position: {x: 1.0040107, y: 128.50597}
-  blackBoard: {fileID: 0}
-  description: 
-  child: {fileID: 8775428078115309027}
 --- !u!114 &-4394410258394057923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -213,6 +175,25 @@ MonoBehaviour:
   position: {x: 467.935, y: 1723.9675}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &-2255352901321592693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79a118b6e26070149a744309003dbe70, type: 3}
+  m_Name: SequenceCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b360f1d479e5a45438cd168a8d92d084
+  position: {x: 180.22716, y: 621.502}
+  blackBoard: {fileID: 0}
+  description: 
+  child: {fileID: 4475331866734409460}
 --- !u!114 &-1125418119469297944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,9 +213,9 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   children:
-  - {fileID: 7321490333449008780}
-  - {fileID: 934958712457650013}
-  - {fileID: -9020712989801807178}
+  - {fileID: 4621341597704371392}
+  - {fileID: 7821811617800623583}
+  - {fileID: -2255352901321592693}
   - {fileID: 9032924591394990372}
 --- !u!114 &-486654915704201253
 MonoBehaviour:
@@ -251,10 +232,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 14fe3d6bf8d36aa41bb9b6c0a5c8e46c
-  position: {x: 0, y: 0}
+  position: {x: 1, y: 117}
   blackBoard: {fileID: 0}
   description: 
-  child: {fileID: -4615646051204261117}
+  child: {fileID: 8775428078115309027}
 --- !u!114 &-384210076606581967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,12 +312,8 @@ MonoBehaviour:
   treeState: 0
   nodes:
   - {fileID: -486654915704201253}
-  - {fileID: -4615646051204261117}
   - {fileID: -1125418119469297944}
   - {fileID: 8775428078115309027}
-  - {fileID: 934958712457650013}
-  - {fileID: -9020712989801807178}
-  - {fileID: 7321490333449008780}
   - {fileID: -4394410258394057923}
   - {fileID: -384210076606581967}
   - {fileID: -3814839551938261722}
@@ -372,25 +349,9 @@ MonoBehaviour:
   - {fileID: -2302828999600644047}
   - {fileID: 7309710746585178887}
   - {fileID: 9035349294366682562}
---- !u!114 &934958712457650013
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af8a59816fab424db3b2390e8fb7c85, type: 3}
-  m_Name: DamageCheck
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 3611c1fb427d0bb439ecd5fb5a151c18
-  position: {x: -196.85425, y: 752.77936}
-  blackBoard: {fileID: 0}
-  description: "\uB370\uBBF8\uC9C0\uB97C \uC785\uC5C8\uB294\uAC00"
-  child: {fileID: -384210076606581967}
+  - {fileID: 7821811617800623583}
+  - {fileID: 4621341597704371392}
+  - {fileID: -2255352901321592693}
 --- !u!114 &1484370956722694731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -620,6 +581,25 @@ MonoBehaviour:
   description: 
   children:
   - {fileID: 4686856766047974948}
+--- !u!114 &4621341597704371392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6e97d81d76e434e800bc0a033f6209, type: 3}
+  m_Name: VictoryCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: b0a2ca79f4b54da4faa5ded3d2dc0af9
+  position: {x: -512.4742, y: 579}
+  blackBoard: {fileID: 0}
+  description: 
+  child: {fileID: -4394410258394057923}
 --- !u!114 &4686856766047974948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -739,25 +719,6 @@ MonoBehaviour:
   position: {x: 907.8625, y: 1537.3578}
   blackBoard: {fileID: 0}
   description: 
---- !u!114 &7321490333449008780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a6e97d81d76e434e800bc0a033f6209, type: 3}
-  m_Name: VictoryCheck
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 3d11a75742bff704a8818f494c79a966
-  position: {x: -504, y: 615}
-  blackBoard: {fileID: 0}
-  description: "\uC2B9\uB9AC \uC870\uAC74"
-  child: {fileID: -4394410258394057923}
 --- !u!114 &7368879895939858568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,6 +755,25 @@ MonoBehaviour:
   position: {x: -517.2505, y: 1705.5189}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &7821811617800623583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7af8a59816fab424db3b2390e8fb7c85, type: 3}
+  m_Name: DamageCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a58672d55f07cbb4ca897d41ed92bc10
+  position: {x: -193.49802, y: 610.2907}
+  blackBoard: {fileID: 0}
+  description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
+  child: {fileID: -384210076606581967}
 --- !u!114 &8775428078115309027
 MonoBehaviour:
   m_ObjectHideFlags: 0

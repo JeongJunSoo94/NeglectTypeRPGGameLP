@@ -4,10 +4,12 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class SequenceCheck : DecoratorNode
+    public class DefeatUINode : ActionNode
     {
+
         protected override void OnStart()
         {
+
         }
 
         protected override void OnStop()
@@ -16,8 +18,7 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            child.Update();
-            return State.Running;
+            return State.Success;
         }
     }
 }
