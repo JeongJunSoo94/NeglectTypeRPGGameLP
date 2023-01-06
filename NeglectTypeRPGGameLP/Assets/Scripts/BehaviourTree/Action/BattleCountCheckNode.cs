@@ -23,10 +23,27 @@ namespace JJS.BT
         {
             if (BSC.state == BattleState.Battle)
             {
-
-                return State.Success;
+                if(BattlePossibleCheck())
+                    return State.Success;
             }
             return State.Failure;
+        }
+
+        bool BattlePossibleCheck()
+        {
+            if (BSC.heroRedBattleList.Count().Equals(0))
+            {
+                BSC.winner = Win.BLUE;
+                BSC.state = BattleState.End;
+                return false;
+            }
+            if (BSC.heroBlueBattleList.Count().Equals(0))
+            {
+                BSC.winner = Win.RED;
+                BSC.state = BattleState.End;
+                return false;
+            }
+            return true;
         }
     }
 }

@@ -11,9 +11,13 @@ public class ObjectPool: MonoBehaviour
     public Queue<GameObject> useObjs;
     public Queue<GameObject> waitObjs;
 
-
     public int minCount;
     public int curCount;
+
+    private void Awake()
+    {
+        Init();
+    }
 
     public void Init()
     {
@@ -35,19 +39,21 @@ public class ObjectPool: MonoBehaviour
     }
 
 
-    public void Enqueue()
+    private void Enqueue()
     {
         GameObject obj = Instantiate(prefab);
+        obj.GetComponent<HeroBattleIconUI>().parant = this;
         obj.SetActive(false);
-        waitObjs.Enqueue(obj);
+        //waitObjs.Enqueue(obj);
         curCount++;
     }
 
-    public void Enqueue(Transform parent)
+    private void Enqueue(Transform parent)
     {
         GameObject obj = Instantiate(prefab, parent);
+        obj.GetComponent<HeroBattleIconUI>().parant = this;
         obj.SetActive(false);
-        waitObjs.Enqueue(obj);
+        //waitObjs.Enqueue(obj);
         curCount++;
     }
 
@@ -60,14 +66,17 @@ public class ObjectPool: MonoBehaviour
     public GameObject Dequeue()
     {
         if (waitObjs.Count.Equals(0))
-            Enqueue();
+        {
+            if (parent)
+                Enqueue(parent);
+            else
+                Enqueue();
+        }
 
         useObjs.Enqueue(waitObjs.Peek());
         curCount--;
         return waitObjs.Dequeue();
     }
-
-
 
 
 }

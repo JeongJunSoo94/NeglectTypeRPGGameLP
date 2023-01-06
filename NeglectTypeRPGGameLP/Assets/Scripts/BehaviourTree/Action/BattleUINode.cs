@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class VictoryUINode : ActionNode
+    public class BattleUINode : ActionNode
     {
         BattleSystemContext BSC;
         protected override void OnStart()
@@ -21,6 +21,8 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
+
+
             return State.Success;
         }
     }

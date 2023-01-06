@@ -22,7 +22,10 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            HeroBase hero = BSC.heroBattleList.Dequeue();
+            //if (!BSC.heroBattleList.Count().Equals(0))
+            //{
+            //    HeroBase hero = BSC.heroBattleList.Dequeue();
+            //}
 
 
             return State.Success;

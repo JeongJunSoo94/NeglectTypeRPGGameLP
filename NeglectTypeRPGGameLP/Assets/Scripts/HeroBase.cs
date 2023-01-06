@@ -2,15 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class HeroBase : MonoBehaviour, IComparable<HeroBase>
+public class HeroBase : IComparable<HeroBase>
 {
     public HeroInfo heroInfo;
     public HeroStat heroStat;
 
     public bool myTurn;
 
+
     private float maxHealth;
-    public float curHealth;
+    public float prevHealth;
+    public float curHealth=100;
     private float maxGage;
     public float curSkillGage;
 

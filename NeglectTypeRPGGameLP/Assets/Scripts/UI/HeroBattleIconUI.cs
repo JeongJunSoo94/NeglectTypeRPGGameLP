@@ -13,10 +13,20 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     public Image _image;
 
     public bool isUse;
+
+    public ObjectPool parant;
+
+    public int heroIndex;
+
     private void Awake()
     {
         _image = GetComponent<Image>();
         Init();
+    }
+
+    private void OnDisable()
+    {
+        parant.Enqueue(this.gameObject);
     }
 
     public void Init()

@@ -16,8 +16,8 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            child.Update();
-            return State.Running;
+            //child.Update();
+            return State.Failure;
         }
     }
 }

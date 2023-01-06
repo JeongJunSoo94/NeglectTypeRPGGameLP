@@ -8,7 +8,6 @@ namespace JJS.BT
     {
         BattleSystemContext BSC;
 
-
         protected override void OnStart()
         {
             if (BSC == null)
@@ -23,15 +22,106 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            HeroBase hero;
-            for (int i = 0; i < BSC.heroBattleList.Count(); i++)
+            switch (BSC.state)
             {
-                hero = BSC.heroBattleList.Dequeue();
-                hero.myTurn = true;
+                case BattleState.Battle:
+                    {
+                        if (BattlePossibleCheck())
+                        {
+                            BattleOneTurn();
+                            return State.Running;
+                        }
+                    }
+                    break;
+                case BattleState.BattleWaitTurn:
+                    {
+                        if (BattlePossibleCheck())
+                        {
+                            return State.Running;
+                        }
+                    }
+                    break;
+
+                //case BattleState.BattleEndTurn:
+                //    {
+                //        if (BattlePossibleCheck())
+                //        {
+                //            BattleOneTurn();
+                //            return State.Running;
+                //        }
+                //    }
+                //    break;
+            }
+            return State.Success;
+        }
+
+        void BattleOneTurn()
+        {
+            HeroBase hero;
+            if (BSC.isRedTurn)
+            {
+                if (BSC.heroRedBattleList.Count().Equals(0))
+                {
+                    BSC.isRedTurn = false;
+                    ResetHero(BSC.RedHero, BSC.heroRedBattleList);
+                }
+                else
+                { 
+                    hero = BSC.heroRedBattleList.Dequeue();
+                    if (hero.curHealth != 0)
+                    {
+                        hero.myTurn = true;
+                        BSC.state = BattleState.BattleWaitTurn;
+                        //BSC.heroRedBattleList.Enqueue(hero);
+                    }
+                }
+            }
+            else
+            {
+
+                if (BSC.heroBlueBattleList.Count().Equals(0))
+                {
+                    BSC.isRedTurn = true;
+                    ResetHero(BSC.BlueHero, BSC.heroBlueBattleList);
+                }
+                else
+                {
+                    hero = BSC.heroBlueBattleList.Dequeue();
+                    if (hero.curHealth != 0)
+                    {
+                        hero.myTurn = true;
+                        BSC.state = BattleState.BattleWaitTurn;
+                        //BSC.heroBlueBattleList.Enqueue(hero);
+                    }
+                }
+
             }
 
+        }
 
-            return State.Success;
+        bool BattlePossibleCheck()
+        {
+            if (BSC.RedHero.Count.Equals(0))
+            {
+                BSC.winner = Win.BLUE;
+                BSC.state = BattleState.End;
+                return false;
+            }
+            if (BSC.BlueHero.Count.Equals(0))
+            {
+                BSC.winner = Win.RED;
+                BSC.state = BattleState.End;
+                return false;
+            }
+            return true;
+        }
+
+        void ResetHero(List<GameObject> list, PriorityQueue<HeroBase> q)
+        {
+            for (int i = 0; i < list.Count; i++)
+            {
+                q.Enqueue(list[i].GetComponent<HeroContext>().GetInfo());
+            }
         }
     }
 }

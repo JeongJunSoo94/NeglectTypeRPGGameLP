@@ -6,8 +6,13 @@ namespace JJS.BT
 {
     public class SequenceCheckNode : DecoratorNode
     {
+        HeroContext HC;
         protected override void OnStart()
         {
+            if (HC == null)
+            {
+                HC = blackBoard.context as HeroContext;
+            }
         }
 
         protected override void OnStop()
@@ -16,8 +21,12 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            child.Update();
-            return State.Running;
+            if (HC.info.myTurn)
+            {
+                child.Update();
+                return State.Running;
+            }
+            return State.Failure;
         }
     }
 }

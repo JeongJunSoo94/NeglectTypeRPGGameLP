@@ -6,8 +6,13 @@ namespace JJS.BT
 {
     public class DamageCheckNode : DecoratorNode
     {
+        HeroContext HC;
         protected override void OnStart()
         {
+            if (HC == null)
+            {
+                HC = blackBoard.context as HeroContext;
+            }
         }
 
         protected override void OnStop()
@@ -16,8 +21,20 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            child.Update();
-            return State.Running;
+            if (HC.info.curHealth <= 0)
+            {
+                HC.gameObject.SetActive(false);
+            }
+            if (HC.info.prevHealth != HC.info.curHealth)
+            {
+                HC.info.prevHealth = HC.info.curHealth;
+            }
+                //if (HC.info.prevHealth != HC.info.curHealth)
+                //{
+                //    child.Update();
+                //    return State.Running;
+                //}
+           return State.Failure;
         }
     }
 }

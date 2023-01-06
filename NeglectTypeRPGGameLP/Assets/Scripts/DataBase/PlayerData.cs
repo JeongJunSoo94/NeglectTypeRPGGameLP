@@ -8,7 +8,7 @@ public class PlayerData : ScriptableObject
     public int _id;
     public string _name;
 
-    public List<HeroBase> characterInventory;
+    public List<bool> characterInventory;
     public List<int> itemInventory;
     
 
