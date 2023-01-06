@@ -109,6 +109,21 @@ public class HeroMakeEditor : EditorWindow
                     EditorUtility.SetDirty(asset);
                 }
             }
+            else if (i == 2)
+            {
+                for (int j = 0; j < cache.Count; j++)
+                {
+                    string path = "Assets/Heroes/Data/FactionInfo.asset";
+                    HeroStat asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
+                    if (!asset)
+                    {
+                        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), path);
+                        asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
+                    }
+                    asset.CreateHeroStatData(asset, cache[j]);
+                    EditorUtility.SetDirty(asset);
+                }
+            }
         }
         label.text = "µ•¿Ã≈Õ ¿˙¿Â«ﬂ¬«ø∞ ª—øÏ";
         ColorChange(topPane, Color.green);
@@ -125,17 +140,16 @@ public class HeroMakeEditor : EditorWindow
     };
     IEnumerator GetDataSheet()
     {
-        UnityWebRequest www = UnityWebRequest.Get(URL[0]);
-        yield return www.SendWebRequest();
+        UnityWebRequest www;
+        string data;
+        for (int i = 0; i < URL.Length; i++)
+        {
+            www = UnityWebRequest.Get(URL[i]);
+            yield return www.SendWebRequest();
 
-        string data = www.downloadHandler.text;
-        TSVPasing(data,0);
-
-        www = UnityWebRequest.Get(URL[1]);
-        yield return www.SendWebRequest();
-
-        data = www.downloadHandler.text;
-        TSVPasing(data,1);
+            data = www.downloadHandler.text;
+            TSVPasing(data, i);
+        }
 
         label.text = "µ•¿Ã≈Õ ∫“∑Øø‘¬«ø∞ ª—øÏ";
         ColorChange(topPane, Color.blue);

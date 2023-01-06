@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   Name: Rebecca
-  Faction: "\uC758\uC6A9\uAD70"
+  Faction: Minutemen
   Type: "\uC0AC\uC218"
   Rarity: Elite
   Explanation: "\uC5D8\uB9AC\uD2B8 \uC2A4\uB098\uC774\uD37C"
-  Icon: Rebecca_Icon
+  Icon: {fileID: 21300000, guid: 8a6cf80b3a19fa648bddfbfd3000c899, type: 3}
   Model: 1

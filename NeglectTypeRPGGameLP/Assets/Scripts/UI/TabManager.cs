@@ -6,7 +6,11 @@ public class TabManager : MonoBehaviour
 {
     //public GameObject[] Tab;
     public int Tab=6;
+    
+    //이미지 갯수 체크
     public Image[] TabBtnImage;
+
+    //데이터 베이스 접근해야함
     public Sprite[] IdleSprite, SelectSprite;
 
     public List<RectTransform>  a= new List<RectTransform>();

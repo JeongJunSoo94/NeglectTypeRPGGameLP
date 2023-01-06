@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 91e49f2979f80184e9032b8dae01e2e3, type: 3}
-  m_Name: Kin OgawaInfoData
+  m_Name: KinOgawaInfoData
   m_EditorClassIdentifier: 
   id: 5
-  Name: Kin Ogawa
-  Faction: "\uD669\uC57C\uC758 \uC790\uC2DD"
+  Name: KinOgawa
+  Faction: Wildlings
   Type: "\uC6A9\uC0AC"
   Rarity: Elite
   Explanation: "\uD6C4\uC9C0\uC640\uB77C \uBB34\uC0AC"
-  Icon: Kin Ogawa_Icon
+  Icon: {fileID: 21300000, guid: 68025d280020d0f4397222b3d540de4f, type: 3}
   Model: 5

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 4
   Name: Benson
-  Faction: "\uC758\uC6A9\uAD70"
+  Faction: Minutemen
   Type: "\uC6A9\uC0AC"
   Rarity: Elite
   Explanation: "\uC7AC\uC0DD\uC758 \uBD88"
-  Icon: Benson_Icon
+  Icon: {fileID: 21300000, guid: baa055ca75e384d4c880961fb537a3d8, type: 3}
   Model: 4

@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   Name: Bolton
-  Faction: "\uC758\uC6A9\uAD70"
+  Faction: Minutemen
   Type: "\uAC00\uB514\uC5B8"
   Rarity: Elite
   Explanation: "\uC815\uC758 \uC218\uD638"
-  Icon: Bolton_Icon
+  Icon: {fileID: 21300000, guid: a641107763393d54296c1815276a130a, type: 3}
   Model: 3

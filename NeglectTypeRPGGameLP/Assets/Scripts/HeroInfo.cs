@@ -11,7 +11,7 @@ public class HeroInfo : ScriptableObject
     public string Type;
     public string Rarity;
     public string Explanation;
-    public string Icon;
+    public Sprite Icon;
     public string Model;
 
     public void CreateHeroInfoData(HeroInfo info, string[] value)
@@ -22,7 +22,7 @@ public class HeroInfo : ScriptableObject
         info.Type           = value[3].Trim();
         info.Rarity         = value[4].Trim();
         info.Explanation    = value[5].Trim();
-        info.Icon           = value[6].Trim();
+        info.Icon = Resources.Load<Sprite>("Icon/"+value[6].Trim());
         info.Model          = value[7].Trim();
     }
 }
