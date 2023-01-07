@@ -21,7 +21,7 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            context.Gets().print();
+
             return State.Success;
         }
 

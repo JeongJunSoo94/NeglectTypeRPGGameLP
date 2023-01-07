@@ -27,8 +27,9 @@ namespace JJS.BT
             //    HeroBase hero = BSC.heroBattleList.Dequeue();
             //}
 
-
-            return State.Success;
+            if (BSC.isStart)
+                return State.Success;
+            return State.Running;
         }
     }
 }

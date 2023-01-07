@@ -14,26 +14,17 @@ namespace JJS.BT
                 HC = blackBoard.context as HeroContext;
             }
         }
-
+        
         protected override void OnStop()
         {
         }
 
         protected override State OnUpdate()
         {
+
             if (HC.win)
             {
-                switch (child.Update())
-                {
-                    case State.Running:
-                        { 
-                            return State.Running;
-                        }
-                    case State.Success:
-                        {
-                            return State.Success;
-                        }
-                }
+                child.Update();
             }
             return State.Failure;
         }

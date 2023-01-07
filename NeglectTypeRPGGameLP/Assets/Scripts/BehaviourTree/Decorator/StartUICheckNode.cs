@@ -24,6 +24,7 @@ namespace JJS.BT
             if (BSC.state == BattleState.Start && child.Update()==State.Success)
             {
                 BSC.state = BattleState.Battle;
+                BSC.BattleUI(false);
                 return State.Failure;
             }
             return State.Running;

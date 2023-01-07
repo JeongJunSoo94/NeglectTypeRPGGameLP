@@ -52,7 +52,7 @@ namespace JJS.BT
                 //    }
                 //    break;
             }
-            return State.Success;
+            return State.Failure;
         }
 
         void BattleOneTurn()
@@ -101,18 +101,19 @@ namespace JJS.BT
 
         bool BattlePossibleCheck()
         {
-            if (BSC.RedHero.Count.Equals(0))
+            if (BSC.redCount.Equals(0))
             {
                 BSC.winner = Win.BLUE;
                 BSC.state = BattleState.End;
                 return false;
             }
-            if (BSC.BlueHero.Count.Equals(0))
+            if (BSC.blueCount.Equals(0))
             {
                 BSC.winner = Win.RED;
                 BSC.state = BattleState.End;
                 return false;
             }
+
             return true;
         }
 
