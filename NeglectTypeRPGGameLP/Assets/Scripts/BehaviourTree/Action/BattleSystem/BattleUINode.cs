@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class BattleTurnArrangementNode : ActionNode
+    public class BattleUINode : ActionNode
     {
         BattleSystemContext BSC;
-
         protected override void OnStart()
         {
             if (BSC == null)
@@ -22,14 +21,16 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            //if (!BSC.heroBattleList.Count().Equals(0))
-            //{
-            //    HeroBase hero = BSC.heroBattleList.Dequeue();
-            //}
+            BattleUI(false);
+            return State.Success;
+        }
 
-            if (BSC.isStart)
-                return State.Success;
-            return State.Running;
+        public void BattleUI(bool use)
+        {
+            for (int i = 0; i < BSC.UI.Length; i++)
+            {
+                BSC.UI[i].SetActive(use);
+            }
         }
     }
 }

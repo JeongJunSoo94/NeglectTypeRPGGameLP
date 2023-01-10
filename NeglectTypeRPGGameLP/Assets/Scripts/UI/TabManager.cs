@@ -25,13 +25,13 @@ public class TabManager : MonoBehaviour
 
     public void CreateUI()
     {
-        int count = GameManager.Instance.player.characterInventory.Count;
+        int count = DataManager.Instance.player.characterInventory.Count;
         for (int i = 0; i < count; i++)
         {
-            if (GameManager.Instance.player.characterInventory[i])
+            if (DataManager.Instance.player.characterInventory[i])
             {
                 GameObject obj = pool.Dequeue();
-                obj.GetComponent<Image>().sprite = GameManager.Instance.heroInfo[i].Icon;
+                obj.GetComponent<Image>().sprite = DataManager.Instance.heroInfo[i].Icon;
                 obj.SetActive(true);
             }
         }

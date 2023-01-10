@@ -23,10 +23,10 @@ namespace JJS.BT
         {
             if (HC.info.curHealth <= 0)
             {
-                if (HC.isRed)
-                    HC.bsc.redCount--;
-                else
-                    HC.bsc.blueCount--;
+                //if (HC.isRed)
+                //    HC.bsc.redCount--;
+                //else
+                //    HC.bsc.blueCount--;
 
                 HC.gameObject.SetActive(false);
             }

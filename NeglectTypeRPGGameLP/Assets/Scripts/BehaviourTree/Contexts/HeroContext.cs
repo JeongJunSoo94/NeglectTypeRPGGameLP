@@ -1,16 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroContext : Context
+public class HeroContext : Context, IComparable<HeroContext>
 {
     public HeroBase info;
-
-    public BattleSystemContext bsc;
 
     //юс╫ц
     public HeroInfo heroInfo;
     public HeroStat heroStat;
+
+    public bool myTurn;
 
     public bool win;
 
@@ -19,14 +20,6 @@ public class HeroContext : Context
     public Vector3 originPos;
 
     public GameObject target;
-
-    public HeroBase Gets()
-    {
-        if(info ==null)
-            info = gameObject.GetComponent<HeroBase>();
-
-        return info;
-    }
 
     public HeroBase GetInfo()
     {
@@ -40,6 +33,7 @@ public class HeroContext : Context
         }
         return info;
     }
+
     public override void InitContext()
     {
         if (info == null)
@@ -50,5 +44,15 @@ public class HeroContext : Context
         info.prevHealth = info.curHealth;
         info.heroInfo = heroInfo;
         info.heroStat = heroStat;
+    }
+
+    public int CompareTo(HeroContext x)
+    {
+        if (info.heroStat.Luck > x.heroStat.Luck)
+            return 1;
+        else if (info.heroStat.Luck == x.heroStat.Luck)
+            return 0;
+        else
+            return -1;
     }
 }

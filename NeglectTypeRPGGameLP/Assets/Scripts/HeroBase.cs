@@ -2,13 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class HeroBase : IComparable<HeroBase>
+public class HeroBase
 {
     public HeroInfo heroInfo;
     public HeroStat heroStat;
-
-    public bool myTurn;
-
 
     private float maxHealth;
     public float prevHealth;
@@ -17,11 +14,6 @@ public class HeroBase : IComparable<HeroBase>
     public float curSkillGage;
 
     SkillInfo[] skill;
-
-    public void print()
-    {
-        //Debug.Log(heroInfo.name);
-    }
 
     public int CompareTo(HeroBase x)
     {

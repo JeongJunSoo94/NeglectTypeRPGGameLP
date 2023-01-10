@@ -34,7 +34,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4694dbba75da337418dcb95c9079e305
-  position: {x: 388.01355, y: 1192.255}
+  position: {x: 413.19257, y: 1188.0977}
   blackBoard: {fileID: 0}
   description: 
   isMove: 0
@@ -697,7 +697,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 562f31321a3895e4cb359353a9927bb3
-  position: {x: 824.7462, y: 1199.2231}
+  position: {x: 876.6425, y: 1185.84}
   blackBoard: {fileID: 0}
   description: 
   isMove: 0
@@ -907,6 +907,6 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e76f28c31ed6f1a4fb38a89771512323
-  position: {x: 23.270851, y: 1912.7529}
+  position: {x: 15.227483, y: 1915.5042}
   blackBoard: {fileID: 0}
   description: 

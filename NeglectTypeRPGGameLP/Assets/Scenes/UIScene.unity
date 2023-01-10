@@ -342,8 +342,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1966452295}
   m_HandleRect: {fileID: 1966452294}
   m_Direction: 0
-  m_Value: 1
-  m_Size: 0.88241684
+  m_Value: 0
+  m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -495,7 +495,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70115257}
-  - component: {fileID: 70115255}
+  - component: {fileID: 70115259}
   - component: {fileID: 70115254}
   - component: {fileID: 70115258}
   m_Layer: 0
@@ -517,26 +517,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 9f705df49bbbaad4083c23215605ac42, type: 2}
   heroStat: {fileID: 11400000, guid: dc0b81b836a04b1498b29be160b865e6, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &70115255
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 70115252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 70115254}
 --- !u!4 &70115257
 Transform:
   m_ObjectHideFlags: 0
@@ -566,7 +553,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 70115254}
+--- !u!114 &70115259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 70115252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 70115254}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &128005418
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,7 +577,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 128005423}
-  - component: {fileID: 128005421}
+  - component: {fileID: 128005425}
   - component: {fileID: 128005420}
   - component: {fileID: 128005424}
   m_Layer: 0
@@ -598,26 +599,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: d8403a056baeade429403a36be77fae9, type: 2}
   heroStat: {fileID: 11400000, guid: 5904b72f68c230d43a4b97b07d39de81, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &128005421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 128005418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 128005420}
 --- !u!4 &128005423
 Transform:
   m_ObjectHideFlags: 0
@@ -647,7 +635,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 128005420}
+--- !u!114 &128005425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128005418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 128005420}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &140975923
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,9 +1161,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 206551105}
-  - component: {fileID: 206551104}
   - component: {fileID: 206551103}
   - component: {fileID: 206551106}
+  - component: {fileID: 206551107}
   m_Layer: 0
   m_Name: Character (9)
   m_TagString: Untagged
@@ -1181,26 +1183,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: af53b76b6b1a0f8479be31aeb22b2290, type: 2}
   heroStat: {fileID: 11400000, guid: 464b30c5572616b4281f41b01dbcc1cf, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &206551104
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 206551101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 206551103}
 --- !u!4 &206551105
 Transform:
   m_ObjectHideFlags: 0
@@ -1230,7 +1219,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 206551103}
+--- !u!114 &206551107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206551101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &235553720
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,9 +2066,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 399596148}
-  - component: {fileID: 399596147}
   - component: {fileID: 399596146}
   - component: {fileID: 399596149}
+  - component: {fileID: 399596150}
   m_Layer: 0
   m_Name: Character (5)
   m_TagString: Untagged
@@ -2085,26 +2088,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: d8403a056baeade429403a36be77fae9, type: 2}
   heroStat: {fileID: 11400000, guid: 5904b72f68c230d43a4b97b07d39de81, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &399596147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 399596144}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 399596146}
 --- !u!4 &399596148
 Transform:
   m_ObjectHideFlags: 0
@@ -2134,7 +2124,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 399596146}
+--- !u!114 &399596150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 399596144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -2395,7 +2399,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458092517}
-  - component: {fileID: 458092515}
+  - component: {fileID: 458092519}
   - component: {fileID: 458092514}
   - component: {fileID: 458092518}
   m_Layer: 0
@@ -2417,26 +2421,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 080c191b06fcdb04b8de2051b22d3af3, type: 2}
   heroStat: {fileID: 11400000, guid: 136b74110b4150e4985fcbddf2b49ab2, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &458092515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 458092512}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 458092514}
 --- !u!4 &458092517
 Transform:
   m_ObjectHideFlags: 0
@@ -2466,7 +2457,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 458092514}
+--- !u!114 &458092519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458092512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &472068463
 GameObject:
   m_ObjectHideFlags: 0
@@ -3488,9 +3493,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 818030642}
-  - component: {fileID: 818030641}
   - component: {fileID: 818030640}
   - component: {fileID: 818030643}
+  - component: {fileID: 818030644}
   m_Layer: 0
   m_Name: Character (8)
   m_TagString: Untagged
@@ -3510,26 +3515,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 3692a1229310f504b80b77e038101305, type: 2}
   heroStat: {fileID: 11400000, guid: 909463aca52b6af408e071da8a768512, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &818030641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 818030638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 818030640}
 --- !u!4 &818030642
 Transform:
   m_ObjectHideFlags: 0
@@ -3559,7 +3551,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 818030640}
+--- !u!114 &818030644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818030638}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3620,7 +3626,7 @@ GameObject:
   - component: {fileID: 837752366}
   - component: {fileID: 837752367}
   m_Layer: 0
-  m_Name: GameManager
+  m_Name: DataManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5110,7 +5116,6 @@ MonoBehaviour:
   isRedTurn: 1
   redCount: 0
   blueCount: 0
-  isStart: 0
   UI:
   - {fileID: 1746991022}
   - {fileID: 381223562}
@@ -5126,10 +5131,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1146094937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
+  m_Script: {fileID: 11500000, guid: c3ea3d0e9c851f942a3076c58b463efd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  context: {fileID: 1146094940}
+  context: {fileID: 0}
+  isStart: 0
 --- !u!1 &1159624479
 GameObject:
   m_ObjectHideFlags: 0
@@ -6417,7 +6423,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1520195714}
-  - component: {fileID: 1520195718}
+  - component: {fileID: 1520195720}
   - component: {fileID: 1520195717}
   - component: {fileID: 1520195719}
   m_Layer: 0
@@ -6455,26 +6461,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 3692a1229310f504b80b77e038101305, type: 2}
   heroStat: {fileID: 11400000, guid: 909463aca52b6af408e071da8a768512, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &1520195718
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1520195709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 1520195717}
 --- !u!114 &1520195719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6488,7 +6481,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 1520195717}
+--- !u!114 &1520195720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1520195709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1578879298
 GameObject:
   m_ObjectHideFlags: 0
@@ -7159,7 +7166,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1707155350}
-  - component: {fileID: 1707155348}
+  - component: {fileID: 1707155352}
   - component: {fileID: 1707155347}
   - component: {fileID: 1707155351}
   m_Layer: 0
@@ -7181,26 +7188,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: af53b76b6b1a0f8479be31aeb22b2290, type: 2}
   heroStat: {fileID: 11400000, guid: 464b30c5572616b4281f41b01dbcc1cf, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &1707155348
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1707155345}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 1707155347}
 --- !u!4 &1707155350
 Transform:
   m_ObjectHideFlags: 0
@@ -7230,7 +7224,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 1707155347}
+--- !u!114 &1707155352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707155345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1714329816
 GameObject:
   m_ObjectHideFlags: 0
@@ -9145,9 +9153,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1146094940}
-        m_TargetAssemblyTypeName: BattleSystemContext, Assembly-CSharp
-        m_MethodName: OnStart
+      - m_Target: {fileID: 1146094941}
+        m_TargetAssemblyTypeName: BattleSystemBlackboard, Assembly-CSharp
+        m_MethodName: BattleStart
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9204,9 +9212,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998985965}
-  - component: {fileID: 1998985964}
   - component: {fileID: 1998985963}
   - component: {fileID: 1998985966}
+  - component: {fileID: 1998985967}
   m_Layer: 0
   m_Name: Character (6)
   m_TagString: Untagged
@@ -9226,26 +9234,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 9f705df49bbbaad4083c23215605ac42, type: 2}
   heroStat: {fileID: 11400000, guid: dc0b81b836a04b1498b29be160b865e6, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &1998985964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1998985961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 1998985963}
 --- !u!4 &1998985965
 Transform:
   m_ObjectHideFlags: 0
@@ -9275,7 +9270,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 1998985963}
+--- !u!114 &1998985967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998985961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2005814781
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,9 +9294,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2005814785}
-  - component: {fileID: 2005814784}
   - component: {fileID: 2005814783}
   - component: {fileID: 2005814786}
+  - component: {fileID: 2005814787}
   m_Layer: 0
   m_Name: Character (7)
   m_TagString: Untagged
@@ -9307,26 +9316,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6befc912b29a9440a1412df60bb4154, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bsc: {fileID: 0}
   heroInfo: {fileID: 11400000, guid: 080c191b06fcdb04b8de2051b22d3af3, type: 2}
   heroStat: {fileID: 11400000, guid: 136b74110b4150e4985fcbddf2b49ab2, type: 2}
+  myTurn: 0
   win: 0
   isRed: 0
   originPos: {x: 0, y: 0, z: 0}
   target: {fileID: 0}
---- !u!114 &2005814784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005814781}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4849d89a1a890ab45bd176711f3a7b11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  context: {fileID: 2005814783}
 --- !u!4 &2005814785
 Transform:
   m_ObjectHideFlags: 0
@@ -9356,7 +9352,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
-  heroBase: {fileID: 2005814783}
+--- !u!114 &2005814787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005814781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 653bdcddacb556b4aa98725410d21999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  context: {fileID: 0}
+  battleSystemBlackboard: {fileID: 0}
+  moveToPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2012323755
 GameObject:
   m_ObjectHideFlags: 0

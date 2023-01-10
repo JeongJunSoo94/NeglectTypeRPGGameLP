@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 3ff00998e68114240a6a9a627bc6033c
-  position: {x: -195.13913, y: -176.68808}
+  position: {x: -190.96764, y: -35.427532}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 1043033445128292158}
@@ -52,7 +52,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: da5be679c20367e4d8422e531d162635
-  position: {x: 323.85944, y: 716.66016}
+  position: {x: 322.74246, y: 613.715}
   blackBoard: {fileID: 0}
   description: "\uC2B9\uB9AC\uD558\uC600\uB098"
   child: {fileID: 7215656656402009659}
@@ -71,25 +71,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e6b87d4bb0cf584498cecd3554cca085
-  position: {x: 449.85953, y: 1116.66}
-  blackBoard: {fileID: 0}
-  description: 
---- !u!114 &-6247122757058553379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29bfa8bcb83554042b85dece89b1b011, type: 3}
-  m_Name: BattleCountCheckNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 2a5881498911a2a4f9e0c3846742da8d
-  position: {x: -242.00002, y: 645.4791}
+  position: {x: 447.1025, y: 919.87}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-5943849940143815649
@@ -127,7 +109,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7e980a3007c27ae46ba80a80d4f5ef6f
-  position: {x: 938.8597, y: 893.6601}
+  position: {x: 1019.5175, y: 803.97003}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-3896001312194298166
@@ -150,6 +132,24 @@ MonoBehaviour:
   description: "\uC900\uBE44"
   children:
   - {fileID: -7338844552606009107}
+--- !u!114 &-3382452623977940017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 966244258208eb143b6c087869febdc9, type: 3}
+  m_Name: BattleUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: d932b5c25ef7fe24e8fab54a73d7ff8f
+  position: {x: -283.51245, y: 610.97}
+  blackBoard: {fileID: 0}
+  description: 
 --- !u!114 &-3242193478749123945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,7 +183,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab1b8f041ca5c5f4db694e55f493529d
-  position: {x: -55.643917, y: 638.6966}
+  position: {x: -107.51251, y: 609.97}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-208270775560355013
@@ -233,7 +233,6 @@ MonoBehaviour:
   - {fileID: -6802102175268480644}
   - {fileID: 491592364670077866}
   - {fileID: -3242193478749123945}
-  - {fileID: -6247122757058553379}
   - {fileID: -2564119710970065395}
   - {fileID: -3896001312194298166}
   - {fileID: -7338844552606009107}
@@ -241,6 +240,7 @@ MonoBehaviour:
   - {fileID: -6495512250867991663}
   - {fileID: 7335209971161699033}
   - {fileID: -4505825547987243694}
+  - {fileID: -3382452623977940017}
 --- !u!114 &491592364670077866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,11 +256,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4c52d590fa34eef41a085f77a487d9e5
-  position: {x: -142.143, y: 464.96414}
+  position: {x: -193.51247, y: 435.97003}
   blackBoard: {fileID: 0}
   description: "\uC804\uD22C"
   children:
-  - {fileID: -6247122757058553379}
+  - {fileID: -3382452623977940017}
   - {fileID: -2564119710970065395}
 --- !u!114 &923362538676557401
 MonoBehaviour:
@@ -277,7 +277,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 039dc1dbcac47d54990d85b2078ca514
-  position: {x: 818.85956, y: 700.6601}
+  position: {x: 882.70996, y: 614.8725}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -321,7 +321,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6106b6186d515444ead981f062ac1550
-  position: {x: 202.85951, y: 1115.66}
+  position: {x: 205.51, y: 922.90265}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &5043849997334561455
@@ -378,7 +378,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 873b9c076d94a9f41b3928d676e25b1c
-  position: {x: 319.8595, y: 887.66003}
+  position: {x: 324.0325, y: 751.8476}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -399,6 +399,6 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c62e23a45dce41c489f00c214a209d22
-  position: {x: 745.8595, y: 889.6601}
+  position: {x: 749.9676, y: 803.485}
   blackBoard: {fileID: 0}
   description: 

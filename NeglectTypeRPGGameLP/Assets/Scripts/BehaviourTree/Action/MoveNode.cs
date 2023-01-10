@@ -17,7 +17,7 @@ namespace JJS.BT
             {
                 context = blackBoard.context as HeroContext;
             }
-            TargetLockOn();
+           
         }
 
         protected override void OnStop()
@@ -28,38 +28,9 @@ namespace JJS.BT
         {
             if(success)
                 return State.Success;
-            if (isMove)
-                return Action();
+            return Action();
 
             return State.Failure;
-        }
-
-        public void TargetLockOn()
-        {
-            if (context.isRed)
-            {
-                for (int i = 0; i < context.bsc.BlueHero.Count; i++)
-                {
-                    if (context.bsc.BlueHero[i].GetComponent<HeroContext>().GetInfo().curHealth>0)
-                    { 
-                        context.target = context.bsc.BlueHero[i];
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < context.bsc.RedHero.Count; i++)
-                {
-                    if (context.bsc.RedHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
-                    {
-                        context.target = context.bsc.RedHero[i];
-                        break;
-                    }
-                }
-            }
-            isMove = true;
-            Debug.Log("Å¸°Ù ·Ï¿Â"+ context.target);
         }
 
         public State Action()

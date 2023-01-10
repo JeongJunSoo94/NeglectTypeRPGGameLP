@@ -21,7 +21,7 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            if (HC.info.myTurn)
+            if (HC.myTurn)
             {
                 child.Update();
                 return State.Running;

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+
+public delegate void characterCreate();
 public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 {
     float clickTime = -1;
@@ -17,6 +19,7 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     public ObjectPool parant;
 
     public int heroIndex;
+
 
     private void Awake()
     {

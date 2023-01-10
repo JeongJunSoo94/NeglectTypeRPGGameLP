@@ -5,6 +5,5 @@ using UnityEngine;
 
 public class HeroController : BehaviourTreeRunner
 {
-    public HeroContext heroBase;
 
 }

@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-public class GameManager : MonoBehaviour
+public class DataManager : MonoBehaviour
 {
-    private static GameManager instance;
-    public static GameManager Instance
+    private static DataManager instance;
+    public static DataManager Instance
     {
         get
         {
             if (instance == null)
             {
                 GameObject newGameObject = new GameObject("GameManager");
-                instance = newGameObject.AddComponent<GameManager>();
+                instance = newGameObject.AddComponent<DataManager>();
             }
             return instance;
         }
@@ -28,18 +28,10 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         DontDestroyOnLoad(this.gameObject);
+        //юс╫ц
         AllCharacterAdd();
     }
     
-    void Start()
-    {
-    }
-
-    void Update()
-    {
-        
-    }
-
     public void AllCharacterAdd()
     {
         if (player.characterInventory.Count.Equals(0)&& player.characterInventory.Count< heroInfo.Length)

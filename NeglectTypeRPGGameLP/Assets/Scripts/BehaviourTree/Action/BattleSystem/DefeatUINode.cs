@@ -4,14 +4,14 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class BattleEndCleanNode : ActionNode
+    public class DefeatUINode : ActionNode
     {
-        HeroContext context;
+        BattleSystemContext BSC;
         protected override void OnStart()
         {
-            if (context == null)
+            if (BSC == null)
             {
-                context = blackBoard.context as HeroContext;
+                BSC = blackBoard.context as BattleSystemContext;
             }
         }
 
@@ -21,8 +21,13 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            context.bsc.BattleUI(true);
+            LoseUI();
             return State.Success;
+        }
+
+        public void LoseUI()
+        {
+            BSC.EndUI[1].SetActive(true);
         }
     }
 }
