@@ -7,6 +7,7 @@ namespace JJS.BT
     public class DamageCheckNode : DecoratorNode
     {
         HeroContext HC;
+        BattleSystemContext bsc;
         protected override void OnStart()
         {
             if (HC == null)
@@ -23,11 +24,12 @@ namespace JJS.BT
         {
             if (HC.info.curHealth <= 0)
             {
-                //if (HC.isRed)
-                //    HC.bsc.redCount--;
-                //else
-                //    HC.bsc.blueCount--;
-
+                //юс╫ц
+                if (blackBoard.data.TeamCheck(blackBoard)==Team.RED)
+                    blackBoard.data.redCount--;
+                else
+                    blackBoard.data.blueCount--;
+                
                 HC.gameObject.SetActive(false);
             }
             if (HC.info.prevHealth != HC.info.curHealth)
@@ -40,6 +42,16 @@ namespace JJS.BT
                 //    return State.Running;
                 //}
            return State.Failure;
+        }
+
+        public BattleSystemContext GetBSC()
+        {
+            if (bsc == null)
+            {
+                HeroBlackBoard hb = blackBoard as HeroBlackBoard;
+                bsc = hb.battleSystemBlackboard.context as BattleSystemContext;
+            }
+            return bsc;
         }
     }
 }

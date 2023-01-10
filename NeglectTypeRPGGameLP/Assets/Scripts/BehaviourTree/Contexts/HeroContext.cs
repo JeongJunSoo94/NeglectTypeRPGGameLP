@@ -12,11 +12,7 @@ public class HeroContext : Context, IComparable<HeroContext>
     public HeroStat heroStat;
 
     public bool myTurn;
-
-    public bool win;
-
-    public bool isRed;
-
+    
     public Vector3 originPos;
 
     public GameObject target;

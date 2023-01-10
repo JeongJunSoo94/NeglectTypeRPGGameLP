@@ -7,7 +7,6 @@ namespace JJS.BT
     public class BattleTurnBehaviorNode : ActionNode
     {
         BattleSystemContext BSC;
-
         protected override void OnStart()
         {
             if (BSC == null)
@@ -58,20 +57,19 @@ namespace JJS.BT
         void BattleOneTurn()
         {
             HeroContext hero;
-            if (BSC.isRedTurn)
+            if (blackBoard.data.isRedTurn)
             {
-                if (BSC.heroRedBattleList.Count().Equals(0))
+                if (blackBoard.data.heroRedBattleList.Count().Equals(0))
                 {
-                    BSC.isRedTurn = false;
-                    ResetHero(BSC.RedHero, BSC.heroRedBattleList);
+                    blackBoard.data.isRedTurn = false;
+                    ResetHero(blackBoard.data.RedHero, blackBoard.data.heroRedBattleList);
                 }
                 else
                 { 
-                    hero = BSC.heroRedBattleList.Dequeue();
+                    hero = blackBoard.data.heroRedBattleList.Dequeue();
                     if (hero.info.curHealth != 0)
                     {
                         hero.myTurn = true;
-                        TargetLockOn(hero);
                         BSC.state = BattleState.BattleWaitTurn;
                         //BSC.heroRedBattleList.Enqueue(hero);
                     }
@@ -79,18 +77,17 @@ namespace JJS.BT
             }
             else
             {
-                if (BSC.heroBlueBattleList.Count().Equals(0))
+                if (blackBoard.data.heroBlueBattleList.Count().Equals(0))
                 {
-                    BSC.isRedTurn = true;
-                    ResetHero(BSC.BlueHero, BSC.heroBlueBattleList);
+                    blackBoard.data.isRedTurn = true;
+                    ResetHero(blackBoard.data.BlueHero, blackBoard.data.heroBlueBattleList);
                 }
                 else
                 {
-                    hero = BSC.heroBlueBattleList.Dequeue();
+                    hero = blackBoard.data.heroBlueBattleList.Dequeue();
                     if (hero.info.curHealth != 0)
                     {
                         hero.myTurn = true;
-                        TargetLockOn(hero);
                         BSC.state = BattleState.BattleWaitTurn;
                         //BSC.heroBlueBattleList.Enqueue(hero);
                     }
@@ -100,15 +97,15 @@ namespace JJS.BT
 
         bool BattlePossibleCheck()
         {
-            if (BSC.redCount.Equals(0))
+            if (blackBoard.data.redCount.Equals(0))
             {
-                BSC.winner = Win.BLUE;
+                blackBoard.data.winner = Team.BLUE;
                 BSC.state = BattleState.End;
                 return false;
             }
-            if (BSC.blueCount.Equals(0))
+            if (blackBoard.data.blueCount.Equals(0))
             {
-                BSC.winner = Win.RED;
+                blackBoard.data.winner = Team.RED;
                 BSC.state = BattleState.End;
                 return false;
             }
@@ -116,39 +113,13 @@ namespace JJS.BT
             return true;
         }
 
-        void ResetHero(List<GameObject> list, PriorityQueue<HeroContext> q)
+        void ResetHero(List<Blackboard> list, PriorityQueue<HeroContext> q)
         {
             for (int i = 0; i < list.Count; i++)
             {
-                q.Enqueue(list[i].GetComponent<HeroContext>());
+                q.Enqueue(list[i].gameObject.GetComponent<HeroContext>());
             }
         }
-
-        public void TargetLockOn(HeroContext hero)
-        {
-            if (hero.isRed)
-            {
-                for (int i = 0; i < BSC.BlueHero.Count; i++)
-                {
-                    if (BSC.BlueHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
-                    {
-                        hero.target = BSC.BlueHero[i];
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                for (int i = 0; i < BSC.RedHero.Count; i++)
-                {
-                    if (BSC.RedHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
-                    {
-                        hero.target = BSC.RedHero[i];
-                        break;
-                    }
-                }
-            }
-            Debug.Log("Å¸°Ù ·Ï¿Â" + hero.target);
-        }
+       
     }
 }

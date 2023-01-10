@@ -11,8 +11,9 @@ namespace JJS.BT
     {
         [HideInInspector]
         public Context context;
+        public BattleDataCenter data;
 
-        private void Awake()
+        public virtual void Awake()
         {
             Init();
         }

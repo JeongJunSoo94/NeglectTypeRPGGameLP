@@ -11,10 +11,9 @@ namespace JJS.BT
         protected override void OnStart()
         {
             if (BSC == null)
-            {
                 BSC = blackBoard.context as BattleSystemContext;
+            if (BSB == null)
                 BSB = blackBoard as BattleSystemBlackboard;
-            }
             Init();
         }
 
@@ -33,20 +32,26 @@ namespace JJS.BT
 
         public void Init()
         {
-            BSC.isRedTurn = true;
-            BSC.redCount = BSC.RedHero.Count;
-            BSC.blueCount = BSC.BlueHero.Count;
-            for (int i = 0; i < BSC.redCount; i++)
+            blackBoard.data.isRedTurn = true;
+            blackBoard.data.redCount = blackBoard.data.RedHero.Count;
+            blackBoard.data.blueCount = blackBoard.data.BlueHero.Count;
+            for (int i = 0; i < blackBoard.data.redCount; i++)
             {
-                BSC.heroRedBattleList.Enqueue(BSC.RedHero[i].GetComponent<HeroContext>());
-                BSC.RedHero[i].GetComponent<HeroContext>().isRed = true;
-                BSC.RedHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
+                blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
+                blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().data = blackBoard.data;
+                //임시
+                blackBoard.data.RedHero[i].gameObject.SetActive(true);
+                //
+                blackBoard.data.heroRedBattleList.Enqueue(blackBoard.data.RedHero[i].GetComponent<HeroContext>());
             }
-            for (int i = 0; i < BSC.blueCount; i++)
+            for (int i = 0; i < blackBoard.data.blueCount; i++)
             {
-                BSC.heroBlueBattleList.Enqueue(BSC.BlueHero[i].GetComponent<HeroContext>());
-                BSC.BlueHero[i].GetComponent<HeroContext>().isRed = true;
-                BSC.BlueHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
+                blackBoard.data.BlueHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
+                blackBoard.data.BlueHero[i].GetComponent<HeroBlackBoard>().data = blackBoard.data;
+                //임시
+                blackBoard.data.BlueHero[i].gameObject.SetActive(true);
+                //
+                blackBoard.data.heroBlueBattleList.Enqueue(blackBoard.data.BlueHero[i].GetComponent<HeroContext>());
             }
            
         }
