@@ -6,13 +6,13 @@ namespace JJS.BT
 {
     public class VictoryUINode : ActionNode
     {
-        BattleSystemContext BSC;
+        BattleSystemContext bsc; 
+        public bool isOn;
         protected override void OnStart()
         {
-            if (BSC == null)
-            {
-                BSC = blackBoard.context as BattleSystemContext;
-            }
+            if (bsc == null)
+                bsc = blackBoard.context as BattleSystemContext;
+            VictoryUI(isOn);
         }
 
         protected override void OnStop()
@@ -21,16 +21,11 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            if (BSC.state == BattleState.End)
-            {
-                VictoryUI();
-                return State.Running;
-            }
             return State.Success;
         }
-        public void VictoryUI()
+        public void VictoryUI(bool value)
         {
-            BSC.EndUI[0].SetActive(true);
+            bsc.endUI[0].SetActive(value);
         }
     }
 }

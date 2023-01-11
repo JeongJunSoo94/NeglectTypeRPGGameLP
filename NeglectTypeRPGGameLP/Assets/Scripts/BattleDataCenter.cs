@@ -22,6 +22,8 @@ public enum Team
 
 public class BattleDataCenter : MonoBehaviour
 {
+    public List<GameObject> cell = new List<GameObject>();
+
     public List<Blackboard> RedHero = new List<Blackboard>();
     public List<Blackboard> BlueHero = new List<Blackboard>();
 
@@ -37,10 +39,17 @@ public class BattleDataCenter : MonoBehaviour
 
     public Team TeamCheck(Blackboard blackboard)
     {
-        if (RedHero.Equals(blackboard))
-            return Team.RED;
-        if (BlueHero.Equals(blackboard))
-            return Team.BLUE;
+        for (int i = 0; i < RedHero.Count; ++i)
+        { 
+            if (RedHero[i].Equals(blackboard))
+                return Team.RED;
+        }
+        for (int i = 0; i < RedHero.Count; ++i)
+        {
+            if (BlueHero[i].Equals(blackboard))
+                return Team.BLUE;
+        }
         return Team.RED;
     }
+
 }

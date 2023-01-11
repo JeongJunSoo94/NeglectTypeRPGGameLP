@@ -63,4 +63,9 @@ public class PriorityQueue<T> where T : IComparable<T>
     {
         return _heap.Count;
     }
+
+    public void Clear()
+    {
+        _heap.Clear();
+    }
 }

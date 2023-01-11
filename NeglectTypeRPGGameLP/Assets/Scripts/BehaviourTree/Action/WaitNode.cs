@@ -14,7 +14,8 @@ namespace JJS.BT
         public float duration = 1;
         protected override void OnStart()
         {
-            wait = new WaitForSeconds(0.01f);
+            if(wait==null)
+                wait = new WaitForSeconds(0.01f);
             //if (BSC == null)
             //{
             //    BSC = blackBoard.context as BattleSystemContext;
@@ -24,6 +25,8 @@ namespace JJS.BT
             //    BSC.DelayCoroutine(duration);
             //    BSC.delayCheck = false;
             //}
+
+            DelayCoroutine(duration);
         }
 
         protected override void OnStop()
@@ -36,7 +39,9 @@ namespace JJS.BT
             //{
             //    return State.Success;
             //}
-            return State.Running;
+            if(delayEnable)
+                return State.Running;
+            return State.Success;
         }
 
         public void DelayCoroutine(float delayTime)

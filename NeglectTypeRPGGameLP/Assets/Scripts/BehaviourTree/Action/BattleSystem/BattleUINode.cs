@@ -21,16 +21,16 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            BattleUI(false);
+            //BattleUI(false);
             return State.Success;
         }
 
-        public void BattleUI(bool use)
-        {
-            for (int i = 0; i < BSC.UI.Length; i++)
-            {
-                BSC.UI[i].SetActive(use);
-            }
-        }
+        //public void BattleUI(bool use)
+        //{
+        //    for (int i = 0; i < BSC.UI.Length; i++)
+        //    {
+        //        BSC.UI[i].SetActive(use);
+        //    }
+        //}
     }
 }

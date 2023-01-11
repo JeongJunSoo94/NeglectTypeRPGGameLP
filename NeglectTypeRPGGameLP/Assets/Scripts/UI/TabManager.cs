@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+
+
 public class TabManager : MonoBehaviour
 {
     //public GameObject[] Tab;
@@ -16,13 +18,6 @@ public class TabManager : MonoBehaviour
     //public List<RectTransform>  a= new List<RectTransform>();
 
     public ObjectPool pool;
-
-    void Start()
-    {
-        TabClick(0);
-        CreateUI();
-    }
-
     public void CreateUI()
     {
         int count = DataManager.Instance.player.characterInventory.Count;
@@ -37,6 +32,11 @@ public class TabManager : MonoBehaviour
         }
     }
 
+    public void CharacterKind(int n)
+    { 
+
+    }
+
     public void TabClick(int n)
     {
         for (int i = 0; i < Tab; i++)
@@ -45,6 +45,7 @@ public class TabManager : MonoBehaviour
             //TabBtnImage[i].sprite = i == n ? SelectSprite[i] : IdleSprite[i];
             TabBtnImage[i].color = i == n ?  new Color(10, 10, 10, 0.1f) : new Color(10, 10, 10, 1f);
         }
+        CharacterKind(n);
     }
 
 

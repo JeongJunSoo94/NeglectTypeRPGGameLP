@@ -40,7 +40,6 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     void OnMouseDoubleClick()
     {
         Debug.Log("더블클릭");
-        //isDoubleClick = false;
     }
 
     void OnMouseOneClick()
@@ -62,11 +61,11 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     {
         if (!isDoubleClick)
         { 
-            if ((Time.time - clickTime) < 0.3f)
+            if ((Time.time - clickTime) < 0.19f)
             {
                 isDoubleClick = true;
                 OnMouseDoubleClick();
-                //clickTime = -1;
+                clickTime = -1;
             }
             else
             {
@@ -79,9 +78,12 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 
     IEnumerator ClickWaitCoroutine()
     {
-        yield return new WaitForSeconds(0.5f);
-        if(isDoubleClick)
+        yield return new WaitForSeconds(0.2f);
+        if (isDoubleClick)
+        {
+            isDoubleClick = false;
             yield break;
+        }
         OnMouseOneClick();
     }
 

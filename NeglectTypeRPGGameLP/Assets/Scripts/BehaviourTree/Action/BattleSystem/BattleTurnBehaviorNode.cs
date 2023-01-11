@@ -51,7 +51,7 @@ namespace JJS.BT
                 //    }
                 //    break;
             }
-            return State.Failure;
+            return State.Success;
         }
 
         void BattleOneTurn()
@@ -100,13 +100,11 @@ namespace JJS.BT
             if (blackBoard.data.redCount.Equals(0))
             {
                 blackBoard.data.winner = Team.BLUE;
-                BSC.state = BattleState.End;
                 return false;
             }
             if (blackBoard.data.blueCount.Equals(0))
             {
                 blackBoard.data.winner = Team.RED;
-                BSC.state = BattleState.End;
                 return false;
             }
 

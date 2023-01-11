@@ -35,7 +35,6 @@ namespace JJS.BT
 
         public State Action()
         {
-            Debug.Log("¹«ºù");
             context.gameObject.transform.position = Vector3.Lerp(context.gameObject.transform.position, context.target.transform.position, 0.05f);
 
             if (Vector3.Distance(context.gameObject.transform.position, context.target.transform.position)<=50.0f)

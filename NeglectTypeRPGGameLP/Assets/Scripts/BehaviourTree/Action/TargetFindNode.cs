@@ -37,6 +37,7 @@ namespace JJS.BT
                     if (blackBoard.data.BlueHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
                     {
                         hc.target = blackBoard.data.BlueHero[i].gameObject;
+                        findTarget = true;
                         break;
                     }
                 }
@@ -48,6 +49,7 @@ namespace JJS.BT
                     if (blackBoard.data.RedHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
                     {
                         hc.target = blackBoard.data.RedHero[i].gameObject;
+                        findTarget = true;
                         break;
                     }
                 }

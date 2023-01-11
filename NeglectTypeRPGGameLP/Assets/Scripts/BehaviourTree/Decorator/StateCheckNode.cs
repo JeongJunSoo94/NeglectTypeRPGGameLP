@@ -4,16 +4,16 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class DefeatUINode : ActionNode
+    public class StateCheckNode : DecoratorNode
     {
         BattleSystemContext BSC;
+        public BattleState checkState;
         protected override void OnStart()
         {
             if (BSC == null)
             {
                 BSC = blackBoard.context as BattleSystemContext;
             }
-            LoseUI();
         }
 
         protected override void OnStop()
@@ -22,12 +22,13 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            return State.Success;
-        }
-
-        public void LoseUI()
-        {
-            BSC.endUI[1].SetActive(true);
+            if (BSC.state == checkState)
+            {
+                if(child.Update()==State.Success)
+                    return State.Failure;
+                return State.Running;
+            }
+            return State.Failure;
         }
     }
 }

@@ -6,11 +6,11 @@ using UnityEngine;
 
 public class BattleSystemBlackboard : Blackboard
 {
-
-    public bool isStart;
+    public TabManager UI;
     public void BattleStart()
     {
-        isStart = true;
+        BattleSystemContext bsc = context as BattleSystemContext;
+        bsc.isStart = true;
     }
 
 }

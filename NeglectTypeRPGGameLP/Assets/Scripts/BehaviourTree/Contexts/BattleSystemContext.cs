@@ -5,10 +5,14 @@ using UnityEngine;
 
 public class BattleSystemContext : Context
 {
+    public bool isStart;
+
     [HideInInspector] public BattleState state;
 
-    public GameObject[] UI;
-    public GameObject[] EndUI;
+    public GameObject[] startUI;
+    public GameObject[] readyUI;
+    public GameObject[] defaultUI;
+    public GameObject[] endUI;
 
     //public void LoseUI()
     //{
@@ -30,7 +34,8 @@ public class BattleSystemContext : Context
 
     public override void InitContext()
     {
-        state = BattleState.Start;
+        isStart = false;
+        state = BattleState.Ready;
     }
 
 

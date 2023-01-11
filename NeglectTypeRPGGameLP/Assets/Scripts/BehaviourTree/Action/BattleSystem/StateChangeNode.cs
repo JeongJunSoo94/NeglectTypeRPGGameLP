@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace JJS.BT
 {
-    public class StartUINode : ActionNode
+    public class StateChangeNode : ActionNode
     {
         BattleSystemContext BSC;
+        public BattleState battleState;
         protected override void OnStart()
         {
             if (BSC == null)
@@ -17,13 +18,12 @@ namespace JJS.BT
 
         protected override void OnStop()
         {
+            BSC.state = battleState;
         }
 
         protected override State OnUpdate()
         {
-            
-
-            return State.Success;
+            return State.Failure;
         }
     }
 }
