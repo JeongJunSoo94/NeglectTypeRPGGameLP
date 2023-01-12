@@ -16,10 +16,9 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 
     public bool isUse;
 
-    public ObjectPool parant;
+    public ObjectPoolList parant;
 
     public int heroIndex;
-
 
     private void Awake()
     {
@@ -29,7 +28,7 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 
     private void OnDisable()
     {
-        parant.Enqueue(this.gameObject);
+        //parant.Enqueue(this.gameObject);
     }
 
     public void Init()

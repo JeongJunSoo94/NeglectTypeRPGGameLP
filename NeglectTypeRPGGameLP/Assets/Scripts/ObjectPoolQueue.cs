@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool: MonoBehaviour
+public class ObjectPoolQueue: MonoBehaviour
 {
     public GameObject prefab;
 
@@ -42,7 +42,6 @@ public class ObjectPool: MonoBehaviour
     private void Enqueue()
     {
         GameObject obj = Instantiate(prefab);
-        obj.GetComponent<HeroBattleIconUI>().parant = this;
         obj.SetActive(false);
         //waitObjs.Enqueue(obj);
         curCount++;
@@ -51,7 +50,6 @@ public class ObjectPool: MonoBehaviour
     private void Enqueue(Transform parent)
     {
         GameObject obj = Instantiate(prefab, parent);
-        obj.GetComponent<HeroBattleIconUI>().parant = this;
         obj.SetActive(false);
         //waitObjs.Enqueue(obj);
         curCount++;
@@ -77,6 +75,5 @@ public class ObjectPool: MonoBehaviour
         curCount--;
         return waitObjs.Dequeue();
     }
-
 
 }

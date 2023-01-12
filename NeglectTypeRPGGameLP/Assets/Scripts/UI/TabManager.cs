@@ -17,15 +17,20 @@ public class TabManager : MonoBehaviour
 
     //public List<RectTransform>  a= new List<RectTransform>();
 
-    public ObjectPool pool;
+    public ObjectPoolList pool;
+
+    public List<HeroBattleIconUI> UIList;
     public void CreateUI()
     {
         int count = DataManager.Instance.player.characterInventory.Count;
+        pool._objcetCount = count;
+        pool.Production();
         for (int i = 0; i < count; i++)
         {
             if (DataManager.Instance.player.characterInventory[i])
             {
-                GameObject obj = pool.Dequeue();
+                GameObject obj = pool.GetPooledObject();
+                UIList.Add(obj.GetComponent<HeroBattleIconUI>());
                 obj.GetComponent<Image>().sprite = DataManager.Instance.heroInfo[i].Icon;
                 obj.SetActive(true);
             }
@@ -33,8 +38,11 @@ public class TabManager : MonoBehaviour
     }
 
     public void CharacterKind(int n)
-    { 
-
+    {
+        for (int i=0;i< pool._objcetCount;++i)
+        {
+            //UIList[i].heroIndex
+        }
     }
 
     public void TabClick(int n)
