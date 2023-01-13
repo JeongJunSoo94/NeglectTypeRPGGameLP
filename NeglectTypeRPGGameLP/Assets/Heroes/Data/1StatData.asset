@@ -13,28 +13,29 @@ MonoBehaviour:
   m_Name: 1StatData
   m_EditorClassIdentifier: 
   id: 1
+  DamageType: 1
   Combat_Power: 10435
   Strength: 39
   Intelligence: 80
   Agility: 53
   Vital: 26
   Luck: 66
-  Critical_Rate: 0
+  Critical_Rate: 70
   Critical_Immunity_Rate: 0
-  Critical_Damage: 0
-  Health_Point: 0
-  Attack: 0
-  Weapon_Attack: 0
-  Tactical_Attack: 0
-  Defensive: 0
-  Weapon_Defensive: 0
-  Tactical_Defensive: 0
-  Damage_Bonus: 0
-  Weapon_Damage_Bonus: 0
-  Tactical_Damage_Bonus: 0
-  Damage_Mitigation: 0
-  Weapon_Damage_Mitigation: 0
-  Tactical_Damage_Mitigation: 0
+  Critical_Damage: 120
+  Health_Point: 80
+  Attack: 100
+  Weapon_Attack: 10
+  Tactical_Attack: 10
+  Defensive: 30
+  Weapon_Defensive: 1
+  Tactical_Defensive: 1
+  Damage_Bonus: 100
+  Weapon_Damage_Bonus: 30
+  Tactical_Damage_Bonus: 30
+  Damage_Mitigation: 1
+  Weapon_Damage_Mitigation: 1
+  Tactical_Damage_Mitigation: 1
   Critical_Pierces_Defensive: 0
   Focus_Damage: 0
   Shield_Bonus_Damage: 0

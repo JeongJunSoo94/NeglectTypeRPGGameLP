@@ -34,7 +34,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e7fc2eaf2d4884346aac16cbbdff4b25
-  position: {x: -2152.5913, y: 845.5179}
+  position: {x: -2143.8503, y: 854.0001}
   blackBoard: {fileID: 0}
   description: 
   isOn: 1
@@ -90,7 +90,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7e980a3007c27ae46ba80a80d4f5ef6f
-  position: {x: 805.87616, y: 798.0079}
+  position: {x: 931.6775, y: 824.3226}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-4326681094569847417
@@ -261,7 +261,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c585bf6308b44f244acf85e77f9f432a
-  position: {x: -1193.3052, y: 849.55365}
+  position: {x: -1186.1501, y: 858.00006}
   blackBoard: {fileID: 0}
   description: 
   delayEnable: 0
@@ -330,6 +330,8 @@ MonoBehaviour:
   - {fileID: 803536424558790129}
   - {fileID: 9074091076200073111}
   - {fileID: -4326681094569847417}
+  - {fileID: 1744846651309409930}
+  - {fileID: 4739176441111839027}
 --- !u!114 &491592364670077866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,10 +388,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 039dc1dbcac47d54990d85b2078ca514
-  position: {x: 882.70996, y: 614.8725}
+  position: {x: 1008.67755, y: 641.3225}
   blackBoard: {fileID: 0}
   description: 
   children:
+  - {fileID: 4739176441111839027}
   - {fileID: 7335209971161699033}
   - {fileID: -4505825547987243694}
   - {fileID: 9074091076200073111}
@@ -432,7 +435,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 43fb993545a7bf54f857c7b96c81beaa
-  position: {x: -1764.5914, y: 841.5178}
+  position: {x: -1757.0002, y: 848.8501}
   blackBoard: {fileID: 0}
   description: 
   isOn: 0
@@ -455,6 +458,27 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   battleState: 1
+--- !u!114 &1744846651309409930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb76ea833e93d1c40a1e702c791cdbe9, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 84eb0da9303a7fa4ea19005d7ae7fb89
+  position: {x: -47.000057, y: 952}
+  blackBoard: {fileID: 0}
+  description: 
+  delayEnable: 0
+  delayCheck: 0
+  duration: 3
 --- !u!114 &2946076998634544871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -474,6 +498,27 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   isOn: 1
+--- !u!114 &4739176441111839027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb76ea833e93d1c40a1e702c791cdbe9, type: 3}
+  m_Name: WaitNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ef11bcb7724b05d40be7948b2d7b3986
+  position: {x: 594, y: 837.0001}
+  blackBoard: {fileID: 0}
+  description: 
+  delayEnable: 0
+  delayCheck: 0
+  duration: 3
 --- !u!114 &5043849997334561455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,6 +620,7 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   children:
+  - {fileID: 1744846651309409930}
   - {fileID: 2946076998634544871}
   - {fileID: -6495512250867991663}
   - {fileID: 803536424558790129}
@@ -593,7 +639,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c62e23a45dce41c489f00c214a209d22
-  position: {x: 626.8245, y: 798.75696}
+  position: {x: 752.6775, y: 825.3225}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &9074091076200073111
@@ -611,7 +657,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b34a58b82e6330c498e3689d466e7fb7
-  position: {x: 1032.741, y: 794.06085}
+  position: {x: 1158.6776, y: 820.3225}
   blackBoard: {fileID: 0}
   description: 
   battleState: 0

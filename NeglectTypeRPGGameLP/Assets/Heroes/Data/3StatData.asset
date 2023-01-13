@@ -13,28 +13,29 @@ MonoBehaviour:
   m_Name: 3StatData
   m_EditorClassIdentifier: 
   id: 3
+  DamageType: 0
   Combat_Power: 10421
   Strength: 53
   Intelligence: 39
   Agility: 80
   Vital: 39
   Luck: 53
-  Critical_Rate: 0
-  Critical_Immunity_Rate: 0
-  Critical_Damage: 0
-  Health_Point: 0
-  Attack: 0
-  Weapon_Attack: 0
-  Tactical_Attack: 0
-  Defensive: 0
-  Weapon_Defensive: 0
-  Tactical_Defensive: 0
-  Damage_Bonus: 0
-  Weapon_Damage_Bonus: 0
-  Tactical_Damage_Bonus: 0
-  Damage_Mitigation: 0
-  Weapon_Damage_Mitigation: 0
-  Tactical_Damage_Mitigation: 0
+  Critical_Rate: 70
+  Critical_Immunity_Rate: 30
+  Critical_Damage: 120
+  Health_Point: 140
+  Attack: 100
+  Weapon_Attack: 10
+  Tactical_Attack: 10
+  Defensive: 50
+  Weapon_Defensive: 1
+  Tactical_Defensive: 1
+  Damage_Bonus: 100
+  Weapon_Damage_Bonus: 30
+  Tactical_Damage_Bonus: 30
+  Damage_Mitigation: 1
+  Weapon_Damage_Mitigation: 1
+  Tactical_Damage_Mitigation: 1
   Critical_Pierces_Defensive: 0
   Focus_Damage: 0
   Shield_Bonus_Damage: 0

@@ -67,6 +67,7 @@ namespace JJS.BT
                 context.myTurn = false;
                 BattleSystemContext con = hbb.battleSystemBlackboard.context as BattleSystemContext;
                 con.state = BattleState.Battle;
+                Debug.Log("≈œ ≥°≥≤"+blackBoard.gameObject.name);
                 return State.Success;
             }
             return State.Running;

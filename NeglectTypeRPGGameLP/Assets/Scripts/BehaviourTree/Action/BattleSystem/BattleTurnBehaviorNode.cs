@@ -66,7 +66,7 @@ namespace JJS.BT
                 else
                 { 
                     hero = blackBoard.data.heroRedBattleList.Dequeue();
-                    if (hero.info.curHealth != 0)
+                    if (hero.info.curHealth > 0)
                     {
                         hero.myTurn = true;
                         BSC.state = BattleState.BattleWaitTurn;
@@ -78,13 +78,13 @@ namespace JJS.BT
             {
                 if (blackBoard.data.heroBlueBattleList.Count().Equals(0))
                 {
-                    blackBoard.data.isRedTurn = false;
+                    blackBoard.data.isRedTurn = true;
                     ResetHero(blackBoard.data.BlueHero, blackBoard.data.heroBlueBattleList);
                 }
                 else
                 {
                     hero = blackBoard.data.heroBlueBattleList.Dequeue();
-                    if (hero.info.curHealth != 0)
+                    if (hero.info.curHealth > 0)
                     {
                         hero.myTurn = true;
                         BSC.state = BattleState.BattleWaitTurn;
@@ -113,7 +113,7 @@ namespace JJS.BT
 
         bool BattleEndClear()
         {
-            Debug.Log("üũ");
+            Debug.Log("체크");
             HeroContext hero;
             for (int i = 0; i < blackBoard.data.RedHero.Count; ++i)
             {

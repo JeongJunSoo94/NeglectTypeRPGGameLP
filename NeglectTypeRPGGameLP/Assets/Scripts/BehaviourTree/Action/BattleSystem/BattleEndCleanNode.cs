@@ -42,12 +42,12 @@ namespace JJS.BT
             for (int i = 0; i < blackBoard.data.RedHero.Count; ++i)
             {
                 if(blackBoard.data.RedHero[i]!= null)
-                    blackBoard.data.RedHero[i].gameObject.SetActive(false);
+                    blackBoard.data.RedHero[i].gameObject.SetActive(true);
             }
             for (int i = 0; i < blackBoard.data.BlueHero.Count; ++i)
             {
                 if (blackBoard.data.BlueHero[i] != null)
-                    blackBoard.data.BlueHero[i].gameObject.SetActive(false);
+                    blackBoard.data.BlueHero[i].gameObject.SetActive(true);
             }
 
             blackBoard.data.heroRedBattleList.Clear();

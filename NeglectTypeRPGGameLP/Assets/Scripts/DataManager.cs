@@ -45,8 +45,10 @@ public class DataManager : MonoBehaviour
     public void CreateCharacter(int charIndex)
     {
         GameObject obj = Instantiate(defaultCharacter,transform);
-        obj.GetComponent<HeroContext>().heroInfo = heroInfo[charIndex];
-        obj.GetComponent<HeroContext>().heroStat = heroStat[charIndex];
+        HeroBase hb= new HeroBase();
+        hb.heroInfo = Instantiate(heroInfo[charIndex]);
+        hb.heroStat = Instantiate(heroStat[charIndex]);
+        obj.GetComponent<HeroContext>().info = hb;
         Instantiate(model[charIndex], obj.transform);
         obj.SetActive(false);
         characterPool[charIndex] = obj;

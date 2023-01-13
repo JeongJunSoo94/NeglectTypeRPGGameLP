@@ -34,12 +34,14 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     private void OnDisable()
     {
         //parant.Enqueue(this.gameObject);
+        Init();
     }
 
     public void Init()
     {
         isUse = false;
         clickTime = -1;
+        _image.color = new Color(10, 10, 10, 1);
     }
     void OnMouseDoubleClick()
     {

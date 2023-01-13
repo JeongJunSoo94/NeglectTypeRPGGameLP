@@ -52,7 +52,7 @@ public class BattleDataCenter : MonoBehaviour
                     return Team.RED;
             }
         }
-        for (int i = 0; i < RedHero.Count; ++i)
+        for (int i = 0; i < BlueHero.Count; ++i)
         {
             if (BlueHero[i].Equals(blackboard))
                 return Team.BLUE;

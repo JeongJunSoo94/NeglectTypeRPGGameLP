@@ -27,7 +27,7 @@ namespace JJS.BT
 
         void Attack()
         {
-            context.target.GetComponent<HeroContext>().info.curHealth -= 50;
+            context.target.GetComponent<HeroContext>().info.Damaged(context.info);
         }
     }
 }
