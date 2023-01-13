@@ -25,7 +25,7 @@ public class ObjectPoolList : MonoBehaviour
     {
         for (int i = 0; i < _objectPools.Count; i++)
         {
-            if (!_objectPools[i].activeInHierarchy)
+            if (!_objectPools[i].activeSelf)
             {
                 return _objectPools[i];
             }

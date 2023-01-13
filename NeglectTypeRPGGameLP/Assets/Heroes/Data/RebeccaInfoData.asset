@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 1
   Name: Rebecca
-  Faction: Minutemen
+  faction: 0
   Type: "\uC0AC\uC218"
   Rarity: Elite
   Explanation: "\uC5D8\uB9AC\uD2B8 \uC2A4\uB098\uC774\uD37C"

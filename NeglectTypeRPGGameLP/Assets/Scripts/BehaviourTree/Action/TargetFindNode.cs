@@ -46,6 +46,8 @@ namespace JJS.BT
             {
                 for (int i = 0; i < blackBoard.data.RedHero.Count; i++)
                 {
+                    if (blackBoard.data.RedHero[i] == null)
+                        continue;
                     if (blackBoard.data.RedHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
                     {
                         hc.target = blackBoard.data.RedHero[i].gameObject;

@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public delegate void characterCreate();
+public delegate void characterCollocate(int index,bool value);
 public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 {
     float clickTime = -1;
@@ -19,6 +20,10 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     public ObjectPoolList parant;
 
     public int heroIndex;
+
+    public int faction;
+
+    public characterCollocate collocate;
 
     private void Awake()
     {
@@ -45,6 +50,8 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
     {
         Debug.Log("Å¬¸¯");
         ImageChange();
+        collocate(heroIndex, isUse);
+
     }
 
     void ImageChange()

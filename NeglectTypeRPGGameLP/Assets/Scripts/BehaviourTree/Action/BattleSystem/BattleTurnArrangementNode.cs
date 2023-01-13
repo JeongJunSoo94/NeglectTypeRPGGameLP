@@ -30,13 +30,20 @@ namespace JJS.BT
         public void PlayerInit()
         {
             blackBoard.data.isRedTurn = true;
-            blackBoard.data.redCount = blackBoard.data.RedHero.Count;
+            int count = 0;
             for (int i = 0; i < blackBoard.data.RedHero.Count; i++)
             {
-
-                blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
-                blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().data = blackBoard.data;
-                blackBoard.data.RedHero[i].gameObject.SetActive(true);
+                if(blackBoard.data.RedHero[i]!=null)
+                    ++count;
+            }
+            blackBoard.data.redCount = count;
+            for (int i = 0; i < blackBoard.data.RedHero.Count; i++)
+            {
+                if (blackBoard.data.RedHero[i] == null)
+                    continue;
+                //blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
+                //blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().data = blackBoard.data;
+                //blackBoard.data.RedHero[i].gameObject.SetActive(true);
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
                 hc.info.curHealth = 100;

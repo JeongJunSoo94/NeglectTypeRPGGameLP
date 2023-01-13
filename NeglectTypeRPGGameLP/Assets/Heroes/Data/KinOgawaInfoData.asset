@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 5
   Name: KinOgawa
-  Faction: Wildlings
+  faction: 2
   Type: "\uC6A9\uC0AC"
   Rarity: Elite
   Explanation: "\uD6C4\uC9C0\uC640\uB77C \uBB34\uC0AC"

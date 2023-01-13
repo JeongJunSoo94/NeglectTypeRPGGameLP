@@ -1,13 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public enum Faction
+{
+    Minutemen,
+    Vindicators,
+    Wildlings,
+    Watchers
+}
 
 [System.Serializable]
 public class HeroInfo : ScriptableObject
 {
     public int id;
     public string Name;
-    public string Faction;
+    public int faction;
     public string Type;
     public string Rarity;
     public string Explanation;
@@ -18,7 +27,7 @@ public class HeroInfo : ScriptableObject
     {
         info.id             = int.Parse(value[0].Trim());
         info.Name           = value[1].Trim();
-        info.Faction        = value[2].Trim();
+        info.faction        = (int)Enum.Parse(typeof(Faction),value[2].Trim());
         info.Type           = value[3].Trim();
         info.Rarity         = value[4].Trim();
         info.Explanation    = value[5].Trim();

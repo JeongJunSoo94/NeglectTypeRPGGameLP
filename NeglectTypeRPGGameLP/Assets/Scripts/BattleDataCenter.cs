@@ -24,7 +24,7 @@ public class BattleDataCenter : MonoBehaviour
 {
     public List<GameObject> cell = new List<GameObject>();
 
-    public List<Blackboard> RedHero = new List<Blackboard>();
+    public List<Blackboard> RedHero;
     public List<Blackboard> BlueHero = new List<Blackboard>();
 
     [HideInInspector] public PriorityQueue<HeroContext> heroRedBattleList = new PriorityQueue<HeroContext>();
@@ -37,12 +37,20 @@ public class BattleDataCenter : MonoBehaviour
     
     public Team winner;
 
+    private void Awake()
+    {
+        RedHero = new List<Blackboard>(new Blackboard[5]);
+    }
+
     public Team TeamCheck(Blackboard blackboard)
     {
         for (int i = 0; i < RedHero.Count; ++i)
-        { 
-            if (RedHero[i].Equals(blackboard))
-                return Team.RED;
+        {
+            if (RedHero[i] != null)
+            { 
+                if (RedHero[i].Equals(blackboard))
+                    return Team.RED;
+            }
         }
         for (int i = 0; i < RedHero.Count; ++i)
         {
@@ -50,6 +58,11 @@ public class BattleDataCenter : MonoBehaviour
                 return Team.BLUE;
         }
         return Team.RED;
+    }
+
+    public void Initialized()
+    {
+        isRedTurn = true;
     }
 
 }

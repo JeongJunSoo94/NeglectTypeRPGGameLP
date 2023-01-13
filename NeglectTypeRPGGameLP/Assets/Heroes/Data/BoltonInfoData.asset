@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   Name: Bolton
-  Faction: Minutemen
+  faction: 0
   Type: "\uAC00\uB514\uC5B8"
   Rarity: Elite
   Explanation: "\uC815\uC758 \uC218\uD638"

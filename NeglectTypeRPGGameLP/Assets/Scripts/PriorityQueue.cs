@@ -59,6 +59,10 @@ public class PriorityQueue<T> where T : IComparable<T>
         return ret;
     }
 
+    public T Peek()
+    {
+        return _heap[0];
+    }
     public int Count()
     {
         return _heap.Count;

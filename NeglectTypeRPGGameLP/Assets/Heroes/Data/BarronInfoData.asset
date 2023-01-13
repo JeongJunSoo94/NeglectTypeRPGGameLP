@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 2
   Name: Barron
-  Faction: Vindicators
+  faction: 1
   Type: "\uC6A9\uC0AC"
   Rarity: Elite
   Explanation: "\uD30C\uC774\uD130"

@@ -10,6 +10,15 @@ public class PlayerData : ScriptableObject
 
     public List<bool> characterInventory;
     public List<int> itemInventory;
-    
 
+    public int GetCharacterInventoryTrue()
+    {
+        int count = 0;
+        for (int i = 0; i < characterInventory.Count; ++i)
+        {
+            if(characterInventory[i])
+                ++count;
+        }
+        return count;
+    }
 }

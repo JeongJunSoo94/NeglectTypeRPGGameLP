@@ -40,18 +40,17 @@ namespace JJS.BT
                         }
                     }
                     break;
-
-                //case BattleState.BattleEndTurn:
-                //    {
-                //        if (BattlePossibleCheck())
-                //        {
-                //            BattleOneTurn();
-                //            return State.Running;
-                //        }
-                //    }
-                //    break;
+                case BattleState.BattleEndTurn:
+                    {
+                        if (BattleEndClear())
+                        { 
+                            return State.Running;
+                        }
+                        return State.Success;
+                    }
+                    break;
             }
-            return State.Success;
+            return State.Running;
         }
 
         void BattleOneTurn()
@@ -79,7 +78,7 @@ namespace JJS.BT
             {
                 if (blackBoard.data.heroBlueBattleList.Count().Equals(0))
                 {
-                    blackBoard.data.isRedTurn = true;
+                    blackBoard.data.isRedTurn = false;
                     ResetHero(blackBoard.data.BlueHero, blackBoard.data.heroBlueBattleList);
                 }
                 else
@@ -100,21 +99,57 @@ namespace JJS.BT
             if (blackBoard.data.redCount.Equals(0))
             {
                 blackBoard.data.winner = Team.BLUE;
+                BSC.state = BattleState.BattleEndTurn;
                 return false;
             }
             if (blackBoard.data.blueCount.Equals(0))
             {
                 blackBoard.data.winner = Team.RED;
+                BSC.state = BattleState.BattleEndTurn;
                 return false;
             }
-
             return true;
+        }
+
+        bool BattleEndClear()
+        {
+            Debug.Log("üũ");
+            HeroContext hero;
+            for (int i = 0; i < blackBoard.data.RedHero.Count; ++i)
+            {
+                if (blackBoard.data.RedHero[i] != null)
+                {
+                    if (blackBoard.data.heroRedBattleList.Count() != 0)
+                    {
+                        hero = blackBoard.data.heroRedBattleList.Peek();
+                        if (hero.myTurn)
+                            return true;
+                        blackBoard.data.heroRedBattleList.Dequeue();
+                    }
+                }
+            }
+            for (int i = 0; i < blackBoard.data.BlueHero.Count; ++i)
+            {
+                if (blackBoard.data.BlueHero[i] != null)
+                {
+                    if (blackBoard.data.heroBlueBattleList.Count() != 0)
+                    {
+                        hero = blackBoard.data.heroBlueBattleList.Peek();
+                        if (hero.myTurn)
+                            return true;
+                        blackBoard.data.heroBlueBattleList.Dequeue();
+                    }
+                }
+            }
+            return false;
         }
 
         void ResetHero(List<Blackboard> list, PriorityQueue<HeroContext> q)
         {
             for (int i = 0; i < list.Count; i++)
             {
+                if (list[i] == null)
+                    continue;
                 q.Enqueue(list[i].gameObject.GetComponent<HeroContext>());
             }
         }
