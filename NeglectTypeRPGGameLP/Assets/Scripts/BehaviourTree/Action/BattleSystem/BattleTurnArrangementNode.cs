@@ -46,6 +46,7 @@ namespace JJS.BT
                 //blackBoard.data.RedHero[i].gameObject.SetActive(true);
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
+                hc.Initialized();
                 blackBoard.data.heroRedBattleList.Enqueue(blackBoard.data.RedHero[i].GetComponent<HeroContext>());
 
             }

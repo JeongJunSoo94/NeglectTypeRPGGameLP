@@ -97,6 +97,7 @@ namespace JJS.BT
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
                 hc.Initialized();
+                blackBoard.data.RedHero[i].gameObject.SetActive(false);
                 blackBoard.data.RedHero[i] = null;
             }
         

@@ -23,7 +23,8 @@ namespace JJS.BT
         {
             if (blackBoard.data.winner == myTeam)
             {
-                child.Update();
+                if(child.Update()==State.Running)
+                    return State.Running;
                 return State.Success;
             }
             return State.Failure;

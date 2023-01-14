@@ -50,7 +50,6 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 
     void OnMouseOneClick()
     {
-        Debug.Log("Å¬¸¯");
         ImageChange();
         collocate(heroIndex, isUse);
 
