@@ -30,14 +30,14 @@ namespace JJS.BT
                 return State.Success;
             return Action();
 
-            return State.Failure;
+            //return State.Failure;
         }
 
         public State Action()
         {
-            context.gameObject.transform.position = Vector3.Lerp(context.gameObject.transform.position, context.target.transform.position, 0.05f);
+            context.gameObject.transform.position = Vector3.Lerp(context.gameObject.transform.position, context.targetPos, 0.05f);
 
-            if (Vector3.Distance(context.gameObject.transform.position, context.target.transform.position)<=50.0f)
+            if (Vector3.Distance(context.gameObject.transform.position, context.targetPos) <=50.0f)
             {
                 isMove = false;
                 return State.Success;

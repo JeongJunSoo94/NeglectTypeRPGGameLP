@@ -55,7 +55,6 @@ namespace JJS.BT
             //    }
             //}
             isMove = true;
-            Debug.Log("Å¸°Ù ·Ï¿Â" + context.target);
         }
 
         public State Action()

@@ -4,11 +4,16 @@ using UnityEngine;
 
 namespace JJS.BT
 {
+    
     public class SkillAttackCheckNode : DecoratorNode
     {
+        HeroContext HC;
         protected override void OnStart()
         {
-
+            if (HC == null)
+            {
+                HC = blackBoard.context as HeroContext;
+            }
         }
 
         protected override void OnStop()
@@ -17,7 +22,11 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            //child.Update();
+            if (HC.info.maxGage == HC.info.curSkillGage)
+            {
+                child.Update();
+                return State.Running;
+            }
             return State.Failure;
         }
     }

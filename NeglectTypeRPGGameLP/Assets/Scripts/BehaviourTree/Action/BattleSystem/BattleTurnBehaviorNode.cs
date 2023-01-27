@@ -48,7 +48,7 @@ namespace JJS.BT
                         }
                         return State.Success;
                     }
-                    break;
+                    //break;
             }
             return State.Running;
         }
@@ -113,7 +113,6 @@ namespace JJS.BT
 
         bool BattleEndClear()
         {
-            Debug.Log("체크");
             HeroContext hero;
             for (int i = 0; i < blackBoard.data.RedHero.Count; ++i)
             {

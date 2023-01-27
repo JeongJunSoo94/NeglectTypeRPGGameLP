@@ -14,7 +14,9 @@ public class HeroContext : Context, IComparable<HeroContext>
     
     public Vector3 originPos;
 
-    public GameObject target;
+    public Vector3 targetPos;
+
+    public List<GameObject> targets;
 
     public HeroBase GetInfo()
     {

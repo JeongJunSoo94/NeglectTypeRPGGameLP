@@ -27,7 +27,10 @@ namespace JJS.BT
 
         void Attack()
         {
-            context.target.GetComponent<HeroContext>().info.Damaged(context.info);
+            for (int i = 0; i < context.targets.Count; ++i)
+            { 
+                context.targets[i].GetComponent<HeroContext>().info.Damaged(context.info);
+            }
         }
     }
 }

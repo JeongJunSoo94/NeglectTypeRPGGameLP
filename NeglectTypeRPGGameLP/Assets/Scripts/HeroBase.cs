@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public delegate void buff();
-public delegate void skill();
+public delegate void Skill();
 public delegate void HealthUI();
 public delegate float Defence(HeroBase stat);
 public delegate float Attack(HeroBase stat);
-
+public delegate void Find(List<HeroBase> obj);
 
 public enum DamageType
 {
@@ -31,13 +31,15 @@ public class HeroBase
     public Defence weaponDefence;
     public Defence tacticalDefence;
 
+    public Skill skill;
+
     public HealthUI healthBar;
 
     public float damage;
     public float damaged;
     public float defence;
 
-    SkillInfo[] skill;
+    SkillInfo[] skills;
 
     bool init = false;
 
@@ -62,6 +64,7 @@ public class HeroBase
                     attack += new Attack(TacticalDamageBonus);
                     break;
             }
+            attack += new Attack(GageUp);
             weaponDefence += new Defence(WeaponDefence);
             weaponDefence += new Defence(WeaponDefenceMitigation);
             tacticalDefence += new Defence(TacticalDefence);
@@ -70,7 +73,11 @@ public class HeroBase
         }
     }
 
-    
+    public float GageUp(HeroBase hb)
+    {
+        hb.curSkillGage = 100;
+        return 0;
+    }
 
     //데미지에 무기,전술 두가지 종류의 데미지가 있다.
     //해당 타입의 공격이 오면 
@@ -137,6 +144,8 @@ public class HeroBase
         defence += (hb.heroStat.Damage_Mitigation + hb.heroStat.Agility) * hb.heroStat.Tactical_Damage_Mitigation;
         return defence;
     }
+
+
 
     public int CompareTo(HeroBase x)
     {

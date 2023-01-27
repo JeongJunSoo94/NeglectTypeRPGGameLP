@@ -8,7 +8,6 @@ namespace JJS.BT
     {
         BattleSystemContext BSC;
         BattleSystemBlackboard BSB;
-        int visit = 0;
         protected override void OnStart()
         {
             if (BSC == null)
@@ -41,9 +40,6 @@ namespace JJS.BT
             {
                 if (blackBoard.data.RedHero[i] == null)
                     continue;
-                //blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
-                //blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().data = blackBoard.data;
-                //blackBoard.data.RedHero[i].gameObject.SetActive(true);
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
                 hc.Initialized();
