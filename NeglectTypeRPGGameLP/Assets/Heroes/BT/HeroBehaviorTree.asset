@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4694dbba75da337418dcb95c9079e305
-  position: {x: 784.43274, y: 1337.9464}
+  position: {x: 1152.6, y: 1256.2}
   blackBoard: {fileID: 0}
   description: 
   isMove: 0
@@ -75,14 +75,16 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 57402e77a632084488f0a550d0100aa6
-  position: {x: 963.7401, y: 1001.0399}
+  position: {x: 1298.6001, y: 972.20013}
   blackBoard: {fileID: 0}
   description: 
   children:
   - {fileID: -1379371430232001852}
+  - {fileID: 9193168606956771292}
   - {fileID: -8388048738658306387}
   - {fileID: 9035349294366682562}
   - {fileID: 7309710746585178887}
+  - {fileID: 7070403862185854658}
   - {fileID: 5458347161555267443}
 --- !u!114 &-4963825200584943488
 MonoBehaviour:
@@ -105,7 +107,11 @@ MonoBehaviour:
   children:
   - {fileID: 1232093970957574778}
   - {fileID: 1484370956722694731}
-  - {fileID: 7368879895939858568}
+  - {fileID: -2211514862160140906}
+  - {fileID: 7347862243652102253}
+  - {fileID: 5011936366040935591}
+  - {fileID: 2180771698495587627}
+  - {fileID: 1591416612019186790}
 --- !u!114 &-4394410258394057923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,9 +127,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab2d1f3f61223484e991b4beadcad1ab
-  position: {x: -538.70746, y: 760.74255}
+  position: {x: -558.1787, y: 755.4106}
   blackBoard: {fileID: 0}
   description: 
+  name: Victory
+  runToTheEnd: 0
 --- !u!114 &-3814839551938261722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -161,6 +169,25 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 4475331866734409460}
+--- !u!114 &-2211514862160140906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc7ffea8cd765442813479d26b4843a, type: 3}
+  m_Name: MoveNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ab1f8dc67457bde4883c8ed9fa78a678
+  position: {x: 183.89774, y: 1461.977}
+  blackBoard: {fileID: 0}
+  description: 
+  isMove: 0
 --- !u!114 &-1379371430232001852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +203,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 919d34bad337c1a47a60617e76b30bea
-  position: {x: 610, y: 1342}
+  position: {x: 820.60004, y: 1257.2}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-1305553440874083371
@@ -296,7 +323,6 @@ MonoBehaviour:
   - {fileID: 3102653024347158632}
   - {fileID: 7437794790802086185}
   - {fileID: -5149731382989923726}
-  - {fileID: 7368879895939858568}
   - {fileID: 1484370956722694731}
   - {fileID: 7309710746585178887}
   - {fileID: 9035349294366682562}
@@ -309,6 +335,13 @@ MonoBehaviour:
   - {fileID: 5458347161555267443}
   - {fileID: 1232093970957574778}
   - {fileID: -1379371430232001852}
+  - {fileID: -2211514862160140906}
+  - {fileID: 9193168606956771292}
+  - {fileID: 7070403862185854658}
+  - {fileID: 7347862243652102253}
+  - {fileID: 2180771698495587627}
+  - {fileID: 1591416612019186790}
+  - {fileID: 5011936366040935591}
 --- !u!114 &1232093970957574778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -324,7 +357,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0cf0ab3efab038b4886bb39afaa783ae
-  position: {x: 54.93633, y: 1345.255}
+  position: {x: -150.21574, y: 1443.227}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &1484370956722694731
@@ -342,9 +375,30 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 64dc1748457420846b69e6e17733006e
-  position: {x: 240.93637, y: 1342.2549}
+  position: {x: 26.999979, y: 1459.9884}
   blackBoard: {fileID: 0}
   description: 
+  name: Run
+  runToTheEnd: 0
+--- !u!114 &1591416612019186790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e146a30edd3524cb958b21610b45c2, type: 3}
+  m_Name: ComebackMoveNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 2c8d591f5248da14b860b46829bf9343
+  position: {x: 855.1501, y: 1468.8502}
+  blackBoard: {fileID: 0}
+  description: 
+  isMove: 0
 --- !u!114 &1730021628354681881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,10 +414,30 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 200d80be887f5aa43a807d8e8eef806e
-  position: {x: 238.93639, y: 994.2548}
+  position: {x: 240.38756, y: 964.97}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -4963825200584943488}
+--- !u!114 &2180771698495587627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
+  m_Name: AnimationNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bff24330d4ac583449eb43146e9ec72f
+  position: {x: 685.0001, y: 1471.8502}
+  blackBoard: {fileID: 0}
+  description: 
+  name: Run
+  runToTheEnd: 0
 --- !u!114 &2459275571363347787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -401,6 +475,8 @@ MonoBehaviour:
   position: {x: -222.57632, y: 1269.6138}
   blackBoard: {fileID: 0}
   description: 
+  name: Death
+  runToTheEnd: 0
 --- !u!114 &3102653024347158632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +495,8 @@ MonoBehaviour:
   position: {x: -709.3956, y: 1698.998}
   blackBoard: {fileID: 0}
   description: 
+  name: 
+  runToTheEnd: 0
 --- !u!114 &3545055314641662178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,6 +515,8 @@ MonoBehaviour:
   position: {x: -338.10535, y: 1700.165}
   blackBoard: {fileID: 0}
   description: 
+  name: 
+  runToTheEnd: 0
 --- !u!114 &4475331866734409460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +532,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0a9b0538387c8c84dbf237c72072a92d
-  position: {x: 512.60004, y: 819.95013}
+  position: {x: 813.10004, y: 783.0581}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -498,6 +578,24 @@ MonoBehaviour:
   children:
   - {fileID: 7020155244636083768}
   - {fileID: 2838731015109135555}
+--- !u!114 &5011936366040935591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6e24365b0edae04d9c0868303453696, type: 3}
+  m_Name: SkillNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: e5bcde888fc9a2346827e5c3008ddc6e
+  position: {x: 514, y: 1464.8502}
+  blackBoard: {fileID: 0}
+  description: 
 --- !u!114 &5262406165538139151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +630,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 562f31321a3895e4cb359353a9927bb3
-  position: {x: 1321.4326, y: 1342.9464}
+  position: {x: 1789.6001, y: 1254.2001}
   blackBoard: {fileID: 0}
   description: 
   isMove: 0
@@ -555,6 +653,26 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -5433133297602562837}
+--- !u!114 &7070403862185854658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
+  m_Name: AnimationNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 348670014413f7a41b93fee11d55bbae
+  position: {x: 1633.6001, y: 1253.2001}
+  blackBoard: {fileID: 0}
+  description: 
+  name: Run
+  runToTheEnd: 0
 --- !u!114 &7309710746585178887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -570,10 +688,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e46c344ff3b033b45880154bfef18871
-  position: {x: 1152, y: 1342}
+  position: {x: 1471.6002, y: 1251.2}
   blackBoard: {fileID: 0}
   description: 
---- !u!114 &7368879895939858568
+--- !u!114 &7347862243652102253
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -582,15 +700,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c20c3ffc7d3ece940a451d12a58ea5de, type: 3}
-  m_Name: AttackNode
+  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
+  m_Name: AnimationNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 0140830908e3c014bb450ce0017c9a0f
-  position: {x: 422.93634, y: 1343.255}
+  guid: 29b41aca440e4654f9023364f1315537
+  position: {x: 355, y: 1465}
   blackBoard: {fileID: 0}
   description: 
+  name: Skill
+  runToTheEnd: 1
 --- !u!114 &7437794790802086185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +729,8 @@ MonoBehaviour:
   position: {x: -517.2505, y: 1705.5189}
   blackBoard: {fileID: 0}
   description: 
+  name: 
+  runToTheEnd: 0
 --- !u!114 &7821811617800623583
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -663,9 +785,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c6af56b3ca1d2594898a30bf4853b8de
-  position: {x: 488.64813, y: 636.04175}
+  position: {x: 810.6806, y: 599.04535}
   blackBoard: {fileID: 0}
   description: 
+  name: Idle
+  runToTheEnd: 0
 --- !u!114 &9035349294366682562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -681,6 +805,28 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 0ce06166e22a60f45a98148c0062ba14
-  position: {x: 971, y: 1337}
+  position: {x: 1316.6, y: 1251.2}
   blackBoard: {fileID: 0}
   description: 
+  name: Attack
+  runToTheEnd: 1
+--- !u!114 &9193168606956771292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
+  m_Name: AnimationNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a94e5298eb37b3544861689b09b808b8
+  position: {x: 986.60004, y: 1255.2}
+  blackBoard: {fileID: 0}
+  description: 
+  name: Run
+  runToTheEnd: 0

@@ -38,11 +38,11 @@ namespace JJS.BT
             bool findTarget = false;
             if (myTeam == Team.RED)
             {
-                TargetAdd(blackBoard.data.BlueHero, hc);
+                findTarget = TargetAdd(blackBoard.data.BlueHero, hc);
             }
             else if (myTeam == Team.BLUE)
             {
-                TargetAdd(blackBoard.data.RedHero, hc);
+                findTarget = TargetAdd(blackBoard.data.RedHero, hc);
             }
             if(findTarget)
                 return State.Success;
@@ -51,7 +51,7 @@ namespace JJS.BT
         }
 
 
-        public void TargetAdd(List<Blackboard> blackboards, HeroContext context)
+        public bool TargetAdd(List<Blackboard> blackboards, HeroContext context)
         {
             for (int i = 0; i < blackboards.Count; i++)
             {
@@ -60,9 +60,9 @@ namespace JJS.BT
                 if (blackboards[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
                 {
                     context.targets.Add(blackboards[i].gameObject);
-                    break;
                 }
             }
+            return context.targets.Count > 0 ?true:false;
         }
     }
 }

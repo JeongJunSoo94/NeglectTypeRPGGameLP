@@ -22,7 +22,7 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            if (HC.info.maxGage == HC.info.curSkillGage)
+            if (HC.info.maxMana == HC.info.curMana)
             {
                 child.Update();
                 return State.Running;

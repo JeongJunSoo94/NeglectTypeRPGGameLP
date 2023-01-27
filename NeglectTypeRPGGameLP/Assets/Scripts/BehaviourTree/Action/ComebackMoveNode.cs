@@ -22,6 +22,7 @@ namespace JJS.BT
 
         protected override void OnStop()
         {
+            context.info.heroUI();
         }
 
         protected override State OnUpdate()
@@ -32,28 +33,6 @@ namespace JJS.BT
 
         public void TargetLockOn()
         {
-            //if (context.isRed)
-            //{
-            //    for (int i = 0; i < context.bsc.BlueHero.Count; i++)
-            //    {
-            //        if (context.bsc.BlueHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
-            //        {
-            //            context.target = context.bsc.BlueHero[i];
-            //            break;
-            //        }
-            //    }
-            //}
-            //else
-            //{
-            //    for (int i = 0; i < context.bsc.RedHero.Count; i++)
-            //    {
-            //        if (context.bsc.RedHero[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
-            //        {
-            //            context.target = context.bsc.RedHero[i];
-            //            break;
-            //        }
-            //    }
-            //}
             isMove = true;
         }
 
@@ -66,7 +45,6 @@ namespace JJS.BT
                 context.myTurn = false;
                 BattleSystemContext con = hbb.battleSystemBlackboard.context as BattleSystemContext;
                 con.state = BattleState.Battle;
-                Debug.Log("≈œ ≥°≥≤"+blackBoard.gameObject.name);
                 return State.Success;
             }
             return State.Running;

@@ -21,7 +21,7 @@ public class DataManager : MonoBehaviour
     public GameObject defaultCharacter;
     public HeroInfo[] heroInfo;
     public HeroStat[] heroStat;
-    public List<GameObject> model = new List<GameObject>();
+    public List<GameObject> models = new List<GameObject>();
 
     public List<GameObject> characterPool;
 
@@ -48,8 +48,10 @@ public class DataManager : MonoBehaviour
         HeroBase hb= new HeroBase();
         hb.heroInfo = Instantiate(heroInfo[charIndex]);
         hb.heroStat = Instantiate(heroStat[charIndex]);
-        obj.GetComponent<HeroContext>().info = hb;
-        Instantiate(model[charIndex], obj.transform);
+        HeroContext hc= obj.GetComponent<HeroContext>();
+        hc.info = hb;
+        GameObject model = Instantiate(models[charIndex], obj.transform);
+        hc.animator = model.GetComponent<Animator>();
         obj.SetActive(false);
         characterPool[charIndex] = obj;
     }

@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public delegate void buff();
-public delegate void Skill();
-public delegate void HealthUI();
+public delegate float Skill(HeroBase stat);
+public delegate void HeroUI();
 public delegate float Defence(HeroBase stat);
 public delegate float Attack(HeroBase stat);
 public delegate void Find(List<HeroBase> obj);
@@ -23,8 +23,8 @@ public class HeroBase
     public float maxHealth;
     public float prevHealth;
     public float curHealth;
-    public float maxGage;
-    public float curSkillGage;
+    public float maxMana;
+    public float curMana;
 
     public Attack attack;
 
@@ -33,7 +33,7 @@ public class HeroBase
 
     public Skill skill;
 
-    public HealthUI healthBar;
+    public HeroUI heroUI;
 
     public float damage;
     public float damaged;
@@ -48,9 +48,9 @@ public class HeroBase
         maxHealth = heroStat.Health_Point * heroStat.Vital;
         curHealth = maxHealth;
         prevHealth = curHealth;
-        maxGage = 100.0f;
-        curSkillGage = 0;
-        healthBar();
+        maxMana = 100.0f;
+        curMana = 0;
+        heroUI();
         if (!init)
         {
             switch (heroStat.DamageType)
@@ -58,25 +58,38 @@ public class HeroBase
                 case 0:
                     attack += new Attack(WeaponDamage);
                     attack += new Attack(WeaponDamageBonus);
+                    skill += new Skill(WeaponDamage);
+                    skill += new Skill(WeaponDamageBonus);
                     break;
                 case 1:
                     attack += new Attack(TacticalDamage);
                     attack += new Attack(TacticalDamageBonus);
+                    skill += new Skill(TacticalDamage);
+                    skill += new Skill(TacticalDamageBonus);
                     break;
             }
-            attack += new Attack(GageUp);
+            attack += new Attack(GaugeUp);
             weaponDefence += new Defence(WeaponDefence);
             weaponDefence += new Defence(WeaponDefenceMitigation);
             tacticalDefence += new Defence(TacticalDefence);
             tacticalDefence += new Defence(TacticalDefenceMitigation);
+            skill += new Skill(GaugeDown);
             init = true;
         }
     }
 
-    public float GageUp(HeroBase hb)
+    public float GaugeUp(HeroBase hb)
     {
-        hb.curSkillGage = 100;
-        return 0;
+        hb.curMana = 100;
+        heroUI();
+        return hb.damage;
+    }
+
+    public float GaugeDown(HeroBase hb)
+    {
+        hb.curMana = 0;
+        heroUI();
+        return hb.damage;
     }
 
     //데미지에 무기,전술 두가지 종류의 데미지가 있다.
@@ -86,7 +99,7 @@ public class HeroBase
         switch (hb.heroStat.DamageType)
         {
             case 0:
-                damaged = weaponDefence(this) - hb.heroStat.Critical_Pierces_Defensive - hb.attack(hb);
+                damaged = weaponDefence(this)- hb.heroStat.Critical_Pierces_Defensive - hb.attack(hb);
                 break;
             case 1:
                 damaged = tacticalDefence(this)- hb.heroStat.Critical_Pierces_Defensive - hb.attack(hb);
@@ -94,7 +107,25 @@ public class HeroBase
         }
         if (damaged < 0)
             curHealth += damaged;
-        healthBar();
+
+        heroUI();
+    }
+
+    public void SkillDamaged(HeroBase hb)
+    {
+        switch (hb.heroStat.DamageType)
+        {
+            case 0:
+                damaged = weaponDefence(this) - hb.heroStat.Critical_Pierces_Defensive - hb.skill(hb);
+                break;
+            case 1:
+                damaged = tacticalDefence(this) - hb.heroStat.Critical_Pierces_Defensive - hb.skill(hb);
+                break;
+        }
+        if (damaged < 0)
+            curHealth += damaged;
+
+        heroUI();
     }
 
     public float WeaponDamage(HeroBase hb)

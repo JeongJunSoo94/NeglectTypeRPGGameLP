@@ -9,15 +9,17 @@ public class HeroContext : Context, IComparable<HeroContext>
     public HeroBase info;
 
     public Slider hpBar;
+    public Slider mpBar;
 
     public bool myTurn;
-    
+ 
     public Vector3 originPos;
-
     public Vector3 targetPos;
 
     public List<GameObject> targets;
 
+    public Animator animator;
+    public string currentAniState;
     public HeroBase GetInfo()
     {
         if (info == null)
@@ -48,7 +50,8 @@ public class HeroContext : Context, IComparable<HeroContext>
             info.heroInfo = Instantiate(DataManager.Instance.heroInfo[0]);
             info.heroStat = Instantiate(DataManager.Instance.heroStat[0]);
         }
-        info.healthBar = new HealthUI(HealthBarUpdate);
+        info.heroUI += new HeroUI(HealthBarUpdate);
+        info.heroUI += new HeroUI(ManaBarUpdate);
         originPos = transform.position;
         info.Initialized();
     }
@@ -56,6 +59,11 @@ public class HeroContext : Context, IComparable<HeroContext>
     public void HealthBarUpdate()
     {
         hpBar.value = info.curHealth / info.maxHealth;
+    }
+
+    public void ManaBarUpdate()
+    {
+        mpBar.value = info.curMana / info.maxMana;
     }
 
     public int CompareTo(HeroContext x)

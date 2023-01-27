@@ -23,7 +23,7 @@ MonoBehaviour:
   Critical_Rate: 70
   Critical_Immunity_Rate: 0
   Critical_Damage: 120
-  Health_Point: 80
+  Health_Point: 800
   Attack: 100
   Weapon_Attack: 10
   Tactical_Attack: 10

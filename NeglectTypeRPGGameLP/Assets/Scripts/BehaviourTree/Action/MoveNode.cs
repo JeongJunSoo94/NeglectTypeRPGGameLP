@@ -17,7 +17,7 @@ namespace JJS.BT
             {
                 context = blackBoard.context as HeroContext;
             }
-           
+            context.targetPos = context.targets[0].transform.position;
         }
 
         protected override void OnStop()
