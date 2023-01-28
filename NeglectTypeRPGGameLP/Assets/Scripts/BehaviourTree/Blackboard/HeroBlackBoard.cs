@@ -3,13 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HeroBlackBoard : Blackboard
+namespace NeglectTypeRPG
 {
-    public BattleSystemBlackboard battleSystemBlackboard;
-    public Vector3 moveToPosition;
-
-    public override void Awake()
+    public class HeroBlackBoard : Blackboard
     {
-        base.Awake();
+        public BattleSystemBlackboard battleSystemBlackboard;
+        public Vector3 moveToPosition;
+
+        public override void Awake()
+        {
+            base.Awake();
+        }
     }
 }

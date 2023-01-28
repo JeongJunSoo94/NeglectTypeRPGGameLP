@@ -6,9 +6,13 @@ namespace JJS.BT
 {
     public class HelthCheckNode : DecoratorNode
     {
+        HeroContext HC;
         protected override void OnStart()
         {
-
+            if (HC == null)
+            {
+                HC = blackBoard.context as HeroContext;
+            }
         }
 
         protected override void OnStop()
@@ -17,8 +21,12 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            child.Update();
-            return State.Success;
+            if (HC.info.curHealth > 0)
+            {
+                return child.Update();
+            }
+            else
+                return State.Failure;
         }
     }
 }

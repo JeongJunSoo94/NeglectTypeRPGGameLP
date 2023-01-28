@@ -43,7 +43,6 @@ public class ObjectPoolQueue: MonoBehaviour
     {
         GameObject obj = Instantiate(prefab);
         obj.SetActive(false);
-        //waitObjs.Enqueue(obj);
         curCount++;
     }
 
@@ -51,24 +50,46 @@ public class ObjectPoolQueue: MonoBehaviour
     {
         GameObject obj = Instantiate(prefab, parent);
         obj.SetActive(false);
-        //waitObjs.Enqueue(obj);
         curCount++;
     }
 
-    public void Enqueue(GameObject obj)
+    //public void Enqueue(GameObject obj)
+    //{
+    //    waitObjs.Enqueue(obj);
+    //    curCount++;
+    //}
+
+    private void UsedDequeue()
     {
-        waitObjs.Enqueue(obj);
-        curCount++;
+        for (int i = 0; i < useObjs.Count; ++i)
+        {
+            if (useObjs.Peek().activeSelf)
+            {
+                useObjs.Enqueue(useObjs.Dequeue());
+            }
+            else 
+            {
+                waitObjs.Enqueue(useObjs.Dequeue());
+                curCount++;
+            }
+        }
     }
 
     public GameObject Dequeue()
     {
         if (waitObjs.Count.Equals(0))
         {
-            if (parent)
-                Enqueue(parent);
+            if (useObjs.Count.Equals(0))
+            {
+                if (parent)
+                    Enqueue(parent);
+                else
+                    Enqueue();
+            }
             else
-                Enqueue();
+            {
+                UsedDequeue();
+            }
         }
 
         useObjs.Enqueue(waitObjs.Peek());

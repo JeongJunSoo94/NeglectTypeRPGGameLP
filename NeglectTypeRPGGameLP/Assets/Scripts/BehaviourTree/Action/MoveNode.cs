@@ -10,7 +10,8 @@ namespace JJS.BT
 
         public bool isMove;
         bool success;
-
+        float distance; 
+        public float speed = 10;
         protected override void OnStart()
         {
             if (context == null)
@@ -18,6 +19,7 @@ namespace JJS.BT
                 context = blackBoard.context as HeroContext;
             }
             context.targetPos = context.targets[0].transform.position;
+            distance = context.gameObject.transform.localScale.x + context.targets[0].transform.localScale.x;//Vector3.Distance(context.gameObject.transform.position ,context.targetPos);
         }
 
         protected override void OnStop()
@@ -30,14 +32,14 @@ namespace JJS.BT
                 return State.Success;
             return Action();
 
-            //return State.Failure;
         }
 
         public State Action()
         {
-            context.gameObject.transform.position = Vector3.Lerp(context.gameObject.transform.position, context.targetPos, 0.05f);
+            context.gameObject.transform.LookAt(new Vector3(context.targetPos.x, context.gameObject.transform.position.y, context.targetPos.z));
+            context.gameObject.transform.position += speed * context.gameObject.transform.forward * Time.deltaTime;
 
-            if (Vector3.Distance(context.gameObject.transform.position, context.targetPos) <=50.0f)
+            if (Vector3.Distance(context.gameObject.transform.position, context.targetPos) <= distance)
             {
                 isMove = false;
                 return State.Success;

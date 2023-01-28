@@ -3,22 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class BattleSystemBlackboard : Blackboard
+namespace NeglectTypeRPG
 {
-    public TabManager UI;
-    public void BattleStart()
+    public class BattleSystemBlackboard : Blackboard
     {
-        for (int i = 0; i < data.RedHero.Count; ++i)
+        public TabManager UI;
+        public void BattleStart()
         {
-            if (data.RedHero[i] != null)
-                break;
-            if (i == 4)
-                return;
+            for (int i = 0; i < data.RedHero.Count; ++i)
+            {
+                if (data.RedHero[i] != null)
+                    break;
+                if (i == 4)
+                    return;
+            }
+
+            BattleSystemContext bsc = context as BattleSystemContext;
+            bsc.isStart = true;
         }
 
-        BattleSystemContext bsc = context as BattleSystemContext;
-        bsc.isStart = true;
     }
 
 }
+

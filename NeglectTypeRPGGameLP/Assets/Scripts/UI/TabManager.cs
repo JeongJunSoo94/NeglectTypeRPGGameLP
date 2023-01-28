@@ -4,74 +4,78 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class TabManager : MonoBehaviour
+namespace NeglectTypeRPG
 {
-    //public GameObject[] Tab;
-    public int Tab=6;
-    
-    //이미지 갯수 체크
-    public Image[] TabBtnImage;
-
-    //데이터 베이스 접근해야함
-    public Sprite[] IdleSprite, SelectSprite;
-
-    //public List<RectTransform>  a= new List<RectTransform>();
-
-    public ObjectPoolList pool;
-
-    public List<HeroBattleIconUI> UIList;
-
-    private void Start()
+    public class TabManager : MonoBehaviour
     {
-        CreateUI();
-    }
-    public void CreateUI()
-    {
-        int count = DataManager.Instance.player.characterInventory.Count;
-        pool._objcetCount = DataManager.Instance.player.GetCharacterInventoryTrue();
-        pool.Production();
-        for (int i = 0; i < count; i++)
+        //public GameObject[] Tab;
+        public int Tab = 6;
+
+        //이미지 갯수 체크
+        public Image[] TabBtnImage;
+
+        //데이터 베이스 접근해야함
+        public Sprite[] IdleSprite, SelectSprite;
+
+        //public List<RectTransform>  a= new List<RectTransform>();
+
+        public ObjectPoolList pool;
+
+        public List<HeroBattleIconUI> UIList;
+
+        private void Start()
         {
-            if (DataManager.Instance.player.characterInventory[i])
+            CreateUI();
+        }
+        public void CreateUI()
+        {
+            int count = DataManager.Instance.player.characterInventory.Count;
+            pool._objcetCount = DataManager.Instance.player.GetCharacterInventoryTrue();
+            pool.Production();
+            for (int i = 0; i < count; i++)
             {
-                GameObject obj = pool.GetPooledObject();
-                HeroBattleIconUI hbiui = obj.GetComponent<HeroBattleIconUI>();
-                HeroInfo info =DataManager.Instance.heroInfo[i];
-                hbiui.heroIndex = i;
-                hbiui.faction = info.faction;
-                obj.GetComponent<Image>().sprite = info.Icon;
-                UIList.Add(hbiui);
-                obj.SetActive(true);
+                if (DataManager.Instance.player.characterInventory[i])
+                {
+                    GameObject obj = pool.GetPooledObject();
+                    HeroBattleIconUI hbiui = obj.GetComponent<HeroBattleIconUI>();
+                    HeroInfo info = DataManager.Instance.heroInfo[i];
+                    hbiui.heroIndex = i;
+                    hbiui.faction = info.faction;
+                    obj.GetComponent<Image>().sprite = info.Icon;
+                    UIList.Add(hbiui);
+                    obj.SetActive(true);
+                }
             }
         }
-    }
 
-    public void CharacterKind(int n)
-    {
-        for (int i=0;i< UIList.Count; ++i)
+        public void CharacterKind(int n)
         {
-            if (n == 0)
+            for (int i = 0; i < UIList.Count; ++i)
             {
-                UIList[i].gameObject.SetActive(true);
-                continue;
+                if (n == 0)
+                {
+                    UIList[i].gameObject.SetActive(true);
+                    continue;
+                }
+                if (UIList[i].faction == n - 1)
+                    UIList[i].gameObject.SetActive(true);
+                else
+                    UIList[i].gameObject.SetActive(false);
             }
-            if (UIList[i].faction == n - 1)
-                UIList[i].gameObject.SetActive(true);
-            else
-                UIList[i].gameObject.SetActive(false);
         }
-    }
 
-    public void TabClick(int n)
-    {
-        for (int i = 0; i < Tab; i++)
+        public void TabClick(int n)
         {
-            //Tab[i].SetActive(i==n);
-            //TabBtnImage[i].sprite = i == n ? SelectSprite[i] : IdleSprite[i];
-            TabBtnImage[i].color = i == n ?  new Color(10, 10, 10, 0.1f) : new Color(10, 10, 10, 1f);
+            for (int i = 0; i < Tab; i++)
+            {
+                //Tab[i].SetActive(i==n);
+                //TabBtnImage[i].sprite = i == n ? SelectSprite[i] : IdleSprite[i];
+                TabBtnImage[i].color = i == n ? new Color(10, 10, 10, 0.1f) : new Color(10, 10, 10, 1f);
+            }
+            CharacterKind(n);
         }
-        CharacterKind(n);
-    }
 
+
+    }
 
 }

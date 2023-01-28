@@ -6,9 +6,14 @@ namespace JJS.BT
 {
     public class DamagedNode : ActionNode
     {
+        HeroContext HC;
         protected override void OnStart()
         {
-
+            if (HC == null)
+            {
+                HC = blackBoard.context as HeroContext;
+            }
+            HC.info.prevHealth = HC.info.curHealth;
         }
 
         protected override void OnStop()

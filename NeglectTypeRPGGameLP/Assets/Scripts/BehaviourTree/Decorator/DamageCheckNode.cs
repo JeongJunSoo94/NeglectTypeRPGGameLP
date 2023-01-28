@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using NeglectTypeRPG;
 
 namespace JJS.BT
 {
@@ -22,26 +23,11 @@ namespace JJS.BT
 
         protected override State OnUpdate()
         {
-            if (HC.info.curHealth <= 0)
-            {
-                //юс╫ц
-                if (blackBoard.data.TeamCheck(blackBoard)==Team.RED)
-                    blackBoard.data.redCount--;
-                else
-                    blackBoard.data.blueCount--;
-                
-                HC.gameObject.SetActive(false);
-            }
             if (HC.info.prevHealth != HC.info.curHealth)
             {
-                HC.info.prevHealth = HC.info.curHealth;
+                return child.Update();
             }
-                //if (HC.info.prevHealth != HC.info.curHealth)
-                //{
-                //    child.Update();
-                //    return State.Running;
-                //}
-           return State.Failure;
+            return State.Failure;
         }
 
         public BattleSystemContext GetBSC()

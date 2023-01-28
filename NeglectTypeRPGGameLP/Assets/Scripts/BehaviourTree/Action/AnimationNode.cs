@@ -6,7 +6,7 @@ namespace JJS.BT
 {
     public class AnimationNode : ActionNode
     {
-        public string name;
+        public string aniName;
         public bool runToTheEnd;
         HeroContext context;
         protected override void OnStart()
@@ -15,7 +15,7 @@ namespace JJS.BT
             {
                 context = blackBoard.context as HeroContext;
             }
-            ChangeAnimationState(name);
+            ChangeAnimationState(aniName);
         }
 
         protected override void OnStop()
@@ -25,8 +25,8 @@ namespace JJS.BT
         protected override State OnUpdate()
         {
             if (runToTheEnd)
-            { 
-                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(name) &&context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f)
+            {
+                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) &&context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                     return State.Success;
                 return State.Running;
 
