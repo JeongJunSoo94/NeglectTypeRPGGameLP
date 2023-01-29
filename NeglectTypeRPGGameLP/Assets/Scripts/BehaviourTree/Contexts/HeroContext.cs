@@ -13,7 +13,8 @@ public class HeroContext : Context, IComparable<HeroContext>
     public Slider mpBar;
 
     public bool myTurn;
- 
+    public bool skillAvailable;
+
     public Vector3 originPos;
     public Vector3 targetPos;
 

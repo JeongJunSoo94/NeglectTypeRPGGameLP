@@ -29,11 +29,9 @@ namespace JJS.BT
                 if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) &&context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                     return State.Success;
                 return State.Running;
-
             }
             return State.Success;
         }
-
 
         void ChangeAnimationState(string newState)
         {
