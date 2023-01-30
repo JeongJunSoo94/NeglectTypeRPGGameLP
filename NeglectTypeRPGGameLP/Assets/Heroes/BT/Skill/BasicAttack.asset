@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d09dde25f63774a499cebd5c6216f71f
-  position: {x: -153.29234, y: 389.35388}
+  position: {x: -179.69598, y: 436.32202}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -56,10 +56,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01a8d10d2a1ae4e4987c39765f393b10
-  position: {x: -470.37476, y: 443.034}
+  position: {x: -517.061, y: 445.1306}
   blackBoard: {fileID: 0}
   description: 
-  isMove: 0
+  positionType: 0
+  moveType: 0
   speed: 10
 --- !u!114 &-3426520516344291705
 MonoBehaviour:
@@ -96,7 +97,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -240.77153, y: 550.9165}
+  position: {x: -267.69592, y: 598.32196}
   blackBoard: {fileID: 0}
   description: 
   aniName: Attack
@@ -116,7 +117,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d3f01fa4ea4bfa44daaf0f99ed89166f
-  position: {x: -678.5793, y: 437.98853}
+  position: {x: -724.9394, y: 443.50452}
   blackBoard: {fileID: 0}
   description: 
   aniName: Run
@@ -162,10 +163,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8f168fe1333876241a7d27a75f50ada2
-  position: {x: -869.7965, y: 437.95453}
+  position: {x: -917, y: 450.56848}
   blackBoard: {fileID: 0}
   description: 
-  type: 0
+  targetMyTeam: 0
+  StatType: 6
+  targetType: 4
+  targetCount: 1
 --- !u!114 &2977024951802793429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,7 +185,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d80c576e560066b4380cafb5650a9f91
-  position: {x: -149.49004, y: 231.76093}
+  position: {x: -181.08383, y: 242.86313}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -206,7 +210,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 559a9d711721f234793b42eeaa8319a4
-  position: {x: -58.688053, y: 551.0835}
+  position: {x: -85.69598, y: 598.32196}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &6036726901063360503
@@ -224,7 +228,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a4cb5fd9fa8057345bed7d91609ba18d
-  position: {x: -149.74101, y: 101.50595}
+  position: {x: -182.08385, y: 112.863144}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 2977024951802793429}

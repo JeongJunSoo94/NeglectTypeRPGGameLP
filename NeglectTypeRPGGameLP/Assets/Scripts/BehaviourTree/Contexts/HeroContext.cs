@@ -25,6 +25,8 @@ namespace NeglectTypeRPG
         public string currentAniState;
 
         public List<BehaviourTree> AttackBehavior;
+
+
         //public HeroBase GetInfo()
         //{
         //    if (info == null)

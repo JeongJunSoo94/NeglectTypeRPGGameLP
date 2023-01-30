@@ -1,38 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using JJS.BT;
 
 namespace NeglectTypeRPG
 {
-    public class AttackNode : ActionNode, ICharacterNode
+    public class HeroTurnEndNode : ActionNode, ICharacterNode
     {
         HeroContext context;
-
+        HeroBlackBoard hbb;
         protected override void OnStart()
         {
             if (context == null)
             {
                 context = blackBoard.context as HeroContext;
+                hbb = blackBoard as HeroBlackBoard;
             }
-            
         }
+
         protected override void OnStop()
         {
+            context.myTurn = false;
+            BattleSystemContext con = hbb.battleSystemBlackboard.context as BattleSystemContext;
+            con.state = BattleState.Battle;
         }
 
         protected override State OnUpdate()
         {
-            Attack();
             return State.Success;
-        }
-
-        void Attack()
-        {
-            for (int i = 0; i < context.targets.Count; ++i)
-            {
-                context.targets[i].GetComponent<HeroContext>().info.Damaged(context.info);
-            }
         }
     }
 }

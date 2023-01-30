@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d09dde25f63774a499cebd5c6216f71f
-  position: {x: -141.75829, y: 421.31168}
+  position: {x: -106.5207, y: 470.33408}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -36,11 +36,32 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 84fcb43453d3e354b80742d364258e70
-  position: {x: 156.98859, y: 430.86362}
+  position: {x: 296.68234, y: 505.44952}
   blackBoard: {fileID: 0}
   description: 
   aniName: Run
   runToTheEnd: 0
+--- !u!114 &-6100734029666703428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fc7ffea8cd765442813479d26b4843a, type: 3}
+  m_Name: MoveNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: c04a1d61f039d45478fd9a3c5c42945c
+  position: {x: 505.15887, y: 503.44946}
+  blackBoard: {fileID: 0}
+  description: 
+  positionType: 1
+  moveType: 1
+  speed: 10
 --- !u!114 &-3776697868775155057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56,12 +77,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01a8d10d2a1ae4e4987c39765f393b10
-  position: {x: -411.984, y: 429.06082}
+  position: {x: -472.16776, y: 502.2078}
   blackBoard: {fileID: 0}
   description: 
-  isMove: 0
+  positionType: 2
+  moveType: 1
   speed: 10
---- !u!114 &-3426520516344291705
+--- !u!114 &-2051505709749543632
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -70,17 +92,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56e146a30edd3524cb958b21610b45c2, type: 3}
-  m_Name: ComebackMoveNode
+  m_Script: {fileID: 11500000, guid: 5ba503aa70ecada499cec8c2842adbe0, type: 3}
+  m_Name: HeroTurnEndNode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: db389583a87558448a304475993ae50f
-  position: {x: 332.29584, y: 430.86362}
+  guid: 9ca247a0a86bb4d439b04657b9cc8a6e
+  position: {x: 696.15497, y: 508.02893}
   blackBoard: {fileID: 0}
   description: 
-  isMove: 0
-  speed: 10
 --- !u!114 &-407857048458958586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,7 +116,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01bc4440a8732b84594b20373a4d55e2
-  position: {x: -41.14934, y: 606.6688}
+  position: {x: 34.158802, y: 691.1588}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-143152093723390718
@@ -114,7 +134,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -235.62982, y: 604}
+  position: {x: -251.95288, y: 687.1028}
   blackBoard: {fileID: 0}
   description: 
   aniName: Skill
@@ -134,7 +154,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d3f01fa4ea4bfa44daaf0f99ed89166f
-  position: {x: -583.98395, y: 432.06085}
+  position: {x: -716.2327, y: 494.8901}
   blackBoard: {fileID: 0}
   description: 
   aniName: Run
@@ -161,10 +181,11 @@ MonoBehaviour:
   - {fileID: -25794264640207255}
   - {fileID: -3776697868775155057}
   - {fileID: -7206375549158592032}
-  - {fileID: -3426520516344291705}
   - {fileID: -143152093723390718}
   - {fileID: -7535324228799086068}
   - {fileID: -407857048458958586}
+  - {fileID: -2051505709749543632}
+  - {fileID: -6100734029666703428}
 --- !u!114 &7219506378607500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,10 +201,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8f168fe1333876241a7d27a75f50ada2
-  position: {x: -801.13684, y: 433.59088}
+  position: {x: -930.1659, y: 499.25275}
   blackBoard: {fileID: 0}
-  description: 
-  type: 0
+  description: "\uD0C0\uAC9F \uC124\uC815\uB178\uB4DC"
+  targetMyTeam: 0
+  StatType: 6
+  targetType: 3
+  targetCount: 1
 --- !u!114 &2977024951802793429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,7 +223,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: d80c576e560066b4380cafb5650a9f91
-  position: {x: -139.71556, y: 243.30661}
+  position: {x: -103.84093, y: 251}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -208,7 +232,8 @@ MonoBehaviour:
   - {fileID: -3776697868775155057}
   - {fileID: -7535324228799086068}
   - {fileID: -7206375549158592032}
-  - {fileID: -3426520516344291705}
+  - {fileID: -6100734029666703428}
+  - {fileID: -2051505709749543632}
 --- !u!114 &6036726901063360503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,7 +249,7 @@ MonoBehaviour:
   state: 0
   started: 1
   guid: a4cb5fd9fa8057345bed7d91609ba18d
-  position: {x: -138.82909, y: 104.545135}
+  position: {x: -100.909096, y: 123.816345}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 2977024951802793429}

@@ -4,11 +4,30 @@ using UnityEngine;
 
 namespace NeglectTypeRPG
 {
+    public enum PositionType
+    {
+        None,
+        OriginPos,
+        TargetFront,
+        TargetBack,
+        TargetLeft,
+        TargetRight,
+        FrontCenter,
+        BackCenter,
+        SideFront,
+        SideCenter,
+    }
+    public enum MoveType
+    {
+        None,
+        MoveTowards,
+        Teleportation,
+    }
     public class MoveNode : ActionNode,ICharacterNode
     {
         HeroContext context;
-
-        public bool isMove;
+        public PositionType positionType;
+        public MoveType moveType;
         bool success;
         float distance; 
         public float speed = 10;
@@ -41,7 +60,6 @@ namespace NeglectTypeRPG
 
             if (Vector3.Distance(context.gameObject.transform.position, context.targetPos) <= distance)
             {
-                isMove = false;
                 return State.Success;
             }
             return State.Running;

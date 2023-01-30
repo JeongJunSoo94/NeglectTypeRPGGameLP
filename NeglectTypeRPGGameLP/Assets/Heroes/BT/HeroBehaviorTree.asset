@@ -74,7 +74,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 364ec001dd1de984bb2ad6abac2e8c74
-  position: {x: -508.79324, y: 1299.6024}
+  position: {x: -501.00006, y: 1305.6871}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-2255352901321592693
@@ -229,7 +229,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f054fb1308b0b5a4ba517a0872a4e71f
-  position: {x: -709.6045, y: 1299.8748}
+  position: {x: -694.0001, y: 1315}
   blackBoard: {fileID: 0}
   description: 
   aniName: Death
@@ -249,7 +249,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -1228, y: 1775.6461}
+  position: {x: -1220.0002, y: 1781.687}
   blackBoard: {fileID: 0}
   description: 
   aniName: hurt
@@ -330,7 +330,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9410b1cd4695c7247b3686d986b4d31b
-  position: {x: -27.54142, y: 931.26025}
+  position: {x: -57.030014, y: 956.1925}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &7020155244636083768
@@ -406,7 +406,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9c6e00a84ddc5044398ed85b8d7d6ad9
-  position: {x: -1054.2308, y: 1774.9583}
+  position: {x: -1046.0001, y: 1780.6871}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &9032924591394990372
