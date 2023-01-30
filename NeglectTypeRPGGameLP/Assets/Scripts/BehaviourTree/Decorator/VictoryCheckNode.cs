@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class VictoryCheckNode : DecoratorNode
     {

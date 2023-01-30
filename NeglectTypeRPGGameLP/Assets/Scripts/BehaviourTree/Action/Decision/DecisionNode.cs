@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace NeglectTypeRPG
 {
-    public abstract class ActionNode : Node
+    public abstract class DecisionNode : ActionNode
     {
     }
 }

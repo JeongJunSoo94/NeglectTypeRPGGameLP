@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NeglectTypeRPG;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class BattleTurnArrangementNode : ActionNode
+    public class BattleTurnArrangementNode : ActionNode, ISystemNode
     {
         BattleSystemContext BSC;
         BattleSystemBlackboard BSB;

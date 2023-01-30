@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 using UnityEditor.Experimental.GraphView;
 using System;
 using System.Linq;
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class BehaviourTreeView : GraphView
     {
@@ -117,16 +117,40 @@ namespace JJS.BT
             }
             return graphViewChange;
         }
-
         public override void BuildContextualMenu(ContextualMenuPopulateEvent evt)
         {
             Vector2 nodePosition = this.ChangeCoordinatesTo(contentViewContainer, evt.localMousePosition);
             {
-
                 var types = TypeCache.GetTypesDerivedFrom<ActionNode>();
                 foreach (var type in types)
                 {
-                    evt.menu.AppendAction($"[Action]/{type.Name}", (a) => CreateNode(type, nodePosition));
+                    Type[] interfaces = type.GetInterfaces();
+                    if (interfaces.Length == 0)
+                    {
+                        evt.menu.AppendAction($"[Action]/{type.Name}", (a) => CreateNode(type, nodePosition));
+                    }
+
+                    if (tree.behaviourType == BehaviourType.Character)
+                    {
+                        for (int i = 0; i < interfaces.Length; ++i)
+                        {
+                            if (interfaces[i] == typeof(ICharacterNode))
+                            {
+                                evt.menu.AppendAction($"[Action]/[{interfaces[i].Name}]/{type.Name}", (a) => CreateNode(type, nodePosition));
+                            }
+                        }
+                    }
+                    else if (tree.behaviourType == BehaviourType.System)
+                    {
+                        for (int i = 0; i < interfaces.Length; ++i)
+                        {
+                            if (interfaces[i] == typeof(ISystemNode))
+                            {
+                                evt.menu.AppendAction($"[Action]/[{interfaces[i].Name}]/{type.Name}", (a) => CreateNode(type, nodePosition));
+                            }
+                        }
+                    }
+                        
                 }
             }
 
@@ -145,29 +169,6 @@ namespace JJS.BT
                     evt.menu.AppendAction($"[Decorator]/{type.Name}", (a) => CreateNode(type, nodePosition));
                 }
             }
-            //{
-            //    var types = TypeCache.GetTypesDerivedFrom<ActionNode>();
-            //    foreach (var type in types)
-            //    {
-            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
-            //    }
-            //}
-
-            //{
-            //    var types = TypeCache.GetTypesDerivedFrom<CompositeNode>();
-            //    foreach (var type in types)
-            //    {
-            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
-            //    }
-            //}
-
-            //{
-            //    var types = TypeCache.GetTypesDerivedFrom<DecoratorNode>();
-            //    foreach (var type in types)
-            //    {
-            //        evt.menu.AppendAction($"[{type.BaseType.Name}]{type.Name}", (a) => CreateNode(type));
-            //    }
-            //}
         }
 
         void CreateNode(System.Type type)

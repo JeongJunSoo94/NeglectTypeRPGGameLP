@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     [System.Serializable]
     public class Blackboard : MonoBehaviour

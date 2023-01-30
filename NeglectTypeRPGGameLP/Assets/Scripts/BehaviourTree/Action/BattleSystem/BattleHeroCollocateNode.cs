@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using NeglectTypeRPG;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class BattleHeroCollocateNode : ActionNode
+    public class BattleHeroCollocateNode : ActionNode, ISystemNode
     {
         BattleSystemContext bsc; 
         BattleSystemBlackboard bsb;

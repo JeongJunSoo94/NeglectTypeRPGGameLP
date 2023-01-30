@@ -3832,11 +3832,13 @@ MonoBehaviour:
   hpBar: {fileID: 76329221}
   mpBar: {fileID: 27654707}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 234586678}
   currentAniState: 
+  AttackBehavior: []
 --- !u!4 &234586677
 Transform:
   m_ObjectHideFlags: 0
@@ -9642,6 +9644,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: dc0b81b836a04b1498b29be160b865e6, type: 2}
   - {fileID: 11400000, guid: 464b30c5572616b4281f41b01dbcc1cf, type: 2}
   - {fileID: 11400000, guid: 136b74110b4150e4985fcbddf2b49ab2, type: 2}
+  characterBehaviors:
+  - {fileID: 11400000, guid: 41eafc8c4a0a7e940839bc31991def94, type: 2}
+  - {fileID: 11400000, guid: a76c9b8bd70fa1c408bd3ff20c8854a6, type: 2}
   models:
   - {fileID: 3522855692470406516, guid: b545caec64a35f2408431201e928730b, type: 3}
   - {fileID: 3522855692470406516, guid: b545caec64a35f2408431201e928730b, type: 3}
@@ -21554,11 +21559,13 @@ MonoBehaviour:
   hpBar: {fileID: 1177834100}
   mpBar: {fileID: 1759009959}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1239660725}
   currentAniState: 
+  AttackBehavior: []
 --- !u!4 &1239660724
 Transform:
   m_ObjectHideFlags: 0
@@ -24425,11 +24432,13 @@ MonoBehaviour:
   hpBar: {fileID: 1463874107}
   mpBar: {fileID: 1320990005}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1383821174}
   currentAniState: 
+  AttackBehavior: []
 --- !u!4 &1383821173
 Transform:
   m_ObjectHideFlags: 0
@@ -24926,11 +24935,13 @@ MonoBehaviour:
   hpBar: {fileID: 966545099}
   mpBar: {fileID: 1858146785}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1396356061}
   currentAniState: 
+  AttackBehavior: []
 --- !u!4 &1396356060
 Transform:
   m_ObjectHideFlags: 0
@@ -37325,11 +37336,13 @@ MonoBehaviour:
   hpBar: {fileID: 1665004676}
   mpBar: {fileID: 2126228695}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 2062603701}
   currentAniState: 
+  AttackBehavior: []
 --- !u!4 &2062603700
 Transform:
   m_ObjectHideFlags: 0

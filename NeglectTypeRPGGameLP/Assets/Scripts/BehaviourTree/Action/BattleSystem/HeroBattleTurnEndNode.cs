@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class HeroBattleTurnEndNode : ActionNode
+    public class HeroBattleTurnEndNode : ActionNode, ISystemNode
     {
         protected override void OnStart()
         {

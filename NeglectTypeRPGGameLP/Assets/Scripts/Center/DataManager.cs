@@ -22,6 +22,7 @@ namespace NeglectTypeRPG
         public GameObject defaultCharacter;
         public HeroInfo[] heroInfo;
         public HeroStat[] heroStat;
+        public BehaviourTree[] characterBehaviors;
         public List<GameObject> models = new List<GameObject>();
 
         public List<GameObject> characterPool;
@@ -53,6 +54,8 @@ namespace NeglectTypeRPG
             hb.heroStat = Instantiate(heroStat[charIndex]);
             HeroContext hc = obj.GetComponent<HeroContext>();
             hc.info = hb;
+            hc.AttackBehavior.Add(characterBehaviors[0].Clone(obj.GetComponent<Blackboard>()));
+            hc.AttackBehavior.Add(characterBehaviors[1].Clone(obj.GetComponent<Blackboard>()));
             GameObject model = Instantiate(models[charIndex], obj.transform);
             hc.animator = model.GetComponent<Animator>();
             obj.SetActive(false);

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class StateChangeNode : ActionNode
+    public class StateChangeNode : ActionNode, ISystemNode
     {
         BattleSystemContext BSC;
         public BattleState battleState;

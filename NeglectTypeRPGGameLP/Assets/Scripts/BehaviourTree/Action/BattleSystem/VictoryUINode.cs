@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class VictoryUINode : ActionNode
+    public class VictoryUINode : ActionNode, ISystemNode
     {
         BattleSystemContext bsc; 
         public bool isOn;

@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using NeglectTypeRPG;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class ComebackMoveNode : ActionNode
+    public class ComebackMoveNode : ActionNode, ICharacterNode
     {
         HeroContext context;
         HeroBlackBoard hbb; 

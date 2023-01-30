@@ -7,7 +7,7 @@ using UnityEditor.UIElements;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class NodeView : UnityEditor.Experimental.GraphView.Node
     {

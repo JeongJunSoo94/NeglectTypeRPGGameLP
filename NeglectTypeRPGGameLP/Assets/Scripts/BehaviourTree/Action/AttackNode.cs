@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-namespace JJS.BT
+using JJS.BT;
+
+namespace NeglectTypeRPG
 {
-    public class AttackNode : ActionNode
+    public class AttackNode : ActionNode, ICharacterNode
     {
         HeroContext context;
 

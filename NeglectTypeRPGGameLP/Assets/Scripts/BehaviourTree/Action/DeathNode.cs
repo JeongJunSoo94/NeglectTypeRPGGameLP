@@ -1,11 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using JJS.BT;
 
 namespace NeglectTypeRPG
 {
-    public class DeathNode : ActionNode
+    public class DeathNode : ActionNode, ICharacterNode
     {
         HeroContext HC;
         protected override void OnStart()

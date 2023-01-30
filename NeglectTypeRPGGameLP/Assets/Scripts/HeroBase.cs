@@ -39,8 +39,6 @@ public class HeroBase
     public float damaged;
     public float defence;
 
-    SkillInfo[] skills;
-
     bool init = false;
 
     public void Initialized()

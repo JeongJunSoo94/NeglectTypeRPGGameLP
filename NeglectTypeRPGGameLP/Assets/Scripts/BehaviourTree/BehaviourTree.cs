@@ -5,15 +5,20 @@ using UnityEngine;
 using UnityEditor;
 #endif
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
+    public enum BehaviourType
+    {
+        System,
+        Character,
+    }
     [CreateAssetMenu()]
     public class BehaviourTree : ScriptableObject
     {
         public Node rootNode;
         public Node.State treeState = Node.State.Running;
+        public BehaviourType behaviourType;
         public List<Node> nodes = new List<Node>();
-        //public Blackboard blackboard = new Blackboard();
 
         public Node.State Update()
         {

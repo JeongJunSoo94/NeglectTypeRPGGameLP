@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class SplitView : TwoPaneSplitView
     {

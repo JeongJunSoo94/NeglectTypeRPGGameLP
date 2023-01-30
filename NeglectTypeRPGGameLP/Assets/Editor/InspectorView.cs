@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class InspectorView : VisualElement
     {

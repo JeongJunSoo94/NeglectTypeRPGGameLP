@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class BattleEndCleanNode : ActionNode
+    public class BattleEndCleanNode : ActionNode, ISystemNode
     {
         BattleSystemContext bsc;
         protected override void OnStart()

@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEditor.Callbacks;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
     public class BehaviourTreeEditor : EditorWindow
     {

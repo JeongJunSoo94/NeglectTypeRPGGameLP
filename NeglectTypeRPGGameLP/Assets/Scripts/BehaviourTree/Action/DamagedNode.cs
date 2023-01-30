@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class DamagedNode : ActionNode
+    public class DamagedNode : ActionNode, ICharacterNode
     {
         HeroContext HC;
         protected override void OnStart()

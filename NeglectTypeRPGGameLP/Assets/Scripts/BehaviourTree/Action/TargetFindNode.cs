@@ -1,13 +1,25 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JJS.BT
+namespace NeglectTypeRPG
 {
-    public class TargetFindNode : ActionNode
+    public enum TargetType
+    {
+        None,
+        All,
+        Proximate,
+        Farthest,
+        DefenceWeakest,
+        HealthWeakest,
+    }
+
+    public class TargetFindNode :  ActionNode , ICharacterNode
     {
         HeroContext hc;
         Team myTeam;
+        public TargetType type;
         protected override void OnStart()
         {
             if (myTeam == Team.None)
@@ -21,6 +33,7 @@ namespace JJS.BT
 
         protected override void OnStop()
         {
+
         }
 
         protected override State OnUpdate()
@@ -44,25 +57,33 @@ namespace JJS.BT
             {
                 findTarget = TargetAdd(blackBoard.data.RedHero, hc);
             }
-            if(findTarget)
+            if (findTarget)
                 return State.Success;
             else
                 return State.Failure;
         }
 
-
-        public bool TargetAdd(List<Blackboard> blackboards, HeroContext context)
+        public virtual bool TargetAdd(List<Blackboard> blackboards, HeroContext context)
         {
             for (int i = 0; i < blackboards.Count; i++)
             {
                 if (blackboards[i] == null)
                     continue;
-                if (blackboards[i].GetComponent<HeroContext>().GetInfo().curHealth > 0)
+                if (TargetDecision(blackboards[i]))
                 {
                     context.targets.Add(blackboards[i].gameObject);
                 }
+                context.targets.Add(blackboards[i].gameObject);
             }
             return context.targets.Count > 0 ?true:false;
+        }
+
+        public bool TargetDecision(Blackboard blackboard)
+        {
+            if(blackboard.GetComponent<HeroContext>().info.curHealth > 0)
+                return true;
+
+            return false;
         }
     }
 }
