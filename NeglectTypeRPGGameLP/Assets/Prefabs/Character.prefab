@@ -582,6 +582,7 @@ GameObject:
   - component: {fileID: 8361429315246153321}
   - component: {fileID: 8361429315246153316}
   - component: {fileID: 8361429315246153318}
+  - component: {fileID: 8407598435213636453}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -636,11 +637,15 @@ MonoBehaviour:
   hpBar: {fileID: 4142113006860578665}
   mpBar: {fileID: 8804343932604579644}
   myTurn: 0
+  skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 0}
   currentAniState: 
+  AttackBehavior: []
+  syncBehavior: 0
 --- !u!114 &8361429315246153318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -654,6 +659,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tree: {fileID: 11400000, guid: 910b727b944bf464b9915de3cb7b11ed, type: 2}
+--- !u!95 &8407598435213636453
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8361429315246153372}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 1
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8916295973791426737
 GameObject:
   m_ObjectHideFlags: 0

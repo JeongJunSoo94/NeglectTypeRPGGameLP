@@ -24,9 +24,5 @@ namespace NeglectTypeRPG
             context.InitContext();
         }
 
-        public void BlackboardStartCoroutine(IEnumerator value)
-        {
-            StartCoroutine(value);
-        }
     }
 }

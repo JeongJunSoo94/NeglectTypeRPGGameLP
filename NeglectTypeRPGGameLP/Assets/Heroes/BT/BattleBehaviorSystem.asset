@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rootNode: {fileID: -9139008350247504011}
   treeState: 0
+  behaviourType: 0
   nodes:
   - {fileID: -9139008350247504011}
   - {fileID: 1043033445128292158}
@@ -597,7 +598,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9f64b9e1ff5481246bf7902e1707108b
-  position: {x: -164.11134, y: 701.19135}
+  position: {x: -153.73247, y: 697.0325}
   blackBoard: {fileID: 0}
   description: 
   battleState: 5

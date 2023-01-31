@@ -67,9 +67,12 @@ namespace NeglectTypeRPG
                 if (i < 5)
                 {
                     blackBoard.data.RedHero[i] = character.GetComponent<Blackboard>();
-                    character.transform.position = blackBoard.data.cell[i].transform.position;
-                    character.GetComponent<HeroBlackBoard>().data = blackBoard.data;
-                    character.GetComponent<HeroBlackBoard>().battleSystemBlackboard = bsb;
+                    character.transform.position = blackBoard.data.redCell[i].transform.position;
+                    HeroBlackBoard heroBlackBoard = character.GetComponent<HeroBlackBoard>();
+                    heroBlackBoard.data = blackBoard.data;
+                    heroBlackBoard.battleSystemBlackboard = bsb;
+                    character.transform.rotation = Quaternion.Euler(0, 180, 0);
+                    character.GetComponent<HeroContext>().originRotation = new Vector3(0,180,0);
                     character.SetActive(true);
                     return;
                 }

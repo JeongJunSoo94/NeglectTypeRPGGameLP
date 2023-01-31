@@ -1634,7 +1634,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 123984314}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.8138275, y: -1.2172756, z: 3.467968}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
@@ -2344,6 +2344,7 @@ MonoBehaviour:
   context: {fileID: 0}
   data: {fileID: 901422703}
   UI: {fileID: 409895644}
+  soundCenter: {fileID: 840741214}
 --- !u!114 &178952607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2546,6 +2547,37 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 190865839}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &194540375
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194540376}
+  m_Layer: 0
+  m_Name: EffectCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &194540376
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194540375}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &194630001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3835,10 +3867,12 @@ MonoBehaviour:
   skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 234586678}
   currentAniState: 
   AttackBehavior: []
+  syncBehavior: 0
 --- !u!4 &234586677
 Transform:
   m_ObjectHideFlags: 0
@@ -5870,7 +5904,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 345250805}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.973827, y: -1.2172756, z: -8.882032}
+  m_LocalPosition: {x: -11.49, y: -1.2172756, z: -8.54}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6303,7 +6337,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366639940}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -12.793827, y: -1.2172756, z: 9.947968}
+  m_LocalPosition: {x: -14.46, y: -1.2172756, z: 9.947968}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8549,7 +8583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 506821935}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.743827, y: -1.2172756, z: 10.777967}
+  m_LocalPosition: {x: -9.12, y: -1.2172756, z: 10.777967}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9655,7 +9689,6 @@ MonoBehaviour:
   - {fileID: 3522855692470406516, guid: b545caec64a35f2408431201e928730b, type: 3}
   characterPool: []
   player: {fileID: 11400000, guid: 77a405bc58578374eb565b854e94fa0a, type: 2}
-  soundCenter: {fileID: 0}
 --- !u!4 &552930240
 Transform:
   m_ObjectHideFlags: 0
@@ -14689,7 +14722,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.35
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -16239,12 +16272,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d331bad1c968c47960d16a5ed6aece, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cell:
+  redCell:
   - {fileID: 1101369929}
   - {fileID: 123984314}
   - {fileID: 2034980528}
   - {fileID: 506821935}
   - {fileID: 366639940}
+  blueCell:
+  - {fileID: 2136342577}
+  - {fileID: 345250805}
+  - {fileID: 1795646658}
+  - {fileID: 1172140577}
+  - {fileID: 992608358}
   RedHero: []
   BlueHero:
   - {fileID: 234586674}
@@ -18036,7 +18075,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992608358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.223826, y: -1.2172756, z: -13.162032}
+  m_LocalPosition: {x: -14.223826, y: -1.2172756, z: -13.54}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19617,7 +19656,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1101369929}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.743827, y: -1.2172756, z: 3.467968}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
@@ -21562,10 +21601,12 @@ MonoBehaviour:
   skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1239660725}
   currentAniState: 
   AttackBehavior: []
+  syncBehavior: 0
 --- !u!4 &1239660724
 Transform:
   m_ObjectHideFlags: 0
@@ -24435,10 +24476,12 @@ MonoBehaviour:
   skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1383821174}
   currentAniState: 
   AttackBehavior: []
+  syncBehavior: 0
 --- !u!4 &1383821173
 Transform:
   m_ObjectHideFlags: 0
@@ -24938,10 +24981,12 @@ MonoBehaviour:
   skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 1396356061}
   currentAniState: 
   AttackBehavior: []
+  syncBehavior: 0
 --- !u!4 &1396356060
 Transform:
   m_ObjectHideFlags: 0
@@ -36813,7 +36858,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034980528}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4638271, y: -1.2172756, z: 8.667967}
+  m_LocalPosition: {x: -3.17, y: -1.2172756, z: 8.667967}
   m_LocalScale: {x: 3, y: 0.1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -37339,10 +37384,12 @@ MonoBehaviour:
   skillAvailable: 0
   originPos: {x: 0, y: 0, z: 0}
   targetPos: {x: 0, y: 0, z: 0}
+  originRotation: {x: 0, y: 0, z: 0}
   targets: []
   animator: {fileID: 2062603701}
   currentAniState: 
   AttackBehavior: []
+  syncBehavior: 0
 --- !u!4 &2062603700
 Transform:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ namespace NeglectTypeRPG
                 else
                     blackBoard.data.blueCount--;
 
+                HC.myTurn = false;
                 HC.gameObject.SetActive(false);
             }
         }

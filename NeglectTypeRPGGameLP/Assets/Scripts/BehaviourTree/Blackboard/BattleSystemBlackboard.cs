@@ -8,6 +8,7 @@ namespace NeglectTypeRPG
     public class BattleSystemBlackboard : Blackboard
     {
         public TabManager UI;
+        public SoundCenter soundCenter;
         public void BattleStart()
         {
             for (int i = 0; i < data.RedHero.Count; ++i)

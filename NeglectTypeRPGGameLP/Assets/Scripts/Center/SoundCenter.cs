@@ -22,18 +22,8 @@ namespace NeglectTypeRPG
         private void Awake()
         {
             InfoInit();
-            //bgm = Resources.LoadAll<AudioClip>("2DResource/Sound/BGM");
-            //sfx = Resources.LoadAll<AudioClip>("2DResource/Sound/SFX");
             gameObject.AddComponent<AudioSource>();
             gameObject.GetComponent<AudioSource>().loop = true;
-
-            //gameObject.AddComponent<ObjectPoolQueue>();
-            //gameObject.TryGetComponent<ObjectPoolQueue>(out Pool);
-
-            //Pool.parentObject = this.gameObject;
-            //Pool.productObject = Resources.Load<GameObject>("prefap/Core/SFX");
-            //Pool._objectCount = 10;
-            //Pool.Production();
             SetBGM(0);
             BGMPlay();
             DontDestroyOnLoad(this.gameObject);

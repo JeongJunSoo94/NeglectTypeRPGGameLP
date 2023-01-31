@@ -1,5 +1,26 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8312345782388803281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 9fb964b6c06fadf4297ffc7d03f3ec9a
+  position: {x: -1033, y: 1795}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 3102653024347158632}
+  - {fileID: 8848873719020026039}
 --- !u!114 &-8174490526658262017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,7 +39,7 @@ MonoBehaviour:
   position: {x: -1136, y: 1468}
   blackBoard: {fileID: 0}
   description: 
-  child: {fileID: 5284483838149368841}
+  child: {fileID: -4972054341592633645}
 --- !u!114 &-5433133297602562837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39,6 +60,27 @@ MonoBehaviour:
   description: 
   children:
   - {fileID: -8174490526658262017}
+--- !u!114 &-4972054341592633645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73af25f8fee031d4e9134e8d8ca7e7c2, type: 3}
+  m_Name: ParallelNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7ff237450d8a9d34695166ea1bca203f
+  position: {x: -1137.7096, y: 1644.6442}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 6712245848545921146}
+  - {fileID: -8312345782388803281}
 --- !u!114 &-4394410258394057923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54,11 +96,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab2d1f3f61223484e991b4beadcad1ab
-  position: {x: -828.2464, y: 767.58685}
+  position: {x: -1058.7831, y: 808.9403}
   blackBoard: {fileID: 0}
   description: 
-  aniName: Victory
-  runToTheEnd: 0
+  onRandom: 1
+  runToTheEnd: 1
+  prevRunToTheEnd: 0
+  aniNames:
+  - Victory
+  - Victory_1
 --- !u!114 &-2587687797225015618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,7 +138,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b360f1d479e5a45438cd168a8d92d084
-  position: {x: -48.54136, y: 703.26025}
+  position: {x: -60.771404, y: 727.7296}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 6070239337107158435}
@@ -190,9 +236,11 @@ MonoBehaviour:
   - {fileID: -1305553440874083371}
   - {fileID: 8848873719020026039}
   - {fileID: 1089201827884481641}
-  - {fileID: 5284483838149368841}
   - {fileID: 6070239337107158435}
   - {fileID: -2587687797225015618}
+  - {fileID: 6712245848545921146}
+  - {fileID: -4972054341592633645}
+  - {fileID: -8312345782388803281}
 --- !u!114 &1089201827884481641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,8 +280,12 @@ MonoBehaviour:
   position: {x: -694.0001, y: 1315}
   blackBoard: {fileID: 0}
   description: 
-  aniName: Death
+  onRandom: 1
   runToTheEnd: 1
+  prevRunToTheEnd: 0
+  aniNames:
+  - Death
+  - Death_1
 --- !u!114 &3102653024347158632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,11 +301,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -1220.0002, y: 1781.687}
+  position: {x: -1133, y: 1947.2}
   blackBoard: {fileID: 0}
   description: 
-  aniName: hurt
+  onRandom: 1
   runToTheEnd: 1
+  prevRunToTheEnd: 0
+  aniNames:
+  - hurt
+  - hurt_1
 --- !u!114 &4621341597704371392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,27 +350,6 @@ MonoBehaviour:
   children:
   - {fileID: 7020155244636083768}
   - {fileID: 1089201827884481641}
---- !u!114 &5284483838149368841
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
-  m_Name: SequenceNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: c25f3307a8b42ba48baeeefa18f3605e
-  position: {x: -1135.501, y: 1610.9165}
-  blackBoard: {fileID: 0}
-  description: 
-  children:
-  - {fileID: 3102653024347158632}
-  - {fileID: 8848873719020026039}
 --- !u!114 &6070239337107158435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +368,25 @@ MonoBehaviour:
   position: {x: -57.030014, y: 956.1925}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &6712245848545921146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5cde29d01358543a807f92b04ea5e2, type: 3}
+  m_Name: SoundNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: ff1a687aa5c4f0d4084e5d1042457188
+  position: {x: -1403, y: 1869}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 2
 --- !u!114 &7020155244636083768
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -406,7 +460,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9c6e00a84ddc5044398ed85b8d7d6ad9
-  position: {x: -1046.0001, y: 1780.6871}
+  position: {x: -943, y: 1941.16}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &9032924591394990372
@@ -424,8 +478,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c6af56b3ca1d2594898a30bf4853b8de
-  position: {x: 429.1274, y: 675.1606}
+  position: {x: 301, y: 738}
   blackBoard: {fileID: 0}
   description: 
-  aniName: Idle
+  onRandom: 0
   runToTheEnd: 0
+  prevRunToTheEnd: 0
+  aniNames:
+  - Idle
+  - Idle_1

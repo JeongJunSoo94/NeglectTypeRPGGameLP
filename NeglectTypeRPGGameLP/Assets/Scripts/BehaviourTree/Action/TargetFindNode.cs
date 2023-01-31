@@ -117,6 +117,7 @@ namespace NeglectTypeRPG
             {
                 case TargetType.My:
                     context.targets.Add(blackBoard.gameObject);
+                    context.targetPos = context.originPos;
                     break;
                 case TargetType.All:
                     for (int i = 0; i < blackboards.Count; i++)
@@ -141,7 +142,9 @@ namespace NeglectTypeRPG
                             count++;
                         }
                         if (count >= 1 && i == 1)
+                        {
                             break;
+                        }
                     }
                     break;
                 case TargetType.Back:
@@ -155,7 +158,9 @@ namespace NeglectTypeRPG
                             count++;
                         }
                         if (count >= 1 && i == 2)
+                        {
                             break;
+                        }
                     }
                     break;
                 case TargetType.Proximate:

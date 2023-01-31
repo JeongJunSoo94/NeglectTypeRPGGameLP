@@ -19,6 +19,8 @@ namespace NeglectTypeRPG
         public Vector3 originPos;
         public Vector3 targetPos;
 
+        public Vector3 originRotation;
+
         public List<GameObject> targets;
 
         public Animator animator;
@@ -26,6 +28,7 @@ namespace NeglectTypeRPG
 
         public List<BehaviourTree> AttackBehavior;
 
+        public bool syncBehavior;
 
         //public HeroBase GetInfo()
         //{
@@ -41,6 +44,12 @@ namespace NeglectTypeRPG
         private void OnDisable()
         {
             myTurn = false;
+            syncBehavior = false;
+        }
+
+        public void SyncEvent()
+        {
+            syncBehavior = true;
         }
 
         public void Initialized()

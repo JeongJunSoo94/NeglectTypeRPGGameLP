@@ -22,7 +22,8 @@ public enum Team
 
 public class BattleDataCenter : MonoBehaviour
 {
-    public List<GameObject> cell = new List<GameObject>();
+    public List<GameObject> redCell = new List<GameObject>();
+    public List<GameObject> blueCell = new List<GameObject>();
 
     public List<Blackboard> RedHero;
     public List<Blackboard> BlueHero = new List<Blackboard>();

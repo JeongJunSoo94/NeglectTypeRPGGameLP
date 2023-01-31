@@ -8,14 +8,13 @@ namespace NeglectTypeRPG
     public class AttackNode : ActionNode, ICharacterNode
     {
         HeroContext context;
-
+        
         protected override void OnStart()
         {
             if (context == null)
             {
                 context = blackBoard.context as HeroContext;
             }
-            
         }
         protected override void OnStop()
         {

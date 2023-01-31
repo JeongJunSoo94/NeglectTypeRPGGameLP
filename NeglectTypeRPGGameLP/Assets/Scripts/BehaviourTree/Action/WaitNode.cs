@@ -10,23 +10,20 @@ namespace NeglectTypeRPG
 
         public bool delayEnable;
         public bool delayCheck;
-        //BattleSystemContext BSC;
         public float duration = 1;
+
+        public bool onRandom;
+        public float startTime; 
+        public float maxTime;
+
         protected override void OnStart()
         {
             if(wait==null)
                 wait = new WaitForSeconds(0.01f);
-            //if (BSC == null)
-            //{
-            //    BSC = blackBoard.context as BattleSystemContext;
-            //}
-            //if (!BSC.delayEnable)
-            //{
-            //    BSC.DelayCoroutine(duration);
-            //    BSC.delayCheck = false;
-            //}
-
-            DelayCoroutine(duration);
+            if(onRandom)
+                DelayCoroutine(startTime, maxTime);
+            else
+                DelayCoroutine(duration);
         }
 
         protected override void OnStop()
@@ -35,10 +32,6 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            //if (!BSC.delayEnable)
-            //{
-            //    return State.Success;
-            //}
             if(delayEnable)
                 return State.Running;
             return State.Success;
@@ -47,14 +40,14 @@ namespace NeglectTypeRPG
         public void DelayCoroutine(float delayTime)
         {
             delayEnable = true;
-            blackBoard.BlackboardStartCoroutine(Delay(delayTime));
+            blackBoard.StartCoroutine(Delay(delayTime));
         }
 
         public void DelayCoroutine(float startTime, float maxTime)
         {
             float time = Random.Range(startTime, maxTime + 1);
             delayEnable = true;
-            blackBoard.BlackboardStartCoroutine(Delay(time));
+            blackBoard.StartCoroutine(Delay(time));
         }
 
         IEnumerator Delay(float delayTime)

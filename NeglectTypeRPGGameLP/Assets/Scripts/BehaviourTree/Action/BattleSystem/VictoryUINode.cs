@@ -21,6 +21,8 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
+            if (bsc.endUI[0].activeSelf)
+                return State.Running;
             return State.Success;
         }
         public void VictoryUI(bool value)

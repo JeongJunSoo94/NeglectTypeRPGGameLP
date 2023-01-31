@@ -29,8 +29,6 @@ namespace NeglectTypeRPG
 
         public PlayerData player;
 
-        public SoundCenter soundCenter;
-
     private void Awake()
         {
             instance = this;
@@ -57,7 +55,10 @@ namespace NeglectTypeRPG
             hc.AttackBehavior.Add(characterBehaviors[0].Clone(obj.GetComponent<Blackboard>()));
             hc.AttackBehavior.Add(characterBehaviors[1].Clone(obj.GetComponent<Blackboard>()));
             GameObject model = Instantiate(models[charIndex], obj.transform);
-            hc.animator = model.GetComponent<Animator>();
+            hc.animator = obj.GetComponent<Animator>();
+            obj.GetComponent<Animator>().runtimeAnimatorController = model.GetComponent<Animator>().runtimeAnimatorController;
+            obj.GetComponent<Animator>().avatar = model.GetComponent<Animator>().avatar;
+            model.GetComponent<Animator>().enabled = false;
             obj.SetActive(false);
             characterPool[charIndex] = obj;
         }
