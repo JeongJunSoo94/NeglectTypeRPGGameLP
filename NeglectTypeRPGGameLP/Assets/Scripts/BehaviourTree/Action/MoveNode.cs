@@ -88,7 +88,7 @@ namespace NeglectTypeRPG
             switch (moveType)
             {
                 case MoveType.MoveTowards:
-                    context.gameObject.transform.position += speed * context.gameObject.transform.forward * Time.deltaTime;
+                    context.gameObject.transform.position = Vector3.MoveTowards(context.gameObject.transform.position, context.targetPos, speed*Time.deltaTime);//speed * context.gameObject.transform.forward * Time.deltaTime;
                     break;
                 case MoveType.Teleportation:
                     context.gameObject.transform.position = context.targetPos;

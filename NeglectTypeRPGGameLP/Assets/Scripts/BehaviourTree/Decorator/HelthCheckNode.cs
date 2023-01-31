@@ -21,7 +21,7 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            if (HC.info.curHealth > 0)
+            if (HC.info.curHealth <= 0)
             {
                 return child.Update();
             }

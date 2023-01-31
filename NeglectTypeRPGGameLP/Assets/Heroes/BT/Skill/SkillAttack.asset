@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1a2e40cc87675244b8ade4d9f37e3f05
-  position: {x: -1, y: 682}
+  position: {x: -0.6000103, y: 681.70013}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -4664446059350176839}
@@ -105,8 +105,8 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   children:
-  - {fileID: -407857048458958586}
   - {fileID: -1459470918112289482}
+  - {fileID: -407857048458958586}
 --- !u!114 &-3776697868775155057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 75a2d3bff133c724fae104989e59eff9
-  position: {x: -73, y: 979.24}
+  position: {x: -130.55002, y: 974.3501}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -182,7 +182,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01bc4440a8732b84594b20373a4d55e2
-  position: {x: 133, y: 976.4}
+  position: {x: 105.35, y: 981.70013}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-143152093723390718
@@ -200,7 +200,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -251.95288, y: 687.1028}
+  position: {x: -256.2001, y: 680.40015}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d3f01fa4ea4bfa44daaf0f99ed89166f
-  position: {x: -716.2327, y: 494.8901}
+  position: {x: -688.45013, y: 506.4501}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0

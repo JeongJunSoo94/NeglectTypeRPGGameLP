@@ -7,13 +7,14 @@ namespace NeglectTypeRPG
     public class DamageCheckNode : DecoratorNode
     {
         HeroContext HC;
-        BattleSystemContext bsc;
+        public int count;
         protected override void OnStart()
         {
             if (HC == null)
             {
                 HC = blackBoard.context as HeroContext;
             }
+            count = HC.info.damageCount;
         }
 
         protected override void OnStop()
@@ -22,21 +23,12 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            if (HC.info.prevHealth != HC.info.curHealth)
+            if (HC.info.damageCount>0&& HC.info.curHealth > 0)
             {
                 return child.Update();
             }
             return State.Failure;
         }
 
-        public BattleSystemContext GetBSC()
-        {
-            if (bsc == null)
-            {
-                HeroBlackBoard hb = blackBoard as HeroBlackBoard;
-                bsc = hb.battleSystemBlackboard.context as BattleSystemContext;
-            }
-            return bsc;
-        }
     }
 }

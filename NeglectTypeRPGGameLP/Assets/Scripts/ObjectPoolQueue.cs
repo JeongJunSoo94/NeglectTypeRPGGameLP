@@ -42,6 +42,7 @@ public class ObjectPoolQueue: MonoBehaviour
     private void Enqueue()
     {
         GameObject obj = Instantiate(prefab);
+        waitObjs.Enqueue(obj);
         obj.SetActive(false);
         curCount++;
     }
@@ -73,6 +74,13 @@ public class ObjectPoolQueue: MonoBehaviour
                 waitObjs.Enqueue(useObjs.Dequeue());
                 curCount++;
             }
+        }
+        if (waitObjs.Count == 0)
+        {
+            if (parent)
+                Enqueue(parent);
+            else
+                Enqueue();
         }
     }
 

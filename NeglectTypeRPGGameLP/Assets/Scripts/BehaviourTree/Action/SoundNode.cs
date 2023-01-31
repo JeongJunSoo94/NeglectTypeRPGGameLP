@@ -9,6 +9,7 @@ namespace NeglectTypeRPG
         HeroContext context;
         HeroBlackBoard heroBlackBoard;
         public int audioIndex;
+        public bool run;
         protected override void OnStart()
         {
             if (heroBlackBoard == null)

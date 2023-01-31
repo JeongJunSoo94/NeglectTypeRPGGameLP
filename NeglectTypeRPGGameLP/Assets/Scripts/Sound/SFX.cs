@@ -16,7 +16,13 @@ namespace NeglectTypeRPG
 
         public void SoundPlay()
         {
-            StartCoroutine("SoundCoroutine");
+            StartCoroutine(SoundCoroutine());
+        }
+
+        public void SoundRePeat()
+        {
+            StopCoroutine(SoundCoroutine());
+            SoundPlay();
         }
 
         IEnumerator SoundCoroutine()

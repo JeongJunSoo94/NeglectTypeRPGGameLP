@@ -8,26 +8,24 @@ namespace NeglectTypeRPG
     public class SyncCheckNode : DecoratorNode
     {
         HeroContext context;
-
+        public int syncIndex;
         protected override void OnStart()
         {
             if (context == null)
             {
                 context = blackBoard.context as HeroContext;
             }
-
         }
         protected override void OnStop()
         {
-            context.syncBehavior = false;
         }
 
         protected override State OnUpdate()
         {
-            if (context.syncBehavior)
+            if (context.syncBehavior== syncIndex)
             {
-                child.Update();
-                return State.Success;
+                //child.Update();
+                return child.Update();
             }
             return State.Running;
         }

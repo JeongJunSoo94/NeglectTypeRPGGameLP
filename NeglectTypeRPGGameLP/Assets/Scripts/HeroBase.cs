@@ -40,7 +40,7 @@ public class HeroBase
     public float defence;
 
     bool init = false;
-
+    public int damageCount=0;
     public void Initialized()
     {
         maxHealth = heroStat.Health_Point * heroStat.Vital;
@@ -48,6 +48,7 @@ public class HeroBase
         prevHealth = curHealth;
         maxMana = 100.0f;
         curMana = 0;
+        damageCount = 0;
         heroUI();
         if (!init)
         {
@@ -105,7 +106,7 @@ public class HeroBase
         }
         if (damaged < 0)
             curHealth += damaged;
-
+        ++damageCount;
         heroUI();
     }
 
@@ -122,7 +123,7 @@ public class HeroBase
         }
         if (damaged < 0)
             curHealth += damaged;
-
+        ++damageCount;
         heroUI();
     }
 

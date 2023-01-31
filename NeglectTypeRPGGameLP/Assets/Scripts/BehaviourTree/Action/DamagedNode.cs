@@ -13,7 +13,6 @@ namespace NeglectTypeRPG
             {
                 HC = blackBoard.context as HeroContext;
             }
-            HC.info.prevHealth = HC.info.curHealth;
         }
 
         protected override void OnStop()

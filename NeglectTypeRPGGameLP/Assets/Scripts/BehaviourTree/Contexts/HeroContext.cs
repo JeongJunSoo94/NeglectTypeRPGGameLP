@@ -28,7 +28,7 @@ namespace NeglectTypeRPG
 
         public List<BehaviourTree> AttackBehavior;
 
-        public bool syncBehavior;
+        public int syncBehavior;
 
         //public HeroBase GetInfo()
         //{
@@ -44,12 +44,11 @@ namespace NeglectTypeRPG
         private void OnDisable()
         {
             myTurn = false;
-            syncBehavior = false;
         }
 
-        public void SyncEvent()
+        public void SyncEvent(int count)
         {
-            syncBehavior = true;
+            syncBehavior = count;
         }
 
         public void Initialized()

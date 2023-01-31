@@ -17,8 +17,6 @@ namespace NeglectTypeRPG
 
         protected override void OnStop()
         {
-            HC.info.prevHealth = HC.info.curHealth;
-
             if (HC.info.curHealth <= 0)
             {
                 //юс╫ц
