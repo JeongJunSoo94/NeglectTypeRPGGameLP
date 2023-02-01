@@ -23,7 +23,10 @@ namespace NeglectTypeRPG
                 aniName = aniNames[Random.Range(0, aniNames.Count)];
             else
                 aniName = aniNames[0];
-           
+            if (aniName == "Idle")
+                Debug.Log("Idle");
+            else if (aniName == "hurt")
+                Debug.Log("hurt");
         }
 
         protected override void OnStop()
@@ -46,6 +49,7 @@ namespace NeglectTypeRPG
         }
         void ChangeAnimation(string newState)
         {
+            Debug.Log("바꾸기 실행");
             context.animator.StopPlayback();
             context.animator.Play(newState);
             context.currentAniState = newState;

@@ -15,6 +15,7 @@ namespace NeglectTypeRPG
                 context = blackBoard.context as HeroContext;
             }
             curCount = context.info.damageCount;
+            Debug.Log(blackBoard.gameObject.name+"나는 맞았어");
         }
 
         protected override void OnStop()

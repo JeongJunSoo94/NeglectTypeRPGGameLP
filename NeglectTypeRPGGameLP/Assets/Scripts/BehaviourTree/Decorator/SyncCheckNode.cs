@@ -9,12 +9,15 @@ namespace NeglectTypeRPG
     {
         HeroContext context;
         public int syncIndex;
+        public bool repeat;
+        bool check;
         protected override void OnStart()
         {
             if (context == null)
             {
                 context = blackBoard.context as HeroContext;
             }
+            check = true;
         }
         protected override void OnStop()
         {
@@ -24,8 +27,17 @@ namespace NeglectTypeRPG
         {
             if (context.syncBehavior== syncIndex)
             {
-                //child.Update();
-                return child.Update();
+                if (repeat)
+                {
+                    if (check)
+                    {
+                        check = false;
+                        child.Update();
+                    }    
+                    return State.Failure;
+                }
+                else
+                    return child.Update();
             }
             return State.Running;
         }

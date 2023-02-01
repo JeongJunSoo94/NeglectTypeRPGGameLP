@@ -53,13 +53,14 @@ namespace NeglectTypeRPG
             gameObject.GetComponent<AudioSource>().Play();
         }
 
-        public void GetSFX(int index, Transform pos)
+        public GameObject GetSFX(int index, Transform pos)
         {
             GameObject obj = Pool.Dequeue();
             obj.GetComponent<AudioSource>().clip = sfx[index];
             obj.GetComponent<AudioSource>().volume = sfxVolum;
             obj.transform.position = pos.position;
             obj.SetActive(true);
+            return obj;
         }
 
         public void SetBGMVolum()

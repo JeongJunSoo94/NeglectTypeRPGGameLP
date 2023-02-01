@@ -10,6 +10,7 @@ namespace NeglectTypeRPG
         HeroBlackBoard heroBlackBoard;
         public int audioIndex;
         public bool run;
+        GameObject soundObj;
         protected override void OnStart()
         {
             if (heroBlackBoard == null)
@@ -17,7 +18,18 @@ namespace NeglectTypeRPG
                 context = blackBoard.context as HeroContext;
                 heroBlackBoard = blackBoard as HeroBlackBoard;
             }
-            heroBlackBoard.battleSystemBlackboard.soundCenter.GetSFX(audioIndex, blackBoard.transform);
+            if (soundObj == null)
+            {
+                soundObj = heroBlackBoard.battleSystemBlackboard.soundCenter.GetSFX(audioIndex, blackBoard.transform);
+            }
+            else if (soundObj.activeSelf)
+            {
+                soundObj.GetComponent<SFX>().SoundRePeat();
+            }
+            else
+            {
+                soundObj = heroBlackBoard.battleSystemBlackboard.soundCenter.GetSFX(audioIndex, blackBoard.transform);
+            }
         }
 
         protected override void OnStop()

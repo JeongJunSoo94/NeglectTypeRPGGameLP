@@ -8,6 +8,7 @@ public class HeroStat : ScriptableObject
 {
     public int id;
     public int DamageType;
+    public int level;
     public float Combat_Power;
     public float Strength;
     public float Intelligence;

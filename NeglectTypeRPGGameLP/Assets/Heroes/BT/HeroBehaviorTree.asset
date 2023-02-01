@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1759a173560fe9546af806dc123a7207
-  position: {x: -559.32513, y: 1206.9675}
+  position: {x: -726.01135, y: 1284.9543}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -7698904855400995703}
@@ -34,7 +34,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6ab8ba1502fdf54489349e36e5ec57eb
-  position: {x: -561, y: 1394}
+  position: {x: -725.97675, y: 1420.102}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -55,7 +55,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 4b4e1e0a4cf5d6747bf9fb9f065b4772
-  position: {x: -441.74103, y: 1020.76483}
+  position: {x: -434.00003, y: 1031.0111}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -100,7 +100,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 364ec001dd1de984bb2ad6abac2e8c74
-  position: {x: -56.99599, y: 1179.494}
+  position: {x: -61.06812, y: 1263.4314}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-2255352901321592693
@@ -234,7 +234,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1c898bffb2cb5fa458e741c10a2a397f
-  position: {x: -165.75287, y: 991.5656}
+  position: {x: -170.0681, y: 1076.4314}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -255,7 +255,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f054fb1308b0b5a4ba517a0872a4e71f
-  position: {x: -244.00002, y: 1165.251}
+  position: {x: -258.10217, y: 1267.0566}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 1
@@ -280,13 +280,13 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -672, y: 1603.5503}
+  position: {x: -844.9767, y: 1602.102}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
-  cutAnimation: 0
+  cutAnimation: 1
   aniNames:
   - hurt
   - hurt_1
@@ -305,11 +305,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b2013bf5215fb6d4487a6ff7db81d49e
-  position: {x: -468.99994, y: 1608.2002}
+  position: {x: -613, y: 1600}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 6712245848545921146}
   syncIndex: 0
+  repeat: 1
 --- !u!114 &4621341597704371392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -362,7 +363,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ff1a687aa5c4f0d4084e5d1042457188
-  position: {x: -468.94998, y: 1758.9003}
+  position: {x: -612, y: 1779}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 2
@@ -401,7 +402,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a58672d55f07cbb4ca897d41ed92bc10
-  position: {x: -365.7371, y: 776.47815}
+  position: {x: -397.12476, y: 793.9885}
   blackBoard: {fileID: 0}
   description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
   child: {fileID: -5433133297602562837}
@@ -421,7 +422,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c6af56b3ca1d2594898a30bf4853b8de
-  position: {x: 278.2637, y: 746.9999}
+  position: {x: 322.29788, y: 761.80585}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
