@@ -49380,7 +49380,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4571756472629890}
-  - component: {fileID: -4153678263167573954}
+  - component: {fileID: 613273775432238870}
   m_Layer: 0
   m_Name: ModularCharacter_01
   m_TagString: Untagged
@@ -49405,7 +49405,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &-4153678263167573954
+--- !u!95 &613273775432238870
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -49415,7 +49415,7 @@ Animator:
   m_GameObject: {fileID: 1752634011024786}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 98a56ff2c8ee98645a4d3f79fa1506c5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bf780084be2a7f7408c36c992cad727a, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1

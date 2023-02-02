@@ -4,10 +4,6 @@ using UnityEngine;
 
 namespace NeglectTypeRPG
 {
-    public enum AttackState
-    { 
-        
-    }
     public class DamageInfo : ScriptableObject
     {
         public int id;

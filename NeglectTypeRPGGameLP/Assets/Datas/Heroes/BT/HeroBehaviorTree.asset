@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1759a173560fe9546af806dc123a7207
-  position: {x: -1045.0642, y: 1280.757}
+  position: {x: -1082, y: 1290.0079}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -7698904855400995703}
@@ -34,7 +34,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6ab8ba1502fdf54489349e36e5ec57eb
-  position: {x: -1045.0642, y: 1415.757}
+  position: {x: -1084.2468, y: 1442.5099}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -75,16 +75,18 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab2d1f3f61223484e991b4beadcad1ab
-  position: {x: -617.6913, y: 901.6459}
+  position: {x: -667.79315, y: 983.002}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 1
+  runTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
   aniNames:
   - Victory
   - Victory_1
+  startCheck: 0
 --- !u!114 &-2587687797225015618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,7 +120,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b360f1d479e5a45438cd168a8d92d084
-  position: {x: 34.00005, y: 756.7067}
+  position: {x: 38, y: 792}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 6070239337107158435}
@@ -137,7 +139,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e5a870095838b0346ab586e2c5b08cc2
-  position: {x: -28.64997, y: 256.35004}
+  position: {x: -177.89998, y: 377.50006}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -1125418119469297944}
@@ -156,7 +158,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b5b96abb24136634a97ec95f4e69e0ea
-  position: {x: -25.008947, y: 439.2612}
+  position: {x: -174.72948, y: 593.93835}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -180,7 +182,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 14fe3d6bf8d36aa41bb9b6c0a5c8e46c
-  position: {x: -31.649979, y: 108.35004}
+  position: {x: -176.85, y: 226.6}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -1305553440874083371}
@@ -259,12 +261,14 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   onRandom: 1
+  runTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
   aniNames:
   - Death
   - Death_1
+  startCheck: 0
 --- !u!114 &3102653024347158632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -280,16 +284,18 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -1164.0642, y: 1597.757}
+  position: {x: -1222.251, y: 1611.2509}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
+  runTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 1
   aniNames:
   - hurt
   - hurt_1
+  startCheck: 0
 --- !u!114 &3185102858571092467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,7 +311,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b2013bf5215fb6d4487a6ff7db81d49e
-  position: {x: -932.06415, y: 1595.757}
+  position: {x: -936.24274, y: 1604}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 6712245848545921146}
@@ -326,7 +332,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b0a2ca79f4b54da4faa5ded3d2dc0af9
-  position: {x: -609.8228, y: 725.17706}
+  position: {x: -664.1668, y: 779.62427}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -4394410258394057923}
@@ -345,7 +351,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9410b1cd4695c7247b3686d986b4d31b
-  position: {x: 56.032475, y: 940.84}
+  position: {x: 51.000195, y: 949.2271}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &6712245848545921146
@@ -402,7 +408,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a58672d55f07cbb4ca897d41ed92bc10
-  position: {x: -397.12476, y: 793.9885}
+  position: {x: -413.99985, y: 798.04175}
   blackBoard: {fileID: 0}
   description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
   child: {fileID: -5433133297602562837}
@@ -422,13 +428,15 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c6af56b3ca1d2594898a30bf4853b8de
-  position: {x: 322.29788, y: 761.80585}
+  position: {x: 280.31213, y: 798.31213}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
+  runTime: 0
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
   aniNames:
   - Idle
   - Idle_1
+  startCheck: 0

@@ -14,7 +14,6 @@ namespace NeglectTypeRPG
             {
                 HC = blackBoard.context as HeroContext;
             }
-            count = HC.info.damageCount;
         }
 
         protected override void OnStop()

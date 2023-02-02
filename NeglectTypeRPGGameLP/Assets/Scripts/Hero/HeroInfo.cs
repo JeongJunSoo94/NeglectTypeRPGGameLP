@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NeglectTypeRPG;
+
 public enum DamageType
 {
     Weapon,
@@ -28,7 +29,7 @@ public class HeroInfo : ScriptableObject
     public string Explanation;
     public Sprite Icon;
     public string Model;
-    public int DamageType;
+    //public int DamageType;
 
     public int level;
     public float Combat_Power;
@@ -69,7 +70,7 @@ public class HeroInfo : ScriptableObject
         Explanation    = value[5].Trim();
         Icon           = Resources.Load<Sprite>("Icon/"+value[6].Trim());
         Model          = value[7].Trim();
-        DamageType     = (int)Enum.Parse(typeof(DamageType), value[8].Trim());
+        //DamageType     = (int)Enum.Parse(typeof(DamageType), value[8].Trim());
     }
 
     public void CreateHeroStatData(string[] value)

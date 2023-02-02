@@ -21,6 +21,7 @@ namespace NeglectTypeRPG
         }
         public GameObject defaultCharacter;
         public HeroInfo[] heroInfo;
+        public SkillInfo[] skillInfo;
         public AssetsData AssetsData;
         public BehaviourTree[] characterBehaviors;
         public List<GameObject> models = new List<GameObject>();

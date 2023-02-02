@@ -10,8 +10,7 @@ namespace NeglectTypeRPG
 
         public void CreateInit(List<List<string[]>> value)
         {
-            if (heroCache == null)
-                heroCache = new List<Caches>();
+            heroCache = new List<Caches>();
             for (int i = 0; i < value.Count; ++i)
             {
                 Caches caches;

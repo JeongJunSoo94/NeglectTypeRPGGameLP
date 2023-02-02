@@ -1,0 +1,53 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8938349b77373144d9022257fba9696f, type: 3}
+  m_Name: 22famous_swordSkill
+  m_EditorClassIdentifier: 
+  ID: 22
+  Name: famous_sword
+  Icon: {fileID: 21300000, guid: 8a6cf80b3a19fa648bddfbfd3000c899, type: 3}
+  Explanation: "\uC804\uC124\uC5D0 \uB530\uB974\uBA74 Kin Ogawa\uB294 \uBB34\uC5C7\uC774\uB4E0
+    \uC808\uB2E8\uD560 \uC218 \uC788\uB294 \uC2E0\uBE44\uD55C \uAE08\uC18D\uC73C\uB85C
+    \uB2E8\uC870\uB41C \uCE74\uD0C0\uB098\uB97C \uD718\uB450\uB985\uB2C8\uB2E4. Kin
+    Ogawa\uB294 +X% WPN DMG \uBCF4\uB108\uC2A4\uB97C \uC5BB\uC2B5\uB2C8\uB2E4."
+  action: 1
+  BehaviorTreeID: 0
+  damageType: 0
+  attackState: 0
+  Turn: 1
+  level: 1
+  Strength: 0
+  Intelligence: 0
+  Agility: 0
+  Vital: 0
+  Luck: 0
+  Critical_Rate: 0
+  Critical_Immunity_Rate: 0
+  Critical_Damage: 0
+  Health_Point: 0
+  Attack: 0
+  Weapon_Attack: 0
+  Tactical_Attack: 0
+  Defensive: 0
+  Weapon_Defensive: 0
+  Tactical_Defensive: 0
+  Damage_Bonus: 0
+  Weapon_Damage_Bonus: 0
+  Tactical_Damage_Bonus: 0
+  Damage_Mitigation: 0
+  Weapon_Damage_Mitigation: 0
+  Tactical_Damage_Mitigation: 0
+  Critical_Pierces_Defensive: 0
+  Focus_Damage: 0
+  Shield_Bonus_Damage: 0
+  Damage_Reflection: 0
+  Extra_Healing_Effect: 0

@@ -94,7 +94,6 @@ public class HeroMakeEditor : EditorWindow
         return asset;
     }
 
-
     public void CreateScriptableObjects()
     {
         string path = "Assets/Datas/AssetsData.asset";
@@ -106,7 +105,7 @@ public class HeroMakeEditor : EditorWindow
         List<string[]> cache = heroCache[0];
         for (int j = 0; j < cache.Count; j++)
         {
-            path = "Assets/Datas/Heroes/Data/" + cache[j][1] + "InfoData.asset";
+            path = "Assets/Datas/Heroes/Data/" + cache[j][0] + cache[j][1] + "InfoData.asset";
             HeroInfo asset = GetAsset<HeroInfo>(path, typeof(HeroInfo));
             asset.CreateHeroInfoData(cache[j]);
             heroAssets.Add(asset);
@@ -120,9 +119,24 @@ public class HeroMakeEditor : EditorWindow
             EditorUtility.SetDirty(heroAssets[index2++]);
         }
 
+        List<SkillInfo> skillAssets = new List<SkillInfo>();
         cache = heroCache[2];
-
+        for (int j = 0; j < cache.Count; j++)
+        {
+            path = "Assets/Datas/Skills/"+ cache[j][0] + cache[j][1] + "Skill.asset";
+            SkillInfo asset = GetAsset<SkillInfo>(path, typeof(SkillInfo));
+            asset.CreateSkillInfoData(cache[j]);
+            skillAssets.Add(asset);
+        }
         cache = heroCache[3];
+        index1 = 0;
+        index2 = 0;
+        while (index2 != skillAssets.Count)
+        {
+            skillAssets[index2].CreateSkillStatData(cache[index1]);
+            index1 += 5;
+            EditorUtility.SetDirty(skillAssets[index2++]);
+        }
 
         label.text = "데이터를 프로젝트에 저장했습니다.";
         ColorChange(textPane, Color.green);
@@ -134,13 +148,14 @@ public class HeroMakeEditor : EditorWindow
         EditorCoroutineUtility.StartCoroutine(GetDataSheet(), this);
     }
 
-    string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats" };
+    string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats", "heroSkillKey" };
 
     string[] URL = { 
                 "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921"
             ,   "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=0"
             ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=515130627"
             ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=1154008238"
+            ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=143248180"
     };
 
     IEnumerator GetDataSheet()

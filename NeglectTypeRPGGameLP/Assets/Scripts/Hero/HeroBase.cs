@@ -48,21 +48,21 @@ namespace NeglectTypeRPG
             heroUI();
             if (!init)
             {
-                switch (heroInfo.DamageType)
-                {
-                    case 0:
-                        attack += new Attack(WeaponDamage);
-                        attack += new Attack(WeaponDamageBonus);
-                        skill += new Skill(WeaponDamage);
-                        skill += new Skill(WeaponDamageBonus);
-                        break;
-                    case 1:
-                        attack += new Attack(TacticalDamage);
-                        attack += new Attack(TacticalDamageBonus);
-                        skill += new Skill(TacticalDamage);
-                        skill += new Skill(TacticalDamageBonus);
-                        break;
-                }
+                //switch (heroInfo.DamageType)
+                //{
+                //    case 0:
+                //        attack += new Attack(WeaponDamage);
+                //        attack += new Attack(WeaponDamageBonus);
+                //        skill += new Skill(WeaponDamage);
+                //        skill += new Skill(WeaponDamageBonus);
+                //        break;
+                //    case 1:
+                //        attack += new Attack(TacticalDamage);
+                //        attack += new Attack(TacticalDamageBonus);
+                //        skill += new Skill(TacticalDamage);
+                //        skill += new Skill(TacticalDamageBonus);
+                //        break;
+                //}
                 attack += new Attack(GaugeUp);
                 weaponDefence += new Defence(WeaponDefence);
                 weaponDefence += new Defence(WeaponDefenceMitigation);
@@ -91,15 +91,15 @@ namespace NeglectTypeRPG
         //해당 타입의 공격이 오면 
         public void Damaged(HeroBase hb)
         {
-            switch (hb.heroInfo.DamageType)
-            {
-                case 0:
-                    damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
-                    break;
-                case 1:
-                    damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
-                    break;
-            }
+            //switch (hb.heroInfo.DamageType)
+            //{
+            //    case 0:
+            //        damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
+            //        break;
+            //    case 1:
+            //        damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
+            //        break;
+            //}
             if (damaged < 0)
                 curHealth += damaged;
             ++damageCount;
@@ -108,15 +108,15 @@ namespace NeglectTypeRPG
 
         public void SkillDamaged(HeroBase hb)
         {
-            switch (hb.heroInfo.DamageType)
-            {
-                case 0:
-                    damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
-                    break;
-                case 1:
-                    damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
-                    break;
-            }
+            //switch (hb.heroInfo.DamageType)
+            //{
+            //    case 0:
+            //        damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
+            //        break;
+            //    case 1:
+            //        damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
+            //        break;
+            //}
             if (damaged < 0)
                 curHealth += damaged;
             ++damageCount;

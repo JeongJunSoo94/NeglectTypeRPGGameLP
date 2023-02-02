@@ -23,7 +23,6 @@ MonoBehaviour:
       - "\uC5D8\uB9AC\uD2B8 \uC2A4\uB098\uC774\uD37C"
       - Rebecca_Icon
       - 1
-      - Tactical
     - cache:
       - 2
       - Barron
@@ -33,7 +32,6 @@ MonoBehaviour:
       - "\uD30C\uC774\uD130"
       - Barron_Icon
       - 2
-      - Weapon
     - cache:
       - 3
       - Bolton
@@ -43,7 +41,6 @@ MonoBehaviour:
       - "\uC815\uC758 \uC218\uD638"
       - Bolton_Icon
       - 3
-      - Weapon
     - cache:
       - 4
       - Benson
@@ -53,7 +50,6 @@ MonoBehaviour:
       - "\uC7AC\uC0DD\uC758 \uBD88"
       - Benson_Icon
       - 4
-      - Weapon
     - cache:
       - 5
       - KinOgawa
@@ -63,7 +59,6 @@ MonoBehaviour:
       - "\uD6C4\uC9C0\uC640\uB77C \uBB34\uC0AC"
       - KinOgawa_Icon
       - 5
-      - Weapon
   - caches:
     - cache:
       - 1
@@ -815,72 +810,247 @@ MonoBehaviour:
       - 0
       - 0
       - 0
+    - cache:
+      - 6
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 6
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 6
+      - 3
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 6
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 6
+      - 5
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
   - caches:
     - cache:
-      - 2
-      - "\uC800\uACA9"
       - 1
-      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Tactical_Attack"
-      - Passive
+      - aiming
+      - Rebecca_Icon
+      - "\uBBFC\uCCA9\uC774 \uAC00\uC7A5 \uB0AE\uC740 \uC801\uAD70 \uD0C0\uAE43\uC5D0
+        Tactical_Attack \uC758 \uC804\uC220\uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+      - Active
       - 1
       - Tactical
+      - Promptly
+      - 1
+    - cache:
+      - 2
+      - sniping
+      - Rebecca_Icon
+      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Tactical_Attack"
+      - Passive
+      - 0
+      - Tactical
+      - Promptly
+      - 1
     - cache:
       - 3
-      - "\uB0A0\uB835\uD568"
-      - 1
+      - nimbleness
+      - Rebecca_Icon
       - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Tactical_Attack
         , \uB370\uBBF8\uC9C0 \uAC10\uC18C Tactical_Damage_Mitigation"
       - Passive
-      - 1
+      - 0
       - Tactical
+      - Promptly
+      - 1
     - cache:
       - 4
-      - "\uC815\uBC00"
-      - 1
+      - detailed
+      - Rebecca_Icon
       - "\"\uC870\uC900\"\uC0AC\uC6A9\uC2DC, \uCD94\uAC00\uB85C Tactical_Attack \uC758
         \uC804\uC220 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
-      - 1
+      - 0
       - Tactical
+      - Promptly
+      - 1
     - cache:
       - 5
-      - "\uAC15\uD380\uCE58"
-      - 1
+      - strong_punch
+      - Rebecca_Icon
       - "\uC801\uAD70 1\uAC1C \uD0C0\uAC9F\uC5D0\uAC8C Weapon_Attack \uBB34\uAE30
         \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Active
       - 1
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 6
-      - "\uBCF5\uC2F1"
-      - 1
+      - boxing
+      - Rebecca_Icon
       - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Attack, \uB370\uBBF8\uC9C0
         \uAC10\uC18C Damage_Mitigation"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 7
-      - "\uB178\uBC1C"
-      - 1
+      - Noval
+      - Rebecca_Icon
       - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Attack"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 8
-      - "\uD30C\uACA9\uAD8C"
-      - 1
+      - Breakthrough
+      - Rebecca_Icon
       - "\"\uAC15\uD380\uCE58\" \uC0AC\uC6A9 \uC2DC, \uCD94\uAC00\uB85C Weapon_Attack
         \uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 9
-      - "\uC815\uC758\uC758 \uC77C\uACA9"
-      - 1
+      - strike_of_justice
+      - Rebecca_Icon
       - "\uC801\uAD70\uC758 \uC55E\uC5F4\uC5D0 \uC704\uCE58\uD55C \uD0C0\uAE43\uC5D0
         Weapon_Attack \uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C \uC785\uD788\uACE0
         \uC790\uC2E0\uC5D0\uAC8C \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation
@@ -888,89 +1058,109 @@ MonoBehaviour:
       - Active
       - 1
       - Weapon
+      - Duration
+      - 2
     - cache:
       - 10
-      - "\uC815\uC758\uB85C\uC6B4 \uC218\uBE44"
-      - 1
+      - fair_defense
+      - Rebecca_Icon
       - "\uC790\uC2E0\uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation,
         \uC804\uC220 \uB370\uBBF8\uC9C0 \uAC10\uC18C Tactical_Damage_Mitigation"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 11
-      - "\uC815\uC758 \uC218\uD638"
-      - 1
+      - justice_guardian
+      - Rebecca_Icon
       - "\uD3B8\uB300 \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 12
-      - "\uC804\uC220 \uC2A4\uD0AC"
-      - 1
+      - tactical_skills
+      - Rebecca_Icon
       - "\"\uC815\uC758\uC758 \uC77C\uACA9\"\uC0AC\uC6A9 \uC2DC, \uCD94\uAC00\uB85C
         Weapon_Attack \uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 13
-      - "\uC815\uC758\uC758 \uBC29\uD328"
-      - 1
+      - shield_of_justice
+      - Rebecca_Icon
       - "\uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation ,\uCCB4\uB825 Health_Point"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 14
-      - "\uC9C0\uC625 \uBD88"
-      - 1
+      - hell_fire
+      - Rebecca_Icon
       - "\uBAA8\uB4E0 \uC801\uC5D0\uAC8C X% WPN DMG\uB97C \uAC00\uD574 \uC801\uB4E4\uC744
         \uBD88\uD0C0\uB294 \uC0C1\uD0DC\uB85C \uB9CC\uB4E4\uACE0 2\uB77C\uC6B4\uB4DC
         \uB3D9\uC548 \uAC01 \uB77C\uC6B4\uB4DC\uC5D0\uC11C Y% WPN DMG\uB97C \uAC00\uD569\uB2C8\uB2E4."
       - Active
       - 1
       - Weapon
+      - Duration
+      - 2
     - cache:
       - 15
-      - "\uC5F4\uD30C\uACF5\uACA9"
-      - 1
+      - heat_wave_attack
+      - Rebecca_Icon
       - "\uC790\uC2E0\uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Weapon_Attack"
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 16
-      - "\uC695\uD654\uC911\uC0DD"
-      - 1
+      - rebirth
+      - Rebecca_Icon
       - "\uB77C\uC778\uC5C5\uC758 \uBAA8\uB4E0 Minutemen\uC5D0 \uB300\uD574 +X% DMG
         \uBCF4\uB108\uC2A4."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 17
-      - "\uC5F4\uD30C"
-      - 1
+      - heat_wave
+      - Rebecca_Icon
       - "\"Hellfire\"\uB97C \uCE90\uC2A4\uD305\uD558\uBA74 \uCD94\uAC00 X% WPN DMG\uB97C
         \uCC98\uB9AC\uD569\uB2C8\uB2E4."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 18
-      - "\uC5F4\uAD11"
-      - 1
+      - enthusiasm
+      - Rebecca_Icon
       - "\uC774 \uC601\uC6C5\uC5D0 \uB300\uD55C +X% WPN DMG \uBCF4\uB108\uC2A4 \uBC0F
         +Y% DMG \uC644\uD654."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 19
-      - "\uBE44\uAC80\uB2E8\uACF5"
-      - 1
+      - non_geom_dagger
+      - Rebecca_Icon
       - "\uC5F0\uC18D\uC73C\uB85C \uC801\uC744 3\uBC88 \uACF5\uACA9\uD558\uACE0 \uB9E4\uBC88
         \uBB34\uC791\uC704 \uC801 \uB300\uC0C1\uC5D0\uAC8C X% WPN \uD53C\uD574\uB97C
         \uC785\uD799\uB2C8\uB2E4(\uACF5\uACA9\uD558\uC9C0 \uC54A\uC740 \uB300\uC0C1\uC744
@@ -978,36 +1168,64 @@ MonoBehaviour:
       - Active
       - 1
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 20
-      - "\uBB34\uC0AC\uC758 \uACF5\uACA9"
-      - 1
+      - warrior_attack
+      - Rebecca_Icon
       - "\uC774 \uC601\uC6C5\uC5D0 \uB300\uD55C +X% WPN DMG \uBCF4\uB108\uC2A4 \uBC0F
         +Y% DMG \uC644\uD654."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 21
-      - "\uC778\uAC80\uD569\uC77C"
-      - 1
+      - become_one_with_the_sword
+      - Rebecca_Icon
       - "\uACF5\uC131 \uACF5\uACA9 \uC911 \uB77C\uC778\uC5C5\uC5D0 +X% DMG \uBCF4\uB108\uC2A4.
         \"Hidden Blade - Void Cut\" \uC2DC\uC804 \uC2DC Y% \uCD94\uAC00 WPN DMG\uB97C
         \uCC98\uB9AC\uD569\uB2C8\uB2E4."
       - Passive
-      - 1
+      - 0
       - Weapon
+      - Promptly
+      - 1
     - cache:
       - 22
-      - "\uBA85\uAC80"
-      - 1
+      - famous_sword
+      - Rebecca_Icon
       - "\uC804\uC124\uC5D0 \uB530\uB974\uBA74 Kin Ogawa\uB294 \uBB34\uC5C7\uC774\uB4E0
         \uC808\uB2E8\uD560 \uC218 \uC788\uB294 \uC2E0\uBE44\uD55C \uAE08\uC18D\uC73C\uB85C
         \uB2E8\uC870\uB41C \uCE74\uD0C0\uB098\uB97C \uD718\uB450\uB985\uB2C8\uB2E4.
         Kin Ogawa\uB294 +X% WPN DMG \uBCF4\uB108\uC2A4\uB97C \uC5BB\uC2B5\uB2C8\uB2E4."
       - Passive
+      - 0
+      - Weapon
+      - Promptly
+      - 1
+    - cache:
+      - 23
+      - normal_weapon_attack
+      - Rebecca_Icon
+      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 Weapon_Attack"
+      - Active
       - 1
       - Weapon
+      - Promptly
+      - 1
+    - cache:
+      - 24
+      - normal_tactical_attack
+      - Rebecca_Icon
+      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 Tactical_Attack"
+      - Active
+      - 1
+      - Tactical
+      - Promptly
+      - 1
   - caches:
     - cache:
       - 1
@@ -4199,3 +4417,357 @@ MonoBehaviour:
       - 0
       - 0
       - 0
+    - cache:
+      - 23
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 23
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 23
+      - 3
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 23
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 23
+      - 5
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 24
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 24
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 24
+      - 3
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 24
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 24
+      - 5
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+  - caches:
+    - cache:
+      - 1
+      - 2
+    - cache:
+      - 1
+      - 3
+    - cache:
+      - 1
+      - 4
+    - cache:
+      - 2
+      - 5
+    - cache:
+      - 2
+      - 6
+    - cache:
+      - 2
+      - 7
+    - cache:
+      - 2
+      - 8
+    - cache:
+      - 3
+      - 9
+    - cache:
+      - 3
+      - 10
+    - cache:
+      - 3
+      - 11
+    - cache:
+      - 3
+      - 12
+    - cache:
+      - 3
+      - 13
+    - cache:
+      - 4
+      - 14
+    - cache:
+      - 4
+      - 15
+    - cache:
+      - 4
+      - 16
+    - cache:
+      - 4
+      - 17
+    - cache:
+      - 4
+      - 18
+    - cache:
+      - 5
+      - 19
+    - cache:
+      - 5
+      - 20
+    - cache:
+      - 5
+      - 21
+    - cache:
+      - 5
+      - 22

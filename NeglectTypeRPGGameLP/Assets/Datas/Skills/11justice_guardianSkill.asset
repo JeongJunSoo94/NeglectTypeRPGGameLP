@@ -1,0 +1,50 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8938349b77373144d9022257fba9696f, type: 3}
+  m_Name: 11justice_guardianSkill
+  m_EditorClassIdentifier: 
+  ID: 11
+  Name: justice_guardian
+  Icon: {fileID: 21300000, guid: 8a6cf80b3a19fa648bddfbfd3000c899, type: 3}
+  Explanation: "\uD3B8\uB300 \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation"
+  action: 1
+  BehaviorTreeID: 0
+  damageType: 0
+  attackState: 0
+  Turn: 1
+  level: 1
+  Strength: 0
+  Intelligence: 0
+  Agility: 0
+  Vital: 0
+  Luck: 0
+  Critical_Rate: 0
+  Critical_Immunity_Rate: 0
+  Critical_Damage: 0
+  Health_Point: 0
+  Attack: 0
+  Weapon_Attack: 0
+  Tactical_Attack: 0
+  Defensive: 0
+  Weapon_Defensive: 0
+  Tactical_Defensive: 0
+  Damage_Bonus: 0
+  Weapon_Damage_Bonus: 0
+  Tactical_Damage_Bonus: 0
+  Damage_Mitigation: 0
+  Weapon_Damage_Mitigation: 0
+  Tactical_Damage_Mitigation: 0
+  Critical_Pierces_Defensive: 0
+  Focus_Damage: 0
+  Shield_Bonus_Damage: 0
+  Damage_Reflection: 0
+  Extra_Healing_Effect: 0
