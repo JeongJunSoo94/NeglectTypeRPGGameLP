@@ -9,21 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d9b7819e3e2a4249b78b9e91e62dc21, type: 3}
-  m_Name: 2StatData
+  m_Script: {fileID: 11500000, guid: 91e49f2979f80184e9032b8dae01e2e3, type: 3}
+  m_Name: BoltonInfoData
   m_EditorClassIdentifier: 
-  id: 2
+  id: 3
+  Name: Bolton
+  faction: 0
+  Type: "\uAC00\uB514\uC5B8"
+  Rarity: Elite
+  Explanation: "\uC815\uC758 \uC218\uD638"
+  Icon: {fileID: 21300000, guid: a641107763393d54296c1815276a130a, type: 3}
+  Model: 3
   DamageType: 0
-  Combat_Power: 10435
-  Strength: 80
+  level: 1
+  Combat_Power: 10421
+  Strength: 53
   Intelligence: 39
-  Agility: 53
-  Vital: 26
-  Luck: 66
+  Agility: 80
+  Vital: 39
+  Luck: 53
   Critical_Rate: 70
   Critical_Immunity_Rate: 30
   Critical_Damage: 120
-  Health_Point: 1200
+  Health_Point: 140
   Attack: 100
   Weapon_Attack: 10
   Tactical_Attack: 10

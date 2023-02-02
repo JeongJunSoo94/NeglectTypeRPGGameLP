@@ -21,7 +21,7 @@ namespace NeglectTypeRPG
         }
         public GameObject defaultCharacter;
         public HeroInfo[] heroInfo;
-        public HeroStat[] heroStat;
+        public AssetsData AssetsData;
         public BehaviourTree[] characterBehaviors;
         public List<GameObject> models = new List<GameObject>();
 
@@ -49,7 +49,6 @@ namespace NeglectTypeRPG
             GameObject obj = Instantiate(defaultCharacter, transform);
             HeroBase hb = new HeroBase();
             hb.heroInfo = Instantiate(heroInfo[charIndex]);
-            hb.heroStat = Instantiate(heroStat[charIndex]);
             HeroContext hc = obj.GetComponent<HeroContext>();
             hc.info = hb;
             hc.AttackBehavior.Add(characterBehaviors[0].Clone(obj.GetComponent<Blackboard>()));

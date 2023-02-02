@@ -186,7 +186,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab1b8f041ca5c5f4db694e55f493529d
-  position: {x: -357.11148, y: 697.19135}
+  position: {x: -358.24997, y: 703.9501}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-2258612866242455891
@@ -267,6 +267,9 @@ MonoBehaviour:
   delayEnable: 0
   delayCheck: 0
   duration: 2
+  onRandom: 0
+  startTime: 0
+  maxTime: 0
 --- !u!114 &-144328889476574802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -480,6 +483,9 @@ MonoBehaviour:
   delayEnable: 0
   delayCheck: 0
   duration: 3
+  onRandom: 0
+  startTime: 0
+  maxTime: 0
 --- !u!114 &2946076998634544871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +526,9 @@ MonoBehaviour:
   delayEnable: 0
   delayCheck: 0
   duration: 3
+  onRandom: 0
+  startTime: 0
+  maxTime: 0
 --- !u!114 &5043849997334561455
 MonoBehaviour:
   m_ObjectHideFlags: 0

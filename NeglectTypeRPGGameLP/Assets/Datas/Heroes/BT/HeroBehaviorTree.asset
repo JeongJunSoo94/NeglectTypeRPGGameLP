@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 1759a173560fe9546af806dc123a7207
-  position: {x: -726.01135, y: 1284.9543}
+  position: {x: -1045.0642, y: 1280.757}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -7698904855400995703}
@@ -34,7 +34,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 6ab8ba1502fdf54489349e36e5ec57eb
-  position: {x: -725.97675, y: 1420.102}
+  position: {x: -1045.0642, y: 1415.757}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -280,7 +280,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -844.9767, y: 1602.102}
+  position: {x: -1164.0642, y: 1597.757}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -305,7 +305,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b2013bf5215fb6d4487a6ff7db81d49e
-  position: {x: -613, y: 1600}
+  position: {x: -932.06415, y: 1595.757}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 6712245848545921146}
@@ -363,7 +363,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ff1a687aa5c4f0d4084e5d1042457188
-  position: {x: -612, y: 1779}
+  position: {x: -931.0642, y: 1774.757}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 2

@@ -7,12 +7,13 @@ using UnityEditor.Callbacks;
 using System;
 using UnityEngine.Networking;
 using Unity.EditorCoroutines.Editor;
+using NeglectTypeRPG;
 
 public class HeroMakeEditor : EditorWindow
 {
     List<List<string[]>> heroCache = new List<List<string[]>>();
     VisualElement splitPane;
-    VisualElement topPane;
+    VisualElement textPane;
     Label label;
 
     [MenuItem("MakeData/HeroMakeEditor")]
@@ -43,30 +44,38 @@ public class HeroMakeEditor : EditorWindow
         {
             allObjects.Add(AssetDatabase.LoadAssetAtPath<Sprite>(AssetDatabase.GUIDToAssetPath(guid)));
         }
-
-        splitPane = new TwoPaneSplitView(0, 15, TwoPaneSplitViewOrientation.Vertical);
+        Rect rect = rootVisualElement.contentRect;
+        splitPane = new TwoPaneSplitView(0, rect.height*0.5f, TwoPaneSplitViewOrientation.Vertical);
 
         rootVisualElement.Add(splitPane);
 
-        topPane = new VisualElement();
 
-        splitPane.Add(topPane);
-        label = new Label("켜졌습니다.");
-        topPane.Add(label);
-
-        var BottomPane = new VisualElement();
+        var buttonPane = new VisualElement();
 
         Button JoinButton = (Button)CreateButton("데이터 불러오기", () => { CallData(); });
         Button SaveDataButton = (Button)CreateButton("에셋으로 데이터 저장", () => { CreateScriptableObjects(); });
-        Button cacheDataButton = (Button)CreateButton("캐시 초기화", () => { heroCache.Clear(); });
-        Button cacheDataLenButton = (Button)CreateButton("캐시 개수", () => { Debug.Log(heroCache.Count); });
-        BottomPane.Add(JoinButton);
-        BottomPane.Add(SaveDataButton);
-        BottomPane.Add(cacheDataButton);
-        BottomPane.Add(cacheDataLenButton);
+        Button cacheDataButton = (Button)CreateButton("캐시 초기화", () => {
+            heroCache.Clear();
+            label.text = "초기화했습니다.";
+            ColorChange(textPane, Color.gray);
+        });
+        Button cacheDataLenButton = (Button)CreateButton("캐시 개수", () => {
+            label.text = heroCache.Count.ToString();
+            ColorChange(textPane, Color.gray);
+        });
+        buttonPane.Add(JoinButton);
+        buttonPane.Add(SaveDataButton);
+        buttonPane.Add(cacheDataButton);
+        buttonPane.Add(cacheDataLenButton);
 
-        splitPane.Add(BottomPane);
+        splitPane.Add(buttonPane);
 
+        textPane = new VisualElement();
+
+
+        label = new Label("엑셀스프레드시트에서 정보를 가져와서 에셋을 만드는 툴입니다.");
+        textPane.Add(label);
+        splitPane.Add(textPane);
     }
 
     private VisualElement CreateButton(string text, Action action)
@@ -74,59 +83,49 @@ public class HeroMakeEditor : EditorWindow
         return new Button(action) { text = text };
     }
 
+    T GetAsset<T>(string path, Type type) where T : ScriptableObject
+    {
+        T asset = (T)AssetDatabase.LoadAssetAtPath(path, type);
+        if (!asset)
+        {
+            AssetDatabase.CreateAsset(CreateInstance(type), path);
+            asset = (T)AssetDatabase.LoadAssetAtPath(path, type);
+        }
+        return asset;
+    }
+
+
     public void CreateScriptableObjects()
     {
-        for (int i = 0; i < heroCache.Count; i++)
+        string path = "Assets/Datas/AssetsData.asset";
+        AssetsData assetsData = GetAsset<AssetsData>(path, typeof(AssetsData));
+        assetsData.CreateInit(heroCache);
+        EditorUtility.SetDirty(assetsData);
+
+        List<HeroInfo> heroAssets = new List<HeroInfo>();
+        List<string[]> cache = heroCache[0];
+        for (int j = 0; j < cache.Count; j++)
         {
-            List<string[]> cache = heroCache[i];
-            if (i == 0)
-            {
-                for (int j = 0; j < cache.Count; j++)
-                {
-                    string path = "Assets/Heroes/Data/" + cache[j][1] + "InfoData.asset";
-                    HeroInfo asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
-                    if (!asset)
-                    {
-                        AssetDatabase.CreateAsset(CreateInstance<HeroInfo>(), path);
-                        asset = (HeroInfo)AssetDatabase.LoadAssetAtPath(path, typeof(HeroInfo));
-                    }
-                    asset.CreateHeroInfoData(asset, cache[j]);
-                    EditorUtility.SetDirty(asset);
-                }
-            }
-            else if (i == 1)
-            {
-                for (int j = 0; j < cache.Count; j++)
-                {
-                    string path = "Assets/Heroes/Data/" + cache[j][0] + "StatData.asset";
-                    HeroStat asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
-                    if (!asset)
-                    {
-                        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), path);
-                        asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
-                    }
-                    asset.CreateHeroStatData(asset, cache[j]);
-                    EditorUtility.SetDirty(asset);
-                }
-            }
-            else if (i == 2)
-            {
-                for (int j = 0; j < cache.Count; j++)
-                {
-                    string path = "Assets/Heroes/Data/FactionInfo.asset";
-                    HeroStat asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
-                    if (!asset)
-                    {
-                        AssetDatabase.CreateAsset(CreateInstance<HeroStat>(), path);
-                        asset = (HeroStat)AssetDatabase.LoadAssetAtPath(path, typeof(HeroStat));
-                    }
-                    asset.CreateHeroStatData(asset, cache[j]);
-                    EditorUtility.SetDirty(asset);
-                }
-            }
+            path = "Assets/Datas/Heroes/Data/" + cache[j][1] + "InfoData.asset";
+            HeroInfo asset = GetAsset<HeroInfo>(path, typeof(HeroInfo));
+            asset.CreateHeroInfoData(cache[j]);
+            heroAssets.Add(asset);
         }
-        label.text = "데이터 저장했쪄염 뿌우";
-        ColorChange(topPane, Color.green);
+        cache = heroCache[1];
+        int index1 = 0,index2 = 0;
+        while (index2 != heroAssets.Count)
+        {
+            heroAssets[index2].CreateHeroStatData(cache[index1]);
+            index1 += 5;
+            EditorUtility.SetDirty(heroAssets[index2++]);
+        }
+
+        cache = heroCache[2];
+
+        cache = heroCache[3];
+
+        label.text = "데이터를 프로젝트에 저장했습니다.";
+        ColorChange(textPane, Color.green);
     }
 
     public void CallData()
@@ -134,10 +133,16 @@ public class HeroMakeEditor : EditorWindow
         heroCache.Clear();
         EditorCoroutineUtility.StartCoroutine(GetDataSheet(), this);
     }
+
+    string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats" };
+
     string[] URL = { 
                 "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921"
             ,   "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=0"
+            ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=515130627"
+            ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=1154008238"
     };
+
     IEnumerator GetDataSheet()
     {
         UnityWebRequest www;
@@ -151,8 +156,8 @@ public class HeroMakeEditor : EditorWindow
             TSVPasing(data, i);
         }
 
-        label.text = "데이터 불러왔쪄염 뿌우";
-        ColorChange(topPane, Color.blue);
+        label.text = "데이터 받아서 캐시에 담았습니다.";
+        ColorChange(textPane, Color.blue);
     }
 
     public void TSVPasing(string tsv,int index)
@@ -162,9 +167,10 @@ public class HeroMakeEditor : EditorWindow
         string[] values = null;
 
         rows = tsv.Split('\n');
-        for (int i = 1; i < rows.Length; i++)
+        for (int i = 2; i < rows.Length; i++)
         {
             values = rows[i].Split('\t');
+            values[values.Length - 1] = values[values.Length - 1].Split('\r')[0];
             heroCache[index].Add(values);
         }
     }

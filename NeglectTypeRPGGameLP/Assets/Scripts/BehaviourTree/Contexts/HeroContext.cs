@@ -63,7 +63,7 @@ namespace NeglectTypeRPG
             {
                 info = new HeroBase();
                 info.heroInfo = Instantiate(DataManager.Instance.heroInfo[0]);
-                info.heroStat = Instantiate(DataManager.Instance.heroStat[0]);
+                //info.heroStat = Instantiate(DataManager.Instance.heroStat[0]);
                 AttackBehavior.Add(DataManager.Instance.characterBehaviors[0].Clone(GetComponent<Blackboard>()));
                 AttackBehavior.Add(DataManager.Instance.characterBehaviors[1].Clone(GetComponent<Blackboard>()));
             }
@@ -85,9 +85,9 @@ namespace NeglectTypeRPG
 
         public int CompareTo(HeroContext x)
         {
-            if (info.heroStat.Luck > x.info.heroStat.Luck)
+            if (info.heroInfo.Luck > x.info.heroInfo.Luck)
                 return 1;
-            else if (info.heroStat.Luck == x.info.heroStat.Luck)
+            else if (info.heroInfo.Luck == x.info.heroInfo.Luck)
                 return 0;
             else
                 return -1;
