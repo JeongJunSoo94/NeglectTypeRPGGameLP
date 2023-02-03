@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NeglectTypeRPG;
+using TMPro;
 
 namespace NeglectTypeRPG
 {
@@ -9,8 +10,9 @@ namespace NeglectTypeRPG
     {
         BattleSystemContext bsc; 
         BattleSystemBlackboard bsb;
-        int visit = 0; 
         bool initialized = false;
+        float redCombat=0;
+        float blueCombat = 0;
         protected override void OnStart()
         {
             if (bsc == null)
@@ -50,7 +52,13 @@ namespace NeglectTypeRPG
             for (int i = 0; i < bsb.UI.UIList.Count; ++i)
             {
                 bsb.UI.UIList[i].collocate += new characterCollocate(GetCharacterCollocate);
+                bsb.UI.UIList[i].collocate += new characterCollocate(BattleCombatPowerUI);
             }
+        }
+
+        public void BattleCombatPowerUI(int index, bool value)
+        {
+            bsc.readyUI[3].GetComponent<TextMeshProUGUI>().text = redCombat + "전투력";
         }
 
         public void GetCharacterCollocate(int index, bool value)
@@ -73,6 +81,7 @@ namespace NeglectTypeRPG
                     heroBlackBoard.battleSystemBlackboard = bsb;
                     character.transform.rotation = Quaternion.Euler(0, 180, 0);
                     character.GetComponent<HeroContext>().originRotation = new Vector3(0,180,0);
+                    redCombat += character.GetComponent<HeroContext>().info.heroInfo.Combat_Power;
                     character.SetActive(true);
                     return;
                 }
@@ -84,6 +93,7 @@ namespace NeglectTypeRPG
                     if (blackBoard.data.RedHero[i] == DataManager.Instance.characterPool[index].GetComponent<Blackboard>())
                     {
                         blackBoard.data.RedHero[i] = null;
+                        redCombat -= character.GetComponent<HeroContext>().info.heroInfo.Combat_Power;
                         DataManager.Instance.characterPool[index].SetActive(false);
                         return;
                     }
@@ -101,14 +111,16 @@ namespace NeglectTypeRPG
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
                 hc.Initialized();
-                blackBoard.data.RedHero[i].gameObject.SetActive(false);
-                blackBoard.data.RedHero[i] = null;
+                //blackBoard.data.RedHero[i].gameObject.SetActive(false);
+                //blackBoard.data.RedHero[i] = null;
             }
-        
+            //redCombat = 0;
+            bsc.readyUI[3].GetComponent<TextMeshProUGUI>().text = redCombat + "전투력";
         }
 
         public void EnemyInit()
         {
+            blueCombat = 0;
             int count = 0;
             for (int i = 0; i < blackBoard.data.BlueHero.Count; i++)
             {
@@ -128,9 +140,10 @@ namespace NeglectTypeRPG
                 HeroContext hc = blackBoard.data.BlueHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
                 hc.myTurn = false;
                 hc.Initialized();
+                blueCombat += hc.info.heroInfo.Combat_Power;
                 blackBoard.data.heroBlueBattleList.Enqueue(blackBoard.data.BlueHero[i].GetComponent<HeroContext>());
             }
-            visit++;
+            bsc.readyUI[2].GetComponent<TextMeshProUGUI>().text = blueCombat + "전투력";
         }
     }
 }

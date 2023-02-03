@@ -32,7 +32,6 @@ namespace NeglectTypeRPG
                 SelectAnimation();
             }
             startCheck = true;
-            Debug.Log("idle");
         }
 
         protected override void OnStop()

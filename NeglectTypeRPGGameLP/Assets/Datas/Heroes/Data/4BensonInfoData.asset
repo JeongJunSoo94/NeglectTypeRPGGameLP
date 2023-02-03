@@ -48,7 +48,7 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
-  normalAttack: {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
+  normalAttack: {fileID: 11400000, guid: 6345c4ae7bdb1fd4baa296013a62ce81, type: 2}
   skills:
   - {fileID: 11400000, guid: 7a491162ce4f20c4e846efba186c75b0, type: 2}
   - {fileID: 11400000, guid: 9c6a2ffd041ab52429ab494052182aec, type: 2}

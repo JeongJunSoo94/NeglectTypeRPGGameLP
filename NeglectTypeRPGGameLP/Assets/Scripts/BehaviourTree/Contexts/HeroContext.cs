@@ -51,11 +51,13 @@ namespace NeglectTypeRPG
             if (info == null)
             {
                 info = new HeroBase();
-                info.heroInfo = Instantiate(DataManager.Instance.heroInfo[0]);
-                //info.heroStat = Instantiate(DataManager.Instance.heroStat[0]);
-
-                AttackBehavior.Add(DataManager.Instance.characterBehaviors[0].Clone(GetComponent<Blackboard>()));
-                AttackBehavior.Add(DataManager.Instance.characterBehaviors[1].Clone(GetComponent<Blackboard>()));
+                info.heroInfo = Instantiate(DataManager.Instance.heroInfo[2]);
+                AttackBehavior.Add(DataManager.Instance.characterBehaviors[info.heroInfo.normalAttack.BehaviorTreeID - 1].Clone(gameObject.GetComponent<Blackboard>()));
+                for (int i = 0; i < info.heroInfo.skills.Count; ++i)
+                {
+                    if (info.heroInfo.skills[i].BehaviorTreeID != 0)
+                        AttackBehavior.Add(DataManager.Instance.characterBehaviors[info.heroInfo.skills[i].BehaviorTreeID - 1].Clone(gameObject.GetComponent<Blackboard>()));
+                }
             }
             info.heroUI += new HeroUI(HealthBarUpdate);
             info.heroUI += new HeroUI(ManaBarUpdate);

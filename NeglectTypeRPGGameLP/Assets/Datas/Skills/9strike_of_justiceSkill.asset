@@ -20,7 +20,7 @@ MonoBehaviour:
     \uC790\uC2E0\uC5D0\uAC8C \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation \uB97C
     \uBD80\uC5EC \uD569\uB2C8\uB2E4(2\uD134 \uAC04 \uC9C0\uC18D)"
   action: 0
-  BehaviorTreeID: 2
+  BehaviorTreeID: 4
   damageType: 0
   attackState: 1
   Turn: 2

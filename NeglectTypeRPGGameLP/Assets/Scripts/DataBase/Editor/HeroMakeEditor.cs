@@ -148,7 +148,7 @@ public class HeroMakeEditor : EditorWindow
 
         for (int i = 0; i < heroAssets.Count; ++i)
         {
-            if (heroAssets[i].Type==0)
+            if (heroAssets[i].Type!=0)
                 heroAssets[i].normalAttack =skillAssets[22];
             else
                 heroAssets[i].normalAttack = skillAssets[23];

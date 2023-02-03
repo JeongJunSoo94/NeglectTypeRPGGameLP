@@ -17,8 +17,6 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
 
     public bool isUse;
 
-    public ObjectPoolList parant;
-
     public int heroIndex;
 
     public int faction;
@@ -31,10 +29,13 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
         Init();
     }
 
+    private void OnEnable()
+    {
+    }
+
     private void OnDisable()
     {
         //parant.Enqueue(this.gameObject);
-        Init();
     }
 
     public void Init()
@@ -43,6 +44,7 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
         clickTime = -1;
         _image.color = new Color(10, 10, 10, 1);
     }
+
     void OnMouseDoubleClick()
     {
         Debug.Log("더블클릭");
@@ -93,19 +95,5 @@ public class HeroBattleIconUI : MonoBehaviour, IPointerClickHandler
         }
         OnMouseOneClick();
     }
-
-
-    //아래는 IBeginDragHandler, IDragHandler , IEndDragHandler를 상속받아서 사용 드래그용
-    //public void OnBeginDrag(PointerEventData eventData)
-    //{
-    //}
-
-    //public void OnDrag(PointerEventData eventData)
-    //{
-    //}
-
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-    //}
 
 }
