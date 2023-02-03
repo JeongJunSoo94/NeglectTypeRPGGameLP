@@ -115,6 +115,7 @@ public class HeroMakeEditor : EditorWindow
         while (index2 != heroAssets.Count)
         {
             heroAssets[index2].CreateHeroStatData(cache[index1]);
+            heroAssets[index2].skills.Clear();
             index1 += 5;
             EditorUtility.SetDirty(heroAssets[index2++]);
         }
@@ -136,6 +137,21 @@ public class HeroMakeEditor : EditorWindow
             skillAssets[index2].CreateSkillStatData(cache[index1]);
             index1 += 5;
             EditorUtility.SetDirty(skillAssets[index2++]);
+        }
+
+        cache = heroCache[4];
+
+        for (int j = 0; j < cache.Count; j++)
+        {
+            heroAssets[int.Parse(cache[j][0]) - 1].skills.Add(skillAssets[int.Parse(cache[j][1]) - 1]);
+        }
+
+        for (int i = 0; i < heroAssets.Count; ++i)
+        {
+            if (heroAssets[i].Type==0)
+                heroAssets[i].normalAttack =skillAssets[22];
+            else
+                heroAssets[i].normalAttack = skillAssets[23];
         }
 
         label.text = "데이터를 프로젝트에 저장했습니다.";

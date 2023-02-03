@@ -19,7 +19,7 @@ MonoBehaviour:
     \uBD88\uD0C0\uB294 \uC0C1\uD0DC\uB85C \uB9CC\uB4E4\uACE0 2\uB77C\uC6B4\uB4DC
     \uB3D9\uC548 \uAC01 \uB77C\uC6B4\uB4DC\uC5D0\uC11C Y% WPN DMG\uB97C \uAC00\uD569\uB2C8\uB2E4."
   action: 0
-  BehaviorTreeID: 1
+  BehaviorTreeID: 2
   damageType: 0
   attackState: 1
   Turn: 2

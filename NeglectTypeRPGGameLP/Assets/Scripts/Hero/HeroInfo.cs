@@ -10,6 +10,13 @@ public enum DamageType
     Tactical
 }
 
+public enum HeroType
+{
+    Shooter,
+    Warrior,
+    Guardian
+}
+
 public enum Faction
 {
     Minutemen,
@@ -24,7 +31,7 @@ public class HeroInfo : ScriptableObject
     public int id;
     public string Name;
     public int faction;
-    public string Type;
+    public int Type;
     public string Rarity;
     public string Explanation;
     public Sprite Icon;
@@ -60,17 +67,19 @@ public class HeroInfo : ScriptableObject
     public float Damage_Reflection;
     public float Extra_Healing_Effect;
 
+    public SkillInfo normalAttack;
+    public List<SkillInfo> skills;
+
     public void CreateHeroInfoData(string[] value)
     {
         id             = int.Parse(value[0].Trim());
         Name           = value[1].Trim();
         faction        = (int)Enum.Parse(typeof(Faction),value[2].Trim());
-        Type           = value[3].Trim();
+        Type           = (int)Enum.Parse(typeof(HeroType), value[3].Trim());
         Rarity         = value[4].Trim();
         Explanation    = value[5].Trim();
         Icon           = Resources.Load<Sprite>("Icon/"+value[6].Trim());
         Model          = value[7].Trim();
-        //DamageType     = (int)Enum.Parse(typeof(DamageType), value[8].Trim());
     }
 
     public void CreateHeroStatData(string[] value)

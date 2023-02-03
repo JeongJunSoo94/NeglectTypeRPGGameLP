@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 3
   Name: Bolton
   faction: 0
-  Type: "\uAC00\uB514\uC5B8"
+  Type: 2
   Rarity: Elite
   Explanation: "\uC815\uC758 \uC218\uD638"
   Icon: {fileID: 21300000, guid: a641107763393d54296c1815276a130a, type: 3}
@@ -48,3 +48,10 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
+  normalAttack: {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 6f1265663364cc04380d8827e7550d36, type: 2}
+  - {fileID: 11400000, guid: dc6155d35880f944d99b71eac6eb9797, type: 2}
+  - {fileID: 11400000, guid: 17e25c9177c28bd4582feec4bf04dcc0, type: 2}
+  - {fileID: 11400000, guid: c97fb654560ce294eb60d4a3378ba85a, type: 2}
+  - {fileID: 11400000, guid: 095d30ad2f559c648b9871d875bd0e8d, type: 2}

@@ -52,8 +52,12 @@ namespace NeglectTypeRPG
             hb.heroInfo = Instantiate(heroInfo[charIndex]);
             HeroContext hc = obj.GetComponent<HeroContext>();
             hc.info = hb;
-            hc.AttackBehavior.Add(characterBehaviors[0].Clone(obj.GetComponent<Blackboard>()));
-            hc.AttackBehavior.Add(characterBehaviors[1].Clone(obj.GetComponent<Blackboard>()));
+            hc.AttackBehavior.Add(characterBehaviors[hb.heroInfo.normalAttack.BehaviorTreeID-1].Clone(obj.GetComponent<Blackboard>()));
+            for (int i = 0; i < hb.heroInfo.skills.Count; ++i)
+            {
+                if(hb.heroInfo.skills[i].BehaviorTreeID!=0)
+                    hc.AttackBehavior.Add(characterBehaviors[hb.heroInfo.skills[i].BehaviorTreeID-1].Clone(obj.GetComponent<Blackboard>()));
+            }
             GameObject model = Instantiate(models[charIndex], obj.transform);
             hc.animator = obj.GetComponent<Animator>();
             obj.GetComponent<Animator>().runtimeAnimatorController = model.GetComponent<Animator>().runtimeAnimatorController;

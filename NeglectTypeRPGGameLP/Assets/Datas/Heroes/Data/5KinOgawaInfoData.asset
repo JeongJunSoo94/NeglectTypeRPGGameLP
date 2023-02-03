@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 5
   Name: KinOgawa
   faction: 2
-  Type: "\uC6A9\uC0AC"
+  Type: 1
   Rarity: Elite
   Explanation: "\uD6C4\uC9C0\uC640\uB77C \uBB34\uC0AC"
   Icon: {fileID: 21300000, guid: 68025d280020d0f4397222b3d540de4f, type: 3}
@@ -48,3 +48,9 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
+  normalAttack: {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 408555a51eb7cb84cbcaacebc94e58d4, type: 2}
+  - {fileID: 11400000, guid: 3f41bd06e62db81459bac967fcbff9ba, type: 2}
+  - {fileID: 11400000, guid: 4c49f09c47b2c6341a8798a8a498e5ec, type: 2}
+  - {fileID: 11400000, guid: 456057e0cdadbfe49a2c8df9fc0c11ed, type: 2}

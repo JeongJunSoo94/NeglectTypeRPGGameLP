@@ -30,17 +30,6 @@ namespace NeglectTypeRPG
 
         public int syncBehavior;
 
-        //public HeroBase GetInfo()
-        //{
-        //    if (info == null)
-        //    {
-        //        info = new HeroBase();
-        //        originPos = transform.position;
-        //        info.prevHealth = info.curHealth;
-        //    }
-        //    return info;
-        //}
-
         private void OnDisable()
         {
             myTurn = false;
@@ -64,6 +53,7 @@ namespace NeglectTypeRPG
                 info = new HeroBase();
                 info.heroInfo = Instantiate(DataManager.Instance.heroInfo[0]);
                 //info.heroStat = Instantiate(DataManager.Instance.heroStat[0]);
+
                 AttackBehavior.Add(DataManager.Instance.characterBehaviors[0].Clone(GetComponent<Blackboard>()));
                 AttackBehavior.Add(DataManager.Instance.characterBehaviors[1].Clone(GetComponent<Blackboard>()));
             }

@@ -17,7 +17,7 @@ namespace NeglectTypeRPG
 
         public List<string> aniNames;
         HeroContext context;
-        string aniName;
+        public string aniName;
 
         public bool startCheck = false;
         protected override void OnStart()

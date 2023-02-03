@@ -6,16 +6,19 @@ namespace NeglectTypeRPG
 {
     public class EffectCenter : MonoBehaviour
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        public List<GameObject> buffs;
+        public List<GameObject> debuffs;
+        public List<GameObject> attacks;
+        public List<GameObject> damages;
+        public List<GameObject> heals;
 
-        // Update is called once per frame
-        void Update()
+        public ObjectPoolQueue Pool;
+
+        public void GetEffect(int index, Vector3 pos)
         {
-        
+            GameObject obj = Pool.Dequeue();
+            obj.transform.position = pos;
+            obj.SetActive(true);
         }
     }
 }

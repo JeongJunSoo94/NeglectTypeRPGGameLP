@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 1
   Name: Rebecca
   faction: 0
-  Type: "\uC0AC\uC218"
+  Type: 0
   Rarity: Elite
   Explanation: "\uC5D8\uB9AC\uD2B8 \uC2A4\uB098\uC774\uD37C"
   Icon: {fileID: 21300000, guid: 8a6cf80b3a19fa648bddfbfd3000c899, type: 3}
@@ -48,3 +48,9 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
+  normalAttack: {fileID: 11400000, guid: 6345c4ae7bdb1fd4baa296013a62ce81, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 8f63312337448b0458b3ba0705ee89b2, type: 2}
+  - {fileID: 11400000, guid: afa870bf43e884b4b84b31a40cf17870, type: 2}
+  - {fileID: 11400000, guid: cd380dd8bcad2b348ac28a3615ae9f1f, type: 2}
+  - {fileID: 11400000, guid: 653e5e5cd8a726c4890bec57ca9f09e7, type: 2}

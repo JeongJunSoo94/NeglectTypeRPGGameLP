@@ -30,7 +30,7 @@ namespace NeglectTypeRPG
         {
             for (int i = 0; i < context.targets.Count; ++i)
             {
-                context.targets[i].GetComponent<HeroContext>().info.SkillDamaged(context.info);
+                context.targets[i].GetComponent<HeroContext>().info.SkillDamaged(context.info,0);
             }
         }
     }

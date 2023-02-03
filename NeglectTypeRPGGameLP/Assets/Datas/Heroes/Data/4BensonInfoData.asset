@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 4
   Name: Benson
   faction: 0
-  Type: "\uC6A9\uC0AC"
+  Type: 1
   Rarity: Elite
   Explanation: "\uC7AC\uC0DD\uC758 \uBD88"
   Icon: {fileID: 21300000, guid: baa055ca75e384d4c880961fb537a3d8, type: 3}
@@ -48,3 +48,10 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
+  normalAttack: {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 7a491162ce4f20c4e846efba186c75b0, type: 2}
+  - {fileID: 11400000, guid: 9c6a2ffd041ab52429ab494052182aec, type: 2}
+  - {fileID: 11400000, guid: a99fa1351ef12ce4e993f78732e60b73, type: 2}
+  - {fileID: 11400000, guid: 67c235129cd490344b1e23921a345444, type: 2}
+  - {fileID: 11400000, guid: 94e5fc36cc616074a9129f04095cc891, type: 2}

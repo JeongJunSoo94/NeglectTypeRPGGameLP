@@ -6,10 +6,10 @@ using UnityEngine;
 namespace NeglectTypeRPG
 {
     public delegate void buff();
-    public delegate float Skill(HeroBase stat);
+    public delegate float Skill(HeroBase stat,int index);
     public delegate void HeroUI();
-    public delegate float Defence(HeroBase stat);
-    public delegate float Attack(HeroBase stat);
+    public delegate float Defence(HeroBase stat, int index);
+    public delegate float Attack(HeroBase stat, int index);
     public delegate void Find(List<HeroBase> obj);
     public class HeroBase
     {
@@ -27,7 +27,7 @@ namespace NeglectTypeRPG
         public Defence weaponDefence;
         public Defence tacticalDefence;
 
-        public Skill skill;
+        public List<Skill> skills = new();
 
         public HeroUI heroUI;
 
@@ -46,41 +46,59 @@ namespace NeglectTypeRPG
             curMana = 0;
             damageCount = 0;
             heroUI();
+           
             if (!init)
             {
-                //switch (heroInfo.DamageType)
-                //{
-                //    case 0:
-                //        attack += new Attack(WeaponDamage);
-                //        attack += new Attack(WeaponDamageBonus);
-                //        skill += new Skill(WeaponDamage);
-                //        skill += new Skill(WeaponDamageBonus);
-                //        break;
-                //    case 1:
-                //        attack += new Attack(TacticalDamage);
-                //        attack += new Attack(TacticalDamageBonus);
-                //        skill += new Skill(TacticalDamage);
-                //        skill += new Skill(TacticalDamageBonus);
-                //        break;
-                //}
+                if (heroInfo.normalAttack.action == 0)
+                {
+                    switch (heroInfo.normalAttack.damageType)
+                    {
+                        case 0:
+                            attack += new Attack(WeaponDamage);
+                            attack += new Attack(WeaponDamageBonus);
+                            break;
+                        case 1:
+                            attack += new Attack(TacticalDamage);
+                            attack += new Attack(TacticalDamageBonus);
+                            break;
+                    }
+                }
+                for (int i = 0; i < heroInfo.skills.Count; ++i)
+                {
+                    if (heroInfo.skills[i].action == 0)
+                    {
+                        switch (heroInfo.skills[i].damageType)
+                        {
+                            case 0:
+                                skills.Add(new Skill(WeaponDamage));
+                                skills[skills.Count-1] += new Skill(WeaponDamageBonus);
+                                break;
+                            case 1:
+                                skills.Add(new Skill(TacticalDamage));
+                                skills[skills.Count - 1] += new Skill(TacticalDamageBonus);
+
+                                break;
+                        }
+                        skills[skills.Count - 1] += new Skill(GaugeDown);
+                    }
+                }
                 attack += new Attack(GaugeUp);
                 weaponDefence += new Defence(WeaponDefence);
                 weaponDefence += new Defence(WeaponDefenceMitigation);
                 tacticalDefence += new Defence(TacticalDefence);
                 tacticalDefence += new Defence(TacticalDefenceMitigation);
-                skill += new Skill(GaugeDown);
                 init = true;
             }
         }
 
-        public float GaugeUp(HeroBase hb)
+        public float GaugeUp(HeroBase hb, int index)
         {
             hb.curMana = 100;
             heroUI();
             return hb.damage;
         }
 
-        public float GaugeDown(HeroBase hb)
+        public float GaugeDown(HeroBase hb, int index)
         {
             hb.curMana = 0;
             heroUI();
@@ -89,83 +107,83 @@ namespace NeglectTypeRPG
 
         //데미지에 무기,전술 두가지 종류의 데미지가 있다.
         //해당 타입의 공격이 오면 
-        public void Damaged(HeroBase hb)
+        public void Damaged(HeroBase hb, int index)
         {
-            //switch (hb.heroInfo.DamageType)
-            //{
-            //    case 0:
-            //        damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
-            //        break;
-            //    case 1:
-            //        damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb);
-            //        break;
-            //}
+            switch (hb.heroInfo.normalAttack.damageType)
+            {
+                case 0:
+                    damaged = weaponDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb, index);
+                    break;
+                case 1:
+                    damaged = tacticalDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb, index);
+                    break;
+            }
             if (damaged < 0)
                 curHealth += damaged;
             ++damageCount;
             heroUI();
         }
 
-        public void SkillDamaged(HeroBase hb)
+        public void SkillDamaged(HeroBase hb, int index)
         {
-            //switch (hb.heroInfo.DamageType)
-            //{
-            //    case 0:
-            //        damaged = weaponDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
-            //        break;
-            //    case 1:
-            //        damaged = tacticalDefence(this) - hb.heroInfo.Critical_Pierces_Defensive - hb.skill(hb);
-            //        break;
-            //}
+            switch (hb.heroInfo.skills[index].damageType)
+            {
+                case 0:
+                    damaged = weaponDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.skills[index](hb, index);
+                    break;
+                case 1:
+                    damaged = tacticalDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.skills[index](hb, index);
+                    break;
+            }
             if (damaged < 0)
                 curHealth += damaged;
             ++damageCount;
             heroUI();
         }
 
-        public float WeaponDamage(HeroBase hb)
+        public float WeaponDamage(HeroBase hb, int index)
         {
             hb.damage = (hb.heroInfo.Attack + hb.heroInfo.Strength) * hb.heroInfo.Weapon_Attack;
             return hb.damage;
         }
 
-        public float WeaponDamageBonus(HeroBase hb)
+        public float WeaponDamageBonus(HeroBase hb, int index)
         {
             hb.damage += (hb.heroInfo.Damage_Bonus + hb.heroInfo.Strength) * hb.heroInfo.Weapon_Damage_Bonus * 0.01f;
             return hb.damage;
         }
 
-        public float TacticalDamage(HeroBase hb)
+        public float TacticalDamage(HeroBase hb, int index)
         {
             hb.damage = (hb.heroInfo.Attack + hb.heroInfo.Intelligence) * hb.heroInfo.Tactical_Attack;
             return hb.damage;
         }
 
-        public float TacticalDamageBonus(HeroBase hb)
+        public float TacticalDamageBonus(HeroBase hb, int index)
         {
             hb.damage += (hb.heroInfo.Damage_Bonus + hb.heroInfo.Intelligence) * hb.heroInfo.Tactical_Damage_Bonus * 0.01f;
             return hb.damage;
         }
 
-        public float WeaponDefence(HeroBase hb)
+        public float WeaponDefence(HeroBase hb, int index)
         {
             defence = (hb.heroInfo.Defensive + hb.heroInfo.Agility) * hb.heroInfo.Weapon_Defensive;
             return defence;
         }
 
-        public float WeaponDefenceMitigation(HeroBase hb)
+        public float WeaponDefenceMitigation(HeroBase hb, int index)
         {
             defence += (hb.heroInfo.Damage_Mitigation + hb.heroInfo.Agility) * hb.heroInfo.Weapon_Damage_Mitigation;
             return defence;
         }
 
-        public float TacticalDefence(HeroBase hb)
+        public float TacticalDefence(HeroBase hb, int index)
         {
             defence = (hb.heroInfo.Defensive + hb.heroInfo.Agility) * hb.heroInfo.Tactical_Defensive;
             return defence;
         }
 
-        public float TacticalDefenceMitigation(HeroBase hb)
+        public float TacticalDefenceMitigation(HeroBase hb, int index)
         {
             defence += (hb.heroInfo.Damage_Mitigation + hb.heroInfo.Agility) * hb.heroInfo.Tactical_Damage_Mitigation;
             return defence;

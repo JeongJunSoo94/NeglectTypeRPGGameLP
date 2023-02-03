@@ -24,7 +24,7 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            if (curCount == context.info.damageCount)
+            if (context.info.damageCount>0)
                 return child.Update();
             return State.Failure;
         }

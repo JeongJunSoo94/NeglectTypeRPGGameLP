@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 2
   Name: Barron
   faction: 1
-  Type: "\uC6A9\uC0AC"
+  Type: 1
   Rarity: Elite
   Explanation: "\uD30C\uC774\uD130"
   Icon: {fileID: 21300000, guid: c0afd09e9e4007b48b7e774d2d75bf58, type: 3}
@@ -48,3 +48,9 @@ MonoBehaviour:
   Shield_Bonus_Damage: 0
   Damage_Reflection: 0
   Extra_Healing_Effect: 0
+  normalAttack: {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
+  skills:
+  - {fileID: 11400000, guid: 165776ba06d05f14298e46d53cfb2400, type: 2}
+  - {fileID: 11400000, guid: 9643a0d6e2fd60a47ace9c3a798c9c39, type: 2}
+  - {fileID: 11400000, guid: 998695f8471cdf24fb496807024a5afd, type: 2}
+  - {fileID: 11400000, guid: 0d285f1f3bfb5634cabf657586873589, type: 2}
