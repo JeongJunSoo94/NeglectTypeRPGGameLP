@@ -1,1 +1,35 @@
-<mxfile host="app.diagrams.net" modified="2023-02-03T21:09:41.004Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.15" etag="7ax9-FQvjpwp7u9OdwkF" type="github"><diagram name="페이지-1" id="_lyHjvN7f3qZs5FSL3Dx">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-02-03T21:21:06.165Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="R_whaSk61IgxKTLPe32b" version="20.8.15" type="github">
+  <diagram name="페이지-1" id="_lyHjvN7f3qZs5FSL3Dx">
+    <mxGraphModel dx="1434" dy="764" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-1" value="HeroMakeEditor" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="200" y="210" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-2" value="+ heroCache:  List&lt;List&lt;string[]&gt;&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="-w1kR4tWHNXxjaQolY4Q-1">
+          <mxGeometry y="26" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="-w1kR4tWHNXxjaQolY4Q-1">
+          <mxGeometry y="52" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-4" value="+ CreateScriptableObjects(): void&#xa;+GetDataSheet:IEnumerator&#xa;- GetAsset&lt;T&gt;:where T : ScriptableObject" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=2" vertex="1" parent="-w1kR4tWHNXxjaQolY4Q-1">
+          <mxGeometry y="60" width="250" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-5" value="EditorWindow" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" vertex="1" parent="1">
+          <mxGeometry x="245" y="130" width="160" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-7" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="-w1kR4tWHNXxjaQolY4Q-5">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="-w1kR4tWHNXxjaQolY4Q-10" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;" edge="1" parent="1" source="-w1kR4tWHNXxjaQolY4Q-1" target="-w1kR4tWHNXxjaQolY4Q-5">
+          <mxGeometry x="-0.0625" y="-15" width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="290" as="sourcePoint" />
+            <mxPoint x="490" y="290" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
