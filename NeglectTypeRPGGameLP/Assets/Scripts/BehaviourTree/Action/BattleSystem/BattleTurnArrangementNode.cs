@@ -44,8 +44,8 @@ namespace NeglectTypeRPG
                 hc.myTurn = false;
                 hc.Initialized();
                 blackBoard.data.heroRedBattleList.Enqueue(blackBoard.data.RedHero[i].GetComponent<HeroContext>());
-
             }
+
         }
     }
 }

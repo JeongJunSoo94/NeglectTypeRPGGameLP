@@ -19,6 +19,26 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -4326681094569847417}
+--- !u!114 &-8260104801218211364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: ResultUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: adcfd276deb7d8e419acac2c4b6fc288
+  position: {x: 1414.5099, y: 669.5099}
+  blackBoard: {fileID: 0}
+  description: 
+  text: 
+  isOn: 0
 --- !u!114 &-8186938437449768454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,7 +54,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e7fc2eaf2d4884346aac16cbbdff4b25
-  position: {x: -2143.8503, y: 854.0001}
+  position: {x: -2168.64, y: 847}
   blackBoard: {fileID: 0}
   description: 
   isOn: 1
@@ -90,9 +110,29 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7e980a3007c27ae46ba80a80d4f5ef6f
-  position: {x: 1405.8549, y: 642.03625}
+  position: {x: 1587.1516, y: 662.24304}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &-4480122414102831948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: ResultUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1f418c2fad69f5641b78374313b95768
+  position: {x: -1356.0416, y: 869.2465}
+  blackBoard: {fileID: 0}
+  description: 
+  text: "\uC804\uD22C \uC2DC\uC791"
+  isOn: 1
 --- !u!114 &-4326681094569847417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,7 +301,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c585bf6308b44f244acf85e77f9f432a
-  position: {x: -1186.1501, y: 858.00006}
+  position: {x: -1188.2684, y: 862.833}
   blackBoard: {fileID: 0}
   description: 
   delayEnable: 0
@@ -270,25 +310,6 @@ MonoBehaviour:
   onRandom: 0
   startTime: 0
   maxTime: 0
---- !u!114 &-144328889476574802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
-  m_Name: StartUINode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: a979f80eb81524e4291d57c10e7162bf
-  position: {x: -1028.3053, y: 852.5536}
-  blackBoard: {fileID: 0}
-  description: 
-  isOn: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,7 +328,6 @@ MonoBehaviour:
   nodes:
   - {fileID: -9139008350247504011}
   - {fileID: 1043033445128292158}
-  - {fileID: 6000254945875169810}
   - {fileID: 5043849997334561455}
   - {fileID: 7215656656402009659}
   - {fileID: 923362538676557401}
@@ -316,9 +336,7 @@ MonoBehaviour:
   - {fileID: -3242193478749123945}
   - {fileID: -2564119710970065395}
   - {fileID: -3896001312194298166}
-  - {fileID: 2946076998634544871}
   - {fileID: -6495512250867991663}
-  - {fileID: 7335209971161699033}
   - {fileID: -4505825547987243694}
   - {fileID: -3382452623977940017}
   - {fileID: -2258612866242455891}
@@ -326,7 +344,6 @@ MonoBehaviour:
   - {fileID: -8186938437449768454}
   - {fileID: 6890095064726548327}
   - {fileID: -1085257003259102621}
-  - {fileID: -144328889476574802}
   - {fileID: 1139705088582039942}
   - {fileID: 1709534929816520598}
   - {fileID: -1883759461697905387}
@@ -336,6 +353,12 @@ MonoBehaviour:
   - {fileID: -4326681094569847417}
   - {fileID: 1744846651309409930}
   - {fileID: 4739176441111839027}
+  - {fileID: 2315956932985466466}
+  - {fileID: -4480122414102831948}
+  - {fileID: 2225005347183768531}
+  - {fileID: 877202394015221423}
+  - {fileID: -8260104801218211364}
+  - {fileID: 6716131401325348079}
 --- !u!114 &491592364670077866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,6 +400,26 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   battleState: 0
+--- !u!114 &877202394015221423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: ResultUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1609c0d9b7c6c4a49860d0bd8b7739ed
+  position: {x: -30.519989, y: 881}
+  blackBoard: {fileID: 0}
+  description: 
+  text: "\uC2B9\uB9AC"
+  isOn: 1
 --- !u!114 &923362538676557401
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,8 +439,9 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   children:
+  - {fileID: 6716131401325348079}
   - {fileID: 4739176441111839027}
-  - {fileID: 7335209971161699033}
+  - {fileID: -8260104801218211364}
   - {fileID: -4505825547987243694}
   - {fileID: 9074091076200073111}
 --- !u!114 &1043033445128292158
@@ -477,7 +521,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 84eb0da9303a7fa4ea19005d7ae7fb89
-  position: {x: 139.4218, y: 867.8995}
+  position: {x: 150, y: 886}
   blackBoard: {fileID: 0}
   description: 
   delayEnable: 0
@@ -486,7 +530,7 @@ MonoBehaviour:
   onRandom: 0
   startTime: 0
   maxTime: 0
---- !u!114 &2946076998634544871
+--- !u!114 &2225005347183768531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,16 +539,37 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2be177421d0cf48a46acd6a2bd20d2, type: 3}
-  m_Name: VictoryUINode
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: ResultUINode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 6106b6186d515444ead981f062ac1550
-  position: {x: 321.6144, y: 858.60297}
+  guid: 88c934f8d8424434f8257ba074663c3a
+  position: {x: 320, y: 883}
   blackBoard: {fileID: 0}
   description: 
-  isOn: 1
+  text: 
+  isOn: 0
+--- !u!114 &2315956932985466466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
+  m_Name: ResultUINode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: fbe8e8d75063aff40a73d15f1f9bee31
+  position: {x: -1019.2266, y: 863.3121}
+  blackBoard: {fileID: 0}
+  description: 
+  text: 
+  isOn: 0
 --- !u!114 &4739176441111839027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,7 +585,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ef11bcb7724b05d40be7948b2d7b3986
-  position: {x: 1012.46954, y: 637.80725}
+  position: {x: 1248.0039, y: 662.01184}
   blackBoard: {fileID: 0}
   description: 
   delayEnable: 0
@@ -548,12 +613,12 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: "\uC2DC\uC791"
   children:
-  - {fileID: 6000254945875169810}
+  - {fileID: -4480122414102831948}
   - {fileID: -1085257003259102621}
-  - {fileID: -144328889476574802}
+  - {fileID: 2315956932985466466}
   - {fileID: -3242193478749123945}
   - {fileID: -1883759461697905387}
---- !u!114 &6000254945875169810
+--- !u!114 &6716131401325348079
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -563,14 +628,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd961b41b36a98e47b12d410982c76d1, type: 3}
-  m_Name: StartUINode
+  m_Name: ResultUINode
   m_EditorClassIdentifier: 
   state: 0
   started: 0
-  guid: 4acddec97af57204787df1e5dadc6e97
-  position: {x: -1360.3055, y: 839.55365}
+  guid: 58b1de66691872945ad979ed64cb48b0
+  position: {x: 1063.7567, y: 655.498}
   blackBoard: {fileID: 0}
   description: 
+  text: "\uD328\uBC30"
   isOn: 1
 --- !u!114 &6890095064726548327
 MonoBehaviour:
@@ -630,28 +696,11 @@ MonoBehaviour:
   blackBoard: {fileID: 0}
   description: 
   children:
+  - {fileID: 877202394015221423}
   - {fileID: 1744846651309409930}
-  - {fileID: 2946076998634544871}
+  - {fileID: 2225005347183768531}
   - {fileID: -6495512250867991663}
   - {fileID: 803536424558790129}
---- !u!114 &7335209971161699033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bb4cfbc911a15a4ebc113dd8a324584, type: 3}
-  m_Name: DefeatUINode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: c62e23a45dce41c489f00c214a209d22
-  position: {x: 1210.6621, y: 639.03625}
-  blackBoard: {fileID: 0}
-  description: 
 --- !u!114 &9074091076200073111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -667,7 +716,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b34a58b82e6330c498e3689d466e7fb7
-  position: {x: 1601.1105, y: 636.08575}
+  position: {x: 1782.1515, y: 656.24304}
   blackBoard: {fileID: 0}
   description: 
   battleState: 0

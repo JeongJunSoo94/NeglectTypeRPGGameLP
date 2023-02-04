@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 018e6f112ef159e419b662cff8e9aa69
-  position: {x: -306.53815, y: 785.5843}
+  position: {x: -418.70084, y: 775.37994}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -6970475442578837028}
@@ -36,7 +36,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d09dde25f63774a499cebd5c6216f71f
-  position: {x: -330.5381, y: 530.5843}
+  position: {x: -416.71036, y: 545.7219}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -57,7 +57,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 84fcb43453d3e354b80742d364258e70
-  position: {x: 118.33439, y: 569.0199}
+  position: {x: 157.92021, y: 542.4197}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -68,7 +68,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &-6970475442578837028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +83,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aeb8834973769a642aa35338c5006cb8
-  position: {x: -301.53796, y: 939.5842}
+  position: {x: -413.70096, y: 929.37994}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -105,7 +104,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01a8d10d2a1ae4e4987c39765f393b10
-  position: {x: -581.76514, y: 560.74506}
+  position: {x: -648.4805, y: 547.7198}
   blackBoard: {fileID: 0}
   description: 
   positionType: 0
@@ -128,7 +127,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b614b373113e1d04d8a0de41f7d15b89
-  position: {x: 347.2947, y: 577.25507}
+  position: {x: 386.92026, y: 550.41974}
   blackBoard: {fileID: 0}
   description: 
   positionType: 0
@@ -151,7 +150,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -543.1789, y: 786.49005}
+  position: {x: -654.70087, y: 775.37994}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -162,7 +161,6 @@ MonoBehaviour:
   aniNames:
   - Attack
   aniName: 
-  startCheck: 0
 --- !u!114 &-25794264640207255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -178,7 +176,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d3f01fa4ea4bfa44daaf0f99ed89166f
-  position: {x: -827.1953, y: 553.02}
+  position: {x: -832.30005, y: 553.02}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -189,7 +187,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +232,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8f168fe1333876241a7d27a75f50ada2
-  position: {x: -1041.4506, y: 564.4504}
+  position: {x: -1035.1279, y: 548.05975}
   blackBoard: {fileID: 0}
   description: 
   targetMyTeam: 0
@@ -257,7 +254,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e38e8980173929940a317cc329fa8474
-  position: {x: -386.53812, y: 1089.5842}
+  position: {x: -498.70084, y: 1079.38}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -303,7 +300,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ced7b0d53c0159a4284dfa582ca37069
-  position: {x: -201.53809, y: 1082.5844}
+  position: {x: -313.70084, y: 1072.3799}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &6036726901063360503
@@ -340,6 +337,6 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: de297dd78f9497d41a6720f12ffd9719
-  position: {x: 568.03973, y: 564.4503}
+  position: {x: 607.9203, y: 537.4197}
   blackBoard: {fileID: 0}
   description: 

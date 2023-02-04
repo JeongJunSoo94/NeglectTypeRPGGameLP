@@ -28,11 +28,8 @@ namespace NeglectTypeRPG
 
         public bool endUI()
         {
-            for (int i = 0; i < bsc.endUI.Length; ++i)
-            {
-                if(bsc.endUI[i].activeSelf)
-                    return true;
-            }
+
+            bsc.resultText.text= "";
             blackBoard.data.winner = Team.None;
             return false;
         }

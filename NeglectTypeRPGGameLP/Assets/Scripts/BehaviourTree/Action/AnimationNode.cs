@@ -19,7 +19,6 @@ namespace NeglectTypeRPG
         HeroContext context;
         public string aniName;
 
-        public bool startCheck = false;
         protected override void OnStart()
         {
             if (context == null)
@@ -31,7 +30,6 @@ namespace NeglectTypeRPG
             {
                 SelectAnimation();
             }
-            startCheck = true;
         }
 
         protected override void OnStop()
@@ -40,10 +38,6 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            if (startCheck)
-            {
-                startCheck = false;
-            }
             if (cutAnimation)
                 ChangeAnimation(aniName);
             else

@@ -19,6 +19,7 @@ namespace NeglectTypeRPG
 
         protected override void OnStop()
         {
+            context.syncBehavior = 0;
             context.myTurn = false;
             BattleSystemContext con = hbb.battleSystemBlackboard.context as BattleSystemContext;
             con.state = BattleState.Battle;

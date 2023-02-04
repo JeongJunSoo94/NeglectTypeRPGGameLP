@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace NeglectTypeRPG
 {
@@ -10,17 +11,21 @@ namespace NeglectTypeRPG
 
         [HideInInspector] public BattleState state;
 
-        public GameObject[] startUI;
-        public GameObject[] readyUI;
-        public GameObject[] defaultUI;
-        public GameObject[] endUI;
+        public ObjectPoolQueue pool;
 
+        public Text resultText;
+        public GameObject[] readyUI;
+        public Text[] combatDamageText;
         public override void InitContext()
         {
             isStart = false;
             state = BattleState.Ready;
         }
 
+        public GameObject GetStateUI()
+        {
+            return pool.Dequeue();
+        }
 
     }
 

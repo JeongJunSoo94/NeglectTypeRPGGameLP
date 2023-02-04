@@ -9,6 +9,7 @@ namespace NeglectTypeRPG
     {
         public TabManager UI;
         public SoundCenter soundCenter;
+        public EffectCenter effectcenter;
         public void BattleStart()
         {
             for (int i = 0; i < data.RedHero.Count; ++i)

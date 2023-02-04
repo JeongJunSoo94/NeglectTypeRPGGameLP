@@ -58,7 +58,7 @@ namespace NeglectTypeRPG
 
         public void BattleCombatPowerUI(int index, bool value)
         {
-            bsc.readyUI[3].GetComponent<TextMeshProUGUI>().text = redCombat + "전투력";
+            bsc.combatDamageText[1].text = redCombat + "전투력";
         }
 
         public void GetCharacterCollocate(int index, bool value)
@@ -83,6 +83,8 @@ namespace NeglectTypeRPG
                     character.GetComponent<HeroContext>().originRotation = new Vector3(0,180,0);
                     redCombat += character.GetComponent<HeroContext>().info.heroInfo.Combat_Power;
                     character.SetActive(true);
+                    if(!character.GetComponent<HeroContext>().statBar)
+                        character.GetComponent<HeroContext>().UIAdd(bsc.pool.Dequeue());
                     return;
                 }
             }
@@ -109,13 +111,10 @@ namespace NeglectTypeRPG
                 if (blackBoard.data.RedHero[i] == null)
                     continue;
                 HeroContext hc = blackBoard.data.RedHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
+                hc.syncBehavior = 0;
                 hc.myTurn = false;
                 hc.Initialized();
-                //blackBoard.data.RedHero[i].gameObject.SetActive(false);
-                //blackBoard.data.RedHero[i] = null;
             }
-            //redCombat = 0;
-            bsc.readyUI[3].GetComponent<TextMeshProUGUI>().text = redCombat + "전투력";
         }
 
         public void EnemyInit()
@@ -135,15 +134,20 @@ namespace NeglectTypeRPG
                 HeroBlackBoard hb = blackBoard.data.BlueHero[i].GetComponent<HeroBlackBoard>();
                 hb.battleSystemBlackboard = blackBoard as BattleSystemBlackboard;
                 hb.data = blackBoard.data;
-                
+
                 blackBoard.data.BlueHero[i].gameObject.SetActive(true);
                 HeroContext hc = blackBoard.data.BlueHero[i].GetComponent<HeroBlackBoard>().context as HeroContext;
+                hc.syncBehavior = 0;
                 hc.myTurn = false;
                 hc.Initialized();
                 blueCombat += hc.info.heroInfo.Combat_Power;
                 blackBoard.data.heroBlueBattleList.Enqueue(blackBoard.data.BlueHero[i].GetComponent<HeroContext>());
+                if (!hc.statBar)
+                    hc.UIAdd(bsc.pool.Dequeue());
             }
-            bsc.readyUI[2].GetComponent<TextMeshProUGUI>().text = blueCombat + "전투력";
+            bsc.combatDamageText[0].text = blueCombat + "전투력";
         }
+
+     
     }
 }

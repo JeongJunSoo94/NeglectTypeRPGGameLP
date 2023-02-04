@@ -15,11 +15,11 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 018e6f112ef159e419b662cff8e9aa69
-  position: {x: -147.56006, y: 769}
+  position: {x: -229.3985, y: 805.8733}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -6970475442578837028}
-  syncIndex: 0
+  syncIndex: 1
   repeat: 0
 --- !u!114 &-7535324228799086068
 MonoBehaviour:
@@ -36,7 +36,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d09dde25f63774a499cebd5c6216f71f
-  position: {x: -141.78499, y: 506.44467}
+  position: {x: -365.39844, y: 520.8732}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -68,7 +68,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &-6970475442578837028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +83,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aeb8834973769a642aa35338c5006cb8
-  position: {x: -142.56006, y: 923}
+  position: {x: -224.39839, y: 959.87317}
   blackBoard: {fileID: 0}
   description: 
   children:
@@ -113,6 +112,27 @@ MonoBehaviour:
   moveType: 1
   distanceFromTarget: 5
   speed: 30
+--- !u!114 &-1637973791053545084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 866cccf429f716c45a3f96d980dd1412, type: 3}
+  m_Name: SyncCheckNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a9d924a02244b014da430d767b8b0a04
+  position: {x: 155.27686, y: 773.634}
+  blackBoard: {fileID: 0}
+  description: 
+  child: {fileID: 7583044433523551512}
+  syncIndex: 1
+  repeat: 0
 --- !u!114 &-352333734591015640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +171,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -378.10535, y: 771.87476}
+  position: {x: -601.3984, y: 786.87317}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
@@ -162,7 +182,6 @@ MonoBehaviour:
   aniNames:
   - Attack
   aniName: 
-  startCheck: 0
 --- !u!114 &-25794264640207255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,7 +208,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -220,6 +238,11 @@ MonoBehaviour:
   - {fileID: -6970475442578837028}
   - {fileID: 2330450463409376346}
   - {fileID: 4430323956445934769}
+  - {fileID: -1637973791053545084}
+  - {fileID: 4359899750486638862}
+  - {fileID: 7583044433523551512}
+  - {fileID: 1807507166904799772}
+  - {fileID: 1084583303213297229}
 --- !u!114 &7219506378607500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +265,50 @@ MonoBehaviour:
   StatType: 6
   targetType: 3
   targetCount: 1
+--- !u!114 &1084583303213297229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
+  m_Name: AnimationNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 50b29bd106cedc045b117b0f5273690d
+  position: {x: -21.230753, y: 800.47906}
+  blackBoard: {fileID: 0}
+  description: 
+  onRandom: 0
+  runTime: 0
+  runToTheEnd: 1
+  prevRunToTheEnd: 0
+  cutAnimation: 0
+  aniNames:
+  - Skill
+  aniName: 
+--- !u!114 &1807507166904799772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20c3ffc7d3ece940a451d12a58ea5de, type: 3}
+  m_Name: AttackNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 7dd98e4a847f21d4eb35932c09a571a3
+  position: {x: 264.6322, y: 1088.9465}
+  blackBoard: {fileID: 0}
+  description: 
 --- !u!114 &2330450463409376346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +324,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e38e8980173929940a317cc329fa8474
-  position: {x: -227.56006, y: 1073}
+  position: {x: -309.39844, y: 1109.873}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -285,9 +352,31 @@ MonoBehaviour:
   - {fileID: -25794264640207255}
   - {fileID: -3776697868775155057}
   - {fileID: -7535324228799086068}
+  - {fileID: 4359899750486638862}
   - {fileID: -7206375549158592032}
   - {fileID: -352333734591015640}
   - {fileID: 6756924779976287338}
+--- !u!114 &4359899750486638862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73af25f8fee031d4e9134e8d8ca7e7c2, type: 3}
+  m_Name: ParallelNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 135dcb116d2db464f8a309de49f79dab
+  position: {x: -55.32867, y: 523.0893}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: -1637973791053545084}
+  - {fileID: 1084583303213297229}
 --- !u!114 &4430323956445934769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -303,7 +392,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ced7b0d53c0159a4284dfa582ca37069
-  position: {x: -42.56006, y: 1066}
+  position: {x: -124.3984, y: 1102.8732}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &6036726901063360503
@@ -343,3 +432,23 @@ MonoBehaviour:
   position: {x: 590.99963, y: 516.2416}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &7583044433523551512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8ce159fcde8ffe4ab42eb0652da7b6b, type: 3}
+  m_Name: SequenceNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 13793ab81d1afdb4383030e067afff34
+  position: {x: 179.54457, y: 938.9626}
+  blackBoard: {fileID: 0}
+  description: 
+  children:
+  - {fileID: 1807507166904799772}

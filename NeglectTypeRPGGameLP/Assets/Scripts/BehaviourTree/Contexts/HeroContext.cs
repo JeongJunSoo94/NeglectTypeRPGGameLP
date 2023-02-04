@@ -10,6 +10,8 @@ namespace NeglectTypeRPG
     {
         public HeroBase info;
 
+        public GameObject statBar;
+
         public Slider hpBar;
         public Slider mpBar;
 
@@ -33,6 +35,15 @@ namespace NeglectTypeRPG
         private void OnDisable()
         {
             myTurn = false;
+        }
+
+        private void OnEnable()
+        {
+            if (statBar)
+            { 
+                statBar.SetActive(true);
+                info.heroUI();
+            }
         }
 
         public void SyncEvent(int count)
@@ -67,12 +78,24 @@ namespace NeglectTypeRPG
 
         public void HealthBarUpdate()
         {
-            hpBar.value = info.curHealth / info.maxHealth;
+            if(hpBar)
+                hpBar.value = info.curHealth / info.maxHealth;
         }
 
         public void ManaBarUpdate()
         {
-            mpBar.value = info.curMana / info.maxMana;
+            if (mpBar)
+                mpBar.value = info.curMana / info.maxMana;
+        }
+
+        public void UIAdd(GameObject UI)
+        {
+            statBar= UI;
+            hpBar = UI.GetComponent<TargetFollow>().hpBar;
+            mpBar = UI.GetComponent<TargetFollow>().mpBar;
+            UI.GetComponent<TargetFollow>().target = gameObject;
+            UI.GetComponent<TargetFollow>().gameObject.SetActive(true);
+            info.heroUI();
         }
 
         public int CompareTo(HeroContext x)

@@ -287,14 +287,14 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 24cabff2738db20449fd0d36cae4693b
-  position: {x: -602.10004, y: 1362.4003}
+  position: {x: -627.2181, y: 1360.0345}
   blackBoard: {fileID: 0}
   description: "\uD788\uD2B8\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 0
   runTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
-  cutAnimation: 1
+  cutAnimation: 0
   aniNames:
   - hurt
   - hurt_1
@@ -373,7 +373,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ff1a687aa5c4f0d4084e5d1042457188
-  position: {x: -398.98004, y: 1502.1185}
+  position: {x: -391, y: 1506.6782}
   blackBoard: {fileID: 0}
   description: "\uD53C\uACA9 \uC18C\uB9AC\uC785\uB2C8\uB2E4."
   audioIndex: 2
@@ -412,7 +412,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a58672d55f07cbb4ca897d41ed92bc10
-  position: {x: -507.77463, y: 810.62616}
+  position: {x: -476.7473, y: 817.3391}
   blackBoard: {fileID: 0}
   description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
   child: {fileID: -5433133297602562837}

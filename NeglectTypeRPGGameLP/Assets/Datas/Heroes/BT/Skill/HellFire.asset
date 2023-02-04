@@ -68,7 +68,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &-6100734029666703428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,7 +150,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9ca247a0a86bb4d439b04657b9cc8a6e
-  position: {x: 696.15497, y: 508.02893}
+  position: {x: 703.081, y: 538.9754}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-1459470918112289482
@@ -218,7 +217,6 @@ MonoBehaviour:
   aniNames:
   - Attack
   aniName: 
-  startCheck: 0
 --- !u!114 &-25794264640207255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +243,6 @@ MonoBehaviour:
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
