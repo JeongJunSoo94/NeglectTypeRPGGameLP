@@ -82,6 +82,19 @@ public class HeroInfo : ScriptableObject
         Model          = value[7].Trim();
     }
 
+    public static void CreateHeroInfoData(HeroInfo info,string[] value)
+    {
+        info.id = int.Parse(value[0].Trim());
+        info.Name = value[1].Trim();
+        info.faction = (int)Enum.Parse(typeof(Faction), value[2].Trim());
+        info.Type = (int)Enum.Parse(typeof(HeroType), value[3].Trim());
+        info.Rarity = value[4].Trim();
+        info.Explanation = value[5].Trim();
+        info.Icon = Resources.Load<Sprite>("Icon/" + value[6].Trim());
+        info.Model = value[7].Trim();
+    }
+
+
     public void CreateHeroStatData(string[] value)
     {
         level                      =   int.Parse(value[1].Trim());
@@ -112,5 +125,36 @@ public class HeroInfo : ScriptableObject
         Shield_Bonus_Damage        = float.Parse(value[26].Trim());
         Damage_Reflection          = float.Parse(value[27].Trim());
         Extra_Healing_Effect       = float.Parse(value[28].Trim());
+    }
+    public static void CreateHeroStatData(HeroInfo info,string[] value)
+    {
+        info.level = int.Parse(value[1].Trim());
+        info.Combat_Power = float.Parse(value[2].Trim());
+        info.Strength = float.Parse(value[3].Trim());
+        info.Intelligence = float.Parse(value[4].Trim());
+        info.Agility = float.Parse(value[5].Trim());
+        info.Vital = float.Parse(value[6].Trim());
+        info.Luck = float.Parse(value[7].Trim());
+        info.Critical_Rate = float.Parse(value[8].Trim());
+        info.Critical_Immunity_Rate = float.Parse(value[9].Trim());
+        info.Critical_Damage = float.Parse(value[10].Trim());
+        info.Health_Point = float.Parse(value[11].Trim());
+        info.Attack = float.Parse(value[12].Trim());
+        info.Weapon_Attack = float.Parse(value[13].Trim());
+        info.Tactical_Attack = float.Parse(value[14].Trim());
+        info.Defensive = float.Parse(value[15].Trim());
+        info.Weapon_Defensive = float.Parse(value[16].Trim());
+        info.Tactical_Defensive = float.Parse(value[17].Trim());
+        info.Damage_Bonus = float.Parse(value[18].Trim());
+        info.Weapon_Damage_Bonus = float.Parse(value[19].Trim());
+        info.Tactical_Damage_Bonus = float.Parse(value[20].Trim());
+        info.Damage_Mitigation = float.Parse(value[21].Trim());
+        info.Weapon_Damage_Mitigation = float.Parse(value[22].Trim());
+        info.Tactical_Damage_Mitigation = float.Parse(value[23].Trim());
+        info.Critical_Pierces_Defensive = float.Parse(value[24].Trim());
+        info.Focus_Damage = float.Parse(value[25].Trim());
+        info.Shield_Bonus_Damage = float.Parse(value[26].Trim());
+        info.Damage_Reflection = float.Parse(value[27].Trim());
+        info.Extra_Healing_Effect = float.Parse(value[28].Trim());
     }
 }

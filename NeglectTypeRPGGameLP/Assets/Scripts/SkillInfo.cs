@@ -70,6 +70,19 @@ namespace NeglectTypeRPG
             Turn               = int.Parse(value[8].Trim());
         }
 
+        public static void CreateSkillInfoData(SkillInfo info,string[] value)
+        {
+            info.ID                 = int.Parse(value[0].Trim());
+            info.Name               = value[1].Trim();
+            info.Icon               = Resources.Load<Sprite>("Icon/" + value[2].Trim());
+            info.Explanation        = value[3].Trim();
+            info.action             = (int)Enum.Parse(typeof(SkillAction), value[4].Trim());
+            info.BehaviorTreeID     = int.Parse(value[5].Trim());
+            info.damageType         = (int)Enum.Parse(typeof(DamageType), value[6].Trim());
+            info.attackState        = (int)Enum.Parse(typeof(AttackState), value[7].Trim());
+            info.Turn = int.Parse(value[8].Trim());
+        }
+
         public void CreateSkillStatData(string[] value)
         {
              level                      =   int.Parse(value[1].Trim());
@@ -99,6 +112,37 @@ namespace NeglectTypeRPG
              Shield_Bonus_Damage        = float.Parse(value[25].Trim());
              Damage_Reflection          = float.Parse(value[26].Trim());
              Extra_Healing_Effect       = float.Parse(value[27].Trim());
+        }
+
+        public static void CreateSkillStatData(SkillInfo info, string[] value)
+        {
+             info.level                      =   int.Parse(value[1].Trim());
+             info.Strength                   = float.Parse(value[2].Trim());
+             info.Intelligence               = float.Parse(value[3].Trim());
+             info.Agility                    = float.Parse(value[4].Trim());
+             info.Vital                      = float.Parse(value[5].Trim());
+             info.Luck                       = float.Parse(value[6].Trim());
+             info.Critical_Rate              = float.Parse(value[7].Trim());
+             info.Critical_Immunity_Rate     = float.Parse(value[8].Trim());
+             info.Critical_Damage            = float.Parse(value[9].Trim());
+             info.Health_Point               = float.Parse(value[10].Trim());
+             info.Attack                     = float.Parse(value[11].Trim());
+             info.Weapon_Attack              = float.Parse(value[12].Trim());
+             info.Tactical_Attack            = float.Parse(value[13].Trim());
+             info.Defensive                  = float.Parse(value[14].Trim());
+             info.Weapon_Defensive           = float.Parse(value[15].Trim());
+             info.Tactical_Defensive         = float.Parse(value[16].Trim());
+             info.Damage_Bonus               = float.Parse(value[17].Trim());
+             info.Weapon_Damage_Bonus        = float.Parse(value[18].Trim());
+             info.Tactical_Damage_Bonus      = float.Parse(value[19].Trim());
+             info.Damage_Mitigation          = float.Parse(value[20].Trim());
+             info.Weapon_Damage_Mitigation   = float.Parse(value[21].Trim());
+             info.Tactical_Damage_Mitigation = float.Parse(value[22].Trim());
+             info.Critical_Pierces_Defensive = float.Parse(value[23].Trim());
+             info.Focus_Damage               = float.Parse(value[24].Trim());
+             info.Shield_Bonus_Damage        = float.Parse(value[25].Trim());
+             info.Damage_Reflection          = float.Parse(value[26].Trim());
+             info.Extra_Healing_Effect       = float.Parse(value[27].Trim());
         }
     }
 }

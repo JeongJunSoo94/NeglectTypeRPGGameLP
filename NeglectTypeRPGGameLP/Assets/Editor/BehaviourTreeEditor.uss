@@ -1,7 +1,13 @@
-GridBackground
-{
-	--grid-background-color: rgb(40,40,40);
-	--line-color: rgba(193,196,192,0.1);
-	-thick-line-color: rgba(193,196,192,0.1);
-	--spacing: 15;
+GridBackground {
+    --grid-background-color: rgb(40, 40, 40);
+    --line-color: rgba(193, 196, 192, 0.1);
+    -thick-line-color: rgba(193, 196, 192, 0.1);
+    --spacing: 15;
+    background-color: rgba(255, 255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 255);
+    border-right-color: rgba(0, 0, 0, 255);
+    border-top-color: rgba(0, 0, 0, 255);
+    border-bottom-color: rgba(0, 0, 0, 255);
+    color: rgba(255, 255, 255, 255);
+    -unity-text-outline-color: rgba(255, 255, 255, 255);
 }

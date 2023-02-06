@@ -15,7 +15,7 @@ namespace NeglectTypeRPG
         BehaviourTree tree;
         public BehaviourTreeView()
         {
-            Insert(0, new GridBackground());
+            //Insert(0, new GridBackground());
 
             this.AddManipulator(new ContentZoomer());
             this.AddManipulator(new ContentDragger());

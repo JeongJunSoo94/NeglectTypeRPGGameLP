@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 using UnityEditor.Callbacks;
 using System;
 using UnityEngine.Networking;
-using Unity.EditorCoroutines.Editor;
 using NeglectTypeRPG;
 
 public class HeroMakeEditor : EditorWindow
@@ -94,6 +93,43 @@ public class HeroMakeEditor : EditorWindow
         return asset;
     }
 
+    public void CreateAsset<T>(List<T> list, List<string[]> cache1, List<string[]> cache2, string prev, string assetName, Type type) where T : ScriptableObject
+    {
+        string path="";
+        for (int j = 0; j < cache1.Count; j++)
+        {
+            path = prev + cache1[j][0] + cache1[j][1] + assetName;
+            T asset = GetAsset<T>(path, type);
+            if (type == typeof(HeroInfo))
+            {
+                HeroInfo.CreateHeroInfoData(asset as HeroInfo, cache1[j]);
+            }
+            else if(type == typeof(SkillInfo))
+            {
+                SkillInfo.CreateSkillInfoData(asset as SkillInfo, cache1[j]);
+            }
+            list.Add(asset);
+        }
+        int index1 = 0, index2 = 0;
+        while (index2 != list.Count)
+        {
+            if (type == typeof(HeroInfo))
+            {
+                HeroInfo temp = list[index2] as HeroInfo;
+                HeroInfo.CreateHeroStatData(temp, cache2[index1]);
+                temp.skills.Clear();
+                EditorUtility.SetDirty(temp);
+            }
+            else if (type == typeof(SkillInfo))
+            {
+                SkillInfo.CreateSkillStatData(list[index2] as SkillInfo, cache2[index1]);
+                EditorUtility.SetDirty(list[index2]);
+            }
+            index1 += 5;
+            ++index2;
+        }
+    }
+
     public void CreateScriptableObjects()
     {
         string path = "Assets/Datas/AssetsData.asset";
@@ -102,44 +138,11 @@ public class HeroMakeEditor : EditorWindow
         EditorUtility.SetDirty(assetsData);
 
         List<HeroInfo> heroAssets = new List<HeroInfo>();
-        List<string[]> cache = heroCache[0];
-        for (int j = 0; j < cache.Count; j++)
-        {
-            path = "Assets/Datas/Heroes/Data/" + cache[j][0] + cache[j][1] + "InfoData.asset";
-            HeroInfo asset = GetAsset<HeroInfo>(path, typeof(HeroInfo));
-            asset.CreateHeroInfoData(cache[j]);
-            heroAssets.Add(asset);
-        }
-        cache = heroCache[1];
-        int index1 = 0,index2 = 0;
-        while (index2 != heroAssets.Count)
-        {
-            heroAssets[index2].CreateHeroStatData(cache[index1]);
-            heroAssets[index2].skills.Clear();
-            index1 += 5;
-            EditorUtility.SetDirty(heroAssets[index2++]);
-        }
-
+        CreateAsset(heroAssets, heroCache[0], heroCache[1], "Assets/Datas/Heroes/Data/", "InfoData.asset", typeof(HeroInfo));
         List<SkillInfo> skillAssets = new List<SkillInfo>();
-        cache = heroCache[2];
-        for (int j = 0; j < cache.Count; j++)
-        {
-            path = "Assets/Datas/Skills/"+ cache[j][0] + cache[j][1] + "Skill.asset";
-            SkillInfo asset = GetAsset<SkillInfo>(path, typeof(SkillInfo));
-            asset.CreateSkillInfoData(cache[j]);
-            skillAssets.Add(asset);
-        }
-        cache = heroCache[3];
-        index1 = 0;
-        index2 = 0;
-        while (index2 != skillAssets.Count)
-        {
-            skillAssets[index2].CreateSkillStatData(cache[index1]);
-            index1 += 5;
-            EditorUtility.SetDirty(skillAssets[index2++]);
-        }
-
-        cache = heroCache[4];
+        CreateAsset(skillAssets, heroCache[2], heroCache[3], "Assets/Datas/Skills/", "Skill.asset", typeof(SkillInfo));
+        
+        List<string[]> cache = heroCache[4];
 
         for (int j = 0; j < cache.Count; j++)
         {
@@ -155,13 +158,15 @@ public class HeroMakeEditor : EditorWindow
         }
 
         label.text = "데이터를 프로젝트에 저장했습니다.";
-        ColorChange(textPane, Color.green);
+        ColorChange(textPane, Color.blue);
     }
 
     public void CallData()
     {
+        label.text = "데이터를 불러오고 있습니다.";
+        ColorChange(textPane, Color.black);
         heroCache.Clear();
-        EditorCoroutineUtility.StartCoroutine(GetDataSheet(), this);
+        EditorCoroutine.StartCoroutine(GetDataSheet());
     }
 
     string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats", "heroSkillKey" };
@@ -183,13 +188,20 @@ public class HeroMakeEditor : EditorWindow
             www = UnityWebRequest.Get(URL[i]);
             yield return www.SendWebRequest();
 
-            data = www.downloadHandler.text;
-            TSVPasing(data, i);
-        }
+            while (!www.isDone)
+                yield return null;
 
+            if (www.isDone)
+            {
+                data = www.downloadHandler.text;
+                TSVPasing(data, i);
+            }
+
+        }
         label.text = "데이터 받아서 캐시에 담았습니다.";
         ColorChange(textPane, Color.blue);
     }
+
 
     public void TSVPasing(string tsv,int index)
     {
@@ -205,6 +217,7 @@ public class HeroMakeEditor : EditorWindow
             heroCache[index].Add(values);
         }
     }
+
 
 
     public void ColorChange(VisualElement ve,Color color)

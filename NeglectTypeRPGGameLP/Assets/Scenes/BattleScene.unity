@@ -8826,7 +8826,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 456057e0cdadbfe49a2c8df9fc0c11ed, type: 2}
   - {fileID: 11400000, guid: 6345c4ae7bdb1fd4baa296013a62ce81, type: 2}
   - {fileID: 11400000, guid: d120ac064ec21864994462e55a43bee3, type: 2}
-  AssetsData: {fileID: 11400000, guid: b4b99c7bb2e93424f82e8df01aa7ad0c, type: 2}
+  AssetsData: {fileID: 11400000, guid: 40ebed80c20a2ee4b8d26e7efd0ba3de, type: 2}
   characterBehaviors:
   - {fileID: 11400000, guid: a76c9b8bd70fa1c408bd3ff20c8854a6, type: 2}
   - {fileID: 11400000, guid: 819ae2099f54ad94493e454916111f6f, type: 2}
