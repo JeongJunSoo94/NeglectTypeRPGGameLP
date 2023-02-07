@@ -18,13 +18,10 @@ namespace NeglectTypeRPG
 
         protected override void OnStop()
         {
-            context.info.damageCount--;
         }
 
         protected override State OnUpdate()
         {
-            if (context.info.damageCount>0)
-                return child.Update();
             return State.Failure;
         }
     }

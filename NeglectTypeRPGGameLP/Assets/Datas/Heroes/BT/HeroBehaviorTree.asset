@@ -80,9 +80,12 @@ MonoBehaviour:
   description: "\uC2B9\uB9AC\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 1
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Victory
   - Victory_1
@@ -263,9 +266,12 @@ MonoBehaviour:
   description: "\uC8FD\uC74C\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 1
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Death
   - Death_1
@@ -290,9 +296,12 @@ MonoBehaviour:
   description: "\uD788\uD2B8\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - hurt
   - hurt_1
@@ -409,11 +418,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a58672d55f07cbb4ca897d41ed92bc10
-  position: {x: -485.72952, y: 821.95825}
+  position: {x: -487, y: 832}
   blackBoard: {fileID: 0}
   description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
   child: {fileID: -5433133297602562837}
-  count: 0
 --- !u!114 &9032924591394990372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,14 +437,17 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: c6af56b3ca1d2594898a30bf4853b8de
-  position: {x: 519.06525, y: 801.1825}
+  position: {x: 511.7048, y: 823.318}
   blackBoard: {fileID: 0}
   description: "idle \uB178\uB4DC\uC785\uB2C8\uB2E4."
   onRandom: 1
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Idle
   - Idle_1

@@ -7,8 +7,8 @@ namespace NeglectTypeRPG
 {
     public enum AttackState
     {
-        Promptly,
-        Duration
+        DirectDamage,
+        DamageOverTime
     }
 
     public enum SkillAction

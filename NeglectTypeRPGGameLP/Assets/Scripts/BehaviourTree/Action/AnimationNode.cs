@@ -9,15 +9,23 @@ namespace NeglectTypeRPG
         public bool onRandom;
         [Range(0, 1)]
         public float runTime;
+        [Range(0, 1)]
+        public float startTime;
+        [Range(0, 1)]
+        public float endTime;
+
         public bool runToTheEnd;
 
         public bool prevRunToTheEnd;
 
         public bool cutAnimation;
 
+        public int layer=0;
         public List<string> aniNames;
         HeroContext context;
         public string aniName;
+
+
 
         protected override void OnStart()
         {
@@ -44,7 +52,7 @@ namespace NeglectTypeRPG
                 ChangeAnimationState(aniName);
             if (runToTheEnd)
             {
-                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) && context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) && context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= endTime)
                 {
                     return State.Success;
                 }
@@ -55,7 +63,7 @@ namespace NeglectTypeRPG
         void ChangeAnimation(string newState)
         {
             context.animator.StopPlayback();
-            context.animator.Play(newState);
+            context.animator.Play(newState, layer, startTime);
             context.currentAniState = newState;
         }
         void ChangeAnimationState(string newState)
@@ -63,7 +71,7 @@ namespace NeglectTypeRPG
             if (context.currentAniState == newState) return;
 
             context.animator.StopPlayback();
-            context.animator.Play(newState);
+            context.animator.Play(newState, layer, startTime);
             context.currentAniState = newState;
         }
 

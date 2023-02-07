@@ -7,7 +7,6 @@ namespace NeglectTypeRPG
     public class DamageCheckNode : DecoratorNode
     {
         HeroContext HC;
-        public int count;
         protected override void OnStart()
         {
             if (HC == null)
@@ -22,9 +21,10 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            if (HC.info.damageCount>0&& HC.info.curHealth > 0)
+            if (HC.info.isDamaged&& HC.info.curHealth > 0)
             {
-                return child.Update();
+                child.Update();
+                return State.Success;
             }
             return State.Failure;
         }
