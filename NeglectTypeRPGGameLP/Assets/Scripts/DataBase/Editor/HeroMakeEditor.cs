@@ -111,6 +111,7 @@ public class HeroMakeEditor : EditorWindow
             list.Add(asset);
         }
         int index1 = 0, index2 = 0;
+
         while (index2 != list.Count)
         {
             if (type == typeof(HeroInfo))
@@ -122,7 +123,7 @@ public class HeroMakeEditor : EditorWindow
             }
             else if (type == typeof(SkillInfo))
             {
-                SkillInfo.CreateSkillStatData(list[index2] as SkillInfo, cache2[index1]);
+                //SkillInfo.CreateSkillStatData(list[index2] as SkillInfo,);
                 EditorUtility.SetDirty(list[index2]);
             }
             index1 += 5;
@@ -135,6 +136,12 @@ public class HeroMakeEditor : EditorWindow
         string path = "Assets/Datas/AssetsData.asset";
         AssetsData assetsData = GetAsset<AssetsData>(path, typeof(AssetsData));
         assetsData.CreateInit(heroCache);
+        EditorUtility.SetDirty(assetsData);
+
+        path = "Assets/Datas/SkillsData.asset";
+        SkillsData skillsData = GetAsset<SkillsData>(path, typeof(SkillsData));
+        skillsData.CreateSkillStatsInit(heroCache[3]);
+        skillsData.CreateSkillDamageStatsInit(heroCache[5]);
         EditorUtility.SetDirty(assetsData);
 
         List<HeroInfo> heroAssets = new List<HeroInfo>();
@@ -169,7 +176,7 @@ public class HeroMakeEditor : EditorWindow
         EditorCoroutine.StartCoroutine(GetDataSheet());
     }
 
-    string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats", "heroSkillKey" };
+    string[] URLNameCache = { "heroInfo", "heroStats", "SkillInfo", "SkillStats", "heroSkillKey", "SkillDamageStats" };
 
     string[] URL = { 
                 "https://docs.google.com/spreadsheets/d/1MdMnjWtkRkXVJ-RtGtABf4rEeAfjpwPzvTT-iH1J1is/export?format=tsv&gid=1545996921"
@@ -177,6 +184,7 @@ public class HeroMakeEditor : EditorWindow
             ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=515130627"
             ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=1154008238"
             ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=143248180"
+            ,   "https://docs.google.com/spreadsheets/d/1kI5XpOsfOUDHEUT2X2GwjHT_I8tA1l0RdoHGYlI83p0/export?format=tsv&gid=930504114"
     };
 
     IEnumerator GetDataSheet()

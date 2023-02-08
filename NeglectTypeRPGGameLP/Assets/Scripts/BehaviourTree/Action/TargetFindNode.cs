@@ -5,29 +5,6 @@ using UnityEngine;
 
 namespace NeglectTypeRPG
 {
-    public enum StatType
-    {
-        None,
-        Strength,
-        Intelligence,
-        Agility,
-        Vital,
-        Luck,
-        HealthPoint,
-        Defensive,
-    }
-    public enum TargetType
-    {
-        None,
-        My,
-        All,
-        Front,
-        Back,
-        Proximate,
-        Farthest,
-        Strongest,
-        Weakest,
-    }
 
     public class TargetFindNode :  ActionNode , ICharacterNode
     {
@@ -102,7 +79,7 @@ namespace NeglectTypeRPG
                     return blackboard.GetComponent<HeroContext>().info.heroInfo.Vital;
                 case StatType.Luck:
                     return blackboard.GetComponent<HeroContext>().info.heroInfo.Luck;
-                case StatType.HealthPoint:
+                case StatType.Health_Point:
                     return blackboard.GetComponent<HeroContext>().info.curHealth;
                 case StatType.Defensive:
                     return blackboard.GetComponent<HeroContext>().info.heroInfo.Defensive;

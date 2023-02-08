@@ -74,8 +74,8 @@ MonoBehaviour:
       - 120
       - 80
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -104,8 +104,8 @@ MonoBehaviour:
       - 120
       - 80
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -134,8 +134,8 @@ MonoBehaviour:
       - 120
       - 80
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -164,8 +164,8 @@ MonoBehaviour:
       - 120
       - 80
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -194,8 +194,8 @@ MonoBehaviour:
       - 120
       - 80
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -224,8 +224,8 @@ MonoBehaviour:
       - 120
       - 120
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -254,8 +254,8 @@ MonoBehaviour:
       - 120
       - 120
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -284,8 +284,8 @@ MonoBehaviour:
       - 120
       - 120
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -314,8 +314,8 @@ MonoBehaviour:
       - 120
       - 120
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -344,8 +344,8 @@ MonoBehaviour:
       - 120
       - 120
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -374,8 +374,8 @@ MonoBehaviour:
       - 120
       - 140
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -404,8 +404,8 @@ MonoBehaviour:
       - 120
       - 140
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -434,8 +434,8 @@ MonoBehaviour:
       - 120
       - 140
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -464,8 +464,8 @@ MonoBehaviour:
       - 120
       - 140
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -494,8 +494,8 @@ MonoBehaviour:
       - 120
       - 140
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -524,8 +524,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -554,8 +554,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -584,8 +584,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -614,8 +614,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -644,8 +644,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 50
       - 1
       - 1
@@ -674,8 +674,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -704,8 +704,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -734,8 +734,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -764,8 +764,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -794,8 +794,8 @@ MonoBehaviour:
       - 120
       - 100
       - 100
-      - 10
-      - 10
+      - 100
+      - 100
       - 30
       - 1
       - 1
@@ -823,9 +823,9 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
+      - 100
+      - 100
+      - 100
       - 0
       - 0
       - 0
@@ -853,9 +853,9 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
+      - 100
+      - 100
+      - 100
       - 0
       - 0
       - 0
@@ -883,9 +883,9 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
+      - 100
+      - 100
+      - 100
       - 0
       - 0
       - 0
@@ -913,9 +913,9 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
+      - 100
+      - 100
+      - 100
       - 0
       - 0
       - 0
@@ -943,9 +943,9 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
-      - 0
-      - 0
+      - 100
+      - 100
+      - 100
       - 0
       - 0
       - 0
@@ -966,76 +966,62 @@ MonoBehaviour:
       - aiming
       - Rebecca_Icon
       - "\uBBFC\uCCA9\uC774 \uAC00\uC7A5 \uB0AE\uC740 \uC801\uAD70 \uD0C0\uAE43\uC5D0
-        Tactical_Attack \uC758 \uC804\uC220\uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+        [1] \uC758 \uC804\uC220\uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Active
       - 1
-      - Tactical
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 2
       - sniping
       - Rebecca_Icon
-      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Tactical_Attack"
+      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 [1]"
       - Passive
       - 0
-      - Tactical
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 3
       - nimbleness
       - Rebecca_Icon
-      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Tactical_Attack
-        , \uB370\uBBF8\uC9C0 \uAC10\uC18C Tactical_Damage_Mitigation"
+      - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 \uC99D\uAC00 [1] , \uB370\uBBF8\uC9C0
+        \uAC10\uC18C [2]"
       - Passive
       - 0
-      - Tactical
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 4
       - detailed
       - Rebecca_Icon
-      - "\"\uC870\uC900\"\uC0AC\uC6A9\uC2DC, \uCD94\uAC00\uB85C Tactical_Attack \uC758
-        \uC804\uC220 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+      - "\"\uC870\uC900\"\uC0AC\uC6A9\uC2DC, \uCD94\uAC00\uB85C [1] \uC758 \uC804\uC220
+        \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
       - 0
-      - Tactical
-      - Promptly
       - 1
     - cache:
       - 5
       - strong_punch
       - Rebecca_Icon
-      - "\uC801\uAD70 1\uAC1C \uD0C0\uAC9F\uC5D0\uAC8C Weapon_Attack \uBB34\uAE30
-        \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
+      - "\uC801\uAD70 1\uAC1C \uD0C0\uAC9F\uC5D0\uAC8C [1] \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C
+        \uC785\uD799\uB2C8\uB2E4."
       - Active
       - 5
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 6
       - boxing
       - Rebecca_Icon
-      - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Attack, \uB370\uBBF8\uC9C0
-        \uAC10\uC18C Damage_Mitigation"
+      - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 [1], \uB370\uBBF8\uC9C0
+        \uAC10\uC18C [2]"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 7
       - Noval
       - Rebecca_Icon
-      - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Attack"
+      - "\uC790\uC2E0\uC758 \uB370\uBBF8\uC9C0 \uC99D\uAC00 [1]"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 8
       - Breakthrough
@@ -1044,9 +1030,7 @@ MonoBehaviour:
         \uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 9
       - strike_of_justice
@@ -1057,9 +1041,7 @@ MonoBehaviour:
         \uB97C \uBD80\uC5EC \uD569\uB2C8\uB2E4(2\uD134 \uAC04 \uC9C0\uC18D)"
       - Active
       - 4
-      - Weapon
-      - Duration
-      - 2
+      - 0
     - cache:
       - 10
       - fair_defense
@@ -1068,9 +1050,7 @@ MonoBehaviour:
         \uC804\uC220 \uB370\uBBF8\uC9C0 \uAC10\uC18C Tactical_Damage_Mitigation"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 11
       - justice_guardian
@@ -1078,9 +1058,7 @@ MonoBehaviour:
       - "\uD3B8\uB300 \uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 12
       - tactical_skills
@@ -1089,9 +1067,7 @@ MonoBehaviour:
         Weapon_Attack \uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0\uB97C \uC785\uD799\uB2C8\uB2E4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 13
       - shield_of_justice
@@ -1099,9 +1075,7 @@ MonoBehaviour:
       - "\uB370\uBBF8\uC9C0 \uAC10\uC18C Damage_Mitigation ,\uCCB4\uB825 Health_Point"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 14
       - hell_fire
@@ -1111,9 +1085,7 @@ MonoBehaviour:
         \uB3D9\uC548 \uAC01 \uB77C\uC6B4\uB4DC\uC5D0\uC11C Y% WPN DMG\uB97C \uAC00\uD569\uB2C8\uB2E4."
       - Active
       - 2
-      - Weapon
-      - Duration
-      - 2
+      - 0
     - cache:
       - 15
       - heat_wave_attack
@@ -1121,9 +1093,7 @@ MonoBehaviour:
       - "\uC790\uC2E0\uC758 \uBB34\uAE30 \uB370\uBBF8\uC9C0 \uC99D\uAC00 Weapon_Attack"
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 16
       - rebirth
@@ -1132,9 +1102,7 @@ MonoBehaviour:
         \uBCF4\uB108\uC2A4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 17
       - heat_wave
@@ -1143,9 +1111,7 @@ MonoBehaviour:
         \uCC98\uB9AC\uD569\uB2C8\uB2E4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 14
     - cache:
       - 18
       - enthusiasm
@@ -1154,9 +1120,7 @@ MonoBehaviour:
         +Y% DMG \uC644\uD654."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 19
       - non_geom_dagger
@@ -1167,9 +1131,7 @@ MonoBehaviour:
         \uBA3C\uC800 \uACF5\uACA9)."
       - Active
       - 3
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 20
       - warrior_attack
@@ -1178,9 +1140,7 @@ MonoBehaviour:
         +Y% DMG \uC644\uD654."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 21
       - become_one_with_the_sword
@@ -1190,9 +1150,7 @@ MonoBehaviour:
         \uCC98\uB9AC\uD569\uB2C8\uB2E4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 22
       - famous_sword
@@ -1203,9 +1161,7 @@ MonoBehaviour:
         Kin Ogawa\uB294 +X% WPN DMG \uBCF4\uB108\uC2A4\uB97C \uC5BB\uC2B5\uB2C8\uB2E4."
       - Passive
       - 0
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 23
       - normal_weapon_attack
@@ -1213,9 +1169,7 @@ MonoBehaviour:
       - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 Weapon_Attack"
       - Active
       - 7
-      - Weapon
-      - Promptly
-      - 1
+      - 0
     - cache:
       - 24
       - normal_tactical_attack
@@ -1223,13 +1177,13 @@ MonoBehaviour:
       - "\uC790\uC2E0\uC758 \uC804\uC220 \uB370\uBBF8\uC9C0 Tactical_Attack"
       - Active
       - 6
-      - Tactical
-      - Promptly
-      - 1
+      - 0
   - caches:
     - cache:
       - 1
       - 1
+      - 1
+      - 0
       - 0
       - 0
       - 0
@@ -1255,10 +1209,11 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
     - cache:
       - 1
+      - 1
       - 2
+      - 0
       - 0
       - 0
       - 0
@@ -1284,10 +1239,11 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
     - cache:
       - 1
+      - 1
       - 3
+      - 0
       - 0
       - 0
       - 0
@@ -1313,10 +1269,11 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
     - cache:
       - 1
+      - 1
       - 4
+      - 0
       - 0
       - 0
       - 0
@@ -1342,8 +1299,8 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 0
     - cache:
+      - 1
       - 1
       - 5
       - 0
@@ -1355,7 +1312,7 @@ MonoBehaviour:
       - 0
       - 0
       - 0
-      - 220
+      - 0
       - 0
       - 0
       - 0
@@ -1375,6 +1332,157 @@ MonoBehaviour:
     - cache:
       - 2
       - 1
+      - 1
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 2
+      - 1
+      - 2
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 2
+      - 1
+      - 3
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 2
+      - 1
+      - 4
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 2
+      - 1
+      - 5
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    - cache:
+      - 3
+      - 1
+      - 1
       - 0
       - 0
       - 0
@@ -1402,7 +1510,8 @@ MonoBehaviour:
       - 0
       - 0
     - cache:
-      - 2
+      - 3
+      - 1
       - 2
       - 0
       - 0
@@ -1431,7 +1540,8 @@ MonoBehaviour:
       - 0
       - 0
     - cache:
-      - 2
+      - 3
+      - 1
       - 3
       - 0
       - 0
@@ -1451,64 +1561,6 @@ MonoBehaviour:
       - 0
       - 0
       - 7
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    - cache:
-      - 2
-      - 4
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 8
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    - cache:
-      - 2
-      - 5
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 10
       - 0
       - 0
       - 0
@@ -1520,92 +1572,6 @@ MonoBehaviour:
     - cache:
       - 3
       - 1
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 5
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    - cache:
-      - 3
-      - 2
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 6
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    - cache:
-      - 3
-      - 3
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 7
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-      - 0
-    - cache:
-      - 3
       - 4
       - 0
       - 0
@@ -1635,6 +1601,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 3
+      - 1
       - 5
       - 0
       - 0
@@ -1664,6 +1631,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 4
+      - 1
       - 1
       - 0
       - 0
@@ -1693,6 +1661,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 4
+      - 1
       - 2
       - 0
       - 0
@@ -1722,6 +1691,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 4
+      - 1
       - 3
       - 0
       - 0
@@ -1751,6 +1721,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 4
+      - 1
       - 4
       - 0
       - 0
@@ -1780,6 +1751,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 4
+      - 1
       - 5
       - 0
       - 0
@@ -1809,6 +1781,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 5
+      - 1
       - 1
       - 0
       - 0
@@ -1838,6 +1811,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 5
+      - 1
       - 2
       - 0
       - 0
@@ -1867,6 +1841,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 5
+      - 1
       - 3
       - 0
       - 0
@@ -1896,6 +1871,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 5
+      - 1
       - 4
       - 0
       - 0
@@ -1925,6 +1901,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 5
+      - 1
       - 5
       - 0
       - 0
@@ -1955,6 +1932,7 @@ MonoBehaviour:
     - cache:
       - 6
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -1983,6 +1961,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 6
+      - 1
       - 2
       - 0
       - 0
@@ -2012,6 +1991,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 6
+      - 1
       - 3
       - 0
       - 0
@@ -2041,6 +2021,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 6
+      - 1
       - 4
       - 0
       - 0
@@ -2070,6 +2051,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 6
+      - 1
       - 5
       - 0
       - 0
@@ -2100,6 +2082,7 @@ MonoBehaviour:
     - cache:
       - 7
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2128,6 +2111,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 7
+      - 1
       - 2
       - 0
       - 0
@@ -2157,6 +2141,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 7
+      - 1
       - 3
       - 0
       - 0
@@ -2186,6 +2171,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 7
+      - 1
       - 4
       - 0
       - 0
@@ -2215,6 +2201,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 7
+      - 1
       - 5
       - 0
       - 0
@@ -2245,6 +2232,7 @@ MonoBehaviour:
     - cache:
       - 8
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2273,6 +2261,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 8
+      - 1
       - 2
       - 0
       - 0
@@ -2302,6 +2291,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 8
+      - 1
       - 3
       - 0
       - 0
@@ -2331,6 +2321,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 8
+      - 1
       - 4
       - 0
       - 0
@@ -2360,6 +2351,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 8
+      - 1
       - 5
       - 0
       - 0
@@ -2390,6 +2382,7 @@ MonoBehaviour:
     - cache:
       - 9
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2418,6 +2411,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 9
+      - 1
       - 2
       - 0
       - 0
@@ -2447,6 +2441,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 9
+      - 1
       - 3
       - 0
       - 0
@@ -2476,6 +2471,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 9
+      - 1
       - 4
       - 0
       - 0
@@ -2505,6 +2501,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 9
+      - 1
       - 5
       - 0
       - 0
@@ -2535,6 +2532,7 @@ MonoBehaviour:
     - cache:
       - 10
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2563,6 +2561,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 10
+      - 1
       - 2
       - 0
       - 0
@@ -2592,6 +2591,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 10
+      - 1
       - 3
       - 0
       - 0
@@ -2621,6 +2621,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 10
+      - 1
       - 4
       - 0
       - 0
@@ -2650,6 +2651,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 10
+      - 1
       - 5
       - 0
       - 0
@@ -2680,6 +2682,7 @@ MonoBehaviour:
     - cache:
       - 11
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2708,6 +2711,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 11
+      - 1
       - 2
       - 0
       - 0
@@ -2737,6 +2741,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 11
+      - 1
       - 3
       - 0
       - 0
@@ -2766,6 +2771,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 11
+      - 1
       - 4
       - 0
       - 0
@@ -2795,6 +2801,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 11
+      - 1
       - 5
       - 0
       - 0
@@ -2825,6 +2832,7 @@ MonoBehaviour:
     - cache:
       - 12
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2853,6 +2861,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 12
+      - 1
       - 2
       - 0
       - 0
@@ -2882,6 +2891,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 12
+      - 1
       - 3
       - 0
       - 0
@@ -2911,6 +2921,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 12
+      - 1
       - 4
       - 0
       - 0
@@ -2940,6 +2951,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 12
+      - 1
       - 5
       - 0
       - 0
@@ -2970,6 +2982,7 @@ MonoBehaviour:
     - cache:
       - 13
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -2998,6 +3011,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 13
+      - 1
       - 2
       - 0
       - 0
@@ -3027,6 +3041,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 13
+      - 1
       - 3
       - 0
       - 0
@@ -3056,6 +3071,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 13
+      - 1
       - 4
       - 0
       - 0
@@ -3085,6 +3101,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 13
+      - 1
       - 5
       - 0
       - 0
@@ -3115,6 +3132,7 @@ MonoBehaviour:
     - cache:
       - 14
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3143,6 +3161,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 14
+      - 1
       - 2
       - 0
       - 0
@@ -3172,6 +3191,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 14
+      - 1
       - 3
       - 0
       - 0
@@ -3201,6 +3221,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 14
+      - 1
       - 4
       - 0
       - 0
@@ -3230,6 +3251,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 14
+      - 1
       - 5
       - 0
       - 0
@@ -3260,6 +3282,7 @@ MonoBehaviour:
     - cache:
       - 15
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3288,6 +3311,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 15
+      - 1
       - 2
       - 0
       - 0
@@ -3317,6 +3341,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 15
+      - 1
       - 3
       - 0
       - 0
@@ -3346,6 +3371,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 15
+      - 1
       - 4
       - 0
       - 0
@@ -3375,6 +3401,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 15
+      - 1
       - 5
       - 0
       - 0
@@ -3405,6 +3432,7 @@ MonoBehaviour:
     - cache:
       - 16
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3433,6 +3461,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 16
+      - 1
       - 2
       - 0
       - 0
@@ -3462,6 +3491,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 16
+      - 1
       - 3
       - 0
       - 0
@@ -3491,6 +3521,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 16
+      - 1
       - 4
       - 0
       - 0
@@ -3520,6 +3551,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 16
+      - 1
       - 5
       - 0
       - 0
@@ -3550,6 +3582,7 @@ MonoBehaviour:
     - cache:
       - 17
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3578,6 +3611,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 17
+      - 1
       - 2
       - 0
       - 0
@@ -3607,6 +3641,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 17
+      - 1
       - 3
       - 0
       - 0
@@ -3636,6 +3671,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 17
+      - 1
       - 4
       - 0
       - 0
@@ -3665,6 +3701,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 17
+      - 1
       - 5
       - 0
       - 0
@@ -3695,6 +3732,7 @@ MonoBehaviour:
     - cache:
       - 18
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3723,6 +3761,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 18
+      - 1
       - 2
       - 0
       - 0
@@ -3752,6 +3791,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 18
+      - 1
       - 3
       - 0
       - 0
@@ -3781,6 +3821,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 18
+      - 1
       - 4
       - 0
       - 0
@@ -3810,6 +3851,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 18
+      - 1
       - 5
       - 0
       - 0
@@ -3840,6 +3882,7 @@ MonoBehaviour:
     - cache:
       - 19
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -3868,6 +3911,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 19
+      - 1
       - 2
       - 0
       - 0
@@ -3897,6 +3941,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 19
+      - 1
       - 3
       - 0
       - 0
@@ -3926,6 +3971,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 19
+      - 1
       - 4
       - 0
       - 0
@@ -3955,6 +4001,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 19
+      - 1
       - 5
       - 0
       - 0
@@ -3985,6 +4032,7 @@ MonoBehaviour:
     - cache:
       - 20
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -4013,6 +4061,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 20
+      - 1
       - 2
       - 0
       - 0
@@ -4042,6 +4091,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 20
+      - 1
       - 3
       - 0
       - 0
@@ -4071,6 +4121,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 20
+      - 1
       - 4
       - 0
       - 0
@@ -4100,6 +4151,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 20
+      - 1
       - 5
       - 0
       - 0
@@ -4130,6 +4182,7 @@ MonoBehaviour:
     - cache:
       - 21
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -4158,6 +4211,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 21
+      - 1
       - 2
       - 0
       - 0
@@ -4187,6 +4241,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 21
+      - 1
       - 3
       - 0
       - 0
@@ -4216,6 +4271,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 21
+      - 1
       - 4
       - 0
       - 0
@@ -4245,6 +4301,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 21
+      - 1
       - 5
       - 0
       - 0
@@ -4275,6 +4332,7 @@ MonoBehaviour:
     - cache:
       - 22
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -4303,6 +4361,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 22
+      - 1
       - 2
       - 0
       - 0
@@ -4332,6 +4391,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 22
+      - 1
       - 3
       - 0
       - 0
@@ -4361,6 +4421,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 22
+      - 1
       - 4
       - 0
       - 0
@@ -4390,6 +4451,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 22
+      - 1
       - 5
       - 0
       - 0
@@ -4420,6 +4482,7 @@ MonoBehaviour:
     - cache:
       - 23
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -4448,6 +4511,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 23
+      - 1
       - 2
       - 0
       - 0
@@ -4477,6 +4541,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 23
+      - 1
       - 3
       - 0
       - 0
@@ -4506,6 +4571,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 23
+      - 1
       - 4
       - 0
       - 0
@@ -4535,6 +4601,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 23
+      - 1
       - 5
       - 0
       - 0
@@ -4565,6 +4632,7 @@ MonoBehaviour:
     - cache:
       - 24
       - 1
+      - 1
       - 0
       - 0
       - 0
@@ -4593,6 +4661,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 24
+      - 1
       - 2
       - 0
       - 0
@@ -4622,6 +4691,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 24
+      - 1
       - 3
       - 0
       - 0
@@ -4651,6 +4721,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 24
+      - 1
       - 4
       - 0
       - 0
@@ -4680,6 +4751,7 @@ MonoBehaviour:
       - 0
     - cache:
       - 24
+      - 1
       - 5
       - 0
       - 0
@@ -4774,3 +4846,337 @@ MonoBehaviour:
     - cache:
       - 5
       - 22
+  - caches:
+    - cache:
+      - 1
+      - 1
+      - Enemy
+      - None
+      - Tactical_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 2
+      - 1
+      - Alliance
+      - My
+      - Tactical_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 3
+      - 1
+      - Alliance
+      - My
+      - Tactical_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 3
+      - 2
+      - Alliance
+      - My
+      - Tactical_Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 4
+      - 1
+      - Alliance
+      - My
+      - Tactical_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 5
+      - 1
+      - Enemy
+      - None
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 6
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 6
+      - 2
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 7
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 8
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 9
+      - 1
+      - Enemy
+      - Front
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 9
+      - 2
+      - Enemy
+      - My
+      - Damage_Mitigation
+      - DamageOverTime
+      - 2
+      - 1
+    - cache:
+      - 10
+      - 1
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 10
+      - 2
+      - Alliance
+      - My
+      - Tactical_Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 11
+      - 1
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 12
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 13
+      - 1
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 13
+      - 2
+      - Alliance
+      - My
+      - Health_Point
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 14
+      - 1
+      - Enemy
+      - All
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 14
+      - 2
+      - Enemy
+      - All
+      - Weapon_Attack
+      - DamageOverTime
+      - 2
+      - 1
+    - cache:
+      - 15
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 16
+      - 1
+      - Alliance
+      - All
+      - Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 17
+      - 1
+      - Alliance
+      - My
+      - Weapon_Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 18
+      - 1
+      - Alliance
+      - My
+      - Weapon_Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 18
+      - 2
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 19
+      - 1
+      - Enemy
+      - None
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 3
+    - cache:
+      - 19
+      - 1
+      - Enemy
+      - None
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 2
+    - cache:
+      - 19
+      - 1
+      - Enemy
+      - None
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 19
+      - 2
+      - Enemy
+      - Ramdom
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 3
+    - cache:
+      - 19
+      - 2
+      - Enemy
+      - Ramdom
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 2
+    - cache:
+      - 19
+      - 2
+      - Enemy
+      - Ramdom
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 20
+      - 1
+      - Alliance
+      - My
+      - Weapon_Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 20
+      - 2
+      - Alliance
+      - My
+      - Damage_Mitigation
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 21
+      - 1
+      - Alliance
+      - My
+      - Weapon_Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 22
+      - 1
+      - Alliance
+      - My
+      - Weapon_Damage_Bonus
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 23
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1
+    - cache:
+      - 24
+      - 1
+      - Alliance
+      - My
+      - Weapon_Attack
+      - DirectDamage
+      - 1
+      - 1

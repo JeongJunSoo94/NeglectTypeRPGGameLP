@@ -104,32 +104,32 @@ namespace NeglectTypeRPG
 
         public void AttackAdd(SkillInfo info, int index)
         {
-            switch (info.damageType)
-            {
-                case 0:
-                    attacks[index] += new Attack(WeaponDamage);
-                    attacks[index] += new Attack(WeaponDamageBonus);
-                    break;
-                case 1:
-                    attacks[index] += new Attack(TacticalDamage);
-                    attacks[index] += new Attack(TacticalDamageBonus);
-                    break;
-            }
+            //switch (info.damageType)
+            //{
+            //    case 0:
+            //        attacks[index] += new Attack(WeaponDamage);
+            //        attacks[index] += new Attack(WeaponDamageBonus);
+            //        break;
+            //    case 1:
+            //        attacks[index] += new Attack(TacticalDamage);
+            //        attacks[index] += new Attack(TacticalDamageBonus);
+            //        break;
+            //}
         }
 
         public void PassiveAdd(SkillInfo info, int index)
         {
-            switch (info.damageType)
-            {
-                case 0:
-                    passives[index] += new Passive(WeaponDamage);
-                    passives[index] += new Passive(WeaponDamageBonus);
-                    break;
-                case 1:
-                    passives[index] += new Passive(TacticalDamage);
-                    passives[index] += new Passive(TacticalDamageBonus);
-                    break;
-            }
+            //switch (info.damageType)
+            //{
+            //    case 0:
+            //        passives[index] += new Passive(WeaponDamage);
+            //        passives[index] += new Passive(WeaponDamageBonus);
+            //        break;
+            //    case 1:
+            //        passives[index] += new Passive(TacticalDamage);
+            //        passives[index] += new Passive(TacticalDamageBonus);
+            //        break;
+            //}
         }
 
         public float GaugeUp(HeroBase hb, int index)
