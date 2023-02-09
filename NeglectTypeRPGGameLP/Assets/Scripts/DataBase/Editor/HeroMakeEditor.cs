@@ -123,7 +123,6 @@ public class HeroMakeEditor : EditorWindow
             }
             else if (type == typeof(SkillInfo))
             {
-                //SkillInfo.CreateSkillStatData(list[index2] as SkillInfo,);
                 EditorUtility.SetDirty(list[index2]);
             }
             index1 += 5;
@@ -148,7 +147,12 @@ public class HeroMakeEditor : EditorWindow
         CreateAsset(heroAssets, heroCache[0], heroCache[1], "Assets/Datas/Heroes/Data/", "InfoData.asset", typeof(HeroInfo));
         List<SkillInfo> skillAssets = new List<SkillInfo>();
         CreateAsset(skillAssets, heroCache[2], heroCache[3], "Assets/Datas/Skills/", "Skill.asset", typeof(SkillInfo));
-        
+
+        for (int i = 0; i < skillAssets.Count; ++i)
+        {
+            skillAssets[i].CreateSkillStatData(skillsData);
+        }
+
         List<string[]> cache = heroCache[4];
 
         for (int j = 0; j < cache.Count; j++)

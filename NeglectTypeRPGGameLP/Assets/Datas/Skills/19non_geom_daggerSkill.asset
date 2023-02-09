@@ -21,33 +21,47 @@ MonoBehaviour:
     \uBA3C\uC800 \uACF5\uACA9)."
   action: 0
   BehaviorTreeID: 3
-  damageType: 0
-  attackState: 0
-  Turn: 1
-  level: 1
-  Strength: 0
-  Intelligence: 0
-  Agility: 0
-  Vital: 0
-  Luck: 0
-  Critical_Rate: 0
-  Critical_Immunity_Rate: 0
-  Critical_Damage: 0
-  Health_Point: 0
-  Attack: 0
-  Weapon_Attack: 0
-  Tactical_Attack: 0
-  Defensive: 0
-  Weapon_Defensive: 0
-  Tactical_Defensive: 0
-  Damage_Bonus: 0
-  Weapon_Damage_Bonus: 0
-  Tactical_Damage_Bonus: 0
-  Damage_Mitigation: 0
-  Weapon_Damage_Mitigation: 0
-  Tactical_Damage_Mitigation: 0
-  Critical_Pierces_Defensive: 0
-  Focus_Damage: 0
-  Shield_Bonus_Damage: 0
-  Damage_Reflection: 0
-  Extra_Healing_Effect: 0
+  DependOnID: 0
+  Stats:
+  - damageID: 1
+    skillDamageStats:
+    - team: 2
+      targetType: 0
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 3
+    - team: 2
+      targetType: 0
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 2
+    - team: 2
+      targetType: 0
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 1
+  - damageID: 1
+    skillDamageStats:
+    - team: 2
+      targetType: 9
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 3
+    - team: 2
+      targetType: 9
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 2
+    - team: 2
+      targetType: 9
+      statType: 10
+      attackState: 0
+      turn: 1
+      sync: 1
+  - damageID: 2
+    skillDamageStats: []

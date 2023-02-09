@@ -46,75 +46,78 @@ namespace NeglectTypeRPG
             curMana = 0;
             isDamaged = false;
             heroUI();
-           
-            //if (!init)
-            //{
-            //    if (heroInfo.normalAttack.action == 0)
-            //    {
-            //        switch (heroInfo.normalAttack.damageType)
-            //        {
-            //            case 0:
-            //                attack += new Attack(WeaponDamage);
-            //                attack += new Attack(WeaponDamageBonus);
-            //                break;
-            //            case 1:
-            //                attack += new Attack(TacticalDamage);
-            //                attack += new Attack(TacticalDamageBonus);
-            //                break;
-            //        }
-            //    }
-            //    for (int i = 0; i < heroInfo.skills.Count; ++i)
-            //    {
-            //        if (heroInfo.skills[i].action == 0)
-            //        {
-            //            switch (heroInfo.skills[i].damageType)
-            //            {
-            //                case 0:
-            //                    skills.Add(new Skill(WeaponDamage));
-            //                    skills[skills.Count-1] += new Skill(WeaponDamageBonus);
-            //                    break;
-            //                case 1:
-            //                    skills.Add(new Skill(TacticalDamage));
-            //                    skills[skills.Count - 1] += new Skill(TacticalDamageBonus);
 
-            //                    break;
-            //            }
-            //            skills[skills.Count - 1] += new Skill(GaugeDown);
-            //        }
-            //    }
-            //    attack += new Attack(GaugeUp);
+            if (!init)
+            {
+                if (heroInfo.normalAttack.action == 0)
+                {
+                    for (int i = 0; i < heroInfo.normalAttack.Stats.Count; ++i)
+                    {
+                        SkillDelegateInit(heroInfo.normalAttack, 0);
+                    }
+
+                }
+
+                for (int i = 0; i < heroInfo.skills.Count; ++i)
+                {
+                    if (heroInfo.skills[i].action == 0)
+                    {
+                        for (int j = 0; j < heroInfo.skills[i].Stats.Count; ++j)
+                        {
+                            SkillDelegateInit(heroInfo.skills[i], i);
+                        }
+                    }
+                }
+                //    attack += new Attack(GaugeUp);
                 //weaponDefence += new Defence(WeaponDefence);
                 //weaponDefence += new Defence(WeaponDefenceMitigation);
                 //tacticalDefence += new Defence(TacticalDefence);
                 //tacticalDefence += new Defence(TacticalDefenceMitigation);
                 //init = true;
-            //}
+            }
         }
-
-        public void SkillDelegateInit(SkillInfo info,int index)
+        public void SkillDelegateInit(SkillInfo info, int index)
         {
             if (info.action == 0)
             {
-                AttackAdd(info, index);
+                //StatAdd(info, index);
             }
             else
             { 
             }
         }
 
-        public void AttackAdd(SkillInfo info, int index)
+        public void StatAdd(SkillInfo stat, int index,int damageIndex,Attack attack)
         {
-            //switch (info.damageType)
-            //{
-            //    case 0:
-            //        attacks[index] += new Attack(WeaponDamage);
-            //        attacks[index] += new Attack(WeaponDamageBonus);
-            //        break;
-            //    case 1:
-            //        attacks[index] += new Attack(TacticalDamage);
-            //        attacks[index] += new Attack(TacticalDamageBonus);
-            //        break;
-            //}
+            switch (stat.Stats[index].skillDamageStats[damageIndex].statType)
+            {
+                case 0:          break;
+                case 1:          break;
+                case 2:          break;
+                case 3:          break;
+                case 4:          break;
+                case 5:          break;
+                case 6:          break;
+                case 7:          break;
+                case 8:          break;
+                case 9:          break;
+                case 10:         break;
+                case 11:         break;
+                case 12:         break;
+                case 13:         break;
+                case 14:         break;
+                case 15:         break;
+                case 16:         break;
+                case 17:         break;
+                case 18:         break;
+                case 19:         break;
+                case 20:         break;
+                case 21:         break;
+                case 22:         break;
+                case 23:         break;
+                case 24:         break;
+                case 25:         break;
+            }
         }
 
         public void PassiveAdd(SkillInfo info, int index)

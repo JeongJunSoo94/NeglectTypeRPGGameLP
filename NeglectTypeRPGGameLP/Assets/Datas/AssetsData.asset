@@ -5103,7 +5103,7 @@ MonoBehaviour:
       - 19
       - 2
       - Enemy
-      - Ramdom
+      - Random
       - Weapon_Attack
       - DirectDamage
       - 1
@@ -5112,7 +5112,7 @@ MonoBehaviour:
       - 19
       - 2
       - Enemy
-      - Ramdom
+      - Random
       - Weapon_Attack
       - DirectDamage
       - 1
@@ -5121,7 +5121,7 @@ MonoBehaviour:
       - 19
       - 2
       - Enemy
-      - Ramdom
+      - Random
       - Weapon_Attack
       - DirectDamage
       - 1

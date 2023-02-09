@@ -23,6 +23,7 @@ namespace NeglectTypeRPG
         public HeroInfo[] heroInfo;
         public SkillInfo[] skillInfo;
         public AssetsData AssetsData;
+        public SkillsData skillData;
         public BehaviourTree[] characterBehaviors;
         public List<GameObject> models = new List<GameObject>();
 

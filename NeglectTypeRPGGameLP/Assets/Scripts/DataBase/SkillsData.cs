@@ -6,6 +6,11 @@ using UnityEngine;
 namespace NeglectTypeRPG
 {
     [System.Serializable]
+    public struct SkillStatDatas 
+    {
+        public List<SkillStatData> skillStatDatas;
+    }
+    [System.Serializable]
     public struct SkillStatData
     {
         public int damageID;
@@ -20,6 +25,11 @@ namespace NeglectTypeRPG
         public int attackState;
         public int turn;
         public int sync;
+    }
+    [System.Serializable]
+    public struct Stats
+    {
+        public List<Stat> stats;
     }
     [System.Serializable]
     public struct Stat
@@ -57,34 +67,51 @@ namespace NeglectTypeRPG
     {
         //이거 아님
         //스탯을 사용할수있게 아이디[] - 스탯데미지[] - 스탯들[]
-        public List<List<Stat>> statCache;
-        public List<List<SkillStatData>> statDamageCache;
+        public List<Stats> statCache;
+        public List<SkillStatDatas> statDamageCache;
         public void CreateSkillDamageStatsInit(List<string[]> value)
         {
-            statDamageCache = new List<List<SkillStatData>>();
+            statDamageCache = new();
             int curId=1;
             for (int i = 0; i < value.Count; ++i)
             {
                 int index = int.Parse(value[i][0].Trim());
+                if (statDamageCache.Count < index)
+                {
+                    statDamageCache.Add(new());
+                    SkillStatDatas stats = new();
+                    stats.skillStatDatas = new();
+                    statDamageCache[index-1] = stats;
+                }
                 if (curId != index)
                     curId = index;
                 int demageIndex = int.Parse(value[i][1].Trim());
-                if (statDamageCache[curId - 1].Count < demageIndex)
+                if (statDamageCache[curId - 1].skillStatDatas.Count <= demageIndex)
                 {
                     SkillStatData skillstatdata = new();
                     skillstatdata.damageID = demageIndex;
-                    statDamageCache[curId - 1].Add(skillstatdata);
+                    skillstatdata.skillDamageStats = new List<SkillDamageStats>();
+                    statDamageCache[curId - 1].skillStatDatas.Add(skillstatdata);
                 }
-                statDamageCache[curId - 1][demageIndex - 1].skillDamageStats.Add(CreateSkillDamageStat(value[i]));
+
+                statDamageCache[curId - 1].skillStatDatas[demageIndex - 1].skillDamageStats.Add(CreateSkillDamageStat(value[i]));
             }
         }
         public void CreateSkillStatsInit(List<string[]> skillStats)
         {
-            statCache = new List<List<Stat>>(int.Parse(skillStats[skillStats.Count - 1][0].Trim()));
+            statCache = new (int.Parse(skillStats[skillStats.Count - 1][0].Trim()));
             for (int i = 0; i < skillStats.Count; ++i)
             {
-                int a = int.Parse(skillStats[i][0].Trim()) - 1;
-                statCache[a].Add(CreateStatData(skillStats[i]));
+                int index = int.Parse(skillStats[i][0].Trim()) - 1;
+                if (statCache.Count <= index)
+                    statCache.Add(new());
+                if(statCache[index].stats==null)
+                {
+                    Stats stats = new();
+                    stats.stats = new();
+                    statCache[index] = stats;
+                }
+                statCache[index].stats.Add(CreateStatData(skillStats[i]));
             }
         }
 

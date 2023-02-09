@@ -32,8 +32,8 @@ MonoBehaviour:
   Critical_Damage: 120
   Health_Point: 140
   Attack: 100
-  Weapon_Attack: 10
-  Tactical_Attack: 10
+  Weapon_Attack: 100
+  Tactical_Attack: 100
   Defensive: 50
   Weapon_Defensive: 1
   Tactical_Defensive: 1

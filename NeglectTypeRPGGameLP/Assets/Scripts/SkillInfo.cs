@@ -64,6 +64,7 @@ namespace NeglectTypeRPG
         Farthest,
         Strongest,
         Weakest,
+        Random
     }
 
     
@@ -100,8 +101,10 @@ namespace NeglectTypeRPG
             info.BehaviorTreeID     = int.Parse(value[5].Trim());
             info.DependOnID         = int.Parse(value[6].Trim());
         }
-        public static void CreateSkillStatData(SkillInfo info)
+        public void CreateSkillStatData(SkillsData data)
         {
+            Stats = new();
+            Stats = data.statDamageCache[ID-1].skillStatDatas;
         }
     }
 }
