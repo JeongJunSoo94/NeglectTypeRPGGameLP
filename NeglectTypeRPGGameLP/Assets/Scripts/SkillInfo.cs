@@ -8,7 +8,9 @@ namespace NeglectTypeRPG
     public enum AttackState
     {
         DirectDamage,
-        DamageOverTime
+        DamageOverTime,
+        Buff,
+        BuffOverTime
     }
 
     public enum SkillAction
@@ -28,9 +30,9 @@ namespace NeglectTypeRPG
         Critical_Immunity_Rate,
         Critical_Damage,
         Health_Point,
-        Attack,
-        Weapon_Attack,
-        Tactical_Attack,
+        Damage,
+        Weapon_Damage,
+        Tactical_Damage,
         Defensive,
         Weapon_Defensive,
         Tactical_Defensive,
@@ -78,7 +80,7 @@ namespace NeglectTypeRPG
         public int BehaviorTreeID;
         public int DependOnID;
 
-        public List<SkillStatData> Stats;
+        public List<SkillStatDataDamageID> Stats;
 
         public void CreateSkillInfoData(string[] value)
         {

@@ -28,6 +28,7 @@ MonoBehaviour:
     - team: 1
       targetType: 1
       statType: 16
-      attackState: 0
-      turn: 1
+      attackState: 2
+      round: 0
+      turn: 0
       sync: 1

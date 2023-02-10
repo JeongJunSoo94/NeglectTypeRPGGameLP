@@ -81,8 +81,8 @@ namespace NeglectTypeRPG
                     heroBlackBoard.battleSystemBlackboard = bsb;
                     character.transform.rotation = Quaternion.Euler(0, 180, 0);
                     character.GetComponent<HeroContext>().originRotation = new Vector3(0,180,0);
-                    redCombat += character.GetComponent<HeroContext>().info.heroInfo.Combat_Power;
                     character.SetActive(true);
+                    redCombat += character.GetComponent<HeroContext>().info.heroInfo.CombatPower;
                     if(!character.GetComponent<HeroContext>().statBar)
                         character.GetComponent<HeroContext>().UIAdd(bsc.pool.Dequeue());
                     return;
@@ -95,8 +95,8 @@ namespace NeglectTypeRPG
                     if (blackBoard.data.RedHero[i] == DataManager.Instance.characterPool[index].GetComponent<Blackboard>())
                     {
                         blackBoard.data.RedHero[i] = null;
-                        redCombat -= character.GetComponent<HeroContext>().info.heroInfo.Combat_Power;
                         DataManager.Instance.characterPool[index].SetActive(false);
+                        redCombat -= character.GetComponent<HeroContext>().info.heroInfo.CombatPower;
                         return;
                     }
                 }
@@ -140,7 +140,7 @@ namespace NeglectTypeRPG
                 hc.syncBehavior = 0;
                 hc.myTurn = false;
                 hc.Initialized();
-                blueCombat += hc.info.heroInfo.Combat_Power;
+                blueCombat += hc.info.heroInfo.CombatPower;
                 blackBoard.data.heroBlueBattleList.Enqueue(blackBoard.data.BlueHero[i].GetComponent<HeroContext>());
                 if (!hc.statBar)
                     hc.UIAdd(bsc.pool.Dequeue());

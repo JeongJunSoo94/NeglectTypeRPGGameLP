@@ -21,33 +21,35 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 68025d280020d0f4397222b3d540de4f, type: 3}
   Model: 5
   level: 1
-  Combat_Power: 10435
-  Strength: 80
-  Intelligence: 39
-  Agility: 53
-  Vital: 26
-  Luck: 66
-  Critical_Rate: 70
-  Critical_Immunity_Rate: 0
-  Critical_Damage: 120
-  Health_Point: 100
-  Attack: 100
-  Weapon_Attack: 100
-  Tactical_Attack: 100
-  Defensive: 30
-  Weapon_Defensive: 1
-  Tactical_Defensive: 1
-  Damage_Bonus: 100
-  Weapon_Damage_Bonus: 30
-  Tactical_Damage_Bonus: 30
-  Damage_Mitigation: 1
-  Weapon_Damage_Mitigation: 1
-  Tactical_Damage_Mitigation: 1
-  Critical_Pierces_Defensive: 0
-  Focus_Damage: 0
-  Shield_Bonus_Damage: 0
-  Damage_Reflection: 0
-  Extra_Healing_Effect: 0
+  CombatPower: 0
+  defaultStat:
+    Level: 0
+    Strength: 80
+    Intelligence: 39
+    Agility: 53
+    Vital: 26
+    Luck: 66
+    Critical_Rate: 70
+    Critical_Immunity_Rate: 0
+    Critical_Damage: 120
+    Health_Point: 100
+    Damage: 100
+    Weapon_Damage: 100
+    Tactical_Damage: 100
+    Defensive: 30
+    Weapon_Defensive: 1
+    Tactical_Defensive: 1
+    Damage_Bonus: 100
+    Weapon_Damage_Bonus: 30
+    Tactical_Damage_Bonus: 30
+    Damage_Mitigation: 1
+    Weapon_Damage_Mitigation: 1
+    Tactical_Damage_Mitigation: 1
+    Critical_Pierces_Defensive: 0
+    Focus_Damage: 0
+    Shield_Bonus_Damage: 0
+    Damage_Reflection: 0
+    Extra_Healing_Effect: 0
   normalAttack: {fileID: 11400000, guid: 6345c4ae7bdb1fd4baa296013a62ce81, type: 2}
   skills:
   - {fileID: 11400000, guid: 408555a51eb7cb84cbcaacebc94e58d4, type: 2}

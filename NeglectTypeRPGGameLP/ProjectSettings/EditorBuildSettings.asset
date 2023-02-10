@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BattleScene.unity
-    guid: 1ab5246b9b0605d4ab047c42e8de309d
+    path: Assets/Scenes/ColossalGladiatorBattleScene.unity
+    guid: ebfadfee9d3930845be8e3d838dd00ce
   m_configObjects: {}

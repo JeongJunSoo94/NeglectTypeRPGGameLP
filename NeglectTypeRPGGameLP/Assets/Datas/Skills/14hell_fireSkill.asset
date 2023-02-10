@@ -28,7 +28,8 @@ MonoBehaviour:
       targetType: 2
       statType: 10
       attackState: 0
-      turn: 1
+      round: 0
+      turn: 0
       sync: 1
   - damageID: 2
     skillDamageStats:
@@ -36,5 +37,6 @@ MonoBehaviour:
       targetType: 2
       statType: 10
       attackState: 1
-      turn: 2
+      round: 2
+      turn: 0
       sync: 1

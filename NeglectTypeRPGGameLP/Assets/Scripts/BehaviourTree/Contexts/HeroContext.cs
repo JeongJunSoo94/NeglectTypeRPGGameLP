@@ -100,9 +100,9 @@ namespace NeglectTypeRPG
 
         public int CompareTo(HeroContext x)
         {
-            if (info.heroInfo.Luck > x.info.heroInfo.Luck)
+            if (info.curStat.Luck > x.info.curStat.Luck)
                 return 1;
-            else if (info.heroInfo.Luck == x.info.heroInfo.Luck)
+            else if (info.curStat.Luck == x.info.curStat.Luck)
                 return 0;
             else
                 return -1;

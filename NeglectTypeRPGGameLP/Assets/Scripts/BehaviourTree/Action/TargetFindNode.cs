@@ -70,19 +70,19 @@ namespace NeglectTypeRPG
             switch (StatType)
             {
                 case StatType.Strength:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Strength;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Strength;
                 case StatType.Intelligence:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Intelligence;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Intelligence;
                 case StatType.Agility:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Agility;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Agility;
                 case StatType.Vital:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Vital;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Vital;
                 case StatType.Luck:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Luck;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Luck;
                 case StatType.Health_Point:
                     return blackboard.GetComponent<HeroContext>().info.curHealth;
                 case StatType.Defensive:
-                    return blackboard.GetComponent<HeroContext>().info.heroInfo.Defensive;
+                    return blackboard.GetComponent<HeroContext>().info.curStat.Defensive;
             }
             return 0;
         }

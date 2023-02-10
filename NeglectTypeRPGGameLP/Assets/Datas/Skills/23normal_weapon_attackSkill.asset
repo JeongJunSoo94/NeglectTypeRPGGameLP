@@ -26,5 +26,6 @@ MonoBehaviour:
       targetType: 1
       statType: 10
       attackState: 0
-      turn: 1
+      round: 0
+      turn: 0
       sync: 1
