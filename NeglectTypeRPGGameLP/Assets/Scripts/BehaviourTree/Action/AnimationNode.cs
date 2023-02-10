@@ -10,9 +10,9 @@ namespace NeglectTypeRPG
         [Range(0, 1)]
         public float runTime;
         [Range(0, 1)]
-        public float startTime;
+        public float startTime=0;
         [Range(0, 1)]
-        public float endTime;
+        public float endTime=1;
 
         public bool runToTheEnd;
 
@@ -52,7 +52,7 @@ namespace NeglectTypeRPG
                 ChangeAnimationState(aniName);
             if (runToTheEnd)
             {
-                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) && context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= endTime)
+                if (context.animator.GetCurrentAnimatorStateInfo(0).IsName(aniName) && context.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
                 {
                     return State.Success;
                 }
@@ -63,7 +63,7 @@ namespace NeglectTypeRPG
         void ChangeAnimation(string newState)
         {
             context.animator.StopPlayback();
-            context.animator.Play(newState, layer, startTime);
+            context.animator.Play(newState);
             context.currentAniState = newState;
         }
         void ChangeAnimationState(string newState)
@@ -71,7 +71,7 @@ namespace NeglectTypeRPG
             if (context.currentAniState == newState) return;
 
             context.animator.StopPlayback();
-            context.animator.Play(newState, layer, startTime);
+            context.animator.Play(newState);
             context.currentAniState = newState;
         }
 

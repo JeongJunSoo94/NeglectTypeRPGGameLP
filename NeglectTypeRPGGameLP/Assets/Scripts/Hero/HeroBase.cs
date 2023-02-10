@@ -10,7 +10,7 @@ namespace NeglectTypeRPG
     public delegate void HeroUI();
     public delegate float Defence(HeroBase stat, int index);
     public delegate void Attack(HeroBase stat, int skillIndex);
-    public delegate void SkillDel(HeroBase stat, int skillIndex);
+    public delegate void SkillDel(ref Stat stat, Stat operatorStat);
     public delegate void Passive(HeroBase stat, int index,ref int turn);
     public delegate void Find(List<HeroBase> obj);
     public delegate void DamageOverTime();
@@ -60,24 +60,14 @@ namespace NeglectTypeRPG
             skillData = DataManager.Instance.skillData;
             if (!init)
             {
-                if (heroInfo.normalAttack.action == 0)
+                for (int i = 0; i < heroInfo.normalAttack.Stats.Count; ++i)
                 {
-                    for (int i = 0; i < heroInfo.normalAttack.Stats.Count; ++i)
-                    {
-                        SkillDelegateInit(heroInfo.normalAttack, 0);
-                    }
-
+                    SkillDelegateInit(heroInfo.normalAttack, 0, heroInfo.level);
                 }
 
                 for (int i = 0; i < heroInfo.skills.Count; ++i)
                 {
-                    if (heroInfo.skills[i].action == 0)
-                    {
-                        for (int j = 0; j < heroInfo.skills[i].Stats.Count; ++j)
-                        {
-                            SkillDelegateInit(heroInfo.skills[i], i);
-                        }
-                    }
+                    SkillDelegateInit(heroInfo.skills[i], i, heroInfo.level);
                 }
                 //    attack += new Attack(GaugeUp);
                 //weaponDefence += new Defence(WeaponDefence);
@@ -85,136 +75,103 @@ namespace NeglectTypeRPG
                 //tacticalDefence += new Defence(TacticalDefence);
                 //tacticalDefence += new Defence(TacticalDefenceMitigation);
                 //init = true;
+
             }
         }
-        public void SkillDelegateInit(SkillInfo info, int index)
+        public void SkillDelegateInit(SkillInfo info, int index,int level)
         {
             //0 액티브 1 패시브
             //스킬의 액티브는 사용할때만 스킬의 패시브는 지속적
+            //액티브라고 상대를 때리는 것은 아니다
+            //단지 넣어서 지속적으로 값이 변동이 되어있나 액티브로 잠시동안만 변경이 되나의 차이다.
             //델리게이트 스킬 생성기
             if (info.action == 0)
             {
-                actives.Add(CreateActive());
+                actives.Add(new SkillDel(None));
+                for (int i = 0; i < skillData.statDamageCache[info.ID - 1].skillStatDatas.Count; ++i)
+                {
+                    for (int j = 0; j < skillData.statDamageCache[info.ID - 1].skillStatDatas[i].skillDamageStats.Count; ++j)
+                    {
+                        SkillDamageStats skillDamageStat = skillData.statDamageCache[info.ID - 1].skillStatDatas[i].skillDamageStats[j];
+                        switch (skillDamageStat.statType)
+                        {
+                            case 1:  actives[actives.Count - 1] += new SkillDel(Strength); break;
+                            case 2:  actives[actives.Count - 1] += new SkillDel(Intelligence); break;
+                            case 3:  actives[actives.Count - 1] += new SkillDel(Agility); break;
+                            case 4:  actives[actives.Count - 1] += new SkillDel(Vital); break;
+                            case 5:  actives[actives.Count - 1] += new SkillDel(Luck); break;
+                            case 6:  actives[actives.Count - 1] += new SkillDel(CriticalImmunityRate); break;
+                            case 7:  actives[actives.Count - 1] += new SkillDel(CriticalDamage); break;
+                            case 8:  actives[actives.Count - 1] += new SkillDel(HealthPoint); break;
+                            case 9:  actives[actives.Count - 1] += new SkillDel(Damage); break;
+                            case 10: actives[actives.Count - 1] += new SkillDel(WeaponDamage); break;
+                            case 11: actives[actives.Count - 1] += new SkillDel(TacticalDamage); break;
+                            case 12: actives[actives.Count - 1] += new SkillDel(Defensive); break;
+                            case 13: actives[actives.Count - 1] += new SkillDel(WeaponDefensive); break;
+                            case 14: actives[actives.Count - 1] += new SkillDel(TacticalDefensive); break;
+                            case 15: actives[actives.Count - 1] += new SkillDel(DamageBonus); break;
+                            case 16: actives[actives.Count - 1] += new SkillDel(WeaponDamageBonus); break;
+                            case 17: actives[actives.Count - 1] += new SkillDel(TacticalDamageBonus); break;
+                            case 18: actives[actives.Count - 1] += new SkillDel(DamageMitigation); break;
+                            case 19: actives[actives.Count - 1] += new SkillDel(WeaponDamageMitigation); break;
+                            case 20: actives[actives.Count - 1] += new SkillDel(TacticalDamageMitigation); break;
+                            case 21: actives[actives.Count - 1] += new SkillDel(CriticalPiercesDefensive); break;
+                            case 22: actives[actives.Count - 1] += new SkillDel(FocusDamage); break;
+                            case 23: actives[actives.Count - 1] += new SkillDel(ShieldBonusDamage); break;
+                            case 24: actives[actives.Count - 1] += new SkillDel(DamageReflection); break;
+                            case 25: actives[actives.Count - 1] += new SkillDel(ExtraHealingEffect); break;
+                        }
+                    }
+                }
                 //StatAdd(info, info.ID, info.Stats.Count);
 
             }
             else
             {
-                //passives
-            }
-        }
-
-        public SkillDel CreateActive()
-        {
-            //임시
-            SkillDel ac = new SkillDel(GaugeUp);
-            return ac;
-        }
-
-        public SkillDel CreatePassive()
-        {
-            //임시
-            SkillDel ac = new SkillDel(GaugeUp);
-            return ac;
-        }
-
-        public void AddOperator(SkillInfo stat, int attackIndex,int level)
-        {
-            for (int i = 0; i < stat.Stats.Count; ++i)
-            {
-                for (int j = 0; j < stat.Stats[i].skillDamageStats.Count; ++j)
+                //스탯  반복문으로 info.Stats[0].damageID를 돌려서 모두 가져와야한다. 그래야 
+                //Stat s=skillData.statCache[info.ID].statDatas[info.Stats[0].damageID].stats[level];
+                //데미지 세트 어떤종류의 스탯을 들고있는지
+                passives.Add(new SkillDel(None));
+                for (int i = 0; i < skillData.statDamageCache[info.ID-1].skillStatDatas.Count; ++i)
                 {
-                    //stat.Stats[i].skillDamageStats[j].team;// 타겟 판정 노드에서 실행해도됨 
-                    //stat.Stats[i].skillDamageStats[j].targetType;// 타겟을 어떻게 고를지 선택
-                    //-----나눌수 있음
-                    //stat.Stats[i].skillDamageStats[j].attackState;//스킬연산을 어떻게 할지 선택
-                    //stat.Stats[i].skillDamageStats[j].statType;// 해당 스탯을 위의 연산에 따라서 처리함
-
-
-                    //StatType(stat.Stats[i].skillDamageStats[j].statType, stat.Stats[i].skillDamageStats[j].attackState);
-
-                    //델리게이트에 넣어줘야함
-                    //그러면 어디서 함수를 긁어옴?
-                    //switch (stat.Stats[i].skillDamageStats[j].statType)
-                    //{
-                    //    case 0:          break;
-                    //    case 1:          break;//skillData.statCache[stat.ID].statDatas[stat.Stats[i].damageID].stats[level].Strength;
-                    //    case 2:          break;
-                    //    case 3:          break;
-                    //    case 4:          break;
-                    //    case 5:          break;
-                    //    case 6:          break;
-                    //    case 7:          break;
-                    //    case 8:          break;
-                    //    case 9:          break;
-                    //    case 10:         break;//attacks[attackIndex] += new Attack(WeaponDamage); //데미지 연산을 할수있게 넣어줘야한다 그래야 상대방의 데미지 함수를 불러왔을때 연산이 된다.
-                    //    case 11:         break;
-                    //    case 12:         break;
-                    //    case 13:         break;
-                    //    case 14:         break;
-                    //    case 15:         break;
-                    //    case 16:         break;
-                    //    case 17:         break;
-                    //    case 18:         break;
-                    //    case 19:         break;
-                    //    case 20:         break;
-                    //    case 21:         break;
-                    //    case 22:         break;
-                    //    case 23:         break;
-                    //    case 24:         break;
-                    //    case 25:         break;
-                    //}
+                    for (int j = 0; j < skillData.statDamageCache[info.ID-1].skillStatDatas[i].skillDamageStats.Count; ++j)
+                    {
+                        SkillDamageStats skillDamageStat = skillData.statDamageCache[info.ID-1].skillStatDatas[i].skillDamageStats[j];
+                        switch (skillDamageStat.statType)
+                        {
+                            case 1: passives[passives.Count - 1] += new SkillDel(Strength); break;
+                            case 2: passives[passives.Count - 1] += new SkillDel(Intelligence); break;
+                            case 3: passives[passives.Count - 1] += new SkillDel(Agility); break;
+                            case 4: passives[passives.Count - 1] += new SkillDel(Vital); break;
+                            case 5: passives[passives.Count - 1] += new SkillDel(Luck); break;
+                            case 6: passives[passives.Count - 1] += new SkillDel(CriticalImmunityRate); break;
+                            case 7: passives[passives.Count - 1] += new SkillDel(CriticalDamage); break;
+                            case 8: passives[passives.Count - 1] += new SkillDel(HealthPoint); break;
+                            case 9: passives[passives.Count - 1] += new SkillDel(Damage); break;
+                            case 10: passives[passives.Count - 1] += new SkillDel(WeaponDamage); break;
+                            case 11: passives[passives.Count - 1] += new SkillDel(TacticalDamage); break;
+                            case 12: passives[passives.Count - 1] += new SkillDel(Defensive); break;
+                            case 13: passives[passives.Count - 1] += new SkillDel(WeaponDefensive); break;
+                            case 14: passives[passives.Count - 1] += new SkillDel(TacticalDefensive); break;
+                            case 15: passives[passives.Count - 1] += new SkillDel(DamageBonus); break;
+                            case 16: passives[passives.Count - 1] += new SkillDel(WeaponDamageBonus); break;
+                            case 17: passives[passives.Count - 1] += new SkillDel(TacticalDamageBonus); break;
+                            case 18: passives[passives.Count - 1] += new SkillDel(DamageMitigation); break;
+                            case 19: passives[passives.Count - 1] += new SkillDel(WeaponDamageMitigation); break;
+                            case 20: passives[passives.Count - 1] += new SkillDel(TacticalDamageMitigation); break;
+                            case 21: passives[passives.Count - 1] += new SkillDel(CriticalPiercesDefensive); break;
+                            case 22: passives[passives.Count - 1] += new SkillDel(FocusDamage); break;
+                            case 23: passives[passives.Count - 1] += new SkillDel(ShieldBonusDamage); break;
+                            case 24: passives[passives.Count - 1] += new SkillDel(DamageReflection); break;
+                            case 25: passives[passives.Count - 1] += new SkillDel(ExtraHealingEffect); break;
+                        }
+                    }
+                    passives[passives.Count - 1](ref curStat, skillData.statCache[info.ID - 1].statDatas[info.Stats[i].damageID-1].stats[level - 1]);
                 }
+                
             }
         }
 
-        public void StatType(int statIndex, Type OperatorType)
-        {
-            switch (statIndex)
-            {
-                case 0:                         break;
-                case 1:                         break;//skillData.statCache[stat.ID].statDatas[stat.Stats[i].damageID].stats[level].Strength;
-                case 2:                         break;
-                case 3:                         break;
-                case 4:                         break;
-                case 5:                         break;
-                case 6:                         break;
-                case 7:                         break;
-                case 8:                         break;
-                case 9:                         break;
-                case 10:                        break;//attacks[attackIndex] += new Attack(WeaponDamage); //데미지 연산을 할수있게 넣어줘야한다 그래야 상대방의 데미지 함수를 불러왔을때 연산이 된다.
-                case 11:                        break;
-                case 12:                        break;
-                case 13:                        break;
-                case 14:                        break;
-                case 15:                        break;
-                case 16:                        break;
-                case 17:                        break;
-                case 18:                        break;
-                case 19:                        break;
-                case 20:                        break;
-                case 21:                        break;
-                case 22:                        break;
-                case 23:                        break;
-                case 24:                        break;
-                case 25:                        break;
-            }
-        }
-
-        public void PassiveAdd(SkillInfo info, int index)
-        {
-            //switch (info.damageType)
-            //{
-            //    case 0:
-            //        passives[index] += new Passive(WeaponDamage);
-            //        passives[index] += new Passive(WeaponDamageBonus);
-            //        break;
-            //    case 1:
-            //        passives[index] += new Passive(TacticalDamage);
-            //        passives[index] += new Passive(TacticalDamageBonus);
-            //        break;
-            //}
-        }
 
         public void GaugeUp(HeroBase hb, int index)
         {
@@ -229,8 +186,7 @@ namespace NeglectTypeRPG
             return hb.damage;
         }
 
-        //데미지에 무기,전술 두가지 종류의 데미지가 있다.
-        //해당 타입의 공격이 오면 
+
         public void Damaged(HeroBase hb, int index)
         {
             //hb.actives[index](hb, skillIndex);
@@ -258,33 +214,59 @@ namespace NeglectTypeRPG
             heroUI();
         }
 
+        public void None                                   (ref Stat stat, Stat value) 
+        {  }
+        public void Strength                               (ref Stat stat, Stat value) 
+        { stat.Strength += value.Strength; }
+        public void Intelligence                           (ref Stat stat, Stat value) 
+        {stat.Intelligence += value.Intelligence; }
+        public void Agility                                (ref Stat stat, Stat value) 
+        {stat.Agility += value.Agility; }
+        public void Vital                                  (ref Stat stat, Stat value) 
+        {stat.Vital += value.Vital; }
+        public void Luck                                   (ref Stat stat, Stat value) 
+        {stat.Luck += value.Luck; }
+        public void CriticalImmunityRate                   (ref Stat stat, Stat value) 
+        {stat.Critical_Immunity_Rate += value.Critical_Immunity_Rate; }
+        public void CriticalDamage                         (ref Stat stat, Stat value) 
+        {stat.Critical_Damage += value.Critical_Damage; }
+        public void HealthPoint                            (ref Stat stat, Stat value) 
+        {stat.Health_Point += value.Health_Point; }
+        public void Damage                                 (ref Stat stat, Stat value) 
+        {stat.Damage += value.Damage; }
+        public void WeaponDamage                           (ref Stat stat, Stat value) 
+        {stat.Weapon_Damage += value.Weapon_Damage; }
+        public void TacticalDamage                         (ref Stat stat, Stat value) 
+        {stat.Tactical_Damage += value.Tactical_Damage; }
+        public void Defensive                              (ref Stat stat, Stat value) 
+        {stat.Defensive += value.Defensive; }
+        public void WeaponDefensive                        (ref Stat stat, Stat value) 
+        {stat.Weapon_Defensive += value.Weapon_Defensive; }
+        public void TacticalDefensive                      (ref Stat stat, Stat value) 
+        {stat.Tactical_Defensive += value.Tactical_Defensive; }
+        public void DamageBonus                            (ref Stat stat, Stat value) 
+        {stat.Damage_Bonus += value.Damage_Bonus; }
+        public void WeaponDamageBonus                      (ref Stat stat, Stat value) 
+        {stat.Weapon_Damage_Bonus += value.Weapon_Damage_Bonus; }
+        public void TacticalDamageBonus                    (ref Stat stat, Stat value) 
+        {stat.Tactical_Damage_Bonus += value.Tactical_Damage_Bonus; }
+        public void DamageMitigation                       (ref Stat stat, Stat value) 
+        {stat.Damage_Mitigation += value.Damage_Mitigation; }
+        public void WeaponDamageMitigation                 (ref Stat stat, Stat value) 
+        {stat.Weapon_Damage_Mitigation += value.Weapon_Damage_Mitigation; }
+        public void TacticalDamageMitigation               (ref Stat stat, Stat value) 
+        {stat.Tactical_Damage_Mitigation += value.Tactical_Damage_Mitigation; }
+        public void CriticalPiercesDefensive               (ref Stat stat, Stat value) 
+        {stat.Critical_Pierces_Defensive += value.Critical_Pierces_Defensive; }
+        public void FocusDamage                            (ref Stat stat, Stat value) 
+        {stat.Focus_Damage += value.Focus_Damage; }
+        public void ShieldBonusDamage                      (ref Stat stat, Stat value) 
+        {stat.Shield_Bonus_Damage += value.Shield_Bonus_Damage; }
+        public void DamageReflection                       (ref Stat stat, Stat value) 
+        {stat.Damage_Reflection += value.Damage_Reflection; }
+        public void ExtraHealingEffect                     (ref Stat stat, Stat value) 
+        { stat.Extra_Healing_Effect += value.Extra_Healing_Effect; }
 
-
-        //public void Strength                               (Stat stat) {curStat.Strength += }
-        public void Intelligence                           (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Intelligence += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Intelligence; }
-        public void Agility                                (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Agility += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Agility; }
-        public void Vital                                  (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Vital += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Vital; }
-        public void Luck                                   (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Luck += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Luck; }
-        public void CriticalImmunityRate                   (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Critical_Immunity_Rate += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Critical_Immunity_Rate; }
-        public void CriticalDamage                         (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Critical_Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Critical_Damage; }
-        public void HealthPoint                            (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Health_Point += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Health_Point; }
-        public void Damage                                 (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Damage; }
-        public void WeaponDamage                           (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Weapon_Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Weapon_Damage; }
-        public void TacticalDamage                         (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Tactical_Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Tactical_Damage; }
-        public void Defensive                              (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Defensive += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Defensive; }
-        public void WeaponDefensive                        (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Weapon_Defensive += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Weapon_Defensive; }
-        public void TacticalDefensive                      (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Tactical_Defensive += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Tactical_Defensive; }
-        public void DamageBonus                            (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Damage_Bonus += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Damage_Bonus; }
-        public void WeaponDamageBonus                      (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Weapon_Damage_Bonus += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Weapon_Damage_Bonus; }
-        public void TacticalDamageBonus                    (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Tactical_Damage_Bonus += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Tactical_Damage_Bonus; }
-        public void DamageMitigation                       (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Damage_Mitigation += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Damage_Mitigation; }
-        public void WeaponDamageMitigation                 (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Weapon_Damage_Mitigation += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Weapon_Damage_Mitigation; }
-        public void TacticalDamageMitigation               (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Tactical_Damage_Mitigation += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Tactical_Damage_Mitigation; }
-        public void CriticalPiercesDefensive               (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Critical_Pierces_Defensive += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Critical_Pierces_Defensive; }
-        public void FocusDamage                            (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Focus_Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Focus_Damage; }
-        public void ShieldBonusDamage                      (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Shield_Bonus_Damage += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Shield_Bonus_Damage; }
-        public void DamageReflection                       (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Damage_Reflection += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Damage_Reflection; }
-        public void ExtraHealingEffect                     (HeroBase hero,SkillInfo skill, SkillStatDataDamageID damageStats,int level)   {curStat.Extra_Healing_Effect += skillData.statCache[skill.ID].statDatas[damageStats.damageID].stats[level].Extra_Healing_Effect;}
         //public void AddStrength(HeroBase stat, int index)
         //{
         //    float a = heroInfo.Strength;

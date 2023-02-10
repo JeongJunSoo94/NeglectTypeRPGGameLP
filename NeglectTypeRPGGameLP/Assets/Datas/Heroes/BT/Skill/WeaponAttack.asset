@@ -15,7 +15,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 018e6f112ef159e419b662cff8e9aa69
-  position: {x: -229.3985, y: 805.8733}
+  position: {x: -344.3392, y: 806.4098}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: -6970475442578837028}
@@ -42,6 +42,26 @@ MonoBehaviour:
   children:
   - {fileID: -143152093723390718}
   - {fileID: -8628834798464798100}
+--- !u!114 &-7395202161315530427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d305071dac1dfd4cb4ad07055ef7fbe, type: 3}
+  m_Name: EffectNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 1c929afd02a5c8547811c39f988d9725
+  position: {x: -350.33395, y: 1130.3539}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 0
+  run: 0
 --- !u!114 &-7206375549158592032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,14 +77,17 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 84fcb43453d3e354b80742d364258e70
-  position: {x: 193.60268, y: 507.65717}
+  position: {x: 348.10947, y: 508.4098}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
@@ -83,12 +106,33 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: aeb8834973769a642aa35338c5006cb8
-  position: {x: -224.39839, y: 959.87317}
+  position: {x: -339.3392, y: 960.4098}
   blackBoard: {fileID: 0}
   description: 
   children:
   - {fileID: 2330450463409376346}
+  - {fileID: -7395202161315530427}
   - {fileID: 4430323956445934769}
+--- !u!114 &-5299135861391909489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a5cde29d01358543a807f92b04ea5e2, type: 3}
+  m_Name: SoundNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: a7ba9a59c1fad464d861ccf50eca98e2
+  position: {x: 57.017746, y: 1112.6888}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 0
+  run: 0
 --- !u!114 &-3776697868775155057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,7 +148,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01a8d10d2a1ae4e4987c39765f393b10
-  position: {x: -607.99994, y: 517.01807}
+  position: {x: -843.9484, y: 518.9165}
   blackBoard: {fileID: 0}
   description: 
   positionType: 1
@@ -127,7 +171,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a9d924a02244b014da430d767b8b0a04
-  position: {x: 155.27686, y: 773.634}
+  position: {x: 202.84793, y: 789.58997}
   blackBoard: {fileID: 0}
   description: 
   child: {fileID: 7583044433523551512}
@@ -148,7 +192,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: b614b373113e1d04d8a0de41f7d15b89
-  position: {x: 382.3012, y: 512.07275}
+  position: {x: 536.10956, y: 512.40985}
   blackBoard: {fileID: 0}
   description: 
   positionType: 0
@@ -171,14 +215,17 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a14f62d711a956a49afe59fc86e6dda0
-  position: {x: -601.3984, y: 786.87317}
+  position: {x: -562.2296, y: 814.2826}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Attack
   aniName: 
@@ -197,14 +244,17 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: d3f01fa4ea4bfa44daaf0f99ed89166f
-  position: {x: -814.4338, y: 517}
+  position: {x: -1049.9484, y: 518.9165}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
@@ -243,6 +293,9 @@ MonoBehaviour:
   - {fileID: 7583044433523551512}
   - {fileID: 1807507166904799772}
   - {fileID: 1084583303213297229}
+  - {fileID: -7395202161315530427}
+  - {fileID: -5299135861391909489}
+  - {fileID: 4540472409115884125}
 --- !u!114 &7219506378607500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -258,7 +311,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 8f168fe1333876241a7d27a75f50ada2
-  position: {x: -1029.621, y: 514.4521}
+  position: {x: -1265.9484, y: 515.9165}
   blackBoard: {fileID: 0}
   description: 
   targetMyTeam: 0
@@ -280,16 +333,19 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 50b29bd106cedc045b117b0f5273690d
-  position: {x: -21.230753, y: 800.47906}
+  position: {x: -25.999962, y: 813.79486}
   blackBoard: {fileID: 0}
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 0
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
-  - Skill
+  - Attack
   aniName: 
 --- !u!114 &1807507166904799772
 MonoBehaviour:
@@ -306,7 +362,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 7dd98e4a847f21d4eb35932c09a571a3
-  position: {x: 264.6322, y: 1088.9465}
+  position: {x: 374.30746, y: 1114.922}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &2330450463409376346
@@ -324,7 +380,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e38e8980173929940a317cc329fa8474
-  position: {x: -309.39844, y: 1109.873}
+  position: {x: -516.2922, y: 1133.9583}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -371,12 +427,12 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 135dcb116d2db464f8a309de49f79dab
-  position: {x: -55.32867, y: 523.0893}
+  position: {x: 45.522385, y: 526.37396}
   blackBoard: {fileID: 0}
   description: 
   children:
-  - {fileID: -1637973791053545084}
   - {fileID: 1084583303213297229}
+  - {fileID: -1637973791053545084}
 --- !u!114 &4430323956445934769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -392,9 +448,29 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ced7b0d53c0159a4284dfa582ca37069
-  position: {x: -124.3984, y: 1102.8732}
+  position: {x: -194.4373, y: 1134.4374}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &4540472409115884125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d305071dac1dfd4cb4ad07055ef7fbe, type: 3}
+  m_Name: EffectNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 21a6981811f548f4f97a332ae708a6a0
+  position: {x: 215.1024, y: 1115.922}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 0
+  run: 0
 --- !u!114 &6036726901063360503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +505,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: de297dd78f9497d41a6720f12ffd9719
-  position: {x: 590.99963, y: 516.2416}
+  position: {x: 745.10944, y: 516.40985}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &7583044433523551512
@@ -447,8 +523,10 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 13793ab81d1afdb4383030e067afff34
-  position: {x: 179.54457, y: 938.9626}
+  position: {x: 216.46277, y: 943.20483}
   blackBoard: {fileID: 0}
   description: 
   children:
+  - {fileID: -5299135861391909489}
+  - {fileID: 4540472409115884125}
   - {fileID: 1807507166904799772}
