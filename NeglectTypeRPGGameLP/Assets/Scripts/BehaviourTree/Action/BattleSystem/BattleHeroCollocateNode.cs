@@ -79,8 +79,8 @@ namespace NeglectTypeRPG
                     HeroBlackBoard heroBlackBoard = character.GetComponent<HeroBlackBoard>();
                     heroBlackBoard.data = blackBoard.data;
                     heroBlackBoard.battleSystemBlackboard = bsb;
-                    character.transform.rotation = Quaternion.Euler(0, 180, 0);
-                    character.GetComponent<HeroContext>().originRotation = new Vector3(0,180,0);
+                    character.transform.rotation = Quaternion.Euler(0, 90, 0);
+                    character.GetComponent<HeroContext>().originRotation = new Vector3(0,90,0);
                     character.SetActive(true);
                     redCombat += character.GetComponent<HeroContext>().info.heroInfo.CombatPower;
                     if(!character.GetComponent<HeroContext>().statBar)

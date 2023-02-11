@@ -62,13 +62,15 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &-6100734029666703428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -169,7 +171,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 75a2d3bff133c724fae104989e59eff9
-  position: {x: -130.55002, y: 974.3501}
+  position: {x: -188.71039, y: 983.8253}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -189,7 +191,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 01bc4440a8732b84594b20373a4d55e2
-  position: {x: 105.35, y: 981.70013}
+  position: {x: 171.40886, y: 982.69885}
   blackBoard: {fileID: 0}
   description: 
 --- !u!114 &-143152093723390718
@@ -212,13 +214,15 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Attack
   aniName: 
-  startCheck: 0
 --- !u!114 &-25794264640207255
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -239,13 +243,15 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
-  startCheck: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0

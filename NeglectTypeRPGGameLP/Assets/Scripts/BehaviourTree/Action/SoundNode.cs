@@ -24,7 +24,7 @@ namespace NeglectTypeRPG
             }
             else if (soundObj.activeSelf)
             {
-                soundObj.GetComponent<SFX>().SoundRePeat();
+                //soundObj.GetComponent<SFX>().SoundRePeat();
             }
             else
             {

@@ -30,6 +30,8 @@ namespace NeglectTypeRPG
 
         public List<BehaviourTree> AttackBehavior;
 
+        public GameObject VFX;
+
         public int syncBehavior;
 
         private void OnDisable()

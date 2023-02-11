@@ -22,7 +22,12 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
-            return State.Failure;
+            if (child.Update() == State.Success)
+            {
+                context.info.isDamaged = false;
+                return State.Failure;
+            }
+            return State.Success;
         }
     }
 }

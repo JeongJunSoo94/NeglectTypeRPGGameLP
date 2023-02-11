@@ -9,26 +9,14 @@ namespace NeglectTypeRPG
         HeroContext context;
         HeroBlackBoard heroBlackBoard;
         public int audioIndex;
-        public bool run;
-        GameObject soundObj;
+        public bool onVFX;
+        GameObject vfxObj;
         protected override void OnStart()
         {
             if (heroBlackBoard == null)
             {
                 context = blackBoard.context as HeroContext;
                 heroBlackBoard = blackBoard as HeroBlackBoard;
-            }
-            if (soundObj == null)
-            {
-                //soundObj = heroBlackBoard.battleSystemBlackboard.effectcenter.GetSFX(audioIndex, blackBoard.transform);
-            }
-            else if (soundObj.activeSelf)
-            {
-                soundObj.GetComponent<SFX>().SoundRePeat();
-            }
-            else
-            {
-                //soundObj = heroBlackBoard.battleSystemBlackboard.effectcenter.GetSFX(audioIndex, blackBoard.transform);
             }
         }
 
@@ -38,6 +26,11 @@ namespace NeglectTypeRPG
 
         protected override State OnUpdate()
         {
+            if (context.VFX != null)
+            {
+                context.VFX.SetActive(onVFX);
+            }
+            //heroBlackBoard.battleSystemBlackboard.effectcenter.GetVFX(0,);
             return State.Success;
         }
     }

@@ -14,7 +14,7 @@ namespace NeglectTypeRPG
 
         public ObjectPoolQueue Pool;
 
-        public void GetEffect(int index, Vector3 pos)
+        public void GetVFX(int index, Vector3 pos)
         {
             GameObject obj = Pool.Dequeue();
             obj.transform.position = pos;

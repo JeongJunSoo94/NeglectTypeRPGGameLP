@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1888647719}
-  m_IndirectSpecularColor: {r: 0.18055452, g: 0.22603963, b: 0.30707482, a: 1}
+  m_IndirectSpecularColor: {r: 0.4620183, g: 0.51275724, b: 0.590066, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -822,6 +822,7 @@ MonoBehaviour:
   animator: {fileID: 168315175}
   currentAniState: 
   AttackBehavior: []
+  VFX: {fileID: 0}
   syncBehavior: 0
 --- !u!4 &168315178
 Transform:
@@ -3065,6 +3066,7 @@ MonoBehaviour:
   buffs: []
   debuffs: []
   attacks:
+  - {fileID: 1178844608527456, guid: 30714a0405d279e47b83c7442fe6c9a6, type: 3}
   - {fileID: 1567806960868878, guid: 4679f502927204d4e96816238c116fdf, type: 3}
   damages: []
   heals: []
@@ -4224,6 +4226,7 @@ MonoBehaviour:
   animator: {fileID: 857376991}
   currentAniState: 
   AttackBehavior: []
+  VFX: {fileID: 0}
   syncBehavior: 0
 --- !u!4 &857376994
 Transform:
@@ -4917,6 +4920,7 @@ MonoBehaviour:
   animator: {fileID: 989008491}
   currentAniState: 
   AttackBehavior: []
+  VFX: {fileID: 0}
   syncBehavior: 0
 --- !u!4 &989008494
 Transform:
@@ -5422,7 +5426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0.029678345, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.46666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7281,6 +7285,7 @@ MonoBehaviour:
   animator: {fileID: 1563685493}
   currentAniState: 
   AttackBehavior: []
+  VFX: {fileID: 0}
   syncBehavior: 0
 --- !u!4 &1563685497
 Transform:
@@ -7411,7 +7416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.13914871, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.46666667}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -7915,6 +7920,7 @@ MonoBehaviour:
   animator: {fileID: 1715261352}
   currentAniState: 
   AttackBehavior: []
+  VFX: {fileID: 0}
   syncBehavior: 0
 --- !u!4 &1715261355
 Transform:
@@ -8553,7 +8559,7 @@ MonoBehaviour:
   data: {fileID: 311039700}
   UI: {fileID: 2124663952}
   soundCenter: {fileID: 1746113443}
-  effectcenter: {fileID: 0}
+  effectcenter: {fileID: 685514443}
 --- !u!114 &1773561785
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -60,7 +60,6 @@ MonoBehaviour:
   description: "\uC5B4\uB5A4 \uC885\uB958\uC758 \uB370\uBBF8\uC9C0\uB97C \uC785\uC5C8\uB294\uC9C0"
   children:
   - {fileID: -8174490526658262017}
-  - {fileID: 3692842296444292998}
 --- !u!114 &-4394410258394057923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -91,47 +90,6 @@ MonoBehaviour:
   - Victory
   - Victory_1
   aniName: 
---- !u!114 &-3311678495029907407
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5cde29d01358543a807f92b04ea5e2, type: 3}
-  m_Name: SoundNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: c722b79fe9e91884da89b52d9fcbd6dd
-  position: {x: -362.415, y: 1582.4187}
-  blackBoard: {fileID: 0}
-  description: 
-  audioIndex: 0
-  run: 0
---- !u!114 &-2861869437371893564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 866cccf429f716c45a3f96d980dd1412, type: 3}
-  m_Name: SyncCheckNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 4457d0c12f5098a4e9f39869a2a06c35
-  position: {x: -364.54, y: 1445.875}
-  blackBoard: {fileID: 0}
-  description: 
-  child: {fileID: -3311678495029907407}
-  syncIndex: 0
-  repeat: 0
 --- !u!114 &-2587687797225015618
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,6 +167,7 @@ MonoBehaviour:
     \uC54A\uB418\uBA74\n\uB9C8\uC9C0\uB9C9 \uB178\uB4DC \uC0AC\uC6A9\uD560\uAC83\uC785\uB2C8\uB2E4."
   children:
   - {fileID: 4621341597704371392}
+  - {fileID: 7821811617800623583}
   - {fileID: 7020155244636083768}
   - {fileID: -2255352901321592693}
   - {fileID: 9032924591394990372}
@@ -266,11 +225,6 @@ MonoBehaviour:
   - {fileID: 6712245848545921146}
   - {fileID: -7698904855400995703}
   - {fileID: 3185102858571092467}
-  - {fileID: 3692842296444292998}
-  - {fileID: 6109751481299846247}
-  - {fileID: 1099796884042725629}
-  - {fileID: -2861869437371893564}
-  - {fileID: -3311678495029907407}
 --- !u!114 &1089201827884481641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,34 +246,6 @@ MonoBehaviour:
   children:
   - {fileID: 2838731015109135555}
   - {fileID: -2587687797225015618}
---- !u!114 &1099796884042725629
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15c8645815f815c42bb01d146021916c, type: 3}
-  m_Name: AnimationNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 3aab7eff149eae24b8325b411a381772
-  position: {x: -530.15247, y: 1441.42}
-  blackBoard: {fileID: 0}
-  description: 
-  onRandom: 0
-  runTime: 0
-  startTime: 0
-  endTime: 1
-  runToTheEnd: 0
-  prevRunToTheEnd: 0
-  cutAnimation: 0
-  layer: 0
-  aniNames: []
-  aniName: 
 --- !u!114 &2838731015109135555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,26 +326,7 @@ MonoBehaviour:
   description: "\uC560\uB2C8\uBA54\uC774\uC158\uC5D0\uC11C \uC624\uB294 \uC2F1\uD06C\uCCB4\uD06C"
   child: {fileID: 6712245848545921146}
   syncIndex: 0
-  repeat: 1
---- !u!114 &3692842296444292998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2845046cbb806274dbb127d69fb1c129, type: 3}
-  m_Name: CrowdControlCheckNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: 2c703f2ee58707f40925cb53f7f25bc0
-  position: {x: -503.2574, y: 1162.5175}
-  blackBoard: {fileID: 0}
-  description: 
-  child: {fileID: 6109751481299846247}
+  repeat: 0
 --- !u!114 &4621341597704371392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -457,27 +364,6 @@ MonoBehaviour:
   position: {x: 274.20013, y: 945.0519}
   blackBoard: {fileID: 0}
   description: "\uC11C\uBE0C \uD589\uB3D9 \uD2B8\uB9AC \uB178\uB4DC\uC785\uB2C8\uB2E4."
---- !u!114 &6109751481299846247
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73af25f8fee031d4e9134e8d8ca7e7c2, type: 3}
-  m_Name: ParallelNode
-  m_EditorClassIdentifier: 
-  state: 0
-  started: 0
-  guid: cb31c7bac5e18684fa8fee8dac8314b9
-  position: {x: -480.8049, y: 1296.13}
-  blackBoard: {fileID: 0}
-  description: 
-  children:
-  - {fileID: 1099796884042725629}
-  - {fileID: -2861869437371893564}
 --- !u!114 &6712245848545921146
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,7 +418,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: a58672d55f07cbb4ca897d41ed92bc10
-  position: {x: -622.07965, y: 856.73865}
+  position: {x: -635.0388, y: 855.4367}
   blackBoard: {fileID: 0}
   description: "\uB370\uBBF8\uC9C0 \uC785\uC5C8\uB098"
   child: {fileID: -5433133297602562837}

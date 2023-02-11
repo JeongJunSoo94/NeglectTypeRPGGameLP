@@ -61,6 +61,8 @@ namespace NeglectTypeRPG
             }
             GameObject model = Instantiate(models[charIndex], obj.transform);
             hc.animator = obj.GetComponent<Animator>();
+            if(model.GetComponent<HeroSet>()!=null)
+                hc.VFX = model.GetComponent<HeroSet>().VFX;
             obj.GetComponent<Animator>().runtimeAnimatorController = model.GetComponent<Animator>().runtimeAnimatorController;
             obj.GetComponent<Animator>().avatar = model.GetComponent<Animator>().avatar;
             model.GetComponent<Animator>().enabled = false;

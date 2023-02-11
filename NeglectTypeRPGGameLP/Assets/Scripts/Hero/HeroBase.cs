@@ -123,14 +123,9 @@ namespace NeglectTypeRPG
                         }
                     }
                 }
-                //StatAdd(info, info.ID, info.Stats.Count);
-
             }
             else
             {
-                //스탯  반복문으로 info.Stats[0].damageID를 돌려서 모두 가져와야한다. 그래야 
-                //Stat s=skillData.statCache[info.ID].statDatas[info.Stats[0].damageID].stats[level];
-                //데미지 세트 어떤종류의 스탯을 들고있는지
                 passives.Add(new SkillDel(None));
                 for (int i = 0; i < skillData.statDamageCache[info.ID-1].skillStatDatas.Count; ++i)
                 {
@@ -186,31 +181,44 @@ namespace NeglectTypeRPG
             return hb.damage;
         }
 
-
-        public void Damaged(HeroBase hb, int index)
+        public void Damaged(HeroBase hb, int index,bool isSkill,int kind )
         {
             //hb.actives[index](hb, skillIndex);
-            //switch (hb.heroInfo.)
-            //{
-            //    case 0:
-            //        damage = weaponDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb, index);
-            //        break;
-            //    case 1:
-            //        damage = tacticalDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.attack(hb, index);
-            //        break;
-            //}
-            //switch (hb.heroInfo.skills[index].damageType)
-            //{
-            //    case 0:
-            //        damage = weaponDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.skills[index](hb, index);
-            //        break;
-            //    case 1:
-            //        damage = tacticalDefence(this, index) - hb.heroInfo.Critical_Pierces_Defensive - hb.skills[index](hb, index);
-            //        break;
-            //}
+            if (isSkill)
+            {
+                switch (kind)
+                {
+                    case 0:
+                        damage = -hb.curStat.Damage;//weaponDefence(this, index) - hb.curStat.Critical_Pierces_Defensive - hb.attack(hb, index);
+                        break;
+                    case 1:
+                        damage = -hb.curStat.Weapon_Damage;//tacticalDefence(this, index) - hb.curStat.Critical_Pierces_Defensive - hb.attack(hb, index);
+                        break;
+                    case 2:
+                        damage = -hb.curStat.Tactical_Damage;
+                        break;
+                }
+            }
+            else 
+            {
+                switch (kind)
+                {
+                    case 0:
+                        damage = -hb.curStat.Damage;//weaponDefence(this, index) - hb.curStat.Critical_Pierces_Defensive - hb.skills[index](hb, index);
+                        break;
+                    case 1:
+                        damage = -hb.curStat.Weapon_Damage;//tacticalDefence(this, index) - hb.curStat.Critical_Pierces_Defensive - hb.skills[index](hb, index);
+                        break;
+                    case 2:
+                        damage = -hb.curStat.Tactical_Damage;//tacticalDefence(this, index) - hb.curStat.Critical_Pierces_Defensive - hb.skills[index](hb, index);
+                        break;
+                }
+            }
             if (damage < 0)
+            { 
                 curHealth += damage;
-            isDamaged = true;
+                isDamaged = true;
+            }
             heroUI();
         }
 

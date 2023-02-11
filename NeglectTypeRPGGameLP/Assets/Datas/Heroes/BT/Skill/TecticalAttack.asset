@@ -62,9 +62,12 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
@@ -88,6 +91,7 @@ MonoBehaviour:
   description: 
   children:
   - {fileID: 2330450463409376346}
+  - {fileID: 3764372378192926338}
   - {fileID: 4430323956445934769}
 --- !u!114 &-3776697868775155057
 MonoBehaviour:
@@ -155,9 +159,12 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 1
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Attack
   aniName: 
@@ -181,9 +188,12 @@ MonoBehaviour:
   description: 
   onRandom: 0
   runTime: 0
+  startTime: 0
+  endTime: 1
   runToTheEnd: 0
   prevRunToTheEnd: 0
   cutAnimation: 0
+  layer: 0
   aniNames:
   - Run
   aniName: 
@@ -217,6 +227,8 @@ MonoBehaviour:
   - {fileID: -6970475442578837028}
   - {fileID: 2330450463409376346}
   - {fileID: 4430323956445934769}
+  - {fileID: 3764372378192926338}
+  - {fileID: 4705550519087268208}
 --- !u!114 &7219506378607500
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -254,7 +266,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: e38e8980173929940a317cc329fa8474
-  position: {x: -498.70084, y: 1079.38}
+  position: {x: -597.8796, y: 1090.6854}
   blackBoard: {fileID: 0}
   description: 
   audioIndex: 0
@@ -282,9 +294,30 @@ MonoBehaviour:
   - {fileID: -25794264640207255}
   - {fileID: -3776697868775155057}
   - {fileID: -7535324228799086068}
+  - {fileID: 4705550519087268208}
   - {fileID: -7206375549158592032}
   - {fileID: -352333734591015640}
   - {fileID: 6756924779976287338}
+--- !u!114 &3764372378192926338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d305071dac1dfd4cb4ad07055ef7fbe, type: 3}
+  m_Name: EffectNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: bcf183692e0e3df4d8d955a0f06477eb
+  position: {x: -403.9998, y: 1098.786}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 0
+  onVFX: 1
 --- !u!114 &4430323956445934769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,9 +333,29 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ced7b0d53c0159a4284dfa582ca37069
-  position: {x: -313.70084, y: 1072.3799}
+  position: {x: -237.81795, y: 1078.1571}
   blackBoard: {fileID: 0}
   description: 
+--- !u!114 &4705550519087268208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d305071dac1dfd4cb4ad07055ef7fbe, type: 3}
+  m_Name: EffectNode
+  m_EditorClassIdentifier: 
+  state: 0
+  started: 0
+  guid: 597e44584be86c14087e887f0dd06659
+  position: {x: -25.157192, y: 559.8428}
+  blackBoard: {fileID: 0}
+  description: 
+  audioIndex: 0
+  onVFX: 0
 --- !u!114 &6036726901063360503
 MonoBehaviour:
   m_ObjectHideFlags: 0
