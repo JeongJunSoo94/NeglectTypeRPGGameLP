@@ -16,7 +16,7 @@ namespace NeglectTypeRPG
         //SerializedObject treeObject;
         //SerializedProperty blackboardProperty;
 
-        [MenuItem("Window/UI Toolkit/BehaviourTreeEditor")]
+        [MenuItem("JJS/BehaviourTreeEditor")]
         public static void OpenWindow()
         {
             BehaviourTreeEditor wnd = GetWindow<BehaviourTreeEditor>();

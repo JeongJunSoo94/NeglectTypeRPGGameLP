@@ -75,7 +75,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: ab2d1f3f61223484e991b4beadcad1ab
-  position: {x: -1198.7833, y: 1006.93176}
+  position: {x: -1191, y: 985}
   blackBoard: {fileID: 0}
   description: "\uC2B9\uB9AC\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 1
@@ -105,7 +105,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 364ec001dd1de984bb2ad6abac2e8c74
-  position: {x: 80.93953, y: 1140.6959}
+  position: {x: 47, y: 1087}
   blackBoard: {fileID: 0}
   description: "\uC8FD\uC5C8\uC744\uB54C \uCC98\uB9AC \uB178\uB4DC\uC785\uB2C8\uB2E4."
 --- !u!114 &-2255352901321592693
@@ -261,7 +261,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: f054fb1308b0b5a4ba517a0872a4e71f
-  position: {x: -121.060555, y: 1136.6959}
+  position: {x: -126, y: 1086}
   blackBoard: {fileID: 0}
   description: "\uC8FD\uC74C\uC560\uB2C8\uBA54\uC774\uC158"
   onRandom: 1
@@ -361,7 +361,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9410b1cd4695c7247b3686d986b4d31b
-  position: {x: 274.20013, y: 945.0519}
+  position: {x: 276.28677, y: 973.9486}
   blackBoard: {fileID: 0}
   description: "\uC11C\uBE0C \uD589\uB3D9 \uD2B8\uB9AC \uB178\uB4DC\uC785\uB2C8\uB2E4."
 --- !u!114 &6712245848545921146
@@ -399,7 +399,7 @@ MonoBehaviour:
   state: 0
   started: 0
   guid: 9e9aade1e59de064489a9b090473afb0
-  position: {x: -31.0604, y: 820.69604}
+  position: {x: -36, y: 828}
   blackBoard: {fileID: 0}
   description: "\uCCB4\uB825\uC774 \uB0A8\uC544\uC788\uB098"
   child: {fileID: 1089201827884481641}
